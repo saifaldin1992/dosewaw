@@ -1,0 +1,372 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>DOSEWAW — نموذج التصميم</title>
+<meta name="theme-color" content="#0F4D3A">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+/* DOSEWAW · Phase 0 design mockup (not the production site).
+   Identity: emerald green + gold on ivory. */
+:root{
+  --green-900:#0B3A2C; --green:#0F4D3A; --green-600:#1F7A5A; --green-100:#E3EFE9; --green-50:#F1F7F3;
+  --gold:#C9A24B; --gold-600:#A9842F; --gold-100:#F6EDD6;
+  --bg:#FAF8F2; --card:#FFFFFF; --ink:#14231D; --mute:#5D6B64; --line:#E4E0D3;
+  --major:#B42318; --major-bg:#FDECEA; --mod:#9A5B00; --mod-bg:#FFF4E0; --minor:#3D5A80; --minor-bg:#EAF0F7;
+  --radius:16px; --shadow:0 1px 2px rgba(15,77,58,.06),0 6px 24px rgba(15,77,58,.06);
+  --font:'IBM Plex Sans Arabic','Inter',system-ui,-apple-system,'Segoe UI',Tahoma,sans-serif;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --green-100:#16352B; --green-50:#11271F; --gold-100:#3A2F17;
+    --bg:#0C1713; --card:#13221C; --ink:#E9F1EC; --mute:#9DB0A6; --line:#22362D;
+    --major-bg:#3A1612; --mod-bg:#35260C; --minor-bg:#17263A; --major:#F28B82; --mod:#F2C26B; --minor:#9CC0EA;
+    --shadow:none;
+  }
+}
+:root[data-theme="dark"]{
+  --green-100:#16352B; --green-50:#11271F; --gold-100:#3A2F17;
+  --bg:#0C1713; --card:#13221C; --ink:#E9F1EC; --mute:#9DB0A6; --line:#22362D;
+  --major-bg:#3A1612; --mod-bg:#35260C; --minor-bg:#17263A; --major:#F28B82; --mod:#F2C26B; --minor:#9CC0EA;
+  --shadow:none;
+}
+*{box-sizing:border-box}
+[hidden]{display:none!important}
+html,body{margin:0}
+body{background:var(--bg);color:var(--ink);font-family:var(--font);font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased;padding-bottom:84px}
+.en,.num{font-family:'Inter',var(--font)}
+button,input{font:inherit;color:inherit}
+a{color:var(--green-600)}
+
+/* Header */
+.top{position:sticky;top:0;z-index:20;background:var(--green);color:#fff;box-shadow:0 2px 10px rgba(0,0,0,.08)}
+.top .in{max-width:1200px;margin:0 auto;display:flex;align-items:center;gap:12px;padding:10px 16px}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none;color:#fff}
+.brand .word{font-family:'Inter',sans-serif;font-weight:700;letter-spacing:.08em;font-size:20px;line-height:1}
+.brand .word b{color:var(--gold);font-weight:700}
+.brand small{display:block;font-size:11px;letter-spacing:0;opacity:.8;font-family:var(--font);font-weight:500;margin-top:3px}
+.top .sp{flex:1}
+.ib{min-width:44px;height:44px;border-radius:12px;border:1px solid rgba(255,255,255,.22);background:transparent;color:#fff;cursor:pointer;font-weight:600;padding:0 10px}
+
+/* Search */
+.wrap{max-width:1200px;margin:0 auto;padding:16px}
+.search{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow);padding:14px}
+.sbox{display:flex;align-items:center;gap:10px;background:var(--green-50);border:2px solid var(--green-600);border-radius:14px;padding:0 14px;height:56px}
+.sbox svg{flex:none;color:var(--green-600)}
+.sbox input{border:0;background:transparent;outline:0;flex:1;font-size:18px;font-weight:600;min-width:0}
+.sbox .clr{border:0;background:var(--green-100);border-radius:99px;width:32px;height:32px;cursor:pointer;color:var(--green)}
+.chips{display:flex;gap:8px;overflow-x:auto;padding:12px 2px 2px;scrollbar-width:none}
+.chips::-webkit-scrollbar{display:none}
+.chip{flex:none;display:inline-flex;align-items:center;gap:6px;border:1px solid var(--line);background:var(--card);border-radius:99px;padding:7px 14px;font-size:14px;font-weight:500;white-space:nowrap;cursor:pointer}
+.chip[aria-pressed="true"]{background:var(--green);border-color:var(--green);color:#fff}
+.chip .dot{width:8px;height:8px;border-radius:50%;background:var(--gold)}
+.chip.soon{color:var(--mute)}
+.chip.soon em{font-style:normal;font-size:11px;background:var(--gold-100);color:var(--gold-600);border-radius:99px;padding:1px 7px}
+.recent{display:flex;gap:8px;align-items:center;flex-wrap:wrap;font-size:13px;color:var(--mute);margin-top:10px}
+.recent button{border:0;background:var(--gold-100);color:var(--ink);border-radius:99px;padding:4px 12px;font-size:13px;cursor:pointer}
+
+/* Drug head */
+.dhead{display:flex;align-items:flex-start;gap:14px;margin:18px 2px 12px}
+.dicon{flex:none;width:52px;height:52px;border-radius:14px;background:var(--green-100);display:grid;place-items:center;color:var(--green)}
+.dhead h1{margin:0;font-size:24px;line-height:1.3}
+.dhead h1 .en{font-size:15px;font-weight:500;color:var(--mute);margin-inline-start:8px}
+.tags{display:flex;gap:6px;flex-wrap:wrap;margin-top:6px}
+.tag{font-size:12px;border-radius:99px;padding:2px 10px;background:var(--green-100);color:var(--green);font-weight:600}
+.tag.gold{background:var(--gold-100);color:var(--gold-600)}
+.tag.access{background:#E2F3E8;color:#17663A}
+
+/* Layout */
+.grid{display:grid;gap:16px}
+@media (min-width:1024px){
+  .grid{grid-template-columns:minmax(380px,440px) 1fr;align-items:start}
+  .calc-col{position:sticky;top:84px}
+}
+@media (min-width:700px) and (max-width:1023px){
+  .info{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+  .info .card.wide{grid-column:1/-1}
+}
+.calc-col,.info{display:grid;gap:16px}
+.grid>*,.calc-col>*,.info>*{min-width:0}
+.card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow);padding:16px}
+.card h2{margin:0 0 12px;font-size:17px;display:flex;align-items:center;gap:8px}
+.card h2 .ic{width:30px;height:30px;border-radius:9px;display:grid;place-items:center;background:var(--green-100);color:var(--green);font-size:16px}
+.card h2 .cnt{margin-inline-start:auto;font-size:12px;font-weight:600;color:var(--mute)}
+
+/* Patient input */
+.seg{display:grid;grid-template-columns:repeat(3,1fr);background:var(--green-50);border:1px solid var(--line);border-radius:14px;padding:4px;gap:4px}
+.seg.two{grid-template-columns:1fr 1fr}
+.seg button{border:0;background:transparent;border-radius:10px;min-height:44px;font-weight:600;font-size:15px;cursor:pointer;color:var(--mute)}
+.seg button[aria-pressed="true"]{background:var(--card);color:var(--green);box-shadow:0 1px 3px rgba(0,0,0,.08);outline:2px solid var(--green-600)}
+.numin{display:flex;align-items:center;gap:10px;margin-top:12px;border:2px solid var(--line);border-radius:14px;padding:0 16px;height:64px;background:var(--card)}
+.numin:focus-within{border-color:var(--green-600)}
+.numin input{border:0;outline:0;background:transparent;flex:1;width:100%;font-size:30px;font-weight:700;min-width:0;font-family:'Inter',sans-serif;text-align:start}
+.numin span{color:var(--mute);font-weight:600}
+.est{font-size:13px;color:var(--gold-600);background:var(--gold-100);border-radius:10px;padding:6px 10px;margin-top:8px}
+.lbl{font-size:13px;font-weight:600;color:var(--mute);margin:14px 2px 6px}
+.opts{display:grid;gap:6px}
+.opt{display:flex;align-items:center;gap:10px;border:1px solid var(--line);border-radius:12px;padding:10px 12px;min-height:48px;cursor:pointer;background:var(--card);text-align:start;font-size:14.5px}
+.opt i{flex:none;width:20px;height:20px;border-radius:50%;border:2px solid var(--mute)}
+.opt[aria-pressed="true"]{border-color:var(--green-600);background:var(--green-50)}
+.opt[aria-pressed="true"] i{border:6px solid var(--green-600)}
+.check{display:flex;align-items:center;gap:10px;margin-top:10px;font-size:14px;color:var(--mute);cursor:pointer}
+.check input{width:20px;height:20px;accent-color:var(--green-600)}
+
+/* Result */
+.result{padding:0;overflow:hidden;border:0;box-shadow:0 10px 30px rgba(15,77,58,.18)}
+.rhead{background:linear-gradient(135deg,var(--green) 0%,var(--green-900) 100%);color:#fff;padding:16px 18px;position:relative}
+.rhead:after{content:"";position:absolute;inset-inline:18px;bottom:0;height:3px;background:var(--gold);border-radius:3px 3px 0 0}
+.rhead .k{font-size:13px;opacity:.85;font-weight:500;display:flex;justify-content:space-between}
+.rhead .big{font-family:'Inter',sans-serif;font-size:40px;font-weight:700;line-height:1.15;margin-top:4px}
+.rhead .big small{font-family:var(--font);font-size:18px;font-weight:600;opacity:.9}
+.rhead .sub{font-size:14px;opacity:.9;margin-top:2px}
+.rbody{padding:14px 18px;background:var(--card)}
+table.ml{width:100%;border-collapse:collapse;font-size:15px}
+table.ml th{font-size:12px;color:var(--mute);font-weight:600;text-align:start;padding:4px 0 8px}
+table.ml td{padding:10px 0;border-top:1px solid var(--line)}
+table.ml td.v{font-family:'Inter',sans-serif;font-weight:700;font-size:20px;color:var(--green);text-align:end;white-space:nowrap}
+table.ml td.v small{font-family:var(--font);font-size:13px;color:var(--mute);font-weight:500}
+table.ml tr.best td{background:var(--gold-100)}
+table.ml tr.best td:first-child{border-start-start-radius:10px;border-end-start-radius:10px;padding-inline-start:8px}
+table.ml tr.best td:last-child{border-start-end-radius:10px;border-end-end-radius:10px;padding-inline-end:8px}
+.facts{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:12px}
+.fact{background:var(--green-50);border-radius:12px;padding:8px 12px}
+.fact b{display:block;font-size:12px;color:var(--mute);font-weight:600}
+.fact span{font-weight:600;font-size:14px}
+.warn{margin-top:10px;border-radius:12px;padding:10px 12px;font-size:14px;background:var(--mod-bg);color:var(--mod);font-weight:500}
+.warn.red{background:var(--major-bg);color:var(--major)}
+.src{font-size:12.5px;color:var(--mute);margin-top:12px}
+.src a{font-weight:600}
+.acts{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:12px}
+.btn{min-height:46px;border-radius:12px;border:1px solid var(--line);background:var(--card);font-weight:600;cursor:pointer;font-size:14px}
+.btn.pri{background:var(--gold);border-color:var(--gold);color:#1E1606}
+.empty{padding:22px 18px;color:var(--mute);text-align:center}
+
+/* Info sections */
+.ilist{display:grid;gap:8px}
+.inter{display:flex;gap:10px;border:1px solid var(--line);border-radius:12px;padding:10px 12px;border-inline-start:5px solid var(--minor)}
+.inter.major{border-inline-start-color:var(--major)}
+.inter.moderate{border-inline-start-color:var(--mod)}
+.inter b{display:block;font-size:15px}
+.inter p{margin:2px 0 0;font-size:14px;color:var(--mute)}
+.sev{flex:none;align-self:flex-start;font-size:11.5px;font-weight:700;border-radius:99px;padding:2px 9px;background:var(--minor-bg);color:var(--minor)}
+.major .sev{background:var(--major-bg);color:var(--major)}
+.moderate .sev{background:var(--mod-bg);color:var(--mod)}
+.inter .grow{flex:1}
+.ref{font-size:11.5px;font-weight:700;color:var(--gold-600);text-decoration:none;background:var(--gold-100);border-radius:6px;padding:0 6px;margin-inline-start:4px}
+.row{display:flex;gap:10px;padding:10px 0;border-top:1px solid var(--line);font-size:14.5px}
+.row:first-of-type{border-top:0;padding-top:0}
+.row b{flex:none;width:118px;color:var(--mute);font-size:13px;font-weight:600;padding-top:2px}
+ol.refs{margin:0;padding-inline-start:20px;font-size:14px}
+ol.refs li{margin-bottom:8px}
+ol.refs .d{color:var(--mute);font-size:12.5px}
+
+.disc{font-size:12.5px;color:var(--mute);text-align:center;margin:20px auto 8px;max-width:640px}
+.mock{display:inline-block;background:var(--gold-100);color:var(--gold-600);font-weight:700;font-size:12px;border-radius:99px;padding:2px 10px;margin-bottom:6px}
+
+/* Bottom bar (phone / tablet) */
+.tabs{position:fixed;bottom:0;inset-inline:0;z-index:30;background:var(--card);border-top:1px solid var(--line);display:grid;grid-template-columns:repeat(4,1fr);padding:6px 6px calc(6px + env(safe-area-inset-bottom))}
+.tabs button{border:0;background:transparent;display:flex;flex-direction:column;align-items:center;gap:2px;font-size:12px;font-weight:600;color:var(--mute);padding:4px 0;cursor:pointer}
+.tabs button svg{width:24px;height:24px}
+.tabs button[aria-current="page"]{color:var(--green)}
+.tabs button[aria-current="page"] .pill{background:var(--green-100)}
+.tabs .pill{border-radius:99px;padding:3px 18px;display:grid;place-items:center}
+.side{display:none}
+@media (min-width:1024px){
+  body{padding-bottom:0}
+  .tabs{display:none}
+  .topnav{display:flex!important}
+}
+.topnav{display:none;gap:4px}
+.topnav a{color:#fff;text-decoration:none;font-weight:600;font-size:14px;padding:8px 14px;border-radius:10px;opacity:.85}
+.topnav a.on{background:rgba(255,255,255,.12);opacity:1;box-shadow:inset 0 -2px 0 var(--gold)}
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="in">
+    <a class="brand" href="#" aria-label="DOSEWAW">
+      <svg width="38" height="38" viewBox="0 0 48 48" aria-hidden="true">
+        <rect x="1" y="1" width="46" height="46" rx="13" fill="#0B3A2C" stroke="#C9A24B" stroke-opacity=".55"/>
+        <g transform="rotate(-45 24 24)">
+          <path d="M14 24a7 7 0 0 1 7-7h3v14h-3a7 7 0 0 1-7-7z" fill="#FFFFFF"/>
+          <path d="M24 17h3a7 7 0 0 1 0 14h-3z" fill="#C9A24B"/>
+        </g>
+        <circle cx="35" cy="13" r="2.4" fill="#C9A24B"/>
+      </svg>
+      <span><span class="word">DOSE<b>WAW</b></span><small>مرجع الجرعات للصيادلة</small></span>
+    </a>
+    <span class="sp"></span>
+    <nav class="topnav" aria-label="الأقسام">
+      <a class="on" href="#">الأدوية</a><a href="#">فاحص التداخلات</a><a href="#">الحاسبات</a><a href="#">المصادر والمنهجية</a>
+    </nav>
+    <button class="ib en" type="button" aria-label="English">EN</button>
+    <button class="ib" type="button" id="theme" aria-label="الوضع الليلي">☾</button>
+  </div>
+</header>
+
+<main class="wrap">
+  <span class="mock">نموذج تصميم · المرحلة 0</span>
+
+  <section class="search" aria-label="البحث عن دواء">
+    <label class="sbox">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+      <input id="q" value="أموكسيسيلين" placeholder="اكتب الاسم العلمي للدواء…" autocomplete="off" aria-label="اسم الدواء العلمي">
+      <button class="clr" type="button" aria-label="مسح">×</button>
+    </label>
+    <div class="chips" role="group" aria-label="المجموعات">
+      <button class="chip" aria-pressed="false">الكل</button>
+      <button class="chip" aria-pressed="true"><span class="dot"></span>المضادات الحيوية</button>
+      <button class="chip soon" aria-pressed="false">خافضات الحرارة والمسكنات <em>قريباً</em></button>
+      <button class="chip soon" aria-pressed="false">مضادات الهيستامين والكورتيزونات <em>قريباً</em></button>
+      <button class="chip soon" aria-pressed="false">أدوية الجهاز الهضمي <em>قريباً</em></button>
+      <button class="chip" aria-pressed="false">الفيتامينات والمكملات</button>
+    </div>
+    <div class="recent">🕘 آخر المستخدم:
+      <button>أموكسيسيلين–كلافولانات</button><button>أزيثروميسين</button><button>سيفالكسين</button>
+    </div>
+  </section>
+
+  <div class="dhead">
+    <div class="dicon" aria-hidden="true">
+      <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="8" width="18" height="8" rx="4" transform="rotate(-35 12 12)"/><path d="m9.2 7.7 5.6 8.6"/></svg>
+    </div>
+    <div>
+      <h1>أموكسيسيلين <span class="en">Amoxicillin</span></h1>
+      <div class="tags"><span class="tag">بنسلينات</span><span class="tag access">AWaRe · Access</span><span class="tag gold">فموي</span></div>
+    </div>
+  </div>
+
+  <div class="grid">
+    <div class="calc-col">
+      <section class="card" aria-labelledby="pt">
+        <h2 id="pt"><span class="ic">👶</span>بيانات المريض</h2>
+        <div class="seg" role="group" aria-label="طريقة الإدخال">
+          <button type="button" data-mode="w" aria-pressed="true">الوزن</button>
+          <button type="button" data-mode="y" aria-pressed="false">سنوات</button>
+          <button type="button" data-mode="m" aria-pressed="false">أشهر</button>
+        </div>
+        <label class="numin"><input id="val" inputmode="decimal" value="15" aria-label="القيمة"><span id="unit">كغ</span></label>
+        <div class="est" id="est" hidden></div>
+        <label class="check" id="infwrap"><input type="checkbox" id="inf"> عمر الطفل أقل من 3 أشهر</label>
+
+        <div class="lbl">موضع العدوى وشدتها</div>
+        <div class="opts" role="group" aria-label="الاستطباب">
+          <button type="button" class="opt" data-ind="mild" aria-pressed="false"><i></i>الأذن والأنف والحنجرة، الجلد، المسالك البولية · خفيفة إلى متوسطة</button>
+          <button type="button" class="opt" data-ind="sev" aria-pressed="true"><i></i>الأذن والأنف والحنجرة، الجلد، المسالك البولية · شديدة</button>
+          <button type="button" class="opt" data-ind="lrti" aria-pressed="false"><i></i>الجهاز التنفسي السفلي · كل الشدات</button>
+        </div>
+
+        <div class="lbl">عدد الجرعات</div>
+        <div class="seg two" role="group" aria-label="التكرار">
+          <button type="button" data-f="12" aria-pressed="true">كل 12 ساعة</button>
+          <button type="button" data-f="8" aria-pressed="false">كل 8 ساعات</button>
+        </div>
+      </section>
+
+      <section class="card result" aria-live="polite" id="result"></section>
+    </div>
+
+    <div class="info">
+      <section class="card wide">
+        <h2><span class="ic">⚠️</span>التداخلات الدوائية<span class="cnt">5 تداخلات</span></h2>
+        <div class="ilist">
+          <div class="inter major"><div class="grow"><b>مميعات الدم الفموية</b><p>قد تطيل زمن البروثرومبين وترفع INR، وتحتاج مراقبة.<a class="ref" href="#r1">1</a></p></div><span class="sev">شديد</span></div>
+          <div class="inter moderate"><div class="grow"><b>البروبينسيد</b><p>يرفع تركيز الأموكسيسيلين ويطيل بقاءه في الدم؛ لا يُنصح بالجمع.<a class="ref" href="#r1">1</a></p></div><span class="sev">متوسط</span></div>
+          <div class="inter moderate"><div class="grow"><b>الألوبيورينول</b><p>يزيد احتمال الطفح الجلدي.<a class="ref" href="#r1">1</a></p></div><span class="sev">متوسط</span></div>
+          <div class="inter moderate"><div class="grow"><b>حبوب منع الحمل المركبة</b><p>قد تقل فعاليتها بسبب تأثير المضاد على البكتيريا المعوية.<a class="ref" href="#r1">1</a></p></div><span class="sev">متوسط</span></div>
+          <div class="inter"><div class="grow"><b>مضادات حيوية أخرى مثبطة للجراثيم</b><p>تضاد في المختبر، وأهميته السريرية غير موثقة جيداً.<a class="ref" href="#r1">1</a></p></div><span class="sev">بسيط</span></div>
+        </div>
+      </section>
+
+      <section class="card">
+        <h2><span class="ic">🫘</span>الكلى والكبد</h2>
+        <div class="row"><b>الأطفال</b><span>لا توجد توصيات جرعة للأطفال مع قصور الكلى في النشرة.<a class="ref" href="#r1">1</a></span></div>
+        <div class="row"><b>البالغون</b><span>تصفية أقل من 30 مل/دقيقة: لا تُستعمل 875 ملغ. من 10 إلى 30: 500 أو 250 ملغ كل 12 ساعة. أقل من 10: كل 24 ساعة.<a class="ref" href="#r1">1</a></span></div>
+        <div class="row"><b>الغسيل الكلوي</b><span>500 أو 250 ملغ كل 24 ساعة، مع جرعة إضافية أثناء الغسيل وفي نهايته.<a class="ref" href="#r1">1</a></span></div>
+      </section>
+
+      <section class="card">
+        <h2><span class="ic">🤰</span>الحمل والرضاعة</h2>
+        <div class="row"><b>الحمل</b><span>لم تُظهر دراسات الحيوان ضرراً على الجنين، ولا توجد دراسات كافية على الحوامل؛ يُستعمل عند الحاجة الواضحة.<a class="ref" href="#r1">1</a></span></div>
+        <div class="row"><b>الرضاعة</b><span>يُفرز في حليب الأم وقد يسبب تحسساً للرضيع؛ يُستعمل بحذر.<a class="ref" href="#r1">1</a></span></div>
+      </section>
+
+      <section class="card">
+        <h2><span class="ic">💊</span>نصائح الصرف</h2>
+        <div class="row"><b>التوقيت</b><span>يُؤخذ مع بداية الوجبة لتقليل اضطراب المعدة.<a class="ref" href="#r1">1</a></span></div>
+        <div class="row"><b>الشراب</b><span>يُحضّر عند الصرف، ويوضع على لسان الطفل مباشرة.<a class="ref" href="#r1">1</a></span></div>
+        <div class="row"><b>المدة</b><span>48 إلى 72 ساعة بعد زوال الأعراض، و10 أيام على الأقل لعدوى المكورات العقدية الحالّة.<a class="ref" href="#r1">1</a></span></div>
+      </section>
+
+      <section class="card">
+        <h2><span class="ic">📚</span>المصادر</h2>
+        <ol class="refs">
+          <li id="r1"><a href="https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=06e5c07d-d95c-4955-8d35-a4703ca2359e" target="_blank" rel="noopener">DailyMed — Amoxicillin (FDA label)</a><br><span class="d">نسخة النشرة: 2026-07-07 · الأقسام 2.2، 2.3، 2.5، 7، 8</span></li>
+        </ol>
+      </section>
+    </div>
+  </div>
+
+  <p class="disc">أداة مساعدة للصيادلة، ولا تغني عن الحكم المهني والنشرة الكاملة. كل رقم مأخوذ من نشرة رسمية مذكورة أعلاه.</p>
+</main>
+
+<nav class="tabs" aria-label="الأقسام">
+  <button aria-current="page"><span class="pill"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="3" y="8" width="18" height="8" rx="4" transform="rotate(-35 12 12)"/></svg></span>الأدوية</button>
+  <button><span class="pill"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 3 2 20h20z"/><path d="M12 10v4M12 17h0"/></svg></span>التداخلات</button>
+  <button><span class="pill"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="5" y="2" width="14" height="20" rx="3"/><path d="M8 6h8M8 11h2M14 11h2M8 15h2M14 15h2M8 19h2M14 19h2"/></svg></span>الحاسبات</button>
+  <button><span class="pill"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 6h16M4 12h16M4 18h16"/></svg></span>القائمة</button>
+</nav>
+
+<script>
+/* Phase 0 prototype logic for one drug (amoxicillin, DailyMed label 2026-07-07, sections 2.2 and 2.3).
+   Weight-for-age values are approximate WHO medians (boys/girls averaged) for the mockup only. */
+const WFA_M=[[0,3.3],[1,4.4],[2,5.4],[3,6.1],[4,6.7],[5,7.1],[6,7.6],[7,7.9],[8,8.2],[9,8.6],[10,8.9],[11,9.1],[12,9.3],[18,10.8],[24,12.0],[36,14.1],[48,16.2],[60,18.3],[72,20.6],[84,22.9],[96,25.4],[108,28.4],[120,31.6],[132,35.3],[144,39.7]];
+function wfa(months){if(months<=0)return WFA_M[0][1];for(let i=1;i<WFA_M.length;i++){const[a,wa]=WFA_M[i-1],[b,wb]=WFA_M[i];if(months<=b)return wa+(wb-wa)*(months-a)/(b-a)}return null}
+const ADULT={mild:{12:[500,'500 ملغ كل 12 ساعة'],8:[250,'250 ملغ كل 8 ساعات']},sev:{12:[875,'875 ملغ كل 12 ساعة'],8:[500,'500 ملغ كل 8 ساعات']}};
+ADULT.lrti=ADULT.sev;
+const MGKG={mild:{12:25,8:20},sev:{12:45,8:40},lrti:{12:45,8:40}};
+const SYR=[125,200,250,400];
+const S={mode:'w',ind:'sev',f:12};
+const $=s=>document.querySelector(s),fmt=n=>(Math.round(n*10)/10).toLocaleString('en-US');
+function pressed(group,attr,val){document.querySelectorAll(group).forEach(b=>b.setAttribute('aria-pressed',String(b.dataset[attr]===val)))}
+document.querySelectorAll('[data-mode]').forEach(b=>b.onclick=()=>{S.mode=b.dataset.mode;pressed('[data-mode]','mode',S.mode);$('#val').value=S.mode==='w'?'15':S.mode==='y'?'4':'8';$('#unit').textContent=S.mode==='w'?'كغ':S.mode==='y'?'سنة':'شهر';render()});
+document.querySelectorAll('[data-ind]').forEach(b=>b.onclick=()=>{S.ind=b.dataset.ind;pressed('[data-ind]','ind',S.ind);render()});
+document.querySelectorAll('[data-f]').forEach(b=>b.onclick=()=>{S.f=+b.dataset.f;pressed('[data-f]','f',String(S.f));render()});
+$('#val').oninput=render;$('#inf').onchange=render;
+$('#theme').onclick=()=>{const r=document.documentElement,d=r.dataset.theme==='dark'||(!r.dataset.theme&&matchMedia('(prefers-color-scheme: dark)').matches);r.dataset.theme=d?'light':'dark';$('#theme').textContent=d?'☾':'☀'};
+function render(){
+  const v=parseFloat($('#val').value),R=$('#result'),est=$('#est');
+  let W=null,months=null;
+  if(v>0){if(S.mode==='w')W=v;else{months=S.mode==='y'?v*12:v;W=wfa(months)}}
+  $('#infwrap').hidden=S.mode!=='w';
+  est.hidden=!(S.mode!=='w'&&W);
+  if(S.mode!=='w'&&W)est.textContent=`وزن تقديري ≈ ${fmt(W)} كغ حسب منحنيات النمو (WHO). الوزن الفعلي أدق دائماً.`;
+  if(!W){R.innerHTML=`<div class="empty">${S.mode!=='w'&&v>0?'العمر خارج جدول التقدير؛ أدخل الوزن الفعلي.':'أدخل الوزن أو العمر لتظهر الجرعة فوراً.'}</div>`;return}
+  const infant=S.mode==='w'?$('#inf').checked:months<3;
+  let html='',warn='';
+  if(W>=40&&!infant){
+    const a=ADULT[S.ind][S.f];
+    html=`<div class="rhead"><div class="k"><span>النتيجة · جرعة البالغين (الوزن 40 كغ أو أكثر)</span></div><div class="big">${a[0]} <small>ملغ</small></div><div class="sub">${a[1]} · أقراص أو كبسولات</div></div>`;
+    return R.innerHTML=html+body('',[],a[0]*(24/S.f));
+  }
+  let mgkgday=MGKG[S.ind][S.f],f=S.f;
+  if(infant){mgkgday=30;f=12;warn=`<div class="warn">أقل من 3 أشهر: الحد الأعلى 30 ملغ/كغ/يوم مقسمة كل 12 ساعة (النشرة 2.3).</div>`}
+  let dose=W*mgkgday/(24/f);
+  const cap=ADULT[S.ind][f][0];
+  if(dose>cap){dose=cap;warn+=`<div class="warn red">وصلت الجرعة إلى حد جرعة البالغين (${cap} ملغ)، فلم تُرفع أكثر.</div>`}
+  html=`<div class="rhead"><div class="k"><span>النتيجة</span><span>${fmt(W)} كغ</span></div><div class="big">${fmt(dose)} <small>ملغ</small></div><div class="sub">كل ${f} ساعة · ${mgkgday} ملغ/كغ/يوم مقسمة على ${24/f} جرعات</div></div>`;
+  R.innerHTML=html+body(warn,SYR.map(c=>[c,dose*5/c]),dose*24/f);
+}
+function body(warn,rows,daily){
+  const best=rows.length?rows.reduce((b,r)=>Math.abs(r[1]-5)<Math.abs(b[1]-5)?r:b,rows[0])[0]:null;
+  const t=rows.length?`<table class="ml"><tr><th>تركيز الشراب</th><th style="text-align:end">الكمية لكل جرعة</th></tr>${rows.map(([c,ml])=>`<tr class="${c===best?'best':''}"><td><span class="num">${c} mg / 5 mL</span>${c===best?' <small style="color:var(--gold-600);font-weight:600">· الأنسب للقياس</small>':''}</td><td class="v">${fmt(ml)} <small>مل</small></td></tr>`).join('')}</table>`:'';
+  return `<div class="rbody">${t}${warn}<div class="facts"><div class="fact"><b>المجموع اليومي</b><span class="num">${fmt(daily)} mg</span></div><div class="fact"><b>المدة</b><span>48–72 ساعة بعد زوال الأعراض</span></div></div><p class="src">حسب المصدر: <a href="#r1">DailyMed · Amoxicillin [1]</a> · نسخة 2026-07-07 · القسم 2.2</p><div class="acts"><button class="btn pri" type="button">نسخ النتيجة</button><button class="btn" type="button">طباعة</button><button class="btn" type="button">مشاركة</button></div></div>`;
+}
+render();
+</script>
+</body>
+</html>
