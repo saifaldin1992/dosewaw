@@ -1,0 +1,145 @@
+{
+ "batch": 2,
+ "language_note": "Written from the saved official labels (docs/antibiotics/labels). Every number comes from the label named in src.",
+ "drugs": [
+  {
+   "id": "clarith", "n": {"ar": "كلاريثروميسين", "en": "Clarithromycin"}, "aware": "watch",
+   "cls": {"ar": "ماكروليدات", "en": "Macrolides"},
+   "uses": {"ar": "التهابات خفيفة إلى متوسطة: تفاقم التهاب القصبات المزمن، التهاب الجيوب الفكية الحاد، التهاب الرئة المجتمعي، التهاب البلعوم واللوزتين، عدوى الجلد غير المعقدة، الفطرية المتفطرية المنتشرة، والقضاء على جرثومة المعدة مع أدوية أخرى.", "en": "Mild to moderate infections: exacerbation of chronic bronchitis, acute maxillary sinusitis, community-acquired pneumonia, pharyngitis and tonsillitis, uncomplicated skin infections, disseminated mycobacterial infection, and H. pylori eradication with other drugs."},
+   "dose": {"ar": "للبالغين: 250 أو 500 ملغ كل 12 ساعة لـ7 إلى 14 يوماً حسب العدوى (الجيوب: 500 ملغ لـ14 يوماً؛ البلعوم: 250 ملغ لـ10 أيام). جرثومة المعدة: 500 ملغ كل 12 ساعة لـ10 إلى 14 يوماً مع الأموكسيسيلين ومثبط مضخة البروتون، أو كل 8 ساعات لـ14 يوماً مع الأوميبرازول. المتفطرة الطيرية: 500 ملغ كل 12 ساعة.", "en": "Adults: 250 or 500 mg every 12 h for 7 to 14 days by infection (sinusitis: 500 mg for 14 days; pharyngitis: 250 mg for 10 days). H. pylori: 500 mg every 12 h for 10 to 14 days with amoxicillin and a proton pump inhibitor, or every 8 h for 14 days with omeprazole. Mycobacterium avium: 500 mg every 12 h."},
+   "renal": {"ar": "تصفية الكرياتينين أقل من 30 مل/دقيقة: تُخفض الجرعة 50%. مع أتازانافير أو نظام يحتوي ريتونافير: تُخفض 50% عند 30 إلى 60، و75% عند أقل من 30.", "en": "Creatinine clearance under 30 mL/min: reduce the dose by 50%. With atazanavir or a ritonavir regimen: reduce by 50% at 30 to 60, and by 75% under 30."},
+   "timing": {"ar": "مع الطعام أو بدونه.", "en": "With or without food."},
+   "inter": [
+    {"with": {"ar": "السيسابريد والبيموزيد", "en": "Cisapride and pimozide"}, "desc": {"ar": "ممنوع الجمع: اضطرابات نظم قلب خطيرة (إطالة QT وتورساد دي بوانت) وحالات وفاة.", "en": "Contraindicated: serious arrhythmias (QT prolongation, torsades de pointes) and deaths."}, "sev": "major", "r": [37]},
+    {"with": {"ar": "اللوفاستاتين والسيمفاستاتين واللوميتابيد", "en": "Lovastatin, simvastatin and lomitapide"}, "desc": {"ar": "ممنوع الجمع (موانع الاستعمال في الملصق).", "en": "Contraindicated (label contraindications)."}, "sev": "major", "r": [37]},
+    {"with": {"ar": "الكولشيسين", "en": "Colchicine"}, "desc": {"ar": "ممنوع مع القصور الكلوي أو الكبدي؛ يرفع مستوى الكولشيسين.", "en": "Contraindicated with kidney or liver impairment; raises colchicine levels."}, "sev": "major", "r": [37]},
+    {"with": {"ar": "قلويدات الإرغوت (إرغوتامين، ديهيدروإرغوتامين)", "en": "Ergot alkaloids (ergotamine, dihydroergotamine)"}, "desc": {"ar": "ممنوع الجمع.", "en": "Contraindicated."}, "sev": "major", "r": [37]},
+    {"with": {"ar": "اللوراسيدون", "en": "Lurasidone"}, "desc": {"ar": "ممنوع الجمع.", "en": "Contraindicated."}, "sev": "major", "r": [37]},
+    {"with": {"ar": "مضادات اضطراب النظم (كينيدين، ديسوبيراميد، دوفيتيليد، أميودارون، سوتالول، بروكاييناميد)", "en": "Antiarrhythmics (quinidine, disopyramide, dofetilide, amiodarone, sotalol, procainamide)"}, "desc": {"ar": "لا يُنصح بالجمع: تقارير تورساد دي بوانت.", "en": "Not recommended: reports of torsades de pointes."}, "sev": "major", "r": [37]},
+    {"with": {"ar": "أدوية تُستقلب بإنزيم CYP3A ضيقة هامش الأمان (مثل الكاربامازيبين)", "en": "Narrow-margin CYP3A substrates (e.g. carbamazepine)"}, "desc": {"ar": "يثبط CYP3A فيرفع مستوياتها: تعديل الجرعة ومراقبة المستوى.", "en": "Inhibits CYP3A and raises their levels: adjust the dose and monitor levels."}, "sev": "moderate", "r": [37]}
+   ],
+   "src": [37]
+  },
+  {
+   "id": "levo", "n": {"ar": "ليفوفلوكساسين", "en": "Levofloxacin"}, "aware": "watch",
+   "cls": {"ar": "فلوروكينولونات", "en": "Fluoroquinolones"},
+   "uses": {"ar": "التهاب الرئة المكتسب في المستشفى والمجتمعي، عدوى الجلد المعقدة وغير المعقدة، التهاب البروستاتا المزمن، الجمرة الخبيثة الاستنشاقية بعد التعرض، الطاعون، التهاب المسالك البولية المعقد وغير المعقد، التهاب الحويضة والكلية، تفاقم التهاب القصبات المزمن، والتهاب الجيوب الحاد.", "en": "Hospital and community pneumonia, complicated and uncomplicated skin infections, chronic prostatitis, post-exposure inhalational anthrax, plague, complicated and uncomplicated urinary infections, pyelonephritis, exacerbation of chronic bronchitis, and acute sinusitis."},
+   "dose": {"ar": "مرة كل 24 ساعة: 750 ملغ (التهاب الرئة في المستشفى، الجلد المعقد، التهاب الرئة المجتمعي لـ5 أيام، المسالك المعقدة أو الحويضة لـ5 أيام، الجيوب لـ5 أيام)؛ 500 ملغ (التهاب الرئة المجتمعي لـ7 إلى 14 يوماً، الجلد غير المعقد، البروستاتا لـ28 يوماً، القصبات لـ7 أيام، الجيوب لـ10 إلى 14 يوماً، الجمرة الخبيثة لـ60 يوماً، الطاعون)؛ 250 ملغ (المسالك المعقدة لـ10 أيام، غير المعقدة لـ3 أيام).", "en": "Once every 24 h: 750 mg (hospital pneumonia, complicated skin, community pneumonia for 5 days, complicated urinary or pyelonephritis for 5 days, sinusitis for 5 days); 500 mg (community pneumonia for 7 to 14 days, uncomplicated skin, prostatitis for 28 days, bronchitis for 7 days, sinusitis for 10 to 14 days, anthrax for 60 days, plague); 250 mg (complicated urinary for 10 days, uncomplicated for 3 days)."},
+   "renal": {"ar": "حسب الجرعة المعتادة. 750 ملغ: التصفية 20 إلى 49 ← 750 ملغ كل 48 ساعة؛ 10 إلى 19 أو الغسيل ← 750 ثم 500 ملغ كل 48 ساعة. 500 ملغ: 20 إلى 49 ← 500 ثم 250 ملغ كل 24 ساعة؛ 10 إلى 19 أو الغسيل ← 500 ثم 250 ملغ كل 48 ساعة. 250 ملغ: 20 إلى 49 ← لا تعديل؛ 10 إلى 19 ← 250 ملغ كل 48 ساعة (لا تعديل في المسالك غير المعقدة)؛ الغسيل ← لا معلومات.", "en": "By the usual dose. 750 mg: clearance 20 to 49 → 750 mg every 48 h; 10 to 19 or dialysis → 750 then 500 mg every 48 h. 500 mg: 20 to 49 → 500 then 250 mg every 24 h; 10 to 19 or dialysis → 500 then 250 mg every 48 h. 250 mg: 20 to 49 → no change; 10 to 19 → 250 mg every 48 h (no change for uncomplicated urinary infection); dialysis → no information."},
+   "timing": {"ar": "مع الطعام أو بدونه. قبل مضادات الحموضة (مغنيسيوم، ألمنيوم) والسكرالفات والحديد والزنك والفيتامينات المتعددة بساعتين، أو بعدها بساعتين. شرب سوائل كافية.", "en": "With or without food. 2 hours before or 2 hours after antacids (magnesium, aluminium), sucralfate, iron, zinc and multivitamins. Keep well hydrated."},
+   "inter": [
+    {"with": {"ar": "مضادات الحموضة والسكرالفات والحديد والزنك والديدانوزين", "en": "Antacids, sucralfate, iron, zinc and didanosine"}, "desc": {"ar": "تقلل امتصاصه: يؤخذ قبلها أو بعدها بساعتين.", "en": "Reduce its absorption: take it 2 hours before or after them."}, "sev": "moderate", "r": [38]},
+    {"with": {"ar": "الوارفارين", "en": "Warfarin"}, "desc": {"ar": "قد يزيد أثره: مراقبة زمن البروثرومبين وINR والنزف.", "en": "Effect may increase: monitor prothrombin time, INR and bleeding."}, "sev": "moderate", "r": [38]},
+    {"with": {"ar": "أدوية السكري", "en": "Antidiabetic drugs"}, "desc": {"ar": "اضطراب سكر الدم (ارتفاع أو انخفاض): مراقبة دقيقة.", "en": "Blood glucose disturbances (high or low): monitor carefully."}, "sev": "moderate", "r": [38]}
+   ],
+   "src": [38]
+  },
+  {
+   "id": "cefurox", "n": {"ar": "سيفوروكسيم أكسيتيل", "en": "Cefuroxime axetil"}, "aware": "watch",
+   "cls": {"ar": "سيفالوسبورينات (الجيل الثاني)", "en": "Second-generation cephalosporins"},
+   "uses": {"ar": "التهاب البلعوم واللوزتين، الجيوب الفكية، تفاقم التهاب القصبات المزمن، عدوى الجلد غير المعقدة، المسالك البولية غير المعقدة، السيلان غير المعقد، وداء لايم المبكر.", "en": "Pharyngitis and tonsillitis, maxillary sinusitis, exacerbation of chronic bronchitis, uncomplicated skin infection, uncomplicated urinary infection, uncomplicated gonorrhoea, and early Lyme disease."},
+   "dose": {"ar": "أقراص للبالغين والمراهقين (13 سنة فأكثر): البلعوم والجيوب 250 ملغ كل 12 ساعة لـ10 أيام؛ القصبات والجلد 250 أو 500 ملغ كل 12 ساعة لـ10 أيام؛ المسالك 250 ملغ كل 12 ساعة لـ7 إلى 10 أيام؛ السيلان 1000 ملغ مرة واحدة؛ داء لايم 500 ملغ كل 12 ساعة لـ20 يوماً.", "en": "Tablets, adults and adolescents (13 and over): pharyngitis and sinusitis 250 mg every 12 h for 10 days; bronchitis and skin 250 or 500 mg every 12 h for 10 days; urinary 250 mg every 12 h for 7 to 10 days; gonorrhoea 1000 mg once; Lyme disease 500 mg every 12 h for 20 days."},
+   "renal": {"ar": "التصفية 30 فأكثر: لا تعديل. من 10 إلى أقل من 30: الجرعة نفسها كل 24 ساعة. أقل من 10 بلا غسيل: كل 48 ساعة. الغسيل: جرعة إضافية واحدة في نهاية كل جلسة.", "en": "Clearance 30 or more: no change. 10 to under 30: the same dose every 24 h. Under 10 without dialysis: every 48 h. Dialysis: one extra dose at the end of each session."},
+   "timing": {"ar": "الأقراص مع الطعام أو بدونه. الأقراص والمعلق ليسا متكافئين ملغاً بملغ.", "en": "Tablets with or without food. Tablets and suspension are not interchangeable milligram for milligram."},
+   "inter": [
+    {"with": {"ar": "الأدوية التي تقلل حموضة المعدة", "en": "Drugs that reduce stomach acid"}, "desc": {"ar": "قد تقلل امتصاصه.", "en": "May lower its absorption."}, "sev": "moderate", "r": [39]},
+    {"with": {"ar": "البروبينسيد", "en": "Probenecid"}, "desc": {"ar": "يرفع مستواه في الدم؛ لا يُنصح بالجمع.", "en": "Raises its blood level; not recommended together."}, "sev": "moderate", "r": [39]}
+   ],
+   "src": [39]
+  },
+  {
+   "id": "cefixime", "n": {"ar": "سيفيكسيم", "en": "Cefixime"}, "aware": "watch",
+   "cls": {"ar": "سيفالوسبورينات (الجيل الثالث)", "en": "Third-generation cephalosporins"},
+   "uses": {"ar": "التهاب المسالك البولية غير المعقد، التهاب الأذن الوسطى، التهاب البلعوم واللوزتين، تفاقم التهاب القصبات، والسيلان غير المعقد في عنق الرحم أو الإحليل.", "en": "Uncomplicated urinary infection, otitis media, pharyngitis and tonsillitis, exacerbation of bronchitis, and uncomplicated cervical or urethral gonorrhoea."},
+   "dose": {"ar": "للبالغين: 400 ملغ يومياً (قرص واحد، أو نصف قرص كل 12 ساعة). السيلان غير المعقد: 400 ملغ مرة واحدة. عدوى المكورات العقدية الحالّة: 10 أيام على الأقل.", "en": "Adults: 400 mg a day (one tablet, or half a tablet every 12 h). Uncomplicated gonorrhoea: 400 mg once. Streptococcus pyogenes: at least 10 days."},
+   "renal": {"ar": "قرص 400 ملغ: التصفية 60 فأكثر ← الجرعة المعتادة. 21 إلى 59 أو الغسيل الدموي ← القرص غير مناسب (يُستعمل شكل آخر حسب الملصق). 20 أو أقل أو الغسيل البريتوني ← نصف قرص يومياً. الغسيل لا يزيله بكمية مهمة.", "en": "400 mg tablet: clearance 60 or more → usual dose. 21 to 59 or haemodialysis → the tablet is not appropriate (another form, as in the label). 20 or less or peritoneal dialysis → half a tablet a day. Dialysis does not remove much."},
+   "timing": {"ar": "مع الطعام أو بدونه.", "en": "With or without food."},
+   "inter": [
+    {"with": {"ar": "الكاربامازيبين", "en": "Carbamazepine"}, "desc": {"ar": "ارتفاع مستواه: يفيد قياس المستوى.", "en": "Raised levels: measuring the level may help."}, "sev": "moderate", "r": [40]},
+    {"with": {"ar": "الوارفارين ومميعات الدم", "en": "Warfarin and anticoagulants"}, "desc": {"ar": "ارتفاع زمن البروثرومبين مع نزف أو بدونه.", "en": "Raised prothrombin time, with or without bleeding."}, "sev": "moderate", "r": [40]}
+   ],
+   "src": [40]
+  },
+  {
+   "id": "clinda", "n": {"ar": "كليندامايسين", "en": "Clindamycin"}, "aware": "access",
+   "cls": {"ar": "لينكوزاميدات", "en": "Lincosamides"},
+   "uses": {"ar": "عدوى خطيرة بالبكتيريا اللاهوائية الحساسة، والمكورات العقدية والرئوية والعنقودية الحساسة عند عدم مناسبة البنسلين.", "en": "Serious infections by susceptible anaerobes, and susceptible streptococci, pneumococci and staphylococci when a penicillin is not suitable."},
+   "dose": {"ar": "للبالغين: العدوى الخطيرة 150 إلى 300 ملغ كل 6 ساعات؛ الأشد 300 إلى 450 ملغ كل 6 ساعات. المكورات العقدية الحالّة بيتا: 10 أيام على الأقل.", "en": "Adults: serious infections 150 to 300 mg every 6 h; more severe 300 to 450 mg every 6 h. Beta-haemolytic streptococci: at least 10 days."},
+   "renal": {"ar": "لا تعديل للجرعة في أمراض الكلى. قد يضر الكلى: مراقبة وظيفتها خاصة مع قصور سابق أو أدوية ضارة بالكلى.", "en": "No dose change in kidney disease. It can harm the kidney: monitor kidney function, especially with prior impairment or other nephrotoxic drugs."},
+   "timing": {"ar": "مع كوب ماء كامل، وقبل الاستلقاء بنصف ساعة على الأقل.", "en": "With a full glass of water, at least 30 minutes before lying down."},
+   "inter": [
+    {"with": {"ar": "مرخيات العضلات العصبية العضلية", "en": "Neuromuscular blockers"}, "desc": {"ar": "قد يزيد أثرها؛ الحذر عند الجمع.", "en": "May enhance their effect; use with caution."}, "sev": "moderate", "r": [41]},
+    {"with": {"ar": "مثبطات CYP3A4 القوية", "en": "Strong CYP3A4 inhibitors"}, "desc": {"ar": "ترفع مستواه: مراقبة الآثار الجانبية.", "en": "Raise its level: monitor for adverse reactions."}, "sev": "moderate", "r": [41]},
+    {"with": {"ar": "محرضات CYP3A4 القوية", "en": "Strong CYP3A4 inducers"}, "desc": {"ar": "قد تخفض مستواه.", "en": "May lower its level."}, "sev": "moderate", "r": [41]}
+   ],
+   "src": [41]
+  },
+  {
+   "id": "fluclox", "n": {"ar": "فلوكلوكساسيلين", "en": "Flucloxacillin"}, "aware": "access",
+   "cls": {"ar": "بنسلينات مقاومة للبيتالاكتاماز", "en": "Beta-lactamase-resistant penicillins"},
+   "uses": {"ar": "عدوى بالبكتيريا موجبة الغرام الحساسة، ومنها العنقوديات المنتجة للبيتالاكتاماز: الجلد والأنسجة الرخوة، الجهاز التنفسي، العظم، القلب، المسالك البولية، والوقاية الجراحية.", "en": "Infections by susceptible Gram-positive bacteria, including beta-lactamase-producing staphylococci: skin and soft tissue, respiratory tract, bone, heart, urinary tract, and surgical prophylaxis."},
+   "dose": {"ar": "للبالغين فموياً: 250 ملغ أربع مرات يومياً، ويمكن مضاعفتها في العدوى الخطيرة. التهاب العظم والشغاف: حتى 8 غرام يومياً مقسمة كل 6 إلى 8 ساعات (حسب الملصق البريطاني).", "en": "Adults by mouth: 250 mg four times a day, doubled in serious infection. Osteomyelitis and endocarditis: up to 8 g a day in divided doses every 6 to 8 h (UK label)."},
+   "renal": {"ar": "لا يحتاج عادة تخفيضاً. في القصور الشديد (تصفية أقل من 10 مل/دقيقة) يُنظر في تخفيض الجرعة أو إطالة الفاصل؛ الحد الأقصى للبالغين 1 غرام كل 8 إلى 12 ساعة. لا يزول بالغسيل.", "en": "Usually no reduction. In severe failure (clearance under 10 mL/min) consider a lower dose or a longer interval; adult maximum 1 g every 8 to 12 h. Not removed by dialysis."},
+   "timing": {"ar": "على معدة فارغة: قبل الطعام بساعة أو بعده بساعتين، مع كوب ماء كامل.", "en": "On an empty stomach: 1 hour before or 2 hours after food, with a full glass of water."},
+   "inter": [
+    {"with": {"ar": "الميثوتريكسات", "en": "Methotrexate"}, "desc": {"ar": "يقلل إطراحه وقد يسبب سميته.", "en": "Reduces its excretion and may cause toxicity."}, "sev": "major", "r": [42]},
+    {"with": {"ar": "الوارفارين", "en": "Warfarin"}, "desc": {"ar": "تغيّر INR: مراقبة دقيقة عند البدء والإيقاف.", "en": "INR changes: monitor closely when starting and stopping."}, "sev": "moderate", "r": [42]},
+    {"with": {"ar": "البروبينسيد والسلفينبيرازون", "en": "Probenecid and sulfinpyrazone"}, "desc": {"ar": "تبطئ إطراحه.", "en": "Slow its excretion."}, "sev": "minor", "r": [42]},
+    {"with": {"ar": "لقاح التيفوئيد الفموي", "en": "Oral typhoid vaccine"}, "desc": {"ar": "قد يُبطل مفعول اللقاح.", "en": "May inactivate the vaccine."}, "sev": "moderate", "r": [42]}
+   ],
+   "src": [42]
+  },
+  {
+   "id": "cefazolin", "n": {"ar": "سيفازولين", "en": "Cefazolin"}, "aware": "access",
+   "cls": {"ar": "سيفالوسبورينات (الجيل الأول)", "en": "First-generation cephalosporins"},
+   "uses": {"ar": "عدوى الجهاز التنفسي والمسالك البولية والجلد والقنوات الصفراوية والعظام والمفاصل والأعضاء التناسلية وتسمم الدم والتهاب الشغاف، والوقاية حول الجراحة.", "en": "Respiratory, urinary, skin, biliary, bone and joint and genital infections, septicaemia and endocarditis, and perioperative prophylaxis."},
+   "dose": {"ar": "وريدي أو عضلي للبالغين: المتوسطة إلى الشديدة 500 ملغ إلى 1 غرام كل 6 إلى 8 ساعات؛ الخفيفة 250 إلى 500 ملغ كل 8 ساعات؛ المسالك غير المعقدة 1 غرام كل 12 ساعة؛ الالتهاب الرئوي بالمكورات الرئوية 500 ملغ كل 12 ساعة؛ الشديدة المهددة للحياة 1 إلى 1.5 غرام كل 6 ساعات. الوقاية: 1 غرام قبل الجراحة بنصف ساعة إلى ساعة.", "en": "IV or IM, adults: moderate to severe 500 mg to 1 g every 6 to 8 h; mild 250 to 500 mg every 8 h; uncomplicated urinary 1 g every 12 h; pneumococcal pneumonia 500 mg every 12 h; severe life-threatening 1 to 1.5 g every 6 h. Prophylaxis: 1 g 30 to 60 minutes before surgery."},
+   "renal": {"ar": "بعد جرعة تحميل: التصفية 55 فأكثر ← جرعة كاملة. 35 إلى 54 ← جرعة كاملة بفاصل 8 ساعات على الأقل. 11 إلى 34 ← نصف الجرعة كل 12 ساعة. 10 أو أقل ← نصف الجرعة كل 18 إلى 24 ساعة.", "en": "After a loading dose: clearance 55 or more → full dose. 35 to 54 → full dose at least 8 h apart. 11 to 34 → half the dose every 12 h. 10 or less → half the dose every 18 to 24 h."},
+   "timing": {"ar": "حقن وريدي أو عضلي.", "en": "Intravenous or intramuscular."},
+   "inter": [
+    {"with": {"ar": "البروبينسيد", "en": "Probenecid"}, "desc": {"ar": "يرفع مستواه ويطيل بقاءه في الدم.", "en": "Raises and prolongs its blood levels."}, "sev": "minor", "r": [43]}
+   ],
+   "src": [43]
+  },
+  {
+   "id": "genta", "n": {"ar": "جنتاميسين", "en": "Gentamicin"}, "aware": "access",
+   "cls": {"ar": "أمينوغليكوزيدات", "en": "Aminoglycosides"},
+   "uses": {"ar": "عدوى خطيرة بالبكتيريا سالبة الغرام الحساسة (تسمم الدم، الجهاز التنفسي، المسالك البولية، البطن، العظام، الجلد، الجهاز العصبي المركزي).", "en": "Serious infections by susceptible Gram-negative bacteria (sepsis, respiratory, urinary, abdominal, bone, skin, central nervous system)."},
+   "dose": {"ar": "للبالغين مع كلى سليمة: 3 ملغ/كغ يومياً مقسمة على 3 جرعات كل 8 ساعات؛ حتى 5 ملغ/كغ يومياً في العدوى المهددة للحياة ثم تُخفض. الوزن الخالي من الدهون عند السمنة. يُفضل قياس الذروة (4 إلى 6 مكغ/مل) والقاع (تجنب أكثر من 2 مكغ/مل).", "en": "Adults with normal kidneys: 3 mg/kg a day in 3 doses every 8 h; up to 5 mg/kg a day in life-threatening infection, then reduced. Lean body mass in obesity. Measure peak (4 to 6 mcg/mL) and trough (avoid over 2 mcg/mL)."},
+   "renal": {"ar": "تُعدّل الجرعة في القصور الكلوي مع قياس المستوى. طريقة من الملصق: الجرعة المعتادة بفاصل (ساعات) = كرياتينين الدم (ملغ/دل) × 8.", "en": "Adjust in kidney impairment with level monitoring. A label method: the usual dose at an interval (hours) = serum creatinine (mg/dL) × 8."},
+   "timing": {"ar": "حقن عضلي أو تسريب وريدي. مدة قصيرة قدر الإمكان.", "en": "Intramuscular or intravenous infusion. Keep the course short."},
+   "inter": [
+    {"with": {"ar": "أدوية سامة للأعصاب أو الكلى (سيسبلاتين، أميكاسين، بوليميكسين B، كوليستين، فانكومايسين…)", "en": "Neurotoxic or nephrotoxic drugs (cisplatin, amikacin, polymyxin B, colistin, vancomycin…)"}, "desc": {"ar": "يُتجنب الجمع أو الاستعمال المتتابع (تحذير الملصق المؤطر).", "en": "Avoid concurrent or sequential use (boxed warning)."}, "sev": "major", "r": [44]},
+    {"with": {"ar": "مدرات البول القوية (حمض الإيثاكرينيك، الفوروسيميد)", "en": "Potent diuretics (ethacrynic acid, furosemide)"}, "desc": {"ar": "يُتجنب الجمع: تزيد خطر سمية الأذن والكلى.", "en": "Avoid: they increase the risk of ear and kidney toxicity."}, "sev": "major", "r": [44]}
+   ],
+   "src": [44]
+  },
+  {
+   "id": "vanco", "n": {"ar": "فانكومايسين (وريدي)", "en": "Vancomycin (intravenous)"}, "aware": "watch",
+   "cls": {"ar": "غليكوببتيدات", "en": "Glycopeptides"},
+   "uses": {"ar": "عدوى خطيرة بالبكتيريا موجبة الغرام الحساسة، ومنها العنقوديات المقاومة للميثيسيلين: تسمم الدم، التهاب الشغاف، العظام، الجهاز التنفسي السفلي، والجلد.", "en": "Serious infections by susceptible Gram-positive bacteria, including methicillin-resistant staphylococci: septicaemia, endocarditis, bone, lower respiratory and skin infections."},
+   "dose": {"ar": "للبالغين مع كلى سليمة: 2 غرام يومياً، إما 500 ملغ كل 6 ساعات أو 1 غرام كل 12 ساعة، تسريب وريدي خلال 60 دقيقة على الأقل.", "en": "Adults with normal kidneys: 2 g a day, either 500 mg every 6 h or 1 g every 12 h, infused over at least 60 minutes."},
+   "renal": {"ar": "تُعدّل الجرعة في القصور الكلوي: الجرعة الأولى لا تقل عن 15 ملغ/كغ، ثم حسب مستوى القاع. بلا وظيفة كلوية: 15 ملغ/كغ ثم 1.9 ملغ/كغ كل 24 ساعة، مع قياس المستوى بعد 24 ساعة.", "en": "Adjust in kidney impairment: first dose at least 15 mg/kg, then by trough level. Functionally anephric: 15 mg/kg then 1.9 mg/kg every 24 h, with a level at 24 hours."},
+   "timing": {"ar": "تسريب وريدي فقط، بسرعة 10 ملغ/دقيقة أو أقل لتقليل تفاعلات التسريب.", "en": "Intravenous infusion only, at 10 mg/min or slower to reduce infusion reactions."},
+   "inter": [
+    {"with": {"ar": "أدوية التخدير", "en": "Anaesthetic agents"}, "desc": {"ar": "احمرار وتوهج يشبه الهستامين.", "en": "Erythema and histamine-like flushing."}, "sev": "moderate", "r": [45]},
+    {"with": {"ar": "بيبيراسيلين–تازوباكتام", "en": "Piperacillin–tazobactam"}, "desc": {"ar": "زيادة إصابة الكلى الحادة: مراقبة وظيفة الكلى.", "en": "More acute kidney injury: monitor kidney function."}, "sev": "moderate", "r": [45]}
+   ],
+   "src": [45]
+  },
+  {
+   "id": "linezolid", "n": {"ar": "لينيزوليد", "en": "Linezolid"}, "aware": "reserve",
+   "cls": {"ar": "أوكسازوليدينونات", "en": "Oxazolidinones"},
+   "uses": {"ar": "التهاب الرئة المكتسب في المستشفى والمجتمعي، عدوى الجلد المعقدة وغير المعقدة، وعدوى المكورات المعوية المقاومة للفانكومايسين.", "en": "Hospital and community pneumonia, complicated and uncomplicated skin infections, and vancomycin-resistant enterococcal infections."},
+   "dose": {"ar": "للبالغين والمراهقين: 600 ملغ وريدياً أو فموياً كل 12 ساعة (10 إلى 14 يوماً؛ المكورات المعوية المقاومة 14 إلى 28 يوماً). عدوى الجلد غير المعقدة للبالغين: 400 ملغ فموياً كل 12 ساعة.", "en": "Adults and adolescents: 600 mg IV or oral every 12 h (10 to 14 days; resistant enterococci 14 to 28 days). Uncomplicated skin infection, adults: 400 mg oral every 12 h."},
+   "renal": {"ar": "لا تعديل للجرعة في القصور الكلوي. الغسيل يزيل نحو 30% من الجرعة في 3 ساعات. نقص الصفائح أكثر مع القصور الكلوي الشديد: عدّ الدم أسبوعياً.", "en": "No dose change in kidney impairment. Dialysis removes about 30% of a dose in 3 hours. Low platelets are more common in severe kidney impairment: weekly blood counts."},
+   "timing": {"ar": "مع الطعام أو بدونه. تجنب كميات كبيرة من الأطعمة الغنية بالتيرامين (الأجبان المعتقة، اللحوم المخمرة، صلصة الصويا).", "en": "With or without food. Avoid large amounts of tyramine-rich foods (aged cheese, fermented meat, soy sauce)."},
+   "inter": [
+    {"with": {"ar": "مثبطات أكسيداز أحادي الأمين (MAOI)", "en": "Monoamine oxidase inhibitors (MAOIs)"}, "desc": {"ar": "ممنوع معها أو خلال أسبوعين منها.", "en": "Contraindicated with them or within two weeks of them."}, "sev": "major", "r": [46]},
+    {"with": {"ar": "الأدوية السيروتونينية والأدرينالية", "en": "Serotonergic and adrenergic drugs"}, "desc": {"ar": "خطر متلازمة السيروتونين وارتفاع الضغط: مراقبة دقيقة.", "en": "Risk of serotonin syndrome and raised blood pressure: monitor closely."}, "sev": "major", "r": [46]},
+    {"with": {"ar": "الأطعمة الغنية بالتيرامين", "en": "Tyramine-rich foods"}, "desc": {"ar": "قد ترفع ضغط الدم.", "en": "May raise blood pressure."}, "sev": "moderate", "r": [46]}
+   ],
+   "src": [46]
+  }
+ ]
+}

@@ -1,0 +1,658 @@
+{
+ "batch": 8,
+ "language_note": "Written from the saved official labels (docs/antibiotics/labels). Teicoplanin: UK SmPC (Targocid, eMC).",
+ "drugs": [
+  {
+   "id": "delaflox",
+   "n": {
+    "ar": "ديلافلوكساسين",
+    "en": "Delafloxacin"
+   },
+   "aware": "watch",
+   "cls": {
+    "ar": "فلوروكينولونات",
+    "en": "Fluoroquinolones"
+   },
+   "uses": {
+    "ar": "عدوى الجلد الجرثومية الحادة (ومنها العنقوديات المقاومة للميثيسيلين)، والتهاب الرئة المكتسب من المجتمع، للبالغين.",
+    "en": "Acute bacterial skin infections (including MRSA) and community-acquired pneumonia in adults."
+   },
+   "dose": {
+    "ar": "300 ملغ وريدياً خلال 60 دقيقة كل 12 ساعة، أو قرص 450 ملغ كل 12 ساعة. الجلد 5 إلى 14 يوماً؛ الرئة 5 إلى 10 أيام.",
+    "en": "300 mg IV over 60 minutes every 12 h, or a 450 mg tablet every 12 h. Skin 5 to 14 days; pneumonia 5 to 10 days."
+   },
+   "renal": {
+    "ar": "حسب معدل الترشيح (MDRD): 30 إلى 89 بلا تعديل؛ 15 إلى 29: الأقراص بلا تعديل، والوريدي 200 ملغ كل 12 ساعة؛ أقل من 15 (ومنه الغسيل): لا يُنصح به.",
+    "en": "By eGFR (MDRD): 30 to 89 no change; 15 to 29: tablets no change, IV 200 mg every 12 h; under 15 (including dialysis): not recommended."
+   },
+   "timing": {
+    "ar": "الأقراص مع الطعام أو بدونه، قبل مضادات الحموضة والحديد والزنك بساعتين أو بعدها بـ 6. تحذيرات الكينولونات: الأوتار والأعصاب والجهاز العصبي والوهن العضلي.",
+    "en": "Tablets with or without food, 2 hours before or 6 hours after antacids, iron or zinc. Quinolone warnings: tendons, nerves, central nervous system and myasthenia gravis."
+   },
+   "inter": [
+    {
+     "with": {
+      "ar": "مضادات الحموضة والسكرالفات والحديد والزنك",
+      "en": "Antacids, sucralfate, iron and zinc"
+     },
+     "desc": {
+      "ar": "تقلل امتصاص الأقراص: قبلها بساعتين أو بعدها بـ 6. الوريدي لا يُعطى مع محاليل المغنيسيوم في الخط نفسه.",
+      "en": "Reduce tablet absorption: 2 hours before or 6 hours after. IV: not with magnesium solutions in the same line."
+     },
+     "sev": "moderate",
+     "r": [
+      97
+     ]
+    },
+    {
+     "with": {
+      "ar": "أدوية السكري (السلفونيل يوريا، الإنسولين)",
+      "en": "Diabetes medicines (sulfonylureas, insulin)"
+     },
+     "desc": {
+      "ar": "اضطراب السكر: مراقبة السكر.",
+      "en": "Blood sugar disturbances: monitor glucose."
+     },
+     "sev": "moderate",
+     "r": [
+      97
+     ]
+    }
+   ],
+   "src": [
+    97
+   ]
+  },
+  {
+   "id": "azt_avi",
+   "n": {
+    "ar": "أزتريونام–أفيباكتام",
+    "en": "Aztreonam–avibactam"
+   },
+   "aware": "",
+   "cls": {
+    "ar": "مونوباكتام مع مثبط بيتا لاكتاماز",
+    "en": "Monobactam with a beta-lactamase inhibitor"
+   },
+   "uses": {
+    "ar": "عدوى البطن المعقدة (مع الميترونيدازول) للبالغين ذوي الخيارات المحدودة أو المعدومة، ومنها بعض الجراثيم سلبية الغرام المقاومة.",
+    "en": "Complicated intra-abdominal infection (with metronidazole) in adults with limited or no options, including some resistant Gram-negative bacteria."
+   },
+   "dose": {
+    "ar": "تصفية أكثر من 50: جرعة أولى 2.67 غرام (أزتريونام 2 + أفيباكتام 0.67)، ثم 2 غرام (1.5 + 0.5) كل 6 ساعات، كل جرعة خلال 3 ساعات، 5 إلى 14 يوماً، مع الميترونيدازول.",
+    "en": "Clearance over 50: a first dose of 2.67 g (aztreonam 2 + avibactam 0.67), then 2 g (1.5 + 0.5) every 6 h, each over 3 hours, for 5 to 14 days, with metronidazole."
+   },
+   "renal": {
+    "ar": "بكوكروفت-غولت: أكثر من 30 إلى 50 ← 2.67 غرام ثم 1 غرام كل 6 ساعات؛ أكثر من 15 إلى 30 ← 1.8 غرام ثم 0.9 غرام كل 8 ساعات؛ 15 أو أقل (ومنه الغسيل) ← 1.33 غرام ثم 0.9 غرام كل 12 ساعة، بعد الغسيل في أيامه.",
+    "en": "By Cockcroft-Gault: over 30 to 50 → 2.67 g, then 1 g every 6 h; over 15 to 30 → 1.8 g, then 0.9 g every 8 h; 15 or less (including dialysis) → 1.33 g, then 0.9 g every 12 h, after dialysis on dialysis days."
+   },
+   "timing": {
+    "ar": "تسريب وريدي خلال 3 ساعات.",
+    "en": "IV infusion over 3 hours."
+   },
+   "inter": [
+    {
+     "with": {
+      "ar": "مثبطات OAT1/OAT3 (البروبينيسيد)",
+      "en": "OAT1/OAT3 inhibitors (probenecid)"
+     },
+     "desc": {
+      "ar": "لا يُنصح بالجمع.",
+      "en": "Not recommended together."
+     },
+     "sev": "moderate",
+     "r": [
+      98
+     ]
+    }
+   ],
+   "src": [
+    98
+   ]
+  },
+  {
+   "id": "methenamine",
+   "n": {
+    "ar": "ميثينامين هيبورات",
+    "en": "Methenamine hippurate"
+   },
+   "aware": "",
+   "cls": {
+    "ar": "مطهرات بولية",
+    "en": "Urinary antiseptics"
+   },
+   "uses": {
+    "ar": "الوقاية أو العلاج الكابت لعدوى المسالك البولية المتكررة كثيراً عندما يلزم علاج طويل.",
+    "en": "Prevention or suppression of frequently recurring urinary tract infections when long-term treatment is needed."
+   },
+   "dose": {
+    "ar": "البالغون والأطفال فوق 12 سنة: 1 غرام مرتين يومياً (صباحاً ومساءً). الأطفال 6 إلى 12 سنة: 0.5 إلى 1 غرام مرتين يومياً.",
+    "en": "Adults and children over 12: 1 g twice a day (morning and night). Children 6 to 12: 0.5 to 1 g twice a day."
+   },
+   "renal": {
+    "ar": "ممنوع في القصور الكلوي، وضعف الكبد الشديد، والجفاف الشديد.",
+    "en": "Contraindicated in kidney insufficiency, severe liver insufficiency and severe dehydration."
+   },
+   "timing": {
+    "ar": "يعمل أفضل في البول الحمضي: تُقلل الأطعمة والأدوية القلوية، ومتابعة زرع البول.",
+    "en": "Works best in acid urine: limit alkalinising foods and medicines, and follow with urine cultures."
+   },
+   "inter": [
+    {
+     "with": {
+      "ar": "السلفوناميدات",
+      "en": "Sulfonamides"
+     },
+     "desc": {
+      "ar": "ممنوع: تكوّن راسباً غير ذائب مع الفورمالديهايد في البول.",
+      "en": "Contraindicated: they can form an insoluble precipitate with formaldehyde in the urine."
+     },
+     "sev": "major",
+     "r": [
+      99
+     ]
+    },
+    {
+     "with": {
+      "ar": "الأدوية القلوية للبول (مضادات الحموضة، السترات، البيكربونات)",
+      "en": "Urine-alkalinising medicines (antacids, citrate, bicarbonate)"
+     },
+     "desc": {
+      "ar": "تُضعف أثره.",
+      "en": "Weaken its effect."
+     },
+     "sev": "moderate",
+     "r": [
+      99
+     ]
+    }
+   ],
+   "src": [
+    99
+   ]
+  },
+  {
+   "id": "tmp",
+   "n": {
+    "ar": "تريميثوبريم",
+    "en": "Trimethoprim"
+   },
+   "aware": "access",
+   "cls": {
+    "ar": "مثبطات اختزال الفولات",
+    "en": "Dihydrofolate reductase inhibitors"
+   },
+   "uses": {
+    "ar": "النوبة الأولى من عدوى المسالك البولية غير المعقدة بالجراثيم الحساسة.",
+    "en": "First episodes of uncomplicated urinary tract infection by susceptible bacteria."
+   },
+   "dose": {
+    "ar": "للبالغين: 100 ملغ كل 12 ساعة أو 200 ملغ مرة يومياً، لمدة 10 أيام.",
+    "en": "Adults: 100 mg every 12 h or 200 mg once a day, for 10 days."
+   },
+   "renal": {
+    "ar": "التصفية 15 إلى 30: 50 ملغ كل 12 ساعة. أقل من 15: لا يُنصح به. مراقبة البوتاسيوم والكلى عند كبار السن.",
+    "en": "Clearance 15 to 30: 50 mg every 12 h. Under 15: not recommended. Monitor potassium and kidneys in the elderly."
+   },
+   "timing": {
+    "ar": "فموياً. ممنوع مع فقر الدم الضخم الأرومات بنقص الفولات.",
+    "en": "By mouth. Contraindicated in megaloblastic anaemia from folate deficiency."
+   },
+   "inter": [
+    {
+     "with": {
+      "ar": "الفينيتوين",
+      "en": "Phenytoin"
+     },
+     "desc": {
+      "ar": "يطيل عمر الفينيتوين بنحو 51%: انتبه لزيادة أثره.",
+      "en": "Prolongs phenytoin half-life by about 51%: watch for excess effect."
+     },
+     "sev": "moderate",
+     "r": [
+      100
+     ]
+    },
+    {
+     "with": {
+      "ar": "فحص الميثوتريكسات (طريقة CBPA)",
+      "en": "Methotrexate assay (CBPA method)"
+     },
+     "desc": {
+      "ar": "يتداخل مع الفحص؛ لا تداخل مع طريقة RIA.",
+      "en": "Interferes with the assay; no interference with RIA."
+     },
+     "sev": "minor",
+     "r": [
+      100
+     ]
+    }
+   ],
+   "src": [
+    100
+   ]
+  },
+  {
+   "id": "sulfadiazine",
+   "n": {
+    "ar": "سلفاديازين",
+    "en": "Sulfadiazine"
+   },
+   "aware": "access",
+   "cls": {
+    "ar": "سلفوناميدات",
+    "en": "Sulfonamides"
+   },
+   "uses": {
+    "ar": "داء المقوسات (التهاب الدماغ، مع البيريميثامين)، والنوكارديا، والقريح، والتراخوما، والتهاب الملتحمة الاشتمالي، وعدوى المسالك البولية (بعد فشل السلفوناميدات الأكثر ذوباناً)، ووقاية وعلاج التهاب السحايا بالمكورات الحساسة، والملاريا المقاومة للكلوروكين (مساعد)، والوقاية من الحمى الرثوية.",
+    "en": "Toxoplasmosis (encephalitis, with pyrimethamine), nocardiosis, chancroid, trachoma, inclusion conjunctivitis, urinary tract infection (after more soluble sulfonamides fail), prevention and treatment of meningococcal meningitis by susceptible strains, chloroquine-resistant malaria (adjunct), and prevention of rheumatic fever."
+   },
+   "dose": {
+    "ar": "للبالغين: 2 إلى 4 غرامات أولاً، ثم 2 إلى 4 غرامات يومياً مقسمة 3 إلى 6 جرعات. الأطفال فوق شهرين: نصف الجرعة اليومية أولاً، ثم 150 ملغ/كغ يومياً مقسمة 4 إلى 6 جرعات (حد أقصى 6 غرامات). الوقاية من الحمى الرثوية: أقل من 30 كغ 500 ملغ يومياً، وأكثر 1 غرام يومياً.",
+    "en": "Adults: 2 to 4 g first, then 2 to 4 g a day in 3 to 6 doses. Children over 2 months: half the daily dose first, then 150 mg/kg a day in 4 to 6 doses (maximum 6 g). Rheumatic fever prevention: under 30 kg 500 mg a day, over 30 kg 1 g a day."
+   },
+   "renal": {
+    "ar": "بحذر في ضعف الكلى أو الكبد. شرب سوائل كافية لمنع البلورات والحصى.",
+    "en": "Caution in kidney or liver impairment. Enough fluids to prevent crystals and stones."
+   },
+   "timing": {
+    "ar": "مع سوائل كافية. ممنوع تحت شهرين (إلا للمقوسات الخلقية)، وفي نهاية الحمل والرضاعة. يُبلغ فوراً عن التهاب الحلق أو الحمى أو الشحوب أو اليرقان.",
+    "en": "With plenty of fluids. Contraindicated under 2 months (except congenital toxoplasmosis), at term pregnancy and during breastfeeding. Report sore throat, fever, pallor or jaundice at once."
+   },
+   "inter": [
+    {
+     "with": {
+      "ar": "مضادات التخثر الفموية والميثوتريكسات",
+      "en": "Oral anticoagulants and methotrexate"
+     },
+     "desc": {
+      "ar": "يزيد أثرها: مراقبة INR وسمية الميثوتريكسات.",
+      "en": "Increases their effect: monitor INR and methotrexate toxicity."
+     },
+     "sev": "major",
+     "r": [
+      101
+     ]
+    },
+    {
+     "with": {
+      "ar": "السلفونيل يوريا، والثيازيدات، ومدرات حمض اليوريك",
+      "en": "Sulfonylureas, thiazides and uricosurics"
+     },
+     "desc": {
+      "ar": "قد يقوي أثرها (هبوط السكر مع السلفونيل يوريا).",
+      "en": "May strengthen their effect (low blood sugar with sulfonylureas)."
+     },
+     "sev": "moderate",
+     "r": [
+      101
+     ]
+    },
+    {
+     "with": {
+      "ar": "الميثينامين",
+      "en": "Methenamine"
+     },
+     "desc": {
+      "ar": "ممنوع: راسب في البول.",
+      "en": "Contraindicated: precipitate in the urine."
+     },
+     "sev": "major",
+     "r": [
+      99
+     ]
+    }
+   ],
+   "src": [
+    101
+   ]
+  },
+  {
+   "id": "fosfo",
+   "n": {
+    "ar": "فوسفومايسين (فموي)",
+    "en": "Fosfomycin (oral)"
+   },
+   "aware": "watch",
+   "cls": {
+    "ar": "مشتقات حمض الفوسفونيك",
+    "en": "Phosphonic acid derivatives"
+   },
+   "uses": {
+    "ar": "التهاب المثانة الحاد غير المعقد عند النساء 18 سنة فأكثر.",
+    "en": "Acute uncomplicated cystitis in women 18 and over."
+   },
+   "dose": {
+    "ar": "كيس واحد 3 غرامات مرة واحدة.",
+    "en": "One 3 g sachet, once."
+   },
+   "renal": {
+    "ar": "لا يذكر الملصق تعديلاً؛ يطول عمر النصف في ضعف الكلى وينخفض ما يصل إلى البول.",
+    "en": "The label gives no adjustment; the half-life is longer in kidney impairment and less reaches the urine."
+   },
+   "timing": {
+    "ar": "مع الطعام أو بدونه. يُذاب في الماء قبل الشرب، ولا يُؤخذ جافاً.",
+    "en": "With or without food. Dissolve in water before drinking; never take it dry."
+   },
+   "inter": [
+    {
+     "with": {
+      "ar": "الميتوكلوبراميد وأدوية تسريع حركة الأمعاء",
+      "en": "Metoclopramide and drugs that speed up the gut"
+     },
+     "desc": {
+      "ar": "تخفض مستواه في الدم والبول.",
+      "en": "Lower its blood and urine levels."
+     },
+     "sev": "moderate",
+     "r": [
+      102
+     ]
+    }
+   ],
+   "src": [
+    102
+   ]
+  },
+  {
+   "id": "tinidazole",
+   "n": {
+    "ar": "تينيدازول",
+    "en": "Tinidazole"
+   },
+   "aware": "access",
+   "cls": {
+    "ar": "نيتروإيميدازولات",
+    "en": "Nitroimidazoles"
+   },
+   "uses": {
+    "ar": "داء المشعرات، والجيارديا، والأميبا المعوية وخراج الكبد الأميبي، والتهاب المهبل الجرثومي عند غير الحوامل.",
+    "en": "Trichomoniasis, giardiasis, intestinal amoebiasis and amoebic liver abscess, and bacterial vaginosis in non-pregnant women."
+   },
+   "dose": {
+    "ar": "للبالغين مع الطعام: المشعرات 2 غرام مرة واحدة (والشريك بالجرعة نفسها)؛ الجيارديا 2 غرام مرة واحدة؛ الأميبا المعوية 2 غرام يومياً 3 أيام؛ خراج الكبد 2 غرام يومياً 3 إلى 5 أيام؛ المهبل الجرثومي 2 غرام يومياً يومين أو 1 غرام يومياً 5 أيام. الأطفال فوق 3 سنوات: 50 ملغ/كغ (حتى 2 غرام).",
+    "en": "Adults, with food: trichomoniasis 2 g once (and the partner the same); giardiasis 2 g once; intestinal amoebiasis 2 g a day for 3 days; liver abscess 2 g a day for 3 to 5 days; bacterial vaginosis 2 g a day for 2 days or 1 g a day for 5 days. Children over 3: 50 mg/kg (up to 2 g)."
+   },
+   "renal": {
+    "ar": "لا تعديل في ضعف الكلى. الغسيل الدموي: إذا أُعطي في يوم الغسيل وقبله، نصف جرعة إضافية بعده.",
+    "en": "No change for kidney impairment. Haemodialysis: if given on the same day and before dialysis, an extra half dose after it."
+   },
+   "timing": {
+    "ar": "مع الطعام. لا كحول أثناء العلاج و3 أيام بعده. لا رضاعة أثناءه و72 ساعة بعده.",
+    "en": "With food. No alcohol during treatment and for 3 days after. No breastfeeding during it and for 72 hours after."
+   },
+   "inter": [
+    {
+     "with": {
+      "ar": "الكحول (ومستحضرات الإيثانول أو البروبيلين غليكول)",
+      "en": "Alcohol (and ethanol or propylene glycol preparations)"
+     },
+     "desc": {
+      "ar": "مغص وغثيان وقيء وصداع واحمرار: يُتجنب أثناء العلاج و3 أيام بعده.",
+      "en": "Cramps, nausea, vomiting, headache and flushing: avoid during treatment and for 3 days after."
+     },
+     "sev": "major",
+     "r": [
+      103
+     ]
+    },
+    {
+     "with": {
+      "ar": "الديسلفيرام",
+      "en": "Disulfiram"
+     },
+     "desc": {
+      "ar": "لا يُعطى لمن تناول الديسلفيرام خلال أسبوعين (تفاعلات ذهانية مع الميترونيدازول).",
+      "en": "Not for patients who took disulfiram in the last two weeks (psychotic reactions with metronidazole)."
+     },
+     "sev": "major",
+     "r": [
+      103
+     ]
+    },
+    {
+     "with": {
+      "ar": "الوارفارين ومضادات التخثر الكومارينية",
+      "en": "Warfarin and coumarin anticoagulants"
+     },
+     "desc": {
+      "ar": "قد يلزم تعديل الجرعة أثناء العلاج و8 أيام بعده.",
+      "en": "The dose may need adjusting during treatment and for 8 days after."
+     },
+     "sev": "moderate",
+     "r": [
+      103
+     ]
+    },
+    {
+     "with": {
+      "ar": "الليثيوم",
+      "en": "Lithium"
+     },
+     "desc": {
+      "ar": "مراقبة مستوى الليثيوم.",
+      "en": "Monitor lithium levels."
+     },
+     "sev": "moderate",
+     "r": [
+      103
+     ]
+    },
+    {
+     "with": {
+      "ar": "السيكلوسبورين والتاكروليمس والفلورويوراسيل",
+      "en": "Cyclosporine, tacrolimus and fluorouracil"
+     },
+     "desc": {
+      "ar": "مراقبة سميتها.",
+      "en": "Monitor their toxicity."
+     },
+     "sev": "moderate",
+     "r": [
+      103
+     ]
+    },
+    {
+     "with": {
+      "ar": "الفينيتوين والفوسفينيتوين ومحفزات أو مثبطات CYP3A4",
+      "en": "Phenytoin, fosphenytoin, and CYP3A4 inducers or inhibitors"
+     },
+     "desc": {
+      "ar": "قد يلزم تعديل الجرعات؛ ضعف أثر أو زيادة آثار جانبية.",
+      "en": "Doses may need adjusting; weaker effect or more side effects."
+     },
+     "sev": "moderate",
+     "r": [
+      103
+     ]
+    }
+   ],
+   "src": [
+    103
+   ]
+  },
+  {
+   "id": "secnidazole",
+   "n": {
+    "ar": "سيكنيدازول",
+    "en": "Secnidazole"
+   },
+   "aware": "access",
+   "cls": {
+    "ar": "نيتروإيميدازولات",
+    "en": "Nitroimidazoles"
+   },
+   "uses": {
+    "ar": "التهاب المهبل الجرثومي (12 سنة فأكثر)، وداء المشعرات (12 سنة فأكثر، مع علاج الشريك).",
+    "en": "Bacterial vaginosis (12 and over) and trichomoniasis (12 and over, treating the partner too)."
+   },
+   "dose": {
+    "ar": "كيس واحد 2 غرام مرة واحدة فموياً.",
+    "en": "One 2 g packet once by mouth."
+   },
+   "renal": {
+    "ar": "لا يذكر الملصق تعديلاً للكلى.",
+    "en": "The label gives no kidney adjustment."
+   },
+   "timing": {
+    "ar": "يُرش الكيس كاملاً على صلصة التفاح أو اللبن أو البودينغ ويؤكل خلال 30 دقيقة دون مضغ الحبيبات؛ لا يُذاب في سائل. مع الطعام أو بدونه.",
+    "en": "Sprinkle the whole packet on applesauce, yogurt or pudding and eat within 30 minutes without chewing the granules; do not dissolve it in liquid. With or without food."
+   },
+   "inter": [
+    {
+     "with": {
+      "ar": "الكحول (ومستحضرات الإيثانول أو البروبيلين غليكول)",
+      "en": "Alcohol (and ethanol or propylene glycol preparations)"
+     },
+     "desc": {
+      "ar": "مغص وغثيان وقيء وصداع واحمرار: يُتجنب أثناء العلاج ويومين بعده.",
+      "en": "Cramps, nausea, vomiting, headache and flushing: avoid during treatment and for 2 days after."
+     },
+     "sev": "major",
+     "r": [
+      104
+     ]
+    },
+    {
+     "with": {
+      "ar": "موانع الحمل الفموية المركبة",
+      "en": "Combined oral contraceptives"
+     },
+     "desc": {
+      "ar": "لا تداخل مهم: يمكن الجمع.",
+      "en": "No important interaction: they can be used together."
+     },
+     "sev": "minor",
+     "r": [
+      104
+     ]
+    }
+   ],
+   "src": [
+    104
+   ]
+  },
+  {
+   "id": "teico",
+   "n": {
+    "ar": "تيكوبلانين",
+    "en": "Teicoplanin"
+   },
+   "aware": "watch",
+   "cls": {
+    "ar": "غليكوببتيدات",
+    "en": "Glycopeptides"
+   },
+   "uses": {
+    "ar": "للبالغين والأطفال من الولادة: عدوى الجلد المعقدة، والعظام والمفاصل، والتهاب الرئة (المكتسب ومن المستشفى)، والمسالك المعقدة، والتهاب الشغاف، والتهاب الصفاق مع الغسيل البريتوني، وتجرثم الدم المرافق؛ وفموياً كبديل لإسهال المطثية العسيرة.",
+    "en": "Adults and children from birth: complicated skin infections, bone and joint, pneumonia (community and hospital), complicated urinary, endocarditis, peritonitis with peritoneal dialysis, and related bacteraemia; and by mouth as an alternative for Clostridioides difficile diarrhoea."
+   },
+   "dose": {
+    "ar": "الجلد والرئة والمسالك: 6 ملغ/كغ كل 12 ساعة لـ 3 جرعات، ثم 6 ملغ/كغ مرة يومياً. العظام: 12 ملغ/كغ كل 12 ساعة لـ 3 إلى 5 جرعات، ثم 12 ملغ/كغ يومياً. التهاب الشغاف: مثل العظام، 21 يوماً على الأقل. المطثية العسيرة: 100 إلى 200 ملغ فموياً مرتين يومياً 7 إلى 14 يوماً. بالوزن الفعلي.",
+    "en": "Skin, pneumonia, urinary: 6 mg/kg every 12 h for 3 doses, then 6 mg/kg once a day. Bone: 12 mg/kg every 12 h for 3 to 5 doses, then 12 mg/kg a day. Endocarditis: as for bone, at least 21 days. C. difficile: 100 to 200 mg by mouth twice a day for 7 to 14 days. Actual weight."
+   },
+   "renal": {
+    "ar": "لا تعديل حتى اليوم الرابع، ثم: التصفية 30 إلى 80 ← نصف الصيانة (الجرعة كل يومين أو نصفها يومياً)؛ أقل من 30 والغسيل ← ثلث الصيانة (الجرعة كل 3 أيام أو ثلثها يومياً). لا يزيله الغسيل.",
+    "en": "No change until day 4, then: clearance 30 to 80 → half the maintenance dose (every other day, or half daily); under 30 and dialysis → a third (every third day, or a third daily). Not removed by dialysis."
+   },
+   "timing": {
+    "ar": "وريدياً (حقن خلال 3 إلى 5 دقائق أو تسريب 30 دقيقة) أو عضلياً. قياس القاع بعد جرعات البداية: أكثر من 15 ملغ/لتر (FPIA)، و30 إلى 40 في التهاب الشغاف.",
+    "en": "IV (injection over 3 to 5 minutes or 30-minute infusion) or IM. Trough after loading: over 15 mg/L (FPIA), and 30 to 40 for endocarditis."
+   },
+   "inter": [
+    {
+     "with": {
+      "ar": "الأدوية السامة للكلى أو الأذن (أمينوغليكوزيدات، كوليستين، أمفوتيريسين ب، سيكلوسبورين، سيسبلاتين، فوروسيميد)",
+      "en": "Nephrotoxic or ototoxic drugs (aminoglycosides, colistin, amphotericin B, ciclosporin, cisplatin, furosemide)"
+     },
+     "desc": {
+      "ar": "بحذر عند الجمع أو التتابع.",
+      "en": "Use with care together or one after the other."
+     },
+     "sev": "moderate",
+     "r": [
+      105
+     ]
+    },
+    {
+     "with": {
+      "ar": "محاليل الأمينوغليكوزيدات",
+      "en": "Aminoglycoside solutions"
+     },
+     "desc": {
+      "ar": "غير متوافقة في الحقنة نفسها (متوافقة في سائل الغسيل البريتوني).",
+      "en": "Incompatible in the same injection (compatible in peritoneal dialysis fluid)."
+     },
+     "sev": "minor",
+     "r": [
+      105
+     ]
+    }
+   ],
+   "src": [
+    105
+   ]
+  },
+  {
+   "id": "dapto",
+   "n": {
+    "ar": "دابتومايسين",
+    "en": "Daptomycin"
+   },
+   "aware": "reserve",
+   "cls": {
+    "ar": "ليبوببتيدات حلقية",
+    "en": "Cyclic lipopeptides"
+   },
+   "uses": {
+    "ar": "عدوى الجلد المعقدة، وتجرثم الدم بالمكورات العنقودية الذهبية (ومنه التهاب الشغاف الأيمن). لا يُستعمل لالتهاب الرئة.",
+    "en": "Complicated skin infections and Staphylococcus aureus bacteraemia (including right-sided endocarditis). Not for pneumonia."
+   },
+   "dose": {
+    "ar": "للبالغين وريدياً: الجلد 4 ملغ/كغ مرة يومياً 7 إلى 14 يوماً؛ تجرثم الدم 6 ملغ/كغ مرة يومياً 2 إلى 6 أسابيع. الأطفال 1 إلى 17 سنة حسب العمر (5 إلى 10 ملغ/كغ للجلد).",
+    "en": "Adults IV: skin 4 mg/kg once a day for 7 to 14 days; bacteraemia 6 mg/kg once a day for 2 to 6 weeks. Children 1 to 17 by age (5 to 10 mg/kg for skin)."
+   },
+   "renal": {
+    "ar": "التصفية أقل من 30 (ومنه الغسيل الدموي والبريتوني): الجرعة نفسها كل 48 ساعة، بعد الغسيل في أيامه.",
+    "en": "Clearance under 30 (including haemodialysis and peritoneal dialysis): the same dose every 48 h, after dialysis on dialysis days."
+   },
+   "timing": {
+    "ar": "للبالغين: حقن خلال دقيقتين أو تسريب 30 دقيقة في محلول ملحي 0.9%. قياس CPK أسبوعياً (اعتلال عضلي).",
+    "en": "Adults: injection over 2 minutes or 30-minute infusion in 0.9% saline. Check CPK weekly (myopathy)."
+   },
+   "inter": [
+    {
+     "with": {
+      "ar": "الستاتينات",
+      "en": "Statins"
+     },
+     "desc": {
+      "ar": "خطر اعتلال عضلي: يُفكر في إيقافها مؤقتاً.",
+      "en": "Risk of myopathy: consider stopping them for a while."
+     },
+     "sev": "moderate",
+     "r": [
+      106
+     ]
+    },
+    {
+     "with": {
+      "ar": "فحص زمن البروثرومبين / INR",
+      "en": "Prothrombin time / INR test"
+     },
+     "desc": {
+      "ar": "إطالة كاذبة مع بعض الكواشف: أخذ العينة قبل الجرعة التالية مباشرة.",
+      "en": "False prolongation with some reagents: draw the sample just before the next dose."
+     },
+     "sev": "minor",
+     "r": [
+      106
+     ]
+    }
+   ],
+   "src": [
+    106
+   ]
+  }
+ ]
+}

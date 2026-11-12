@@ -1,0 +1,812 @@
+{
+ "batch": 9,
+ "language_note": "Written from the saved official labels (docs/antibiotics/labels). Oritavancin: Kimyrsa label (Orbactiv differs).",
+ "drugs": [
+  {
+   "id": "dalba",
+   "n": {
+    "ar": "دالبافانسين",
+    "en": "Dalbavancin"
+   },
+   "aware": "reserve",
+   "cls": {
+    "ar": "ليبوغليكوببتيدات",
+    "en": "Lipoglycopeptides"
+   },
+   "uses": {
+    "ar": "عدوى الجلد الجرثومية الحادة (ومنها العنقوديات المقاومة للميثيسيلين) للبالغين والأطفال من الولادة.",
+    "en": "Acute bacterial skin infections (including MRSA) in adults and children from birth."
+   },
+   "dose": {
+    "ar": "للبالغين: 1500 ملغ جرعة واحدة وريدياً خلال 30 دقيقة. الأطفال (تصفية 30 فأكثر): من الولادة إلى أقل من 6 سنوات 22.5 ملغ/كغ، ومن 6 إلى أقل من 18 سنة 18 ملغ/كغ (حد أقصى 1500 ملغ)، جرعة واحدة.",
+    "en": "Adults: 1500 mg as one dose IV over 30 minutes. Children (clearance 30 or more): birth to under 6 years 22.5 mg/kg, 6 to under 18 years 18 mg/kg (maximum 1500 mg), as one dose."
+   },
+   "renal": {
+    "ar": "التصفية أقل من 30 وبلا غسيل منتظم: 1125 ملغ جرعة واحدة. الغسيل المنتظم: بلا تعديل.",
+    "en": "Clearance under 30 and not on regular dialysis: 1125 mg as one dose. Regular haemodialysis: no change."
+   },
+   "timing": {
+    "ar": "تسريب وريدي خلال 30 دقيقة.",
+    "en": "IV infusion over 30 minutes."
+   },
+   "inter": [],
+   "inter_none": true,
+   "src": [
+    107
+   ]
+  },
+  {
+   "id": "orita",
+   "n": {
+    "ar": "أوريتافانسين",
+    "en": "Oritavancin"
+   },
+   "aware": "reserve",
+   "cls": {
+    "ar": "ليبوغليكوببتيدات",
+    "en": "Lipoglycopeptides"
+   },
+   "uses": {
+    "ar": "عدوى الجلد الجرثومية الحادة (ومنها العنقوديات المقاومة للميثيسيلين) للبالغين.",
+    "en": "Acute bacterial skin infections (including MRSA) in adults."
+   },
+   "dose": {
+    "ar": "Kimyrsa: ‏1200 ملغ جرعة واحدة وريدياً خلال ساعة. يوجد منتج آخر (Orbactiv) بتحضير ومدة تسريب مختلفين: يُتبع ملصق المنتج المستعمل.",
+    "en": "Kimyrsa: 1200 mg as one dose IV over 1 hour. Another product (Orbactiv) differs in preparation and infusion time: follow the label of the product used."
+   },
+   "renal": {
+    "ar": "لا تعديل في الضعف الخفيف أو المتوسط؛ الضعف الشديد لم يُدرس. لا يزيله الغسيل.",
+    "en": "No change for mild or moderate impairment; severe impairment not studied. Not removed by dialysis."
+   },
+   "timing": {
+    "ar": "تسريب وريدي خلال ساعة (Kimyrsa).",
+    "en": "IV infusion over 1 hour (Kimyrsa)."
+   },
+   "inter": [
+    {
+     "with": {
+      "ar": "الهيبارين غير المجزأ وريدياً",
+      "en": "Intravenous unfractionated heparin"
+     },
+     "desc": {
+      "ar": "ممنوع 120 ساعة (5 أيام) بعد الجرعة: يطيل فحص aPTT كاذباً.",
+      "en": "Contraindicated for 120 hours (5 days) after the dose: falsely prolongs aPTT."
+     },
+     "sev": "major",
+     "r": [
+      108
+     ]
+    },
+    {
+     "with": {
+      "ar": "الوارفارين",
+      "en": "Warfarin"
+     },
+     "desc": {
+      "ar": "يطيل PT/INR كاذباً حتى 12 ساعة؛ مراقبة النزف.",
+      "en": "Falsely prolongs PT/INR for up to 12 hours; watch for bleeding."
+     },
+     "sev": "moderate",
+     "r": [
+      108
+     ]
+    },
+    {
+     "with": {
+      "ar": "أدوية ذات هامش علاجي ضيق تُستقلب بـ CYP2C9 أو 2C19 أو 3A4 أو 2D6",
+      "en": "Narrow-margin drugs metabolised by CYP2C9, 2C19, 3A4 or 2D6"
+     },
+     "desc": {
+      "ar": "قد ترتفع أو تنخفض: يُتجنب أو مراقبة.",
+      "en": "They may rise or fall: avoid or monitor."
+     },
+     "sev": "moderate",
+     "r": [
+      108
+     ]
+    }
+   ],
+   "src": [
+    108
+   ]
+  },
+  {
+   "id": "tedizolid",
+   "n": {
+    "ar": "تيديزوليد",
+    "en": "Tedizolid"
+   },
+   "aware": "reserve",
+   "cls": {
+    "ar": "أوكسازوليدينونات",
+    "en": "Oxazolidinones"
+   },
+   "uses": {
+    "ar": "عدوى الجلد الجرثومية الحادة (ومنها العنقوديات المقاومة للميثيسيلين) للبالغين والأطفال.",
+    "en": "Acute bacterial skin infections (including MRSA) in adults and children."
+   },
+   "dose": {
+    "ar": "للبالغين: 200 ملغ مرة يومياً فموياً أو وريدياً خلال ساعة، لمدة 6 أيام. الأطفال حسب الوزن (الأقراص من 35 كغ فقط).",
+    "en": "Adults: 200 mg once a day by mouth or IV over 1 hour, for 6 days. Children by weight (tablets only from 35 kg)."
+   },
+   "renal": {
+    "ar": "لا تعديل في ضعف الكلى أو الغسيل.",
+    "en": "No change for kidney impairment or dialysis."
+   },
+   "timing": {
+    "ar": "الأقراص مع الطعام أو بدونه.",
+    "en": "Tablets with or without food."
+   },
+   "inter": [
+    {
+     "with": {
+      "ar": "الأدوية السيروتونينية (مضادات الاكتئاب وغيرها)",
+      "en": "Serotonergic drugs (antidepressants and others)"
+     },
+     "desc": {
+      "ar": "خطر متلازمة السيروتونين: مراقبة.",
+      "en": "Risk of serotonin syndrome: monitor."
+     },
+     "sev": "major",
+     "r": [
+      109
+     ]
+    },
+    {
+     "with": {
+      "ar": "ركائز BCRP الفموية (ميثوتريكسات، توبوتيكان، روزوفاستاتين)",
+      "en": "Oral BCRP substrates (methotrexate, topotecan, rosuvastatin)"
+     },
+     "desc": {
+      "ar": "ترتفع مستوياتها: إيقافها مؤقتاً إن أمكن أو مراقبة.",
+      "en": "Their levels rise: pause them if possible, or monitor."
+     },
+     "sev": "moderate",
+     "r": [
+      109
+     ]
+    }
+   ],
+   "src": [
+    109
+   ]
+  },
+  {
+   "id": "rifampin",
+   "n": {
+    "ar": "ريفامبين (ريفامبيسين)",
+    "en": "Rifampin (rifampicin)"
+   },
+   "aware": "watch",
+   "cls": {
+    "ar": "ريفاميسينات",
+    "en": "Rifamycins"
+   },
+   "uses": {
+    "ar": "كل أشكال السل (مع أدوية أخرى)، وحاملو المكورات السحائية بلا أعراض.",
+    "en": "All forms of tuberculosis (with other drugs), and symptom-free meningococcal carriers."
+   },
+   "dose": {
+    "ar": "السل: البالغون 10 ملغ/كغ مرة يومياً (حد أقصى 600 ملغ)؛ الأطفال 10 إلى 20 ملغ/كغ (حد أقصى 600 ملغ). حاملو المكورات السحائية: البالغون 600 ملغ مرتين يومياً ليومين.",
+    "en": "Tuberculosis: adults 10 mg/kg once a day (maximum 600 mg); children 10 to 20 mg/kg (maximum 600 mg). Meningococcal carriers: adults 600 mg twice a day for 2 days."
+   },
+   "renal": {
+    "ar": "لا تعديل في الفشل الكلوي بجرعات حتى 600 ملغ يومياً.",
+    "en": "No change in kidney failure at doses up to 600 mg a day."
+   },
+   "timing": {
+    "ar": "مرة يومياً، قبل الطعام بساعة أو بعده بساعتين مع كوب ماء. يلوّن البول والدموع والعرق بالبرتقالي.",
+    "en": "Once a day, 1 hour before or 2 hours after a meal with a glass of water. Colours urine, tears and sweat orange-red."
+   },
+   "inter": [
+    {
+     "with": {
+      "ar": "أدوية فيروس نقص المناعة (أتازانافير، دارونافير، فوسامبرينافير، ساكوينافير، تيبرانافير، كابوتيغرافير، فوستيمسافير، ليناكابافير)",
+      "en": "HIV medicines (atazanavir, darunavir, fosamprenavir, saquinavir, tipranavir, cabotegravir, fostemsavir, lenacapavir)"
+     },
+     "desc": {
+      "ar": "ممنوع: انخفاض كبير وفشل العلاج؛ ومع ساكوينافير/ريتونافير سمية كبدية شديدة.",
+      "en": "Contraindicated: large fall and treatment failure; with saquinavir/ritonavir severe liver toxicity."
+     },
+     "sev": "major",
+     "r": [
+      110
+     ]
+    },
+    {
+     "with": {
+      "ar": "البرازيكوانتيل واللوراسيدون",
+      "en": "Praziquantel and lurasidone"
+     },
+     "desc": {
+      "ar": "ممنوع: لا يصلان لمستوى فعال.",
+      "en": "Contraindicated: they do not reach effective levels."
+     },
+     "sev": "major",
+     "r": [
+      110
+     ]
+    },
+    {
+     "with": {
+      "ar": "الوارفارين ومضادات التخثر الفموية",
+      "en": "Warfarin and oral anticoagulants"
+     },
+     "desc": {
+      "ar": "ينخفض أثرها: قياس زمن البروثرومبين وتعديل الجرعة.",
+      "en": "Their effect falls: check prothrombin time and adjust the dose."
+     },
+     "sev": "major",
+     "r": [
+      110
+     ]
+    },
+    {
+     "with": {
+      "ar": "موانع الحمل الهرمونية",
+      "en": "Hormonal contraceptives"
+     },
+     "desc": {
+      "ar": "تقل فعاليتها: وسيلة غير هرمونية أو حاجز إضافي.",
+      "en": "They work less well: use a non-hormonal or extra barrier method."
+     },
+     "sev": "major",
+     "r": [
+      110
+     ]
+    },
+    {
+     "with": {
+      "ar": "مضادات الفطريات الآزولية (إيتراكونازول، كيتوكونازول، فلوكونازول)",
+      "en": "Azole antifungals (itraconazole, ketoconazole, fluconazole)"
+     },
+     "desc": {
+      "ar": "ينخفض مستواها؛ الإيتراكونازول لا يُنصح به.",
+      "en": "Their levels fall; itraconazole not recommended."
+     },
+     "sev": "major",
+     "r": [
+      110
+     ]
+    },
+    {
+     "with": {
+      "ar": "السيكلوسبورين والتاكروليمس والكورتيكوستيرويدات",
+      "en": "Cyclosporine, tacrolimus and corticosteroids"
+     },
+     "desc": {
+      "ar": "ينخفض مستواها: قياس المستوى وتعديل الجرعة.",
+      "en": "Their levels fall: measure and adjust."
+     },
+     "sev": "major",
+     "r": [
+      110
+     ]
+    },
+    {
+     "with": {
+      "ar": "الميثادون والمسكنات الأفيونية",
+      "en": "Methadone and opioid painkillers"
+     },
+     "desc": {
+      "ar": "ينخفض مستواها وقد تظهر أعراض الانسحاب.",
+      "en": "Their levels fall and withdrawal may appear."
+     },
+     "sev": "major",
+     "r": [
+      110
+     ]
+    },
+    {
+     "with": {
+      "ar": "الديجوكسين",
+      "en": "Digoxin"
+     },
+     "desc": {
+      "ar": "ينخفض: قياس المستوى وقد تُرفع الجرعة 20 إلى 40%.",
+      "en": "Falls: measure levels; the dose may need 20 to 40% more."
+     },
+     "sev": "moderate",
+     "r": [
+      110
+     ]
+    },
+    {
+     "with": {
+      "ar": "الكلوبيدوغريل والتيكاغريلور",
+      "en": "Clopidogrel and ticagrelor"
+     },
+     "desc": {
+      "ar": "الكلوبيدوغريل: زيادة النزف، لا يُشجع الجمع؛ التيكاغريلور: يُتجنب.",
+      "en": "Clopidogrel: more bleeding, discouraged; ticagrelor: avoid."
+     },
+     "sev": "major",
+     "r": [
+      110
+     ]
+    },
+    {
+     "with": {
+      "ar": "الهالوثان والإيزونيازيد",
+      "en": "Halothane and isoniazid"
+     },
+     "desc": {
+      "ar": "زيادة السمية الكبدية؛ يُتجنب الهالوثان.",
+      "en": "More liver toxicity; avoid halothane."
+     },
+     "sev": "major",
+     "r": [
+      110
+     ]
+    },
+    {
+     "with": {
+      "ar": "الأتوفاكون",
+      "en": "Atovaquone"
+     },
+     "desc": {
+      "ar": "لا يُنصح بالجمع.",
+      "en": "Not recommended together."
+     },
+     "sev": "moderate",
+     "r": [
+      110
+     ]
+    },
+    {
+     "with": {
+      "ar": "مضادات الحموضة",
+      "en": "Antacids"
+     },
+     "desc": {
+      "ar": "تقلل الامتصاص: الريفامبين قبلها بساعة على الأقل.",
+      "en": "Reduce absorption: rifampin at least 1 hour before them."
+     },
+     "sev": "moderate",
+     "r": [
+      110
+     ]
+    }
+   ],
+   "src": [
+    110
+   ]
+  },
+  {
+   "id": "rifabutin",
+   "n": {
+    "ar": "ريفابوتين",
+    "en": "Rifabutin"
+   },
+   "aware": "watch",
+   "cls": {
+    "ar": "ريفاميسينات",
+    "en": "Rifamycins"
+   },
+   "uses": {
+    "ar": "الوقاية من داء المتفطرات الطيرية المنتشر (MAC) عند مرضى فيروس نقص المناعة المتقدم.",
+    "en": "Prevention of disseminated Mycobacterium avium complex (MAC) disease in advanced HIV infection."
+   },
+   "dose": {
+    "ar": "300 ملغ مرة يومياً؛ أو 150 ملغ مرتين يومياً مع الطعام لمن يعاني الغثيان.",
+    "en": "300 mg once a day; or 150 mg twice a day with food for those with nausea."
+   },
+   "renal": {
+    "ar": "التصفية أقل من 30: يُفكر في خفض الجرعة 50% إذا شُك بالسمية. لا تعديل في الضعف الخفيف أو المتوسط ولا في ضعف الكبد الخفيف.",
+    "en": "Clearance under 30: consider halving the dose if toxicity is suspected. No change for mild or moderate kidney impairment or mild liver impairment."
+   },
+   "timing": {
+    "ar": "يمكن خلطه مع صلصة التفاح. يلوّن البول والجلد بالبرتقالي.",
+    "en": "Can be mixed with applesauce. Colours urine and skin orange-brown."
+   },
+   "inter": [
+    {
+     "with": {
+      "ar": "الكابوتيغرافير/ريلبيفيرين طويل المفعول",
+      "en": "Long-acting cabotegravir/rilpivirine"
+     },
+     "desc": {
+      "ar": "ممنوع.",
+      "en": "Contraindicated."
+     },
+     "sev": "major",
+     "r": [
+      111
+     ]
+    },
+    {
+     "with": {
+      "ar": "الكلاريثرومايسين والفلوكونازول ومثبطات CYP3A",
+      "en": "Clarithromycin, fluconazole and CYP3A inhibitors"
+     },
+     "desc": {
+      "ar": "يرتفع الريفابوتين وخطر التهاب العنبية: خفض الجرعة ومراقبة العين.",
+      "en": "Rifabutin rises with a risk of uveitis: lower the dose and watch the eyes."
+     },
+     "sev": "major",
+     "r": [
+      111
+     ]
+    },
+    {
+     "with": {
+      "ar": "أدوية CYP3A (إيتراكونازول، كلاريثرومايسين، ساكوينافير)",
+      "en": "CYP3A drugs (itraconazole, clarithromycin, saquinavir)"
+     },
+     "desc": {
+      "ar": "ينخفض مستواها وقد تقل فعاليتها.",
+      "en": "Their levels fall and may work less well."
+     },
+     "sev": "moderate",
+     "r": [
+      111
+     ]
+    },
+    {
+     "with": {
+      "ar": "موانع الحمل الهرمونية",
+      "en": "Hormonal contraceptives"
+     },
+     "desc": {
+      "ar": "تقل فعاليتها: وسيلة غير هرمونية أو حاجز إضافي.",
+      "en": "They work less well: use a non-hormonal or extra barrier method."
+     },
+     "sev": "major",
+     "r": [
+      111
+     ]
+    }
+   ],
+   "src": [
+    111
+   ]
+  },
+  {
+   "id": "rifapentine",
+   "n": {
+    "ar": "ريفابنتين",
+    "en": "Rifapentine"
+   },
+   "aware": "",
+   "cls": {
+    "ar": "ريفاميسينات",
+    "en": "Rifamycins"
+   },
+   "uses": {
+    "ar": "السل الرئوي الفعال الحساس للأدوية (مع أدوية أخرى)، والسل الكامن (مع الإيزونيازيد أسبوعياً 12 أسبوعاً) من عمر سنتين.",
+    "en": "Active pulmonary tuberculosis sensitive to drugs (with other drugs), and latent tuberculosis (with isoniazid weekly for 12 weeks) from 2 years of age."
+   },
+   "dose": {
+    "ar": "السل الفعال: 600 ملغ مرتين أسبوعياً شهرين (72 ساعة على الأقل بين الجرعتين)، ثم 600 ملغ أسبوعياً 4 أشهر مع الإيزونيازيد. السل الكامن: أسبوعياً 12 أسبوعاً حسب الوزن: 10 إلى 14 كغ 300 ملغ، 14.1 إلى 25 كغ 450 ملغ، 25.1 إلى 32 كغ 600 ملغ، 32.1 إلى 50 كغ 750 ملغ، أكثر من 50 كغ 900 ملغ (حد أقصى)، مع الإيزونيازيد 15 ملغ/كغ (حد أقصى 900 ملغ) لمن هم 12 سنة فأكثر.",
+    "en": "Active TB: 600 mg twice a week for 2 months (at least 72 hours apart), then 600 mg weekly for 4 months with isoniazid. Latent TB: weekly for 12 weeks by weight: 10 to 14 kg 300 mg, 14.1 to 25 kg 450 mg, 25.1 to 32 kg 600 mg, 32.1 to 50 kg 750 mg, over 50 kg 900 mg (maximum), with isoniazid 15 mg/kg (maximum 900 mg) from 12 years."
+   },
+   "renal": {
+    "ar": "لا يذكر الملصق تعديلاً للكلى (17% فقط يخرج في البول).",
+    "en": "The label gives no kidney adjustment (only 17% leaves in the urine)."
+   },
+   "timing": {
+    "ar": "مع الطعام، بعلاج تحت الإشراف المباشر. لا يُستعمل مع السل المقاوم للريفامبين.",
+    "en": "With food, as directly observed therapy. Not for rifampin-resistant tuberculosis."
+   },
+   "inter": [
+    {
+     "with": {
+      "ar": "أدوية فيروس نقص المناعة (مثبطات البروتياز وبعض مثبطات النسخ العكسي)",
+      "en": "HIV medicines (protease inhibitors and some reverse transcriptase inhibitors)"
+     },
+     "desc": {
+      "ar": "ينخفض مستواها كثيراً وتفشل أو تظهر مقاومة.",
+      "en": "Their levels fall sharply, with failure or resistance."
+     },
+     "sev": "major",
+     "r": [
+      112
+     ]
+    },
+    {
+     "with": {
+      "ar": "موانع الحمل الهرمونية",
+      "en": "Hormonal contraceptives"
+     },
+     "desc": {
+      "ar": "تقل فعاليتها: وسيلة غير هرمونية أو حاجز إضافي.",
+      "en": "They work less well: use a non-hormonal or extra barrier method."
+     },
+     "sev": "major",
+     "r": [
+      112
+     ]
+    },
+    {
+     "with": {
+      "ar": "أدوية CYP3A4 و2C8/9",
+      "en": "CYP3A4 and 2C8/9 drugs"
+     },
+     "desc": {
+      "ar": "ينخفض أثرها: قد يلزم تعديل الجرعة.",
+      "en": "Their effect falls: doses may need adjusting."
+     },
+     "sev": "moderate",
+     "r": [
+      112
+     ]
+    }
+   ],
+   "src": [
+    112
+   ]
+  },
+  {
+   "id": "isoniazid",
+   "n": {
+    "ar": "إيزونيازيد",
+    "en": "Isoniazid"
+   },
+   "aware": "",
+   "cls": {
+    "ar": "مضادات السل (هيدرازيدات)",
+    "en": "Antituberculosis drugs (hydrazides)"
+   },
+   "uses": {
+    "ar": "علاج كل أشكال السل (مع أدوية أخرى)، والعلاج الوقائي للسل الكامن.",
+    "en": "Treatment of all forms of tuberculosis (with other drugs), and preventive treatment of latent tuberculosis."
+   },
+   "dose": {
+    "ar": "العلاج: البالغون 5 ملغ/كغ حتى 300 ملغ يومياً، أو 15 ملغ/كغ حتى 900 ملغ مرتين أو 3 مرات أسبوعياً؛ الأطفال 10 إلى 15 ملغ/كغ حتى 300 ملغ يومياً، أو 20 إلى 40 ملغ/كغ حتى 900 ملغ. الوقاية: البالغون فوق 30 كغ 300 ملغ يومياً؛ الأطفال 10 ملغ/كغ حتى 300 ملغ.",
+    "en": "Treatment: adults 5 mg/kg up to 300 mg a day, or 15 mg/kg up to 900 mg two or three times a week; children 10 to 15 mg/kg up to 300 mg a day, or 20 to 40 mg/kg up to 900 mg. Prevention: adults over 30 kg 300 mg a day; children 10 mg/kg up to 300 mg."
+   },
+   "renal": {
+    "ar": "بحذر مع ضعف الكلى الشديد أو مرض الكبد المزمن النشط. ممنوع في مرض الكبد الحاد أو أذى كبدي سابق منه.",
+    "en": "Caution in severe kidney impairment or active chronic liver disease. Contraindicated in acute liver disease or past liver injury from it."
+   },
+   "timing": {
+    "ar": "على معدة فارغة (الطعام يقلل الامتصاص). فيتامين B6 لمن لديهم سوء تغذية أو قابلية للاعتلال العصبي (الكحول، السكري). يُتجنب الطعام الغني بالتيرامين والهستامين.",
+    "en": "On an empty stomach (food reduces absorption). Vitamin B6 for the malnourished or those prone to neuropathy (alcohol, diabetes). Avoid tyramine- and histamine-rich foods."
+   },
+   "inter": [
+    {
+     "with": {
+      "ar": "الكحول يومياً",
+      "en": "Daily alcohol"
+     },
+     "desc": {
+      "ar": "زيادة خطر التهاب الكبد.",
+      "en": "Higher risk of hepatitis."
+     },
+     "sev": "major",
+     "r": [
+      113
+     ]
+    },
+    {
+     "with": {
+      "ar": "الباراسيتامول",
+      "en": "Paracetamol (acetaminophen)"
+     },
+     "desc": {
+      "ar": "قد تزيد سميته الكبدية.",
+      "en": "Its liver toxicity may increase."
+     },
+     "sev": "moderate",
+     "r": [
+      113
+     ]
+    },
+    {
+     "with": {
+      "ar": "الفينيتوين والكاربامازيبين والفالبروات",
+      "en": "Phenytoin, carbamazepine and valproate"
+     },
+     "desc": {
+      "ar": "ترتفع مستوياتها: قياس المستوى وتعديل الجرعة.",
+      "en": "Their levels rise: measure and adjust."
+     },
+     "sev": "major",
+     "r": [
+      113
+     ]
+    },
+    {
+     "with": {
+      "ar": "الثيوفيلين",
+      "en": "Theophylline"
+     },
+     "desc": {
+      "ar": "يرتفع مستواه: مراقبة.",
+      "en": "Its level rises: monitor."
+     },
+     "sev": "moderate",
+     "r": [
+      113
+     ]
+    },
+    {
+     "with": {
+      "ar": "الأطعمة الغنية بالتيرامين (الجبن، النبيذ الأحمر) والهستامين (التونة)",
+      "en": "Tyramine-rich (cheese, red wine) and histamine-rich (tuna) foods"
+     },
+     "desc": {
+      "ar": "صداع وتعرق وخفقان واحمرار وهبوط ضغط.",
+      "en": "Headache, sweating, palpitations, flushing and low blood pressure."
+     },
+     "sev": "moderate",
+     "r": [
+      113
+     ]
+    },
+    {
+     "with": {
+      "ar": "الريفامبين",
+      "en": "Rifampin"
+     },
+     "desc": {
+      "ar": "زيادة السمية الكبدية.",
+      "en": "More liver toxicity."
+     },
+     "sev": "moderate",
+     "r": [
+      110
+     ]
+    }
+   ],
+   "src": [
+    113
+   ]
+  },
+  {
+   "id": "ethambutol",
+   "n": {
+    "ar": "إيثامبوتول",
+    "en": "Ethambutol"
+   },
+   "aware": "",
+   "cls": {
+    "ar": "مضادات السل",
+    "en": "Antituberculosis drugs"
+   },
+   "uses": {
+    "ar": "السل الرئوي (مع أدوية أخرى دائماً).",
+    "en": "Pulmonary tuberculosis (always with other drugs)."
+   },
+   "dose": {
+    "ar": "العلاج الأول: 15 ملغ/كغ مرة يومياً. إعادة العلاج: 25 ملغ/كغ مرة يومياً لمدة 60 يوماً، ثم 15 ملغ/كغ مرة يومياً. لا يُنصح به تحت 13 سنة.",
+    "en": "First treatment: 15 mg/kg once a day. Retreatment: 25 mg/kg once a day for 60 days, then 15 mg/kg once a day. Not recommended under 13 years."
+   },
+   "renal": {
+    "ar": "ضعف الكلى: تخفيض الجرعة حسب مستواه في الدم (لا يعطي الملصق جدولاً)؛ يتراكم في القصور الكلوي.",
+    "en": "Kidney impairment: lower the dose by its blood level (the label gives no table); it accumulates in kidney insufficiency."
+   },
+   "timing": {
+    "ar": "مرة كل 24 ساعة، مع الطعام أو بدونه. فحص النظر قبل العلاج وأثناءه (شهرياً مع 25 ملغ/كغ). ممنوع مع التهاب العصب البصري، ولمن لا يستطيع الإبلاغ عن تغير النظر.",
+    "en": "Once every 24 hours, with or without food. Eye checks before and during treatment (monthly at 25 mg/kg). Contraindicated with optic neuritis, and in those who cannot report vision changes."
+   },
+   "inter": [
+    {
+     "with": {
+      "ar": "مضادات الحموضة بهيدروكسيد الألومنيوم",
+      "en": "Aluminium hydroxide antacids"
+     },
+     "desc": {
+      "ar": "تقلل امتصاصه: لا تُؤخذ خلال 4 ساعات بعده.",
+      "en": "Reduce its absorption: not within 4 hours after it."
+     },
+     "sev": "moderate",
+     "r": [
+      114
+     ]
+    }
+   ],
+   "src": [
+    114
+   ]
+  },
+  {
+   "id": "pza",
+   "n": {
+    "ar": "بيرازيناميد",
+    "en": "Pyrazinamide"
+   },
+   "aware": "",
+   "cls": {
+    "ar": "مضادات السل",
+    "en": "Antituberculosis drugs"
+   },
+   "uses": {
+    "ar": "السل (أول شهرين من علاج 6 أشهر أو أكثر، مع أدوية أخرى).",
+    "en": "Tuberculosis (the first 2 months of a 6-month or longer course, with other drugs)."
+   },
+   "dose": {
+    "ar": "15 إلى 30 ملغ/كغ مرة يومياً، لا تتجاوز 3 غرامات يومياً (توصيات CDC: لا تتجاوز 2 غرام في النظام اليومي). أو 50 إلى 70 ملغ/كغ مرتين أسبوعياً بالوزن الخالي من الدهون.",
+    "en": "15 to 30 mg/kg once a day, not over 3 g a day (CDC: not over 2 g on a daily regimen). Or 50 to 70 mg/kg twice a week on lean body weight."
+   },
+   "renal": {
+    "ar": "لا يبدو أن ضعف الكلى يحتاج خفض الجرعة. ممنوع في أذى الكبد الشديد والنقرس الحاد.",
+    "en": "Kidney impairment does not appear to need a lower dose. Contraindicated in severe liver damage and acute gout."
+   },
+   "timing": {
+    "ar": "مرة يومياً. فحص الكبد وحمض اليوريك قبل العلاج. يُوقف عند أذى الكبد أو النقرس الحاد. بحذر في السكري.",
+    "en": "Once a day. Liver tests and uric acid before treatment. Stop if liver damage or acute gout appears. Caution in diabetes."
+   },
+   "inter": [],
+   "inter_none": true,
+   "src": [
+    115
+   ]
+  },
+  {
+   "id": "bedaquiline",
+   "n": {
+    "ar": "بيداكويلين",
+    "en": "Bedaquiline"
+   },
+   "aware": "",
+   "cls": {
+    "ar": "ديارايل كينولينات (مضادات السل)",
+    "en": "Diarylquinolines (antituberculosis)"
+   },
+   "uses": {
+    "ar": "السل الرئوي المقاوم للأدوية المتعددة، مع 3 أدوية فعالة أخرى على الأقل، للبالغين والأطفال من سنتين (8 كغ فأكثر).",
+    "en": "Multidrug-resistant pulmonary tuberculosis, with at least 3 other effective drugs, in adults and children from 2 years (8 kg or more)."
+   },
+   "dose": {
+    "ar": "للبالغين: 400 ملغ مرة يومياً لأسبوعين، ثم 200 ملغ 3 مرات أسبوعياً (48 ساعة على الأقل بين الجرعات) لمدة 22 أسبوعاً. الأطفال حسب الوزن.",
+    "en": "Adults: 400 mg once a day for 2 weeks, then 200 mg three times a week (at least 48 hours apart) for 22 weeks. Children by weight."
+   },
+   "renal": {
+    "ar": "لا تعديل في الضعف الخفيف أو المتوسط؛ بحذر في الضعف الشديد والغسيل.",
+    "en": "No change for mild or moderate impairment; caution in severe impairment and dialysis."
+   },
+   "timing": {
+    "ar": "مع الطعام، بعلاج تحت الإشراف المباشر. تخطيط قلب وإنزيمات الكبد والأملاح قبل العلاج؛ يُوقف إذا تجاوز QTc ‏500 ms.",
+    "en": "With food, as directly observed therapy. ECG, liver enzymes and electrolytes before treatment; stop if QTc goes over 500 ms."
+   },
+   "inter": [
+    {
+     "with": {
+      "ar": "محفزات CYP3A4 القوية والمتوسطة (ريفامبين، ريفابنتين، ريفابوتين…)",
+      "en": "Strong and moderate CYP3A4 inducers (rifampin, rifapentine, rifabutin…)"
+     },
+     "desc": {
+      "ar": "تخفض مستواه: يُتجنب الجمع.",
+      "en": "Lower its level: avoid together."
+     },
+     "sev": "major",
+     "r": [
+      116
+     ]
+    },
+    {
+     "with": {
+      "ar": "مثبطات CYP3A4",
+      "en": "CYP3A4 inhibitors"
+     },
+     "desc": {
+      "ar": "يرتفع مستواه: مراقبة الكبد.",
+      "en": "Its level rises: monitor the liver."
+     },
+     "sev": "moderate",
+     "r": [
+      116
+     ]
+    },
+    {
+     "with": {
+      "ar": "الأدوية التي تطيل QT (كلوفازيمين، فلوروكينولونات، ماكروليدات…)",
+      "en": "QT-prolonging drugs (clofazimine, fluoroquinolones, macrolides…)"
+     },
+     "desc": {
+      "ar": "إطالة إضافية لـ QT: تخطيط قلب.",
+      "en": "Additive QT prolongation: ECG monitoring."
+     },
+     "sev": "major",
+     "r": [
+      116
+     ]
+    }
+   ],
+   "src": [
+    116
+   ]
+  }
+ ]
+}

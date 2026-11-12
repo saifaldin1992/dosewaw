@@ -1,0 +1,130 @@
+{
+ "batch": 5,
+ "language_note": "Written from the saved official labels (docs/antibiotics/labels). Imipenem-relebactam: Recarbrio (DailyMed); ceftobiprole: Zevtera (DailyMed).",
+ "drugs": [
+  {
+   "id": "cefepime", "n": {"ar": "سيفيبيم", "en": "Cefepime"}, "aware": "watch",
+   "cls": {"ar": "سيفالوسبورينات (الجيل الرابع)", "en": "Fourth-generation cephalosporins"},
+   "uses": {"ar": "التهاب الرئة، العلاج التجريبي لنقص العدلات مع الحمى، عدوى المسالك البولية، عدوى الجلد، وعدوى البطن المعقدة (مع الميترونيدازول).", "en": "Pneumonia, empiric treatment of febrile neutropenia, urinary tract infection, skin infection, and complicated intra-abdominal infection (with metronidazole)."},
+   "dose": {"ar": "للبالغين (تصفية أكثر من 60) وريدياً خلال 30 دقيقة: الالتهاب الرئوي 1 إلى 2 غرام كل 8 إلى 12 ساعة (الزائفة الزنجارية 2 غرام كل 8 ساعات)؛ نقص العدلات مع الحمى 2 غرام كل 8 ساعات؛ المسالك الخفيفة إلى المتوسطة 0.5 إلى 1 غرام كل 12 ساعة، والشديدة 2 غرام كل 12 ساعة؛ الجلد 2 غرام كل 12 ساعة؛ البطن 2 غرام كل 8 إلى 12 ساعة.", "en": "Adults (clearance over 60), IV over 30 minutes: pneumonia 1 to 2 g every 8 to 12 h (Pseudomonas 2 g every 8 h); febrile neutropenia 2 g every 8 h; mild to moderate urinary 0.5 to 1 g every 12 h, severe 2 g every 12 h; skin 2 g every 12 h; intra-abdominal 2 g every 8 to 12 h."},
+   "renal": {"ar": "الجرعة الأولى كالمعتادة، ثم الصيانة حسب الجدول: التصفية 30 إلى 60 ← الفاصل 24 ساعة (أو 12 ساعة لجرعة 2 غرام كل 8)؛ 11 إلى 29 ← جرعات أقل كل 24 ساعة؛ أقل من 11 ← 250 ملغ إلى 1 غرام كل 24 ساعة. الغسيل البريتوني: كل 48 ساعة. الغسيل الدموي: 1 غرام اليوم الأول ثم 500 ملغ كل 24 ساعة (أو 1 غرام كل 24 ساعة)، بعد الغسيل.", "en": "First dose as usual, then maintenance by the table: clearance 30 to 60 → every 24 h (or every 12 h for 2 g every 8 h); 11 to 29 → lower doses every 24 h; under 11 → 250 mg to 1 g every 24 h. Peritoneal dialysis: every 48 h. Haemodialysis: 1 g on day 1 then 500 mg every 24 h (or 1 g every 24 h), after dialysis."},
+   "timing": {"ar": "تسريب وريدي خلال 30 دقيقة تقريباً.", "en": "IV infusion over about 30 minutes."},
+   "inter": [
+    {"with": {"ar": "الأمينوغليكوزيدات", "en": "Aminoglycosides"}, "desc": {"ar": "زيادة خطر السمية الكلوية والأذنية: مراقبة الكلى خاصة مع الجرعات العالية.", "en": "More kidney and ear toxicity: monitor the kidneys, especially with high doses."}, "sev": "moderate", "r": [67]},
+    {"with": {"ar": "مدرات البول القوية (فوروسيميد)", "en": "Potent diuretics (furosemide)"}, "desc": {"ar": "تقارير سمية كلوية مع السيفالوسبورينات.", "en": "Reports of kidney toxicity with cephalosporins."}, "sev": "moderate", "r": [67]},
+    {"with": {"ar": "فحص سكر البول (طرق الاختزال)", "en": "Urine glucose tests (reduction methods)"}, "desc": {"ar": "نتيجة موجبة كاذبة: تُستعمل طرق الإنزيم.", "en": "False positive: use enzymatic methods."}, "sev": "minor", "r": [67]}
+   ],
+   "src": [67]
+  },
+  {
+   "id": "ceftaroline", "n": {"ar": "سيفتارولين فوساميل", "en": "Ceftaroline fosamil"}, "aware": "reserve",
+   "cls": {"ar": "سيفالوسبورينات (فعالة ضد العنقوديات المقاومة)", "en": "Cephalosporins with MRSA activity"},
+   "uses": {"ar": "عدوى الجلد والأنسجة الحادة، والتهاب الرئة المجتمعي.", "en": "Acute bacterial skin infection and community-acquired pneumonia."},
+   "dose": {"ar": "للبالغين: 600 ملغ وريدياً كل 12 ساعة خلال 5 إلى 60 دقيقة. الجلد 5 إلى 14 يوماً؛ الرئة 5 إلى 7 أيام.", "en": "Adults: 600 mg IV every 12 h over 5 to 60 minutes. Skin 5 to 14 days; pneumonia 5 to 7 days."},
+   "renal": {"ar": "التصفية أكثر من 50: لا تعديل. 31 إلى 50: 400 ملغ كل 12 ساعة. 15 إلى 30: 300 ملغ كل 12 ساعة. الفشل الكلوي النهائي ومنه الغسيل: 200 ملغ كل 12 ساعة.", "en": "Clearance over 50: no change. 31 to 50: 400 mg every 12 h. 15 to 30: 300 mg every 12 h. End-stage kidney disease including dialysis: 200 mg every 12 h."},
+   "timing": {"ar": "تسريب وريدي خلال 5 إلى 60 دقيقة.", "en": "IV infusion over 5 to 60 minutes."},
+   "inter": [], "inter_none": true,
+   "src": [68]
+  },
+  {
+   "id": "ceftobiprole", "n": {"ar": "سيفتوبيبرول", "en": "Ceftobiprole"}, "aware": "reserve",
+   "cls": {"ar": "سيفالوسبورينات (فعالة ضد العنقوديات المقاومة)", "en": "Cephalosporins with MRSA activity"},
+   "uses": {"ar": "تجرثم الدم بالمكورات العنقودية الذهبية (ومنه التهاب الشغاف الأيمن)، عدوى الجلد الحادة، والتهاب الرئة المجتمعي.", "en": "Staphylococcus aureus bacteraemia (including right-sided endocarditis), acute skin infection, and community-acquired pneumonia."},
+   "dose": {"ar": "للبالغين: 667 ملغ تسريباً خلال ساعتين. تجرثم الدم: كل 6 ساعات في الأيام 1 إلى 8 ثم كل 8 ساعات (حتى 42 يوماً). الجلد والرئة: كل 8 ساعات (5 إلى 14 يوماً).", "en": "Adults: 667 mg infused over 2 hours. Bacteraemia: every 6 h on days 1 to 8, then every 8 h (up to 42 days). Skin and pneumonia: every 8 h (5 to 14 days)."},
+   "renal": {"ar": "تجرثم الدم: التصفية 30 إلى أقل من 50 ← 667 ملغ كل 8 ساعات ثم كل 12 من اليوم 9؛ 15 إلى أقل من 30 ← 333 ملغ كل 8 ثم كل 12؛ أقل من 15 ومنه الغسيل ← 333 ملغ كل 24 ساعة. الجلد والرئة: 30 إلى أقل من 50 ← 667 ملغ كل 12؛ 15 إلى أقل من 30 ← 333 ملغ كل 12؛ أقل من 15 ← 333 ملغ كل 24. التصفية أكثر من 150: 667 ملغ كل 6 ساعات. يُعطى بعد الغسيل يوم الغسيل.", "en": "Bacteraemia: clearance 30 to under 50 → 667 mg every 8 h, then every 12 h from day 9; 15 to under 30 → 333 mg every 8 h then every 12 h; under 15 including dialysis → 333 mg every 24 h. Skin and pneumonia: 30 to under 50 → 667 mg every 12 h; 15 to under 30 → 333 mg every 12 h; under 15 → 333 mg every 24 h. Clearance over 150: 667 mg every 6 h. Give after dialysis on dialysis days."},
+   "timing": {"ar": "تسريب وريدي خلال ساعتين.", "en": "IV infusion over 2 hours."},
+   "inter": [
+    {"with": {"ar": "اختبارات الشريط للبول واختبار كومبس", "en": "Urine dipstick tests and the Coombs test"}, "desc": {"ar": "نتائج موجبة كاذبة محتملة: تأكيد بطريقة أخرى.", "en": "Possible false positives: confirm with another method."}, "sev": "minor", "r": [69]}
+   ],
+   "src": [69]
+  },
+  {
+   "id": "cefiderocol", "n": {"ar": "سيفيديروكول", "en": "Cefiderocol"}, "aware": "reserve",
+   "cls": {"ar": "سيفالوسبورينات (سيدروفور)", "en": "Siderophore cephalosporins"},
+   "uses": {"ar": "للبالغين (18 سنة فأكثر) بالبكتيريا سالبة الغرام الحساسة: عدوى المسالك البولية المعقدة ومنها التهاب الحويضة، والتهاب الرئة المكتسب في المستشفى أو المرتبط بجهاز التنفس.", "en": "Adults (18 and over), susceptible Gram-negative bacteria: complicated urinary tract infection including pyelonephritis, and hospital-acquired or ventilator-associated pneumonia."},
+   "dose": {"ar": "2 غرام كل 8 ساعات تسريباً وريدياً خلال 3 ساعات (تصفية 60 إلى 119)، لـ7 إلى 14 يوماً.", "en": "2 g every 8 h by 3-hour IV infusion (clearance 60 to 119), for 7 to 14 days."},
+   "renal": {"ar": "التصفية 120 فأكثر: 2 غرام كل 6 ساعات. 30 إلى 59: 1.5 غرام كل 8 ساعات. 15 إلى 29: 1 غرام كل 8 ساعات. أقل من 15 مع أو بدون غسيل: 0.75 غرام كل 12 ساعة (بعد الغسيل مباشرة). الغسيل المستمر: حسب معدل التدفق في الملصق.", "en": "Clearance 120 or more: 2 g every 6 h. 30 to 59: 1.5 g every 8 h. 15 to 29: 1 g every 8 h. Under 15 with or without dialysis: 0.75 g every 12 h (right after dialysis). Continuous renal replacement: by effluent flow in the label."},
+   "timing": {"ar": "تسريب وريدي خلال 3 ساعات.", "en": "IV infusion over 3 hours."},
+   "inter": [
+    {"with": {"ar": "اختبارات الشريط للبول", "en": "Urine dipstick tests"}, "desc": {"ar": "نتائج موجبة كاذبة (بروتين، كيتونات، دم خفي).", "en": "False positives (protein, ketones, occult blood)."}, "sev": "minor", "r": [70]}
+   ],
+   "src": [70]
+  },
+  {
+   "id": "ceftolo_tazo", "n": {"ar": "سيفتولوزان–تازوباكتام", "en": "Ceftolozane–tazobactam"}, "aware": "reserve",
+   "cls": {"ar": "سيفالوسبورينات مع مثبط بيتالاكتاماز", "en": "Cephalosporins with a beta-lactamase inhibitor"},
+   "uses": {"ar": "عدوى البطن المعقدة (مع الميترونيدازول)، عدوى المسالك البولية المعقدة ومنها التهاب الحويضة، والتهاب الرئة المكتسب في المستشفى أو المرتبط بجهاز التنفس.", "en": "Complicated intra-abdominal infection (with metronidazole), complicated urinary infection including pyelonephritis, and hospital-acquired or ventilator-associated pneumonia."},
+   "dose": {"ar": "للبالغين كل 8 ساعات تسريباً خلال ساعة: البطن 1.5 غرام (4 إلى 14 يوماً)؛ المسالك 1.5 غرام (7 أيام)؛ الرئة 3 غرام (8 إلى 14 يوماً).", "en": "Adults every 8 h, 1-hour infusion: intra-abdominal 1.5 g (4 to 14 days); urinary 1.5 g (7 days); pneumonia 3 g (8 to 14 days)."},
+   "renal": {"ar": "التصفية 30 إلى 50: البطن والمسالك 750 ملغ، الرئة 1.5 غرام، كل 8 ساعات. 15 إلى 29: 375 ملغ، والرئة 750 ملغ، كل 8 ساعات. أقل من 15 بلا غسيل: الجرعة غير محددة. الغسيل الدموي: تحميل 750 ملغ ثم 150 ملغ كل 8 ساعات (الرئة: 2.25 غرام ثم 450 ملغ)، بعد الغسيل.", "en": "Clearance 30 to 50: intra-abdominal and urinary 750 mg, pneumonia 1.5 g, every 8 h. 15 to 29: 375 mg, pneumonia 750 mg, every 8 h. Under 15 without dialysis: not established. Haemodialysis: 750 mg loading then 150 mg every 8 h (pneumonia: 2.25 g then 450 mg), after dialysis."},
+   "timing": {"ar": "تسريب وريدي خلال ساعة.", "en": "IV infusion over 1 hour."},
+   "inter": [], "inter_none": true,
+   "src": [71]
+  },
+  {
+   "id": "ceftaz_avi", "n": {"ar": "سيفتازيديم–أفيباكتام", "en": "Ceftazidime–avibactam"}, "aware": "reserve",
+   "cls": {"ar": "سيفالوسبورينات مع مثبط بيتالاكتاماز", "en": "Cephalosporins with a beta-lactamase inhibitor"},
+   "uses": {"ar": "عدوى البطن المعقدة (مع الميترونيدازول)، عدوى المسالك البولية المعقدة ومنها التهاب الحويضة، والتهاب الرئة المكتسب في المستشفى أو المرتبط بجهاز التنفس.", "en": "Complicated intra-abdominal infection (with metronidazole), complicated urinary infection including pyelonephritis, and hospital-acquired or ventilator-associated pneumonia."},
+   "dose": {"ar": "للبالغين (تصفية أكثر من 50): 2.5 غرام (سيفتازيديم 2 + أفيباكتام 0.5) كل 8 ساعات تسريباً خلال ساعتين. البطن 5 إلى 14 يوماً؛ المسالك والرئة 7 إلى 14 يوماً.", "en": "Adults (clearance over 50): 2.5 g (ceftazidime 2 + avibactam 0.5) every 8 h by 2-hour infusion. Intra-abdominal 5 to 14 days; urinary and pneumonia 7 to 14 days."},
+   "renal": {"ar": "التصفية 31 إلى 50: 1.25 غرام كل 8 ساعات. 16 إلى 30: 0.94 غرام كل 12 ساعة. 6 إلى 15: 0.94 غرام كل 24 ساعة. 5 أو أقل: 0.94 غرام كل 48 ساعة. يُعطى بعد الغسيل يوم الغسيل.", "en": "Clearance 31 to 50: 1.25 g every 8 h. 16 to 30: 0.94 g every 12 h. 6 to 15: 0.94 g every 24 h. 5 or less: 0.94 g every 48 h. Give after dialysis on dialysis days."},
+   "timing": {"ar": "تسريب وريدي خلال ساعتين.", "en": "IV infusion over 2 hours."},
+   "inter": [
+    {"with": {"ar": "البروبينسيد", "en": "Probenecid"}, "desc": {"ar": "قد يقلل إطراح الأفيباكتام: لا يُنصح بالجمع.", "en": "May reduce avibactam elimination: not recommended together."}, "sev": "moderate", "r": [72]},
+    {"with": {"ar": "فحص سكر البول (طرق الاختزال)", "en": "Urine glucose tests (reduction methods)"}, "desc": {"ar": "نتيجة موجبة كاذبة: تُستعمل طرق الإنزيم.", "en": "False positive: use enzymatic methods."}, "sev": "minor", "r": [72]}
+   ],
+   "src": [72]
+  },
+  {
+   "id": "imi_cila", "n": {"ar": "إيميبينيم–سيلاستاتين", "en": "Imipenem–cilastatin"}, "aware": "watch",
+   "cls": {"ar": "كاربابينيمات", "en": "Carbapenems"},
+   "uses": {"ar": "عدوى الجهاز التنفسي السفلي، المسالك البولية، البطن، العدوى النسائية، تسمم الدم، العظام والمفاصل، الجلد، والتهاب الشغاف.", "en": "Lower respiratory, urinary, intra-abdominal, gynaecological, septicaemia, bone and joint, skin infections, and endocarditis."},
+   "dose": {"ar": "للبالغين (تصفية 90 فأكثر) بجرعة الإيميبينيم: البكتيريا الحساسة 500 ملغ كل 6 ساعات أو 1000 ملغ كل 8 ساعات؛ متوسطة الحساسية 1000 ملغ كل 6 ساعات. 500 ملغ أو أقل خلال 20 إلى 30 دقيقة، والأكثر خلال 40 إلى 60 دقيقة.", "en": "Adults (clearance 90 or more), as imipenem: susceptible bacteria 500 mg every 6 h or 1000 mg every 8 h; intermediate susceptibility 1000 mg every 6 h. 500 mg or less over 20 to 30 minutes, more over 40 to 60 minutes."},
+   "renal": {"ar": "حسب الجرعة الأصلية والتصفية: 500 كل 6 ← 400 كل 6 (60 إلى 89)، 300 كل 6 (30 إلى 59)، 200 كل 6 (15 إلى 29). 1000 كل 8 ← 500 كل 6، 500 كل 8، 500 كل 12. 1000 كل 6 ← 750 كل 8، 500 كل 6، 500 كل 12. أقل من 15: لا يُعطى إلا إذا بدأ الغسيل خلال 48 ساعة.", "en": "By the starting dose and clearance: 500 every 6 h → 400 every 6 h (60 to 89), 300 every 6 h (30 to 59), 200 every 6 h (15 to 29). 1000 every 8 h → 500 every 6 h, 500 every 8 h, 500 every 12 h. 1000 every 6 h → 750 every 8 h, 500 every 6 h, 500 every 12 h. Under 15: not unless dialysis starts within 48 h."},
+   "timing": {"ar": "تسريب وريدي؛ يُبطأ عند الغثيان.", "en": "IV infusion; slow it down if nausea occurs."},
+   "inter": [
+    {"with": {"ar": "الغانسيكلوفير", "en": "Ganciclovir"}, "desc": {"ar": "نوبات صرع عامة: لا يُجمع إلا إذا زادت الفائدة على الخطر.", "en": "Generalised seizures: only together if the benefit outweighs the risk."}, "sev": "major", "r": [73]},
+    {"with": {"ar": "حمض الفالبرويك والديفالبروكس", "en": "Valproic acid and divalproex"}, "desc": {"ar": "لا يُنصح بالجمع عموماً؛ يُفضل مضاد حيوي آخر للمرضى المستقرين عليه.", "en": "Generally not recommended; prefer another antibiotic for patients controlled on it."}, "sev": "major", "r": [73]},
+    {"with": {"ar": "البروبينسيد", "en": "Probenecid"}, "desc": {"ar": "يرفع مستوى الإيميبينيم وعمر نصفه: لا يُنصح بالجمع.", "en": "Raises imipenem level and half-life: not recommended together."}, "sev": "moderate", "r": [73]}
+   ],
+   "src": [73]
+  },
+  {
+   "id": "meropenem", "n": {"ar": "ميروبينيم", "en": "Meropenem"}, "aware": "watch",
+   "cls": {"ar": "كاربابينيمات", "en": "Carbapenems"},
+   "uses": {"ar": "عدوى الجلد المعقدة، عدوى البطن، والتهاب السحايا الجرثومي (عند الأطفال).", "en": "Complicated skin infection, intra-abdominal infection, and bacterial meningitis (children)."},
+   "dose": {"ar": "للبالغين: الجلد المعقد 500 ملغ كل 8 ساعات (الزائفة الزنجارية 1 غرام كل 8 ساعات)؛ البطن 1 غرام كل 8 ساعات. تسريب خلال 15 إلى 30 دقيقة، أو حقن بطيء خلال 3 إلى 5 دقائق.", "en": "Adults: complicated skin 500 mg every 8 h (Pseudomonas 1 g every 8 h); intra-abdominal 1 g every 8 h. Infusion over 15 to 30 minutes, or bolus over 3 to 5 minutes."},
+   "renal": {"ar": "التصفية أكثر من 50: الجرعة كل 8 ساعات. 26 إلى 50: الجرعة كل 12 ساعة. 10 إلى 25: نصف الجرعة كل 12 ساعة. أقل من 10: نصف الجرعة كل 24 ساعة.", "en": "Clearance over 50: the dose every 8 h. 26 to 50: the dose every 12 h. 10 to 25: half the dose every 12 h. Under 10: half the dose every 24 h."},
+   "timing": {"ar": "تسريب وريدي أو حقن بطيء.", "en": "IV infusion or slow injection."},
+   "inter": [
+    {"with": {"ar": "حمض الفالبرويك والديفالبروكس", "en": "Valproic acid and divalproex"}, "desc": {"ar": "لا يُنصح بالجمع عموماً؛ يُفضل مضاد حيوي غير الكاربابينيم.", "en": "Generally not recommended; prefer a non-carbapenem antibiotic."}, "sev": "major", "r": [74]},
+    {"with": {"ar": "البروبينسيد", "en": "Probenecid"}, "desc": {"ar": "يثبط إطراحه: لا يُنصح بالجمع.", "en": "Inhibits its excretion: not recommended together."}, "sev": "moderate", "r": [74]}
+   ],
+   "src": [74]
+  },
+  {
+   "id": "ertapenem", "n": {"ar": "إرتابينيم", "en": "Ertapenem"}, "aware": "watch",
+   "cls": {"ar": "كاربابينيمات", "en": "Carbapenems"},
+   "uses": {"ar": "عدوى البطن المعقدة، عدوى الجلد المعقدة ومنها القدم السكرية، التهاب الرئة المجتمعي، عدوى المسالك البولية المعقدة ومنها التهاب الحويضة، عدوى الحوض الحادة، والوقاية في جراحة القولون والمستقيم.", "en": "Complicated intra-abdominal infection, complicated skin infection including diabetic foot, community pneumonia, complicated urinary infection including pyelonephritis, acute pelvic infection, and prophylaxis in colorectal surgery."},
+   "dose": {"ar": "للبالغين (13 سنة فأكثر): 1 غرام مرة يومياً وريدياً (خلال 30 دقيقة، حتى 14 يوماً) أو عضلياً (حتى 7 أيام). الوقاية: 1 غرام قبل جراحة القولون بساعة.", "en": "Adults (13 and over): 1 g once a day IV (over 30 minutes, up to 14 days) or IM (up to 7 days). Prophylaxis: 1 g one hour before colorectal surgery."},
+   "renal": {"ar": "التصفية أكثر من 30: لا تعديل. 30 أو أقل (ومنه الفشل النهائي): 500 ملغ يومياً. إذا أُعطي خلال 6 ساعات قبل الغسيل: جرعة إضافية 150 ملغ بعده.", "en": "Clearance over 30: no change. 30 or less (including end-stage): 500 mg a day. If given within 6 h before dialysis: an extra 150 mg after it."},
+   "timing": {"ar": "لا يُخلط مع أدوية أخرى ولا مع محاليل الدكستروز.", "en": "Do not mix with other drugs or with dextrose solutions."},
+   "inter": [
+    {"with": {"ar": "حمض الفالبرويك والديفالبروكس", "en": "Valproic acid and divalproex"}, "desc": {"ar": "لا يُنصح بالجمع عموماً؛ يُفضل مضاد حيوي غير الكاربابينيم.", "en": "Generally not recommended; prefer a non-carbapenem antibiotic."}, "sev": "major", "r": [75]},
+    {"with": {"ar": "البروبينسيد", "en": "Probenecid"}, "desc": {"ar": "يثبط إطراحه: لا يُنصح بالجمع.", "en": "Inhibits its excretion: not recommended together."}, "sev": "moderate", "r": [75]}
+   ],
+   "src": [75]
+  },
+  {
+   "id": "imi_rele", "n": {"ar": "إيميبينيم–سيلاستاتين–ريليباكتام", "en": "Imipenem–cilastatin–relebactam"}, "aware": "reserve",
+   "cls": {"ar": "كاربابينيمات مع مثبط بيتالاكتاماز", "en": "Carbapenems with a beta-lactamase inhibitor"},
+   "uses": {"ar": "عدوى المسالك البولية المعقدة، عدوى البطن المعقدة، والتهاب الرئة المكتسب في المستشفى أو المرتبط بجهاز التنفس.", "en": "Complicated urinary infection, complicated intra-abdominal infection, and hospital-acquired or ventilator-associated pneumonia."},
+   "dose": {"ar": "للبالغين (تصفية 90 فأكثر): 1.25 غرام (إيميبينيم 500، سيلاستاتين 500، ريليباكتام 250 ملغ) كل 6 ساعات تسريباً خلال 30 دقيقة.", "en": "Adults (clearance 90 or more): 1.25 g (imipenem 500, cilastatin 500, relebactam 250 mg) every 6 h by 30-minute infusion."},
+   "renal": {"ar": "التصفية 60 إلى 89: 1 غرام كل 6 ساعات. 30 إلى 59: 0.75 غرام كل 6 ساعات. 15 إلى 29 أو الغسيل: 0.5 غرام كل 6 ساعات (بعد الغسيل). أقل من 15: لا يُعطى إلا إذا بدأ الغسيل خلال 48 ساعة.", "en": "Clearance 60 to 89: 1 g every 6 h. 30 to 59: 0.75 g every 6 h. 15 to 29 or dialysis: 0.5 g every 6 h (after dialysis). Under 15: not unless dialysis starts within 48 h."},
+   "timing": {"ar": "تسريب وريدي خلال 30 دقيقة.", "en": "IV infusion over 30 minutes."},
+   "inter": [
+    {"with": {"ar": "الغانسيكلوفير", "en": "Ganciclovir"}, "desc": {"ar": "نوبات صرع: يُتجنب الجمع.", "en": "Seizures: avoid together."}, "sev": "major", "r": [76]},
+    {"with": {"ar": "حمض الفالبرويك والديفالبروكس", "en": "Valproic acid and divalproex"}, "desc": {"ar": "يُتجنب الجمع.", "en": "Avoid together."}, "sev": "major", "r": [76]}
+   ],
+   "src": [76]
+  }
+ ]
+}

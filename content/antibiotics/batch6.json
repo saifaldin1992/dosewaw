@@ -1,0 +1,1036 @@
+{
+ "batch": 6,
+ "language_note": "Written from the saved official labels (docs/antibiotics/labels). Roxithromycin (Rulid) and josamycin (Josacine): French ANSM RCP, translated. Telithromycin: last US label (Ketek, 2012).",
+ "drugs": [
+  {
+   "id": "aztreonam",
+   "n": {
+    "ar": "أزتريونام",
+    "en": "Aztreonam"
+   },
+   "aware": "reserve",
+   "cls": {
+    "ar": "مونوباكتام",
+    "en": "Monobactams"
+   },
+   "uses": {
+    "ar": "عدوى المسالك البولية، والجهاز التنفسي السفلي، وتسمم الدم، والجلد، والبطن، والحوض النسائية، بالجراثيم سلبية الغرام الحساسة.",
+    "en": "Urinary tract, lower respiratory tract, septicaemia, skin, intra-abdominal and gynaecological infections caused by susceptible Gram-negative bacteria."
+   },
+   "dose": {
+    "ar": "للبالغين وريدياً أو عضلياً: المسالك البولية 500 ملغ أو 1 غرام كل 8 أو 12 ساعة؛ العدوى الجهازية المتوسطة 1 أو 2 غرام كل 8 أو 12 ساعة؛ الشديدة أو المهددة للحياة 2 غرام كل 6 أو 8 ساعات (وكذلك الزائفة الزنجارية في البداية). الحد الأقصى 8 غرامات يومياً. الأطفال من 9 أشهر: 30 ملغ/كغ كل 6 إلى 8 ساعات (حد أقصى 120 ملغ/كغ يومياً).",
+    "en": "Adults, IV or IM: urinary 500 mg or 1 g every 8 or 12 h; moderately severe systemic 1 or 2 g every 8 or 12 h; severe or life-threatening 2 g every 6 or 8 h (also for Pseudomonas, at least at the start). Maximum 8 g a day. Children from 9 months: 30 mg/kg every 6 to 8 h (maximum 120 mg/kg a day)."
+   },
+   "renal": {
+    "ar": "التصفية 10 إلى 30 (مل/دقيقة/1.73 م²): جرعة أولى 1 أو 2 غرام ثم نصف الجرعة. أقل من 10 (ومنهم مرضى الغسيل): الجرعة الأولى المعتادة ثم ربعها على الفاصل نفسه؛ وفي العدوى الخطيرة ثُمن الجرعة الأولى بعد كل غسيل.",
+    "en": "Clearance 10 to 30 (mL/min/1.73 m²): a first dose of 1 or 2 g, then half the dose. Under 10 (including dialysis): the usual first dose, then a quarter of it at the same interval; in serious infection, one eighth of the first dose after each dialysis."
+   },
+   "timing": {
+    "ar": "وريدياً خلال 3 إلى 5 دقائق أو تسريب خلال 20 إلى 60 دقيقة، أو عضلياً. الوريدي أفضل للجرعات أكثر من 1 غرام.",
+    "en": "IV over 3 to 5 minutes or infusion over 20 to 60 minutes, or IM. IV is preferred for single doses over 1 g."
+   },
+   "inter": [
+    {
+     "with": {
+      "ar": "الأمينوغليكوزيدات",
+      "en": "Aminoglycosides"
+     },
+     "desc": {
+      "ar": "مراقبة الكلى عند الجمع، خاصة مع الجرعات العالية أو العلاج الطويل.",
+      "en": "Monitor the kidneys when combined, especially with high doses or long treatment."
+     },
+     "sev": "moderate",
+     "r": [
+      77
+     ]
+    },
+    {
+     "with": {
+      "ar": "السيفوكسيتين والإيميبينيم",
+      "en": "Cefoxitin and imipenem"
+     },
+     "desc": {
+      "ar": "قد تُحفز إنزيمات بيتا لاكتاماز في بعض الجراثيم فتُضعف الأزتريونام: لا يُجمعان.",
+      "en": "May induce beta-lactamases in some bacteria and antagonise aztreonam: do not combine."
+     },
+     "sev": "moderate",
+     "r": [
+      77
+     ]
+    }
+   ],
+   "src": [
+    77
+   ]
+  },
+  {
+   "id": "mero_vabor",
+   "n": {
+    "ar": "ميروبينيم–فابورباكتام",
+    "en": "Meropenem–vaborbactam"
+   },
+   "aware": "reserve",
+   "cls": {
+    "ar": "كاربابينيم مع مثبط بيتا لاكتاماز",
+    "en": "Carbapenem with a beta-lactamase inhibitor"
+   },
+   "uses": {
+    "ar": "عدوى المسالك البولية المعقدة، ومنها التهاب الحويضة والكلية، للبالغين.",
+    "en": "Complicated urinary tract infection, including pyelonephritis, in adults."
+   },
+   "dose": {
+    "ar": "4 غرامات (ميروبينيم 2 غرام + فابورباكتام 2 غرام) كل 8 ساعات تسريباً وريدياً خلال 3 ساعات، حتى 14 يوماً، للبالغين مع معدل ترشيح 50 أو أكثر.",
+    "en": "4 g (meropenem 2 g + vaborbactam 2 g) every 8 h as a 3-hour IV infusion, for up to 14 days, in adults with eGFR 50 or more."
+   },
+   "renal": {
+    "ar": "حسب معدل الترشيح (MDRD، مل/دقيقة/1.73 م²): 30 إلى 49 ← 2 غرام كل 8 ساعات؛ 15 إلى 29 ← 2 غرام كل 12 ساعة؛ أقل من 15 ← 1 غرام كل 12 ساعة. الغسيل الدموي: بعد الجلسة.",
+    "en": "By eGFR (MDRD, mL/min/1.73 m²): 30 to 49 → 2 g every 8 h; 15 to 29 → 2 g every 12 h; under 15 → 1 g every 12 h. Haemodialysis: after the session."
+   },
+   "timing": {
+    "ar": "تسريب وريدي خلال 3 ساعات.",
+    "en": "IV infusion over 3 hours."
+   },
+   "inter": [
+    {
+     "with": {
+      "ar": "حمض الفالبرويك",
+      "en": "Valproic acid"
+     },
+     "desc": {
+      "ar": "تنخفض مستوياته وقد تحدث نوبات: يُفكر في مضاد صرع إضافي.",
+      "en": "Its levels fall and seizures may break through: consider an extra anticonvulsant."
+     },
+     "sev": "major",
+     "r": [
+      78
+     ]
+    },
+    {
+     "with": {
+      "ar": "البروبينيسيد",
+      "en": "Probenecid"
+     },
+     "desc": {
+      "ar": "يرفع مستوى الميروبينيم: لا يُنصح بالجمع.",
+      "en": "Raises meropenem levels: not recommended together."
+     },
+     "sev": "minor",
+     "r": [
+      78
+     ]
+    },
+    {
+     "with": {
+      "ar": "موانع الحمل الهرمونية",
+      "en": "Hormonal contraceptives"
+     },
+     "desc": {
+      "ar": "قد تقل فعاليتها: وسيلة إضافية غير هرمونية أثناء العلاج.",
+      "en": "May work less well: use an extra non-hormonal method during treatment."
+     },
+     "sev": "moderate",
+     "r": [
+      78
+     ]
+    }
+   ],
+   "src": [
+    78
+   ]
+  },
+  {
+   "id": "amikacin",
+   "n": {
+    "ar": "أميكاسين",
+    "en": "Amikacin"
+   },
+   "aware": "access",
+   "cls": {
+    "ar": "أمينوغليكوزيدات",
+    "en": "Aminoglycosides"
+   },
+   "uses": {
+    "ar": "عدوى خطيرة بالجراثيم سلبية الغرام: تسمم الدم (ومنه عند حديثي الولادة)، والجهاز التنفسي، والعظام والمفاصل، والجهاز العصبي (ومنه التهاب السحايا)، والجلد (ومنه الحروق)، والبطن (ومنه التهاب الصفاق)، والمسالك البولية المعقدة.",
+    "en": "Serious Gram-negative infections: septicaemia (including in newborns), respiratory tract, bones and joints, central nervous system (including meningitis), skin (including burns), intra-abdominal (including peritonitis), and complicated urinary infection."
+   },
+   "dose": {
+    "ar": "15 ملغ/كغ يومياً مقسمة: 7.5 ملغ/كغ كل 12 ساعة أو 5 ملغ/كغ كل 8 ساعات، وريدياً أو عضلياً؛ لا تتجاوز 1.5 غرام يومياً. حديثو الولادة: 10 ملغ/كغ أولاً ثم 7.5 ملغ/كغ كل 12 ساعة. المسالك غير المعقدة: 250 ملغ مرتين يومياً. المدة عادة 7 إلى 10 أيام.",
+    "en": "15 mg/kg a day divided: 7.5 mg/kg every 12 h or 5 mg/kg every 8 h, IV or IM; not over 1.5 g a day. Newborns: 10 mg/kg first, then 7.5 mg/kg every 12 h. Uncomplicated urinary infection: 250 mg twice a day. Usually 7 to 10 days."
+   },
+   "renal": {
+    "ar": "إما الجرعة المعتادة بفاصل أطول (بالساعات = كرياتينين الدم × 9)، أو جرعات أصغر كل 12 ساعة بنسبة انخفاض التصفية، مع قياس المستوى. تجنب ذروة أكثر من 35 وقاع أكثر من 10 مكغ/مل.",
+    "en": "Either the usual dose at a longer interval (hours = serum creatinine × 9) or smaller doses every 12 h in proportion to the lower clearance, with level monitoring. Avoid a peak over 35 and a trough over 10 mcg/mL."
+   },
+   "timing": {
+    "ar": "وريدياً خلال 30 إلى 60 دقيقة للبالغين، أو عضلياً.",
+    "en": "IV over 30 to 60 minutes in adults, or IM."
+   },
+   "inter": [
+    {
+     "with": {
+      "ar": "أدوية سامة للكلى أو الأعصاب (أمينوغليكوزيدات أخرى، فانكومايسين، كوليستين، بوليميكسين ب، أمفوتيريسين ب، سيسبلاتين)",
+      "en": "Other nephrotoxic or neurotoxic drugs (other aminoglycosides, vancomycin, colistin, polymyxin B, amphotericin B, cisplatin)"
+     },
+     "desc": {
+      "ar": "سمية إضافية للكلى والأذن: يُتجنب الجمع أو التتابع.",
+      "en": "Additive kidney and ear toxicity: avoid using them together or one after the other."
+     },
+     "sev": "major",
+     "r": [
+      79
+     ]
+    },
+    {
+     "with": {
+      "ar": "مدرات البول القوية (فوروسيميد، حمض الإيثاكرينيك)",
+      "en": "Potent diuretics (furosemide, ethacrynic acid)"
+     },
+     "desc": {
+      "ar": "تزيد السمية الأذنية: لا تُعطى معاً.",
+      "en": "More ear toxicity: do not give together."
+     },
+     "sev": "major",
+     "r": [
+      79
+     ]
+    },
+    {
+     "with": {
+      "ar": "المرخيات العضلية والتخدير (سكساميثونيوم وغيره)، ونقل الدم المحفوظ بالسترات",
+      "en": "Neuromuscular blockers and anaesthesia (succinylcholine and others), and massive citrated blood transfusion"
+     },
+     "desc": {
+      "ar": "خطر حصار عصبي عضلي وشلل تنفسي.",
+      "en": "Risk of neuromuscular blockade and respiratory paralysis."
+     },
+     "sev": "major",
+     "r": [
+      79
+     ]
+    },
+    {
+     "with": {
+      "ar": "البنسلينات والسيفالوسبورينات في نفس المحلول",
+      "en": "Penicillins and cephalosporins in the same solution"
+     },
+     "desc": {
+      "ar": "تعطيل متبادل عند الخلط: يُعطى كل منهما منفصلاً.",
+      "en": "Mutual inactivation when mixed: give each one separately."
+     },
+     "sev": "moderate",
+     "r": [
+      79
+     ]
+    }
+   ],
+   "src": [
+    79
+   ]
+  },
+  {
+   "id": "tobra",
+   "n": {
+    "ar": "توبراميسين (حقن)",
+    "en": "Tobramycin (injection)"
+   },
+   "aware": "watch",
+   "cls": {
+    "ar": "أمينوغليكوزيدات",
+    "en": "Aminoglycosides"
+   },
+   "uses": {
+    "ar": "عدوى خطيرة بالجراثيم الحساسة (ومنها الزائفة الزنجارية): تسمم الدم، والجهاز التنفسي السفلي، والجهاز العصبي (التهاب السحايا)، والبطن (ومنه التهاب الصفاق)، والجلد والعظام، والمسالك البولية المعقدة.",
+    "en": "Serious infections by susceptible bacteria (including Pseudomonas): septicaemia, lower respiratory tract, central nervous system (meningitis), intra-abdominal (including peritonitis), skin and bone, and complicated urinary infection."
+   },
+   "dose": {
+    "ar": "للبالغين: العدوى الخطيرة 3 ملغ/كغ يومياً (1 ملغ/كغ كل 8 ساعات)؛ المهددة للحياة حتى 5 ملغ/كغ يومياً مقسمة 3 أو 4 مرات ثم تُخفض إلى 3 بأسرع وقت. الأطفال أكبر من أسبوع: 6 إلى 7.5 ملغ/كغ يومياً مقسمة. المدة عادة 7 إلى 10 أيام. السمنة: الوزن الخالي من الدهون + 40% من الزيادة.",
+    "en": "Adults: serious infection 3 mg/kg a day (1 mg/kg every 8 h); life-threatening up to 5 mg/kg a day in 3 or 4 doses, reduced to 3 as soon as possible. Children over 1 week: 6 to 7.5 mg/kg a day divided. Usually 7 to 10 days. Obesity: lean weight plus 40% of the excess."
+   },
+   "renal": {
+    "ar": "جرعة أولى 1 ملغ/كغ، ثم إما جرعات أصغر كل 8 ساعات حسب المخطط، أو الجرعة المعتادة بفاصل (بالساعات = كرياتينين الدم × 6)، مع قياس المستوى. تجنب مستوى أكثر من 12 لفترة طويلة وقاع أكثر من 2 مكغ/مل.",
+    "en": "A first dose of 1 mg/kg, then either smaller doses every 8 h by the nomogram or the usual dose at an interval (hours = serum creatinine × 6), with level monitoring. Avoid prolonged levels over 12 and a trough over 2 mcg/mL."
+   },
+   "timing": {
+    "ar": "وريدياً خلال 20 إلى 60 دقيقة، أو عضلياً.",
+    "en": "IV over 20 to 60 minutes, or IM."
+   },
+   "inter": [
+    {
+     "with": {
+      "ar": "أدوية سامة للكلى أو الأعصاب (أمينوغليكوزيدات أخرى، فانكومايسين، كوليستين، بوليميكسين ب، أمفوتيريسين ب، سيسبلاتين)",
+      "en": "Other nephrotoxic or neurotoxic drugs (other aminoglycosides, vancomycin, colistin, polymyxin B, amphotericin B, cisplatin)"
+     },
+     "desc": {
+      "ar": "سمية إضافية للكلى والأذن: يُتجنب الجمع أو التتابع.",
+      "en": "Additive kidney and ear toxicity: avoid using them together or one after the other."
+     },
+     "sev": "major",
+     "r": [
+      80
+     ]
+    },
+    {
+     "with": {
+      "ar": "مدرات البول القوية (فوروسيميد، حمض الإيثاكرينيك)",
+      "en": "Potent diuretics (furosemide, ethacrynic acid)"
+     },
+     "desc": {
+      "ar": "تزيد السمية الأذنية: لا تُعطى معاً.",
+      "en": "More ear toxicity: do not give together."
+     },
+     "sev": "major",
+     "r": [
+      80
+     ]
+    },
+    {
+     "with": {
+      "ar": "المرخيات العضلية والتخدير (سكساميثونيوم وغيره)، ونقل الدم المحفوظ بالسترات",
+      "en": "Neuromuscular blockers and anaesthesia (succinylcholine and others), and massive citrated blood transfusion"
+     },
+     "desc": {
+      "ar": "خطر حصار عصبي عضلي وشلل تنفسي.",
+      "en": "Risk of neuromuscular blockade and respiratory paralysis."
+     },
+     "sev": "major",
+     "r": [
+      80
+     ]
+    },
+    {
+     "with": {
+      "ar": "البنسلينات والسيفالوسبورينات في نفس المحلول",
+      "en": "Penicillins and cephalosporins in the same solution"
+     },
+     "desc": {
+      "ar": "تعطيل متبادل عند الخلط: يُعطى كل منهما منفصلاً.",
+      "en": "Mutual inactivation when mixed: give each one separately."
+     },
+     "sev": "moderate",
+     "r": [
+      80
+     ]
+    }
+   ],
+   "src": [
+    80
+   ]
+  },
+  {
+   "id": "strepto",
+   "n": {
+    "ar": "ستربتومايسين",
+    "en": "Streptomycin"
+   },
+   "aware": "watch",
+   "cls": {
+    "ar": "أمينوغليكوزيدات",
+    "en": "Aminoglycosides"
+   },
+   "uses": {
+    "ar": "السل (مع أدوية أخرى عند الشك بالمقاومة)، والطاعون، والتولاريميا، والبروسيلا (مع غيره)، والتهاب الشغاف بالعقديات أو المكورات المعوية (مع البنسلين)، وكدواء خط ثانٍ لعدوى أخرى بسلبيات الغرام.",
+    "en": "Tuberculosis (with other drugs when resistance is suspected), plague, tularaemia, brucellosis (with others), streptococcal or enterococcal endocarditis (with penicillin), and as a second-line drug for other Gram-negative infections."
+   },
+   "dose": {
+    "ar": "عضلياً فقط. السل للبالغين: 15 ملغ/كغ يومياً (حد أقصى 1 غرام)، أو 25 إلى 30 ملغ/كغ مرتين أو 3 مرات أسبوعياً (حد أقصى 1.5 غرام)؛ الأطفال 20 إلى 40 ملغ/كغ يومياً (حد أقصى 1 غرام). التولاريميا 1 إلى 2 غرام يومياً مقسمة 7 إلى 14 يوماً. الطاعون 2 غرام يومياً على جرعتين 10 أيام على الأقل. التهاب الشغاف بالعقديات: 1 غرام مرتين يومياً أسبوعاً ثم 500 ملغ مرتين أسبوعاً (فوق 60 سنة: 500 ملغ مرتين أسبوعين). عدوى أخرى: 1 إلى 2 غرام يومياً مقسمة، لا تتجاوز 2 غرام.",
+    "en": "IM only. Tuberculosis, adults: 15 mg/kg a day (maximum 1 g), or 25 to 30 mg/kg two or three times a week (maximum 1.5 g); children 20 to 40 mg/kg a day (maximum 1 g). Tularaemia 1 to 2 g a day divided for 7 to 14 days. Plague 2 g a day in two doses for at least 10 days. Streptococcal endocarditis: 1 g twice a day for a week, then 500 mg twice a day for a week (over 60: 500 mg twice a day for two weeks). Other infections: 1 to 2 g a day divided, not over 2 g."
+   },
+   "renal": {
+    "ar": "جرعات مخفضة عند ضعف الكلى أو احتباس اليوريا (لا يعطي الملصق جدولاً)، مع مراقبة المستوى والكلى؛ وجرعة أقل فوق 60 سنة.",
+    "en": "Reduced doses with kidney impairment or nitrogen retention (the label gives no table), with level and kidney monitoring; and a lower dose over 60."
+   },
+   "timing": {
+    "ar": "حقن عضلي عميق، وتبديل مكان الحقن.",
+    "en": "Deep IM injection, alternating the site."
+   },
+   "inter": [
+    {
+     "with": {
+      "ar": "أدوية سامة للكلى أو الأعصاب (نيومايسين، جنتاميسين، توبراميسين، كوليستين، بوليميكسين ب، سيكلوسبورين)",
+      "en": "Other nephrotoxic or neurotoxic drugs (neomycin, gentamicin, tobramycin, colistin, polymyxin B, cyclosporine)"
+     },
+     "desc": {
+      "ar": "سمية إضافية: يُتجنب الجمع أو التتابع.",
+      "en": "Additive toxicity: avoid using them together or one after the other."
+     },
+     "sev": "major",
+     "r": [
+      81
+     ]
+    },
+    {
+     "with": {
+      "ar": "مدرات البول (فوروسيميد، حمض الإيثاكرينيك، المانيتول)",
+      "en": "Diuretics (furosemide, ethacrynic acid, mannitol)"
+     },
+     "desc": {
+      "ar": "تزيد السمية الأذنية.",
+      "en": "Increase ear toxicity."
+     },
+     "sev": "major",
+     "r": [
+      81
+     ]
+    },
+    {
+     "with": {
+      "ar": "التخدير والمرخيات العضلية",
+      "en": "Anaesthesia and muscle relaxants"
+     },
+     "desc": {
+      "ar": "شلل تنفسي من الحصار العصبي العضلي إذا أُعطي بعدها مباشرة.",
+      "en": "Respiratory paralysis from neuromuscular blockade when given soon after them."
+     },
+     "sev": "major",
+     "r": [
+      81
+     ]
+    }
+   ],
+   "src": [
+    81
+   ]
+  },
+  {
+   "id": "plazomicin",
+   "n": {
+    "ar": "بلازوميسين",
+    "en": "Plazomicin"
+   },
+   "aware": "reserve",
+   "cls": {
+    "ar": "أمينوغليكوزيدات",
+    "en": "Aminoglycosides"
+   },
+   "uses": {
+    "ar": "عدوى المسالك البولية المعقدة، ومنها التهاب الحويضة والكلية، للبالغين ذوي الخيارات المحدودة.",
+    "en": "Complicated urinary tract infection, including pyelonephritis, in adults with limited options."
+   },
+   "dose": {
+    "ar": "15 ملغ/كغ كل 24 ساعة تسريباً خلال 30 دقيقة، 4 إلى 7 أيام، للبالغين مع تصفية 90 أو أكثر. الوزن الفعلي، أو المعدّل إذا زاد الفعلي على المثالي بـ 25% أو أكثر.",
+    "en": "15 mg/kg every 24 h as a 30-minute infusion for 4 to 7 days, in adults with clearance 90 or more. Actual weight, or adjusted weight when actual is 25% or more over ideal."
+   },
+   "renal": {
+    "ar": "حسب تصفية كوكروفت-غولت: 60 إلى أقل من 90 ← 15 ملغ/كغ كل 24 ساعة؛ 30 إلى أقل من 60 ← 10 ملغ/كغ كل 24 ساعة؛ 15 إلى أقل من 30 ← 10 ملغ/كغ كل 48 ساعة. أقل من 15 أو غسيل: لا توصية. قياس المستوى (القاع أقل من 3 مكغ/مل) عند تصفية أقل من 90.",
+    "en": "By Cockcroft-Gault clearance: 60 to under 90 → 15 mg/kg every 24 h; 30 to under 60 → 10 mg/kg every 24 h; 15 to under 30 → 10 mg/kg every 48 h. Under 15 or dialysis: no recommendation. Level monitoring (trough under 3 mcg/mL) when clearance is under 90."
+   },
+   "timing": {
+    "ar": "تسريب وريدي خلال 30 دقيقة.",
+    "en": "IV infusion over 30 minutes."
+   },
+   "inter": [
+    {
+     "with": {
+      "ar": "أدوية سامة للكلى",
+      "en": "Nephrotoxic drugs"
+     },
+     "desc": {
+      "ar": "خطر أعلى للسمية الكلوية: مراقبة التصفية يومياً.",
+      "en": "Higher risk of kidney toxicity: check clearance every day."
+     },
+     "sev": "major",
+     "r": [
+      82
+     ]
+    },
+    {
+     "with": {
+      "ar": "المرخيات العضلية، والوهن العضلي الوبيل",
+      "en": "Neuromuscular blockers, and myasthenia gravis"
+     },
+     "desc": {
+      "ar": "قد يزيد الضعف العضلي أو يؤخر الإفاقة من الحصار.",
+      "en": "May worsen muscle weakness or delay recovery from blockade."
+     },
+     "sev": "major",
+     "r": [
+      82
+     ]
+    }
+   ],
+   "src": [
+    82
+   ]
+  },
+  {
+   "id": "erythro",
+   "n": {
+    "ar": "إريثرومايسين",
+    "en": "Erythromycin"
+   },
+   "aware": "watch",
+   "cls": {
+    "ar": "ماكروليدات",
+    "en": "Macrolides"
+   },
+   "uses": {
+    "ar": "عدوى الجهاز التنفسي العلوي والسفلي، والجلد، والسعال الديكي، والخناق، وداء الفيالقة، والكلاميديا (ومنها أثناء الحمل وعند الرضع)، والتهاب الإحليل، والزهري الأولي عند حساسية البنسلين، والأميبا المعوية، والحمامي الوهمية، والليستيريا، والوقاية من الحمى الرثوية.",
+    "en": "Upper and lower respiratory tract and skin infections, pertussis, diphtheria, Legionnaires disease, chlamydia (including in pregnancy and infants), urethritis, primary syphilis with penicillin allergy, intestinal amoebiasis, erythrasma, listeria, and prevention of rheumatic fever."
+   },
+   "dose": {
+    "ar": "(إريثرومايسين إيثيل سكسينات) للبالغين 400 ملغ كل 6 ساعات، حتى 4 غرامات يومياً حسب الشدة. الكلاميديا أو اليوريابلازما: 800 ملغ 3 مرات يومياً 7 أيام. الأميبا: 400 ملغ 4 مرات يومياً 10 إلى 14 يوماً. الوقاية من الحمى الرثوية: 400 ملغ مرتين يومياً. الأطفال: 30 إلى 50 ملغ/كغ يومياً مقسمة كل 6 ساعات.",
+    "en": "(Erythromycin ethylsuccinate) Adults 400 mg every 6 h, up to 4 g a day by severity. Chlamydia or Ureaplasma: 800 mg three times a day for 7 days. Amoebiasis: 400 mg four times a day for 10 to 14 days. Rheumatic fever prevention: 400 mg twice a day. Children: 30 to 50 mg/kg a day divided every 6 h."
+   },
+   "renal": {
+    "ar": "لا يذكر الملصق تعديلاً للكلى. الحذر في أمراض الكبد (سمية كبدية).",
+    "en": "The label gives no kidney adjustment. Caution in liver disease (liver toxicity)."
+   },
+   "timing": {
+    "ar": "المعلق (إيثيل سكسينات) مع الطعام أو بدونه.",
+    "en": "The suspension (ethylsuccinate) with or without food."
+   },
+   "inter": [
+    {
+     "with": {
+      "ar": "التيرفينادين، الأستيميزول، البيموزيد، السيزابريد",
+      "en": "Terfenadine, astemizole, pimozide, cisapride"
+     },
+     "desc": {
+      "ar": "ممنوع: إطالة QT واضطراب نظم خطير.",
+      "en": "Contraindicated: QT prolongation and serious arrhythmia."
+     },
+     "sev": "major",
+     "r": [
+      83
+     ]
+    },
+    {
+     "with": {
+      "ar": "اللوفاستاتين والسيمفاستاتين",
+      "en": "Lovastatin and simvastatin"
+     },
+     "desc": {
+      "ar": "ممنوع: خطر انحلال العضلات.",
+      "en": "Contraindicated: risk of rhabdomyolysis."
+     },
+     "sev": "major",
+     "r": [
+      83
+     ]
+    },
+    {
+     "with": {
+      "ar": "الإرغوتامين والديهيدروإرغوتامين",
+      "en": "Ergotamine and dihydroergotamine"
+     },
+     "desc": {
+      "ar": "ممنوع: تسمم الإرغوت وتقبض الأوعية.",
+      "en": "Contraindicated: ergot toxicity and vasospasm."
+     },
+     "sev": "major",
+     "r": [
+      83
+     ]
+    },
+    {
+     "with": {
+      "ar": "الكولشيسين",
+      "en": "Colchicine"
+     },
+     "desc": {
+      "ar": "تسمم بالكولشيسين: تخفيض جرعته ومراقبته.",
+      "en": "Colchicine toxicity: lower its dose and monitor."
+     },
+     "sev": "major",
+     "r": [
+      83
+     ]
+    },
+    {
+     "with": {
+      "ar": "مضادات اضطراب النظم من الفئة IA وIII (كينيدين، أميودارون، سوتالول)",
+      "en": "Class IA and III antiarrhythmics (quinidine, amiodarone, sotalol)"
+     },
+     "desc": {
+      "ar": "إطالة QT: يُتجنب.",
+      "en": "QT prolongation: avoid."
+     },
+     "sev": "major",
+     "r": [
+      83
+     ]
+    },
+    {
+     "with": {
+      "ar": "الثيوفيلين",
+      "en": "Theophylline"
+     },
+     "desc": {
+      "ar": "يرتفع الثيوفيلين وقد يتسمم، وينخفض الإريثرومايسين: تخفيض الثيوفيلين.",
+      "en": "Theophylline rises and may become toxic, and erythromycin falls: lower the theophylline dose."
+     },
+     "sev": "moderate",
+     "r": [
+      83
+     ]
+    },
+    {
+     "with": {
+      "ar": "الوارفارين ومضادات التخثر الفموية",
+      "en": "Warfarin and oral anticoagulants"
+     },
+     "desc": {
+      "ar": "زيادة أثر مضاد التخثر، خاصة عند كبار السن: مراقبة INR.",
+      "en": "Stronger anticoagulant effect, especially in the elderly: monitor INR."
+     },
+     "sev": "moderate",
+     "r": [
+      83
+     ]
+    },
+    {
+     "with": {
+      "ar": "الديجوكسين",
+      "en": "Digoxin"
+     },
+     "desc": {
+      "ar": "يرتفع مستوى الديجوكسين.",
+      "en": "Digoxin levels rise."
+     },
+     "sev": "moderate",
+     "r": [
+      83
+     ]
+    },
+    {
+     "with": {
+      "ar": "أدوية CYP3A4 (سيكلوسبورين، تاكروليمس، كاربامازيبين، سيلدينافيل، حاصرات الكالسيوم)",
+      "en": "CYP3A4 drugs (cyclosporine, tacrolimus, carbamazepine, sildenafil, calcium channel blockers)"
+     },
+     "desc": {
+      "ar": "ترتفع مستوياتها؛ هبوط ضغط مع حاصرات الكالسيوم: مراقبة وتعديل.",
+      "en": "Their levels rise; low blood pressure with calcium channel blockers: monitor and adjust."
+     },
+     "sev": "moderate",
+     "r": [
+      83
+     ]
+    }
+   ],
+   "src": [
+    83
+   ]
+  },
+  {
+   "id": "roxithro",
+   "n": {
+    "ar": "روكسيثرومايسين",
+    "en": "Roxithromycin"
+   },
+   "aware": "watch",
+   "cls": {
+    "ar": "ماكروليدات",
+    "en": "Macrolides"
+   },
+   "uses": {
+    "ar": "التهاب اللوزتين بالعقديات (بديل للبيتا لاكتام)، والتهاب الجيوب الحاد، والتهاب القصبات الحاد المختلط وتفاقم المزمن، والتهاب الرئة المكتسب غير الشديد (ومنه اللانمطي)، وعدوى الجلد البسيطة، والعدوى التناسلية غير السيلانية.",
+    "en": "Streptococcal tonsillitis (as an alternative to beta-lactams), acute sinusitis, superinfected acute bronchitis and exacerbations of chronic bronchitis, non-severe community pneumonia (including atypical), mild skin infections, and non-gonococcal genital infections."
+   },
+   "dose": {
+    "ar": "للبالغين: 150 ملغ مرتين يومياً (300 ملغ يومياً)، صباحاً ومساءً. التهاب اللوزتين: 10 أيام.",
+    "en": "Adults: 150 mg twice a day (300 mg a day), morning and evening. Tonsillitis: 10 days."
+   },
+   "renal": {
+    "ar": "لا تعديل في ضعف الكلى ولا عند كبار السن. ضعف الكبد الشديد: لا يُنصح به؛ الخفيف إلى المتوسط: بحذر مع مراقبة الكبد وربما خفض الجرعة.",
+    "en": "No change in kidney impairment or in the elderly. Severe liver impairment: not recommended; mild to moderate: with caution, liver tests and perhaps a lower dose."
+   },
+   "timing": {
+    "ar": "يفضل قبل الوجبات.",
+    "en": "Preferably before meals."
+   },
+   "inter": [
+    {
+     "with": {
+      "ar": "الإرغوتامين والديهيدروإرغوتامين",
+      "en": "Ergotamine and dihydroergotamine"
+     },
+     "desc": {
+      "ar": "ممنوع: تسمم الإرغوت ونخر الأطراف.",
+      "en": "Contraindicated: ergotism with necrosis of the extremities."
+     },
+     "sev": "major",
+     "r": [
+      84
+     ]
+    },
+    {
+     "with": {
+      "ar": "الكولشيسين",
+      "en": "Colchicine"
+     },
+     "desc": {
+      "ar": "ممنوع: آثار جانبية قد تكون قاتلة.",
+      "en": "Contraindicated: possibly fatal side effects."
+     },
+     "sev": "major",
+     "r": [
+      84
+     ]
+    },
+    {
+     "with": {
+      "ar": "السيزابريد وأدوية إطالة QT (أميودارون، سوتالول، هالوبيريدول، ميثادون، سيتالوبرام…)",
+      "en": "Cisapride and QT-prolonging drugs (amiodarone, sotalol, haloperidol, methadone, citalopram…)"
+     },
+     "desc": {
+      "ar": "السيزابريد ممنوع؛ الباقي لا يُنصح به: خطر اضطراب النظم (torsades de pointes).",
+      "en": "Cisapride contraindicated; the others not advised: risk of torsades de pointes."
+     },
+     "sev": "major",
+     "r": [
+      84
+     ]
+    },
+    {
+     "with": {
+      "ar": "الأتورفاستاتين والسيمفاستاتين",
+      "en": "Atorvastatin and simvastatin"
+     },
+     "desc": {
+      "ar": "خطر انحلال العضلات: جرعات أقل من الستاتين.",
+      "en": "Risk of rhabdomyolysis: lower statin doses."
+     },
+     "sev": "moderate",
+     "r": [
+      84
+     ]
+    },
+    {
+     "with": {
+      "ar": "الوارفارين ومضادات فيتامين K",
+      "en": "Warfarin and vitamin K antagonists"
+     },
+     "desc": {
+      "ar": "زيادة خطر النزف: مراقبة INR أكثر.",
+      "en": "More bleeding risk: check INR more often."
+     },
+     "sev": "moderate",
+     "r": [
+      84
+     ]
+    },
+    {
+     "with": {
+      "ar": "السيكلوسبورين",
+      "en": "Cyclosporine"
+     },
+     "desc": {
+      "ar": "ترتفع مستوياته والكرياتينين: قياس المستوى والكلى.",
+      "en": "Its levels and creatinine rise: measure levels and kidney function."
+     },
+     "sev": "moderate",
+     "r": [
+      84
+     ]
+    },
+    {
+     "with": {
+      "ar": "الديجوكسين",
+      "en": "Digoxin"
+     },
+     "desc": {
+      "ar": "يرتفع الديجوكسين: مراقبة سريرية وتخطيط القلب.",
+      "en": "Digoxin rises: clinical and ECG monitoring."
+     },
+     "sev": "moderate",
+     "r": [
+      84
+     ]
+    }
+   ],
+   "src": [
+    84
+   ]
+  },
+  {
+   "id": "josamycin",
+   "n": {
+    "ar": "جوزاميسين",
+    "en": "Josamycin"
+   },
+   "aware": "watch",
+   "cls": {
+    "ar": "ماكروليدات",
+    "en": "Macrolides"
+   },
+   "uses": {
+    "ar": "التهاب اللوزتين بالعقديات (بديل للبيتا لاكتام)، والتهاب الجيوب الحاد، والتهاب القصبات وتفاقم المزمن، والتهاب الرئة المكتسب غير الشديد، وعدوى الجلد البسيطة، وعدوى الفم والأسنان، والعدوى التناسلية غير السيلانية، والوقاية من عودة الحمى الرثوية عند حساسية البيتا لاكتام.",
+    "en": "Streptococcal tonsillitis (as an alternative to beta-lactams), acute sinusitis, bronchitis and exacerbations of chronic bronchitis, non-severe community pneumonia, mild skin infections, dental and oral infections, non-gonococcal genital infections, and prevention of rheumatic fever relapse with beta-lactam allergy."
+   },
+   "dose": {
+    "ar": "للبالغين والأطفال فوق 6 سنوات و40 كغ: 1 إلى 2 غرام يومياً على جرعتين. التهاب اللوزتين: 1 غرام مرتين يومياً 5 أيام.",
+    "en": "Adults and children over 6 years and 40 kg: 1 to 2 g a day in two doses. Tonsillitis: 1 g twice a day for 5 days."
+   },
+   "renal": {
+    "ar": "لا يذكر الملصق تعديلاً للكلى. ضعف الكبد: لا يُنصح به، وإن لزم فمع مراقبة الكبد وربما خفض الجرعة.",
+    "en": "The label gives no kidney adjustment. Liver impairment: not recommended; if needed, with liver tests and perhaps a lower dose."
+   },
+   "timing": {
+    "ar": "فموياً، صباحاً ومساءً.",
+    "en": "By mouth, morning and evening."
+   },
+   "inter": [
+    {
+     "with": {
+      "ar": "الإرغوتامين والديهيدروإرغوتامين",
+      "en": "Ergotamine and dihydroergotamine"
+     },
+     "desc": {
+      "ar": "ممنوع: تسمم الإرغوت.",
+      "en": "Contraindicated: ergotism."
+     },
+     "sev": "major",
+     "r": [
+      85
+     ]
+    },
+    {
+     "with": {
+      "ar": "البيموزيد",
+      "en": "Pimozide"
+     },
+     "desc": {
+      "ar": "ممنوع: اضطراب نظم بطيني.",
+      "en": "Contraindicated: ventricular arrhythmia."
+     },
+     "sev": "major",
+     "r": [
+      85
+     ]
+    },
+    {
+     "with": {
+      "ar": "الإيفابرادين",
+      "en": "Ivabradine"
+     },
+     "desc": {
+      "ar": "ممنوع: ترتفع مستوياته وآثاره الجانبية.",
+      "en": "Contraindicated: its levels and side effects rise."
+     },
+     "sev": "major",
+     "r": [
+      85
+     ]
+    },
+    {
+     "with": {
+      "ar": "الكولشيسين",
+      "en": "Colchicine"
+     },
+     "desc": {
+      "ar": "ممنوع: آثار جانبية قد تكون قاتلة.",
+      "en": "Contraindicated: possibly fatal side effects."
+     },
+     "sev": "major",
+     "r": [
+      85
+     ]
+    },
+    {
+     "with": {
+      "ar": "التاكروليمس",
+      "en": "Tacrolimus"
+     },
+     "desc": {
+      "ar": "لا يُنصح: ترتفع مستوياته والكرياتينين.",
+      "en": "Not advised: its levels and creatinine rise."
+     },
+     "sev": "moderate",
+     "r": [
+      85
+     ]
+    },
+    {
+     "with": {
+      "ar": "الكاربامازيبين والسيكلوسبورين",
+      "en": "Carbamazepine and cyclosporine"
+     },
+     "desc": {
+      "ar": "ترتفع مستوياتهما: مراقبة المستوى وتعديل الجرعة.",
+      "en": "Their levels rise: monitor levels and adjust the dose."
+     },
+     "sev": "moderate",
+     "r": [
+      85
+     ]
+    },
+    {
+     "with": {
+      "ar": "الوارفارين ومضادات فيتامين K",
+      "en": "Warfarin and vitamin K antagonists"
+     },
+     "desc": {
+      "ar": "قد يختل INR: مراقبة أكثر.",
+      "en": "INR may become unstable: check it more often."
+     },
+     "sev": "moderate",
+     "r": [
+      85
+     ]
+    }
+   ],
+   "src": [
+    85
+   ]
+  },
+  {
+   "id": "telithro",
+   "n": {
+    "ar": "تيليثرومايسين",
+    "en": "Telithromycin"
+   },
+   "aware": "watch",
+   "cls": {
+    "ar": "كيتوليدات (قريبة من الماكروليدات)",
+    "en": "Ketolides (related to macrolides)"
+   },
+   "uses": {
+    "ar": "التهاب الرئة المكتسب من المجتمع الخفيف إلى المتوسط للبالغين. لم يعد يُسوَّق في الولايات المتحدة، وآخر ملصق أمريكي من 2012.",
+    "en": "Mild to moderate community-acquired pneumonia in adults. No longer marketed in the United States; the last US label is from 2012."
+   },
+   "dose": {
+    "ar": "800 ملغ (قرصان 400 ملغ) فموياً مرة يومياً، 7 إلى 10 أيام.",
+    "en": "800 mg (two 400 mg tablets) by mouth once a day for 7 to 10 days."
+   },
+   "renal": {
+    "ar": "التصفية أقل من 30 (ومنهم الغسيل): 600 ملغ مرة يومياً، ومع ضعف الكبد أيضاً: 400 ملغ مرة يومياً. الغسيل: بعد الجلسة في أيامه. لا تعديل في ضعف الكبد وحده.",
+    "en": "Clearance under 30 (including dialysis): 600 mg once a day; with liver impairment as well: 400 mg once a day. Dialysis: after the session on dialysis days. No change for liver impairment alone."
+   },
+   "timing": {
+    "ar": "مع الطعام أو بدونه.",
+    "en": "With or without food."
+   },
+   "inter": [
+    {
+     "with": {
+      "ar": "الوهن العضلي الوبيل",
+      "en": "Myasthenia gravis"
+     },
+     "desc": {
+      "ar": "ممنوع: تفاقم قد يسبب فشلاً تنفسياً قاتلاً.",
+      "en": "Contraindicated: exacerbations with possibly fatal respiratory failure."
+     },
+     "sev": "major",
+     "r": [
+      86
+     ]
+    },
+    {
+     "with": {
+      "ar": "السيزابريد والبيموزيد",
+      "en": "Cisapride and pimozide"
+     },
+     "desc": {
+      "ar": "ممنوع: إطالة QT.",
+      "en": "Contraindicated: QT prolongation."
+     },
+     "sev": "major",
+     "r": [
+      86
+     ]
+    },
+    {
+     "with": {
+      "ar": "السيمفاستاتين واللوفاستاتين والأتورفاستاتين",
+      "en": "Simvastatin, lovastatin and atorvastatin"
+     },
+     "desc": {
+      "ar": "يُوقف الستاتين أثناء العلاج: خطر انحلال العضلات.",
+      "en": "Stop the statin during treatment: risk of rhabdomyolysis."
+     },
+     "sev": "major",
+     "r": [
+      86
+     ]
+    },
+    {
+     "with": {
+      "ar": "الكولشيسين",
+      "en": "Colchicine"
+     },
+     "desc": {
+      "ar": "زيادة كبيرة في مستواه (مثبط قوي لـ CYP3A4).",
+      "en": "Large rise in its level (strong CYP3A4 inhibitor)."
+     },
+     "sev": "major",
+     "r": [
+      86
+     ]
+    },
+    {
+     "with": {
+      "ar": "الريفامبين وغيره من محفزات CYP3A4 (فينيتوين، كاربامازيبين، فينوباربيتال)",
+      "en": "Rifampin and other CYP3A4 inducers (phenytoin, carbamazepine, phenobarbital)"
+     },
+     "desc": {
+      "ar": "يُتجنب: ينخفض التيليثرومايسين ويفشل العلاج.",
+      "en": "Avoid: telithromycin falls and treatment fails."
+     },
+     "sev": "major",
+     "r": [
+      86
+     ]
+    },
+    {
+     "with": {
+      "ar": "حاصرات الكالسيوم (فيراباميل، أملوديبين، ديلتيازيم)",
+      "en": "Calcium channel blockers (verapamil, amlodipine, diltiazem)"
+     },
+     "desc": {
+      "ar": "هبوط ضغط وبطء قلب وفقدان وعي: مراقبة.",
+      "en": "Low blood pressure, slow heart rate and fainting: monitor."
+     },
+     "sev": "major",
+     "r": [
+      86
+     ]
+    },
+    {
+     "with": {
+      "ar": "الميدازولام والتريازولام",
+      "en": "Midazolam and triazolam"
+     },
+     "desc": {
+      "ar": "زيادة التهدئة: مراقبة وتعديل الجرعة.",
+      "en": "More sedation: monitor and adjust the dose."
+     },
+     "sev": "moderate",
+     "r": [
+      86
+     ]
+    },
+    {
+     "with": {
+      "ar": "الديجوكسين، والميتوبرولول في فشل القلب",
+      "en": "Digoxin, and metoprolol in heart failure"
+     },
+     "desc": {
+      "ar": "ترتفع مستوياتهما: مراقبة.",
+      "en": "Their levels rise: monitor."
+     },
+     "sev": "moderate",
+     "r": [
+      86
+     ]
+    },
+    {
+     "with": {
+      "ar": "الوارفارين",
+      "en": "Warfarin"
+     },
+     "desc": {
+      "ar": "زيادة أثره: مراقبة INR.",
+      "en": "Stronger effect: monitor INR."
+     },
+     "sev": "moderate",
+     "r": [
+      86
+     ]
+    }
+   ],
+   "src": [
+    86
+   ]
+  }
+ ]
+}

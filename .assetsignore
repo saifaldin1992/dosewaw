@@ -1,0 +1,10 @@
+.git
+.github
+content
+tools
+tests
+design
+node_modules
+wrangler.jsonc
+README.md
+*.py

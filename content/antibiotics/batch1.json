@@ -1,0 +1,916 @@
+{
+ "batch": 1,
+ "language_note": "each text has Arabic (ar) and English (en)",
+ "drugs": [
+  {
+   "id": "amox",
+   "n": {
+    "ar": "أموكسيسيلين",
+    "en": "Amoxicillin"
+   },
+   "aware": "access",
+   "cls": {
+    "ar": "بنسلينات",
+    "en": "Penicillins"
+   },
+   "uses": {
+    "ar": "عدوى الأذن والأنف والحنجرة والجلد والمسالك البولية والجهاز التنفسي السفلي، حسب شدة العدوى.",
+    "en": "Infections of the ear, nose and throat, skin, urinary tract and lower respiratory tract, by severity."
+   },
+   "dose": {
+    "ar": "للبالغين: 500 ملغ كل 12 ساعة أو 250 ملغ كل 8 ساعات للعدوى الخفيفة إلى المتوسطة، و875 ملغ كل 12 ساعة أو 500 ملغ كل 8 ساعات للعدوى الشديدة. المدة: 48 إلى 72 ساعة بعد زوال الأعراض، وعشرة أيام على الأقل لعدوى المكورات العقدية الحالّة.",
+    "en": "Adults: 500 mg every 12 h or 250 mg every 8 h for mild to moderate infection; 875 mg every 12 h or 500 mg every 8 h for severe infection. Duration: 48 to 72 h after symptoms stop; at least 10 days for Streptococcus pyogenes."
+   },
+   "renal": {
+    "ar": "تصفية الكرياتينين أقل من 30 مل/دقيقة: لا تُستعمل جرعة 875 ملغ. من 10 إلى 30: 500 أو 250 ملغ كل 12 ساعة. أقل من 10: 500 أو 250 ملغ كل 24 ساعة. غسيل الكلى: 500 أو 250 ملغ كل 24 ساعة، مع جرعة إضافية أثناء الغسيل وفي نهايته.",
+    "en": "Creatinine clearance under 30 mL/min: do not use 875 mg. 10 to 30: 500 or 250 mg every 12 h. Under 10: 500 or 250 mg every 24 h. Haemodialysis: 500 or 250 mg every 24 h, plus a dose during and at the end of dialysis."
+   },
+   "timing": {
+    "ar": "يُؤخذ مع بداية الوجبة لتقليل اضطراب المعدة. لا توجد قاعدة توقيت أخرى في الملصق.",
+    "en": "Take at the start of a meal to reduce stomach upset. The label gives no other timing rule."
+   },
+   "inter": [
+    {
+     "with": {
+      "ar": "البروبينسيد",
+      "en": "Probenecid"
+     },
+     "desc": {
+      "ar": "يرفع تركيز الأموكسيسيلين ويطيل بقاءه في الدم؛ لا يُنصح بالجمع.",
+      "en": "Raises and prolongs amoxicillin levels; combination not advised."
+     },
+     "sev": "moderate",
+     "r": [
+      3
+     ]
+    },
+    {
+     "with": {
+      "ar": "مميعات الدم الفموية",
+      "en": "Oral anticoagulants"
+     },
+     "desc": {
+      "ar": "قد تطيل زمن البروثرومبين وترفع INR، وتحتاج مراقبة.",
+      "en": "May prolong prothrombin time and raise INR; monitor."
+     },
+     "sev": "major",
+     "r": [
+      3
+     ]
+    },
+    {
+     "with": {
+      "ar": "الألوبيورينول",
+      "en": "Allopurinol"
+     },
+     "desc": {
+      "ar": "يزيد احتمال الطفح الجلدي.",
+      "en": "Increases the risk of rash."
+     },
+     "sev": "moderate",
+     "r": [
+      3
+     ]
+    },
+    {
+     "with": {
+      "ar": "حبوب منع الحمل المركبة",
+      "en": "Combined oral contraceptives"
+     },
+     "desc": {
+      "ar": "قد تقل فعاليتها بسبب تأثير المضاد على البكتيريا المعوية.",
+      "en": "May reduce effectiveness through effects on gut bacteria."
+     },
+     "sev": "moderate",
+     "r": [
+      3
+     ]
+    },
+    {
+     "with": {
+      "ar": "مضادات حيوية أخرى مثبطة للجراثيم",
+      "en": "Other bacteriostatic antibiotics"
+     },
+     "desc": {
+      "ar": "تضاد مخبري في المختبر، وأهميته السريرية غير موثقة جيداً.",
+      "en": "In-vitro antagonism; clinical significance poorly documented."
+     },
+     "sev": "minor",
+     "r": [
+      3
+     ]
+    }
+   ],
+   "src": [
+    27,
+    1,
+    3
+   ],
+   "note": "دواء مرجعي، والملصق المستخدم هو الأقراص على DailyMed (2024)."
+  },
+  {
+   "id": "amox_clav",
+   "n": {
+    "ar": "أموكسيسيلين–كلافولانات",
+    "en": "Amoxicillin–clavulanate"
+   },
+   "aware": "access",
+   "cls": {
+    "ar": "بنسلينات مع مثبط بيتا لاكتاماز",
+    "en": "Penicillins with a beta-lactamase inhibitor"
+   },
+   "uses": {
+    "ar": "عدوى الجهاز التنفسي والأذن والجلد والمسالك البولية، حسب شدة العدوى.",
+    "en": "Respiratory, ear, skin and urinary tract infections, by severity."
+   },
+   "dose": {
+    "ar": "للبالغين: 875/125 ملغ كل 12 ساعة أو 500/125 ملغ كل 8 ساعات للعدوى الشديدة والجهاز التنفسي. للعدوى الأخف: 500/125 ملغ كل 12 ساعة أو 250/125 ملغ كل 8 ساعات. المدة لم يحددها الملصق إلا لالتهاب الأذن الوسطى الحاد: 10 أيام.",
+    "en": "Adults: 875/125 mg every 12 h or 500/125 mg every 8 h for severe and respiratory infection; 500/125 mg every 12 h or 250/125 mg every 8 h for less severe infection. Duration is not stated in the label except acute otitis media: 10 days."
+   },
+   "renal": {
+    "ar": "تصفية الكرياتينين أقل من 30 مل/دقيقة: لا تُستعمل جرعة 875 ملغ. من 10 إلى 30: 500 أو 250 ملغ كل 12 ساعة. أقل من 10: 500 أو 250 ملغ كل 24 ساعة. غسيل الكلى كما في الأموكسيسيلين.",
+    "en": "Creatinine clearance under 30 mL/min: do not use 875 mg. 10 to 30: 500 or 250 mg every 12 h. Under 10: 500 or 250 mg every 24 h. Haemodialysis as for amoxicillin."
+   },
+   "timing": {
+    "ar": "يُؤخذ مع بداية الوجبة لتقليل اضطراب المعدة.",
+    "en": "Take at the start of a meal to reduce stomach upset."
+   },
+   "inter": [
+    {
+     "with": {
+      "ar": "البروبينسيد",
+      "en": "Probenecid"
+     },
+     "desc": {
+      "ar": "يرفع تركيز الأموكسيلين ويطيل بقاءه؛ لا يُنصح بالجمع.",
+      "en": "Raises and prolongs amoxicillin levels; combination not advised."
+     },
+     "sev": "moderate",
+     "r": [
+      24
+     ]
+    },
+    {
+     "with": {
+      "ar": "مميعات الدم الفموية",
+      "en": "Oral anticoagulants"
+     },
+     "desc": {
+      "ar": "قد ترفع INR؛ تحتاج مراقبة.",
+      "en": "May raise INR; monitor."
+     },
+     "sev": "major",
+     "r": [
+      24
+     ]
+    },
+    {
+     "with": {
+      "ar": "الألوبيورينول",
+      "en": "Allopurinol"
+     },
+     "desc": {
+      "ar": "يزيد احتمال الطفح الجلدي.",
+      "en": "Increases the risk of rash."
+     },
+     "sev": "moderate",
+     "r": [
+      24
+     ]
+    },
+    {
+     "with": {
+      "ar": "حبوب منع الحمل المركبة",
+      "en": "Combined oral contraceptives"
+     },
+     "desc": {
+      "ar": "قد تقل فعاليتها.",
+      "en": "May reduce effectiveness."
+     },
+     "sev": "moderate",
+     "r": [
+      24
+     ]
+    }
+   ],
+   "src": [
+    28,
+    24,
+    1
+   ],
+   "note": "تصنيف AWaRe لم يُتحقق منه بعد؛ مدة العلاج غير محددة في الملصق إلا للأذن الوسطى."
+  },
+  {
+   "id": "cefalex",
+   "n": {
+    "ar": "سيفالكسين",
+    "en": "Cephalexin"
+   },
+   "aware": "access",
+   "cls": {
+    "ar": "سيفالوسبورينات (الجيل الأول)",
+    "en": "First-generation cephalosporins"
+   },
+   "uses": {
+    "ar": "عدوى الجلد والمسالك البولية والجهاز التنفسي حسب الإرشادات.",
+    "en": "Skin, urinary tract and respiratory infections, per guidelines."
+   },
+   "dose": {
+    "ar": "للبالغين: الشائع 250 ملغ كل 6 ساعات أو 500 ملغ كل 12 ساعة، لمدة 7 إلى 14 يوماً. في العدوى الشديدة قد تصل إلى 4 غرام يومياً مقسّمة على جرعتين إلى أربع.",
+    "en": "Adults: commonly 250 mg every 6 h or 500 mg every 12 h, for 7 to 14 days. In severe infection up to 4 g a day in two to four divided doses."
+   },
+   "renal": {
+    "ar": "تصفية الكرياتينين أكثر من 60 أو 30 إلى 59: لا تعديل (الحد الأقصى 1 غرام يومياً عند 30 إلى 59). من 15 إلى 29: 250 ملغ كل 8 إلى 12 ساعة. من 5 إلى 14: 250 ملغ كل 24 ساعة. من 1 إلى 4: 250 ملغ كل 48 إلى 60 ساعة. غسيل الكلى: معلومات غير كافية.",
+    "en": "Creatinine clearance over 60 or 30 to 59: no change (maximum 1 g a day at 30 to 59). 15 to 29: 250 mg every 8 to 12 h. 5 to 14: 250 mg every 24 h. 1 to 4: 250 mg every 48 to 60 h. Haemodialysis: insufficient information."
+   },
+   "timing": {
+    "ar": "لا توجد قاعدة توقيت موثقة في الملصق.",
+    "en": "No documented timing rule in the label."
+   },
+   "inter": [
+    {
+     "with": {
+      "ar": "الميتفورمين",
+      "en": "Metformin"
+     },
+     "desc": {
+      "ar": "يرفع تركيزه ويقلل تصفيته بالكلى؛ يلزم مراقبة وتعديل جرعة الميتفورمين عند الحاجة.",
+      "en": "Raises its levels and reduces its renal clearance; monitor and adjust the metformin dose if needed."
+     },
+     "sev": "moderate",
+     "r": [
+      7
+     ]
+    },
+    {
+     "with": {
+      "ar": "البروبينسيد",
+      "en": "Probenecid"
+     },
+     "desc": {
+      "ar": "يقلل إفراز السيفالكسين عبر الكلى؛ لا يُنصح بالجمع.",
+      "en": "Reduces renal excretion of cephalexin; combination not advised."
+     },
+     "sev": "moderate",
+     "r": [
+      7
+     ]
+    },
+    {
+     "with": {
+      "ar": "اختبارات جلوكوز البول",
+      "en": "Urine glucose tests"
+     },
+     "desc": {
+      "ar": "قد تعطي نتيجة إيجابية كاذبة مع محاليل بنديكت أو فهلنغ.",
+      "en": "May give a false-positive result with Benedict or Fehling solutions."
+     },
+     "sev": "minor",
+     "r": [
+      7
+     ]
+    }
+   ],
+   "src": [
+    29,
+    7
+   ],
+   "note": "الملصق المستخدم: كبسولات السيفالكسين على DailyMed."
+  },
+  {
+   "id": "ceftriaxone",
+   "n": {
+    "ar": "سيفترياكسون",
+    "en": "Ceftriaxone"
+   },
+   "aware": "watch",
+   "cls": {
+    "ar": "سيفالوسبورينات (الجيل الثالث)",
+    "en": "Third-generation cephalosporins"
+   },
+   "uses": {
+    "ar": "عدوى متعددة شديدة، منها الالتهاب السحائي وعدوى الجهاز التنفسي والبطن والجلد، حسب الإرشادات.",
+    "en": "Several severe infections, including meningitis, respiratory, abdominal and skin infections, per guidelines."
+   },
+   "dose": {
+    "ar": "للبالغين: من 1 إلى 2 غرام في الوريد مرة يومياً أو مقسّمة مرتين، بحد أقصى 4 غرام يومياً. الجلد: 50 إلى 75 ملغ/كغ، بحد أقصى 2 غرام يومياً. الالتهاب السحائي: 100 ملغ/كغ يومياً، بحد أقصى 4 غرام. السيلان غير المعقد: 250 ملغ حقنة عضلية مرة واحدة. المدة: يومان على الأقل بعد زوال الأعراض.",
+    "en": "Adults: 1 to 2 g IV once daily or divided twice daily, maximum 4 g a day. Skin: 50 to 75 mg/kg, maximum 2 g a day. Meningitis: 100 mg/kg a day, maximum 4 g. Uncomplicated gonorrhoea: 250 mg IM single dose. Duration: at least 2 days after symptoms stop."
+   },
+   "renal": {
+    "ar": "لا يلزم تعديل بسبب الكلى وحدها. عند القصور الكلوي والكبدي معاً: الحد الأقصى 2 غرام يومياً. لا يُزال بالغسيل الكلوي، ولا يُعطى جرعة بعد الغسيل.",
+    "en": "No change for kidney impairment alone. With significant kidney and liver impairment together: maximum 2 g a day. Not removed by dialysis; no dose after dialysis."
+   },
+   "timing": {
+    "ar": "لا يُعطى في الوقت نفسه مع محاليل الوريد التي تحتوي على الكالسيوم. يمكن إعطاؤه بالتتابع مع الشطف بين الدواءين، ما عدا حديثي الولادة.",
+    "en": "Must not be given at the same time as calcium-containing IV solutions. Sequential use with flushing is allowed, except in newborns."
+   },
+   "inter": [
+    {
+     "with": {
+      "ar": "محاليل الكالسيوم الوريدية",
+      "en": "Calcium-containing IV solutions"
+     },
+     "desc": {
+      "ar": "قد يتكون راسب؛ ممنوع الإعطاء في الوقت نفسه، ومحظور عند حديثي الولادة الذين يحتاجون كالسيوم وريدياً.",
+      "en": "Precipitation can occur; must not be given at the same time, and contraindicated in newborns needing IV calcium."
+     },
+     "sev": "major",
+     "r": [
+      25
+     ]
+    },
+    {
+     "with": {
+      "ar": "الفانكومايسين والأمينوغليكوزيدات والفلوكونازول",
+      "en": "Vancomycin, aminoglycosides, fluconazole"
+     },
+     "desc": {
+      "ar": "غير متوافق إذا خُلط في الخط نفسه؛ إن أُعطيت بالتتابع يُشطف الخط بين الدواءين.",
+      "en": "Incompatible if mixed in the same line; if given in sequence, flush the line between drugs."
+     },
+     "sev": "moderate",
+     "r": [
+      25
+     ]
+    }
+   ],
+   "src": [
+    35,
+    25,
+    1
+   ],
+   "note": "الملصق من الشركة المصنّعة (Pfizer) وليس من DailyMed؛ يُستبدل بملصق DailyMed عند توفره."
+  },
+  {
+   "id": "cipro",
+   "n": {
+    "ar": "سيبروفلوكساسين",
+    "en": "Ciprofloxacin"
+   },
+   "aware": "watch",
+   "cls": {
+    "ar": "فلوروكينولونات",
+    "en": "Fluoroquinolones"
+   },
+   "uses": {
+    "ar": "عدوى متعددة، والاستعمال مقيَّد بسبب مخاطر الآثار الجانبية، ويحتاج قراراً طبياً.",
+    "en": "Several infections; use is restricted because of side-effect risks and needs medical judgement."
+   },
+   "dose": {
+    "ar": "تختلف حسب العدوى. الجلد: 500 إلى 750 ملغ كل 12 ساعة لمدة 7 إلى 14 يوماً. العظام: 500 إلى 750 ملغ كل 12 ساعة لمدة 4 إلى 8 أسابيع. المسالك البولية: 250 إلى 500 ملغ كل 12 ساعة لمدة 7 إلى 14 يوماً. الجهاز التنفسي السفلي: 500 إلى 750 ملغ كل 12 ساعة لمدة 7 إلى 14 يوماً. الجرعات الأخرى في جدول الملصق.",
+    "en": "Varies by infection. Skin: 500 to 750 mg every 12 h for 7 to 14 days. Bone: 500 to 750 mg every 12 h for 4 to 8 weeks. Urinary: 250 to 500 mg every 12 h for 7 to 14 days. Lower respiratory: 500 to 750 mg every 12 h for 7 to 14 days. Other doses are in the label table."
+   },
+   "renal": {
+    "ar": "تصفية الكرياتينين أكثر من 50: الجرعة المعتادة. من 30 إلى 50: 250 إلى 500 ملغ كل 12 ساعة. من 5 إلى 29: 250 إلى 500 ملغ كل 18 ساعة. غسيل الكلى أو البريتوني: 250 إلى 500 ملغ كل 24 ساعة بعد الغسيل.",
+    "en": "Creatinine clearance over 50: usual dose. 30 to 50: 250 to 500 mg every 12 h. 5 to 29: 250 to 500 mg every 18 h. Dialysis: 250 to 500 mg every 24 h, after dialysis."
+   },
+   "timing": {
+    "ar": "يُؤخذ قبل مضادات الحموضة والكالسيوم والحديد والزنك ومنتجات الألبان بساعتين، أو بعدها بست ساعات.",
+    "en": "Take 2 hours before or 6 hours after antacids, calcium, iron, zinc and dairy products."
+   },
+   "inter": [
+    {
+     "with": {
+      "ar": "مضادات الحموضة والكالسيوم والحديد والزنك ومنتجات الألبان",
+      "en": "Antacids, calcium, iron, zinc, dairy"
+     },
+     "desc": {
+      "ar": "تقلل امتصاص السيبروفلوكساسين؛ يُؤخذ الدواء قبلها بساعتين أو بعدها بست ساعات.",
+      "en": "Reduce absorption; take the drug 2 hours before or 6 hours after."
+     },
+     "sev": "major",
+     "r": [
+      4,
+      20
+     ]
+    },
+    {
+     "with": {
+      "ar": "التيزانيدين",
+      "en": "Tizanidine"
+     },
+     "desc": {
+      "ar": "مُعارض؛ يرفع تركيزه ويزيد التأثير الخافض للضغط والمهدئ.",
+      "en": "Contraindicated; raises its levels and adds hypotension and sedation."
+     },
+     "sev": "major",
+     "r": [
+      20
+     ]
+    },
+    {
+     "with": {
+      "ar": "الثيوفيلين",
+      "en": "Theophylline"
+     },
+     "desc": {
+      "ar": "يُتجنب الجمع؛ وإن لزم فتُراقب مستوياته.",
+      "en": "Avoid combining; if unavoidable, monitor levels."
+     },
+     "sev": "major",
+     "r": [
+      20
+     ]
+    },
+    {
+     "with": {
+      "ar": "الوارفارين",
+      "en": "Warfarin"
+     },
+     "desc": {
+      "ar": "يزيد تأثير مضاد التخثر؛ يلزم مراقبة INR.",
+      "en": "Enhances anticoagulation; monitor INR."
+     },
+     "sev": "major",
+     "r": [
+      20
+     ]
+    },
+    {
+     "with": {
+      "ar": "الغليبيوريد والسلفونيلوريا",
+      "en": "Glyburide and sulfonylureas"
+     },
+     "desc": {
+      "ar": "قد يسبب نقص سكر الدم؛ يلزم الحذر ومراقبة السكر.",
+      "en": "May cause hypoglycaemia; use caution and monitor glucose."
+     },
+     "sev": "major",
+     "r": [
+      20
+     ]
+    }
+   ],
+   "src": [
+    31,
+    20,
+    4
+   ],
+   "note": "جدول الجرعات حسب العدوى ورد في نص الملصق على DailyMed؛ يُتحقق من كل قيمة قبل الاعتماد."
+  },
+  {
+   "id": "doxy",
+   "n": {
+    "ar": "دوكسيسيكلين",
+    "en": "Doxycycline"
+   },
+   "aware": "access",
+   "cls": {
+    "ar": "تتراسيكلينات",
+    "en": "Tetracyclines"
+   },
+   "uses": {
+    "ar": "عدوى متعددة، منها الأمراض المنقولة جنسياً والعدوى التنفسية والريكتسيا والملاريا (وقاية).",
+    "en": "Several infections, including sexually transmitted, respiratory and rickettsial infections, and malaria prophylaxis."
+   },
+   "dose": {
+    "ar": "للبالغين: 200 ملغ في اليوم الأول (100 ملغ كل 12 ساعة)، ثم 100 ملغ يومياً. للعدوى الأشد: 100 ملغ كل 12 ساعة. السيلان والالتهاب البولي الإحليلي: 100 ملغ كل 12 ساعة لمدة 7 أيام. الزهري المبكر عند من يتحسس من البنسلين: 100 ملغ كل 12 ساعة لمدة أسبوعين. الوقاية من الملاريا: 100 ملغ يومياً.",
+    "en": "Adults: 200 mg on day 1 (100 mg every 12 h), then 100 mg daily; 100 mg every 12 h for more severe infection. Gonorrhoea and nongonococcal urethritis: 100 mg every 12 h for 7 days. Early syphilis in penicillin-allergic patients: 100 mg every 12 h for 2 weeks. Malaria prophylaxis: 100 mg daily."
+   },
+   "renal": {
+    "ar": "لا يلزم تعديل الجرعة بسبب الكلى؛ نصف العمر لا يتغير في القصور الشديد. ينخفض الإفراز عند تصفية أقل من 10 مل/دقيقة.",
+    "en": "No dose adjustment for kidney disease; half-life is unchanged in severe impairment. Excretion falls when clearance is under 10 mL/min."
+   },
+   "timing": {
+    "ar": "وجبة غنية بالدهون والبروتين والألبان تقلل سرعة الامتصاص ومداه. يُؤخذ مع الماء ومنفصلاً عن مضادات الحموضة والحديد والكالسيوم.",
+    "en": "A high-fat, high-protein meal with dairy reduces absorption rate and extent. Take with water and apart from antacids, iron and calcium."
+   },
+   "inter": [
+    {
+     "with": {
+      "ar": "مضادات الحموضة والحديد والبزموث ومتعددات الفيتامينات والمعادن",
+      "en": "Antacids, iron, bismuth, multivitamins with minerals"
+     },
+     "desc": {
+      "ar": "تقلل الامتصاص. الفاصل الزمني الدقيق لم يرد في الملصق ويحتاج تحققاً.",
+      "en": "Reduce absorption. The exact time gap is not in the label and needs checking."
+     },
+     "sev": "major",
+     "r": [
+      12,
+      22
+     ]
+    },
+    {
+     "with": {
+      "ar": "مميعات الدم (الوارفارين)",
+      "en": "Anticoagulants (warfarin)"
+     },
+     "desc": {
+      "ar": "تقلل نشاط البروثرومبين؛ قد تحتاج جرعة المميع إلى خفض.",
+      "en": "Lower prothrombin activity; the anticoagulant dose may need reducing."
+     },
+     "sev": "major",
+     "r": [
+      22
+     ]
+    },
+    {
+     "with": {
+      "ar": "البنسلين",
+      "en": "Penicillin"
+     },
+     "desc": {
+      "ar": "يُتجنب الجمع، لأن المضاد المثبط للجراثيم قد يعيق فعل البنسلين القاتل للجراثيم.",
+      "en": "Avoid together; a bacteriostatic drug may interfere with penicillin's bactericidal action."
+     },
+     "sev": "moderate",
+     "r": [
+      22
+     ]
+    },
+    {
+     "with": {
+      "ar": "حبوب منع الحمل",
+      "en": "Oral contraceptives"
+     },
+     "desc": {
+      "ar": "قد تصبح أقل فعالية.",
+      "en": "May become less effective."
+     },
+     "sev": "moderate",
+     "r": [
+      22
+     ]
+    },
+    {
+     "with": {
+      "ar": "الباربيتورات والكاربامازبين والفينيتوين",
+      "en": "Barbiturates, carbamazepine, phenytoin"
+     },
+     "desc": {
+      "ar": "تقصّر نصف عمر الدوكسيسيكلين فتخفض مستواه.",
+      "en": "Shorten doxycycline's half-life and lower its levels."
+     },
+     "sev": "major",
+     "r": [
+      22
+     ]
+    }
+   ],
+   "src": [
+    30,
+    12,
+    22
+   ],
+   "note": "ملصق الأقراص الهيدروكلوريدية على DailyMed؛ مدة العلاج لكل عدوى تحتاج تحققاً من الإرشادات."
+  },
+  {
+   "id": "nitro",
+   "n": {
+    "ar": "نيتروفورانتوين",
+    "en": "Nitrofurantoin"
+   },
+   "aware": "access",
+   "cls": {
+    "ar": "نيتروفورانات",
+    "en": "Nitrofurans"
+   },
+   "uses": {
+    "ar": "التهاب المسالك البولية غير المعقد فقط.",
+    "en": "Uncomplicated urinary tract infection only."
+   },
+   "dose": {
+    "ar": "50 إلى 100 ملغ أربع مرات يومياً، والأدنى للعدوى غير المعقدة. المدة: أسبوع، أو ثلاثة أيام على الأقل بعد تعقيم البول. للوقاية طويلة المدى: 50 إلى 100 ملغ عند النوم.",
+    "en": "50 to 100 mg four times daily; the lower dose for uncomplicated infection. Duration: one week, or at least 3 days after urine is sterile. Long-term prevention: 50 to 100 mg at bedtime."
+   },
+   "renal": {
+    "ar": "ممنوع عند تصفية الكرياتينين أقل من 60 مل/دقيقة، أو ارتفاع واضح في كرياتينين الدم، أو انقطاع البول أو قلّته (موانع الاستعمال في الملصق). خطر اعتلال الأعصاب الطرفية يزيد مع القصور الكلوي.",
+    "en": "Contraindicated when creatinine clearance is under 60 mL/min, with a clearly raised serum creatinine, or with anuria or oliguria (label contraindications). The risk of peripheral neuropathy rises with kidney impairment."
+   },
+   "timing": {
+    "ar": "تُؤخذ الكبسولات مع الطعام لتحسين الامتصاص والتحمّل.",
+    "en": "Take the capsules with food to improve absorption and tolerance."
+   },
+   "inter": [
+    {
+     "with": {
+      "ar": "مضادات الحموضة الحاوية على تريسيليكات المغنيسيوم",
+      "en": "Magnesium trisilicate antacids"
+     },
+     "desc": {
+      "ar": "تقلل سرعة الامتصاص ومداه؛ يتجنبها الملصق.",
+      "en": "Reduce the rate and extent of absorption; the label advises avoiding them."
+     },
+     "sev": "major",
+     "r": [
+      8,
+      15
+     ]
+    },
+    {
+     "with": {
+      "ar": "البروبينسيد والسلفينبيرازون",
+      "en": "Probenecid and sulfinpyrazone"
+     },
+     "desc": {
+      "ar": "يمنعان إفراز النيتروفورانتوين عبر الكلى، فيرتفع مستواه.",
+      "en": "Block renal secretion of nitrofurantoin, raising its levels."
+     },
+     "sev": "moderate",
+     "r": [
+      8
+     ]
+    },
+    {
+     "with": {
+      "ar": "الكينولونات",
+      "en": "Quinolones"
+     },
+     "desc": {
+      "ar": "تضاد مخبري في المختبر، وأهميته السريرية غير محددة.",
+      "en": "In-vitro antagonism; clinical significance not established."
+     },
+     "sev": "minor",
+     "r": [
+      8
+     ]
+    }
+   ],
+   "src": [
+    33,
+    8,
+    15
+   ],
+   "note": "تعارض في العتبة الكلوية بين الملصق والإرشادات الأيرلندية؛ قرار الصيدلاني مطلوب."
+  },
+  {
+   "id": "metro",
+   "n": {
+    "ar": "ميترونيدازول",
+    "en": "Metronidazole"
+   },
+   "aware": "access",
+   "cls": {
+    "ar": "نيتروإيميدازولات",
+    "en": "Nitroimidazoles"
+   },
+   "uses": {
+    "ar": "داء المشعرات، والبكتيريا اللاهوائية، والأميبيا، وغيرها حسب الدواء.",
+    "en": "Trichomoniasis, anaerobic bacterial infections, amoebiasis and others."
+   },
+   "dose": {
+    "ar": "داء المشعرات: 2 غرام جرعة واحدة، أو 1 غرام مرتين في يوم واحد، أو 250 ملغ ثلاث مرات يومياً لمدة 7 أيام. الأميبيا المعوية: 750 ملغ ثلاث مرات يومياً لمدة 5 إلى 10 أيام. العدوى اللاهوائية: 7.5 ملغ/كغ كل 6 ساعات، بحد أقصى 4 غرام يومياً، لمدة 7 إلى 10 أيام.",
+    "en": "Trichomoniasis: 2 g single dose, or 1 g twice on one day, or 250 mg three times daily for 7 days. Intestinal amoebiasis: 750 mg three times daily for 5 to 10 days. Anaerobic infection: 7.5 mg/kg every 6 h, maximum 4 g a day, for 7 to 10 days."
+   },
+   "renal": {
+    "ar": "لا تعديل روتيني للكلى؛ قد تتراكم المستقلبات في الفشل الكلوي النهائي. بعد الغسيل الدموي قد تلزم جرعة إضافية. الغسيل البريتوني المستمر: لا تعديل.",
+    "en": "No routine kidney adjustment; metabolites may accumulate in end-stage disease. After haemodialysis a supplemental dose may be needed. Continuous peritoneal dialysis: no change."
+   },
+   "timing": {
+    "ar": "تجنّب الكحول ومنتجات البروبيلين غليكول أثناء العلاج ولمدة 3 أيام بعده.",
+    "en": "Avoid alcohol and propylene glycol products during treatment and for 3 days after."
+   },
+   "inter": [
+    {
+     "with": {
+      "ar": "الكحول",
+      "en": "Alcohol"
+     },
+     "desc": {
+      "ar": "تفاعل شبيه بالديسلفيرام (تقلص بطني، غثيان، قيء، صداع، احمرار).",
+      "en": "Disulfiram-like reaction (abdominal cramps, nausea, vomiting, headache, flushing)."
+     },
+     "sev": "major",
+     "r": [
+      13,
+      10
+     ]
+    },
+    {
+     "with": {
+      "ar": "الديسلفيرام",
+      "en": "Disulfiram"
+     },
+     "desc": {
+      "ar": "قد يسبب ذهاناً عند الجمع؛ لا يُعطى الميترونيدازول خلال أسبوعين من تناول الديسلفيرام.",
+      "en": "May cause psychosis; no metronidazole within 2 weeks of disulfiram."
+     },
+     "sev": "major",
+     "r": [
+      13
+     ]
+    },
+    {
+     "with": {
+      "ar": "الليثيوم",
+      "en": "Lithium"
+     },
+     "desc": {
+      "ar": "يرفع مستواه وقد يسبب التسمم؛ تُراجع مستوياته وكرياتينينه.",
+      "en": "Raises its levels and may cause toxicity; check lithium levels and creatinine."
+     },
+     "sev": "major",
+     "r": [
+      13
+     ]
+    },
+    {
+     "with": {
+      "ar": "البوسلفان",
+      "en": "Busulfan"
+     },
+     "desc": {
+      "ar": "يرفع تعرّضه ويزيد خطر السمية؛ يُتجنب إلا عند الضرورة مع مراقبة مستواه.",
+      "en": "Raises exposure and toxicity; avoid unless needed, with level monitoring."
+     },
+     "sev": "major",
+     "r": [
+      13
+     ]
+    },
+    {
+     "with": {
+      "ar": "الوارفارين",
+      "en": "Warfarin"
+     },
+     "desc": {
+      "ar": "يرفع خطر النزيف وINR؛ تُراقب INR بكثرة عند البدء أو الإيقاف.",
+      "en": "Raises bleeding risk and INR; monitor INR closely when starting or stopping."
+     },
+     "sev": "major",
+     "r": [
+      23
+     ]
+    }
+   ],
+   "src": [
+    34,
+    13,
+    23
+   ],
+   "note": "المصدر الأساسي ملصق DailyMed؛ الوارفارين من مصدر ثانوي وحالات مرضية."
+  },
+  {
+   "id": "azithro",
+   "n": {
+    "ar": "أزيثروميسين",
+    "en": "Azithromycin"
+   },
+   "aware": "watch",
+   "cls": {
+    "ar": "ماكروليدات",
+    "en": "Macrolides"
+   },
+   "uses": {
+    "ar": "التهاب الرئة المكتسب من المجتمع، والتهاب الجيوب، والأمراض المنقولة جنسياً، حسب الإرشادات.",
+    "en": "Community-acquired pneumonia, sinusitis and sexually transmitted infections, per guidelines."
+   },
+   "dose": {
+    "ar": "التهاب الرئة المكتسب من المجتمع (خفيف): 500 ملغ في اليوم الأول، ثم 250 ملغ يومياً من اليوم الثاني إلى الخامس. التهاب الجيوب الحاد: 500 ملغ يومياً لثلاثة أيام. الشانكر (القرحة الرخوة) والتهاب الإحليل غير الرابع: جرعة واحدة 1 غرام. السيلان: جرعة واحدة 2 غرام.",
+    "en": "Community-acquired pneumonia (mild): 500 mg on day 1, then 250 mg daily on days 2 to 5. Acute sinusitis: 500 mg daily for 3 days. Chancroid and nongonococcal urethritis or cervicitis: single 1 g dose. Gonorrhoea: single 2 g dose."
+   },
+   "renal": {
+    "ar": "لا تعديل عند تصفية الكرياتينين أكثر من 10 مل/دقيقة. عند أقل من 10 يرتفع التعرّض نحو 35%، فيلزم الحذر.",
+    "en": "No adjustment at clearance above 10 mL/min. Under 10, exposure rises about 35%, so caution."
+   },
+   "timing": {
+    "ar": "لا تُؤخذ مضادات الألومنيوم والماغنيسيوم في الوقت نفسه. ⚠ الفاصل بالساعات ليس من الملصق الأمريكي.",
+    "en": "Do not take aluminium and magnesium antacids at the same time. ⚠ An hour-based gap is not in the US label."
+   },
+   "inter": [
+    {
+     "with": {
+      "ar": "مضادات الألومنيوم والماغنيسيوم",
+      "en": "Aluminium and magnesium antacids"
+     },
+     "desc": {
+      "ar": "تخفض أقصى تركيز في الدم دون التعرض الكلي؛ يُنصح بعدم أخذها معاً.",
+      "en": "Lower peak blood levels but not total exposure; advised not to take together."
+     },
+     "sev": "moderate",
+     "r": [
+      14,
+      21
+     ]
+    },
+    {
+     "with": {
+      "ar": "الوارفارين ومضادات التخثر الفموية",
+      "en": "Warfarin and oral anticoagulants"
+     },
+     "desc": {
+      "ar": "تقارير ما بعد التسويق تشير إلى تعزيز محتمل؛ تُراقب مدة البروثرومبين.",
+      "en": "Postmarketing reports suggest potentiation; monitor prothrombin time."
+     },
+     "sev": "moderate",
+     "r": [
+      21
+     ]
+    },
+    {
+     "with": {
+      "ar": "الديجوكسين",
+      "en": "Digoxin"
+     },
+     "desc": {
+      "ar": "ارتفاع مستواه ملحوظ مع الماكروليدات؛ يلزم مراقبة دقيقة.",
+      "en": "Digoxin levels have been raised with macrolides; monitor carefully."
+     },
+     "sev": "moderate",
+     "r": [
+      21
+     ]
+    },
+    {
+     "with": {
+      "ar": "أدوية أخرى تطيل فترة QT",
+      "en": "Other QT-prolonging drugs"
+     },
+     "desc": {
+      "ar": "خطر اضطراب النظم القلبي؛ يُحذر مع مضادات الاضطراب القلبي من الفئة الأولى أو الثالثة، ونقص البوتاسيوم أو المغنيسيوم، وكبار السن.",
+      "en": "Arrhythmia risk; caution with Class IA or III antiarrhythmics, low potassium or magnesium, and older patients."
+     },
+     "sev": "major",
+     "r": [
+      21
+     ]
+    }
+   ],
+   "src": [
+    32,
+    14,
+    21
+   ],
+   "note": "ملصق DailyMed الحالي؛ التوقيت بالساعات من ملصق غير أمريكي فقط ولم يُستعمل."
+  },
+  {
+   "id": "smx_tmp",
+   "n": {
+    "ar": "سلفاميثوكسازول–تريميثوبريم",
+    "en": "Sulfamethoxazole–trimethoprim"
+   },
+   "aware": "access",
+   "cls": {
+    "ar": "سلفوناميدات مع تريميثوبريم",
+    "en": "Sulfonamides with trimethoprim"
+   },
+   "uses": {
+    "ar": "التهابات المسالك البولية، والشيجيلا، وعدوى أخرى حسب الإرشادات.",
+    "en": "Urinary tract infections, shigellosis and other infections, per guidelines."
+   },
+   "dose": {
+    "ar": "التهاب المسالك البولية: قرص قوي واحد أو قرصان عاديان كل 12 ساعة لمدة 10 إلى 14 يوماً. الشيجيلا: الجرعة اليومية نفسها لمدة 5 أيام.",
+    "en": "Urinary tract infection: one double-strength tablet or two regular tablets every 12 h for 10 to 14 days. Shigellosis: same daily dose for 5 days."
+   },
+   "renal": {
+    "ar": "تصفية الكرياتينين أكثر من 30 مل/دقيقة: الجرعة المعتادة. من 15 إلى 30: نصف الجرعة المعتادة. أقل من 15: لا يُنصح باستعماله (جدول الملصق).",
+    "en": "Creatinine clearance over 30 mL/min: usual regimen. 15 to 30: half the usual regimen. Under 15: use not recommended (label table)."
+   },
+   "timing": {
+    "ar": "لا توجد قاعدة توقيت موثقة في ما قرأناه.",
+    "en": "No documented timing rule in what was read."
+   },
+   "inter": [
+    {
+     "with": {
+      "ar": "الوارفارين",
+      "en": "Warfarin"
+     },
+     "desc": {
+      "ar": "قد يطيل زمن البروثرومبين؛ تُراقب INR.",
+      "en": "May prolong prothrombin time; monitor INR."
+     },
+     "sev": "major",
+     "r": [
+      26
+     ]
+    },
+    {
+     "with": {
+      "ar": "الفينيتوين",
+      "en": "Phenytoin"
+     },
+     "desc": {
+      "ar": "قد يقلل استقلاب الفينيتوين؛ تُراقب مستوياته.",
+      "en": "May reduce phenytoin metabolism; monitor levels."
+     },
+     "sev": "major",
+     "r": [
+      26
+     ]
+    },
+    {
+     "with": {
+      "ar": "الميثوتركسات",
+      "en": "Methotrexate"
+     },
+     "desc": {
+      "ar": "يُتجنب الجمع، لأن السلفوناميدات ترفع الميثوتركسات الحر.",
+      "en": "Avoid together; sulfonamides raise free methotrexate."
+     },
+     "sev": "major",
+     "r": [
+      26
+     ]
+    }
+   ],
+   "src": [
+    36,
+    26
+   ],
+   "note": "الملصق من FDA (SPL، تاريخ 2023)؛ جدول الكلى من مصادر متفقة وملصق الأقراص يُتحقق منه."
+  }
+ ],
+ "note_1_6": "Updated 2026-11-09 from the saved official labels: AWaRe 2023 groups, nitrofurantoin and SMX-TMP kidney text, label sources 27-36."
+}

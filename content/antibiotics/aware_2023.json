@@ -1,0 +1,1804 @@
+{
+ "source": "WHO AWaRe classification of antibiotics for evaluation and monitoring of use, 2023 (EML web annex C), https://iris.who.int/handle/10665/371093",
+ "rows": [
+  {
+   "antibiotic": "Amikacin",
+   "class": "Aminoglycosides",
+   "atc": "J01GB06",
+   "category": "Access",
+   "eml": "Yes"
+  },
+  {
+   "antibiotic": "Amoxicillin",
+   "class": "Penicillins",
+   "atc": "J01CA04",
+   "category": "Access",
+   "eml": "Yes"
+  },
+  {
+   "antibiotic": "Amoxicillin/clavulanic-acid",
+   "class": "Beta-lactam/beta-lactamase-inhibitor",
+   "atc": "J01CR02",
+   "category": "Access",
+   "eml": "Yes"
+  },
+  {
+   "antibiotic": "Ampicillin",
+   "class": "Penicillins",
+   "atc": "J01CA01",
+   "category": "Access",
+   "eml": "Yes"
+  },
+  {
+   "antibiotic": "Ampicillin/sulbactam",
+   "class": "Beta-lactam/beta-lactamase-inhibitor",
+   "atc": "J01CR01",
+   "category": "Access",
+   "eml": "No"
+  },
+  {
+   "antibiotic": "Arbekacin",
+   "class": "Aminoglycosides",
+   "atc": "J01GB12",
+   "category": "Watch",
+   "eml": "No"
+  },
+  {
+   "antibiotic": "Aspoxicillin",
+   "class": "Penicillins",
+   "atc": "J01CA19",
+   "category": "Watch",
+   "eml": "No"
+  },
+  {
+   "antibiotic": "Azidocillin",
+   "class": "Penicillins",
+   "atc": "J01CE04",
+   "category": "Access",
+   "eml": "No"
+  },
+  {
+   "antibiotic": "Azithromycin",
+   "class": "Macrolides",
+   "atc": "J01FA10",
+   "category": "Watch",
+   "eml": "Yes"
+  },
+  {
+   "antibiotic": "Azlocillin",
+   "class": "Penicillins",
+   "atc": "J01CA09",
+   "category": "Watch",
+   "eml": "No"
+  },
+  {
+   "antibiotic": "Aztreonam",
+   "class": "Monobactams",
+   "atc": "J01DF01",
+   "category": "Reserve",
+   "eml": "No"
+  },
+  {
+   "antibiotic": "Bacampicillin",
+   "class": "Penicillins",
+   "atc": "J01CA06",
+   "category": "Access",
+   "eml": "No"
+  },
+  {
+   "antibiotic": "Bekanamycin",
+   "class": "Aminoglycosides",
+   "atc": "J01GB13",
+   "category": "Watch",
+   "eml": "No"
+  },
+  {
+   "antibiotic": "Benzathine-benzylpenicillin",
+   "class": "Penicillins",
+   "atc": "J01CE08",
+   "category": "Access",
+   "eml": "Yes"
+  },
+  {
+   "antibiotic": "Benzylpenicillin",
+   "class": "Penicillins",
+   "atc": "J01CE01",
+   "category": "Access",
+   "eml": "Yes"
+  },
+  {
+   "antibiotic": "Biapenem",
+   "class": "Carbapenems",
+   "atc": "J01DH05",
+   "category": "Watch",
+   "eml": "No"
+  },
+  {
+   "antibiotic": "Brodimoprim",
+   "class": "Trimethoprim-derivatives",
+   "atc": "J01EA02",
+   "category": "Access",
+   "eml": "No"
+  },
+  {
+   "antibiotic": "Carbenicillin",
+   "class": "Penicillins",
+   "atc": "J01CA03",
+   "category": "Watch",
+   "eml": "No"
+  },
+  {
+   "antibiotic": "Carindacillin",
+   "class": "Penicillins",
+   "atc": "J01CA05",
+   "category": "Watch",
+   "eml": "No"
+  },
+  {
+   "antibiotic": "Carumonam",
+   "class": "Monobactams",
+   "atc": "J01DF02",
+   "category": "Reserve",
+   "eml": "No"
+  },
+  {
+   "antibiotic": "Cefacetrile",
+   "class": "First-generation-cephalosporins",
+   "atc": "J01DB10",
+   "category": "Access",
+   "eml": "No"
+  },
+  {
+   "antibiotic": "Cefaclor",
+   "class": "Second-generation-cephalosporins",
+   "atc": "J01DC04",
+   "category": "Watch",
+   "eml": "No"
+  },
+  {
+   "antibiotic": "Cefadroxil",
+   "class": "First-generation-cephalosporins",
+   "atc": "J01DB05",
+   "category": "Access",
+   "eml": "No"
+  },
+  {
+   "antibiotic": "Cefalexin",
+   "class": "First-generation-cephalosporins",
+   "atc": "J01DB01",
+   "category": "Access",
+   "eml": "Yes"
+  },
+  {
+   "antibiotic": "Cefaloridine",
+   "class": "First-generation-cephalosporins",
+   "atc": "J01DB02",
+   "category": "Access",
+   "eml": "No"
+  },
+  {
+   "antibiotic": "Cefalotin",
+   "class": "First-generation-cephalosporins",
+   "atc": "J01DB03",
+   "category": "Access",
+   "eml": "No"
+  },
+  {
+   "antibiotic": "Cefamandole",
+   "class": "Second-generation-cephalosporins",
+   "atc": "J01DC03",
+   "category": "Watch",
+   "eml": "No"
+  },
+  {
+   "antibiotic": "Cefapirin",
+   "class": "First-generation-cephalosporins",
+   "atc": "J01DB08",
+   "category": "Access",
+   "eml": "No"
+  },
+  {
+   "antibiotic": "Cefatrizine",
+   "class": "First-generation-cephalosporins",
+   "atc": "J01DB07",
+   "category": "Access",
+   "eml": "No"
+  },
+  {
+   "antibiotic": "Cefazedone",
+   "class": "First-generation-cephalosporins",
+   "atc": "J01DB06",
+   "category": "Access",
+   "eml": "No"
+  },
+  {
+   "antibiotic": "Cefazolin",
+   "class": "First-generation-cephalosporins",
+   "atc": "J01DB04",
+   "category": "Access",
+   "eml": "Yes"
+  },
+  {
+   "antibiotic": "Cefbuperazone",
+   "class": "Second-generation-cephalosporins",
+   "atc": "J01DC13",
+   "category": "Watch",
+   "eml": "No"
+  },
+  {
+   "antibiotic": "Cefcapene-pivoxil",
+   "class": "Third-generation-cephalosporins",
+   "atc": "J01DD17",
+   "category": "Watch",
+   "eml": "No"
+  },
+  {
+   "antibiotic": "Cefdinir",
+   "class": "Third-generation-cephalosporins",
+   "atc": "J01DD15",
+   "category": "Watch",
+   "eml": "No"
+  },
+  {
+   "antibiotic": "Cefditoren-pivoxil",
+   "class": "Third-generation-cephalosporins",
+   "atc": "J01DD16",
+   "category": "Watch",
+   "eml": "No"
+  },
+  {
+   "antibiotic": "Cefepime",
+   "class": "Fourth-generation-cephalosporins",
+   "atc": "J01DE01",
+   "category": "Watch",
+   "eml": "No"
+  },
+  {
+   "antibiotic": "Cefetamet-pivoxil",
+   "class": "Third-generation-cephalosporins",
+   "atc": "J01DD10",
+   "category": "Watch",
+   "eml": "No"
+  },
+  {
+   "antibiotic": "Cefiderocol",
+   "class": "Other-cephalosporins",
+   "atc": "J01DI04",
+   "category": "Reserve",
+   "eml": "Yes"
+  },
+  {
+   "antibiotic": "Cefixime",
+   "class": "Third-generation-cephalosporins",
+   "atc": "J01DD08",
+   "category": "Watch",
+   "eml": "Yes"
+  },
+  {
+   "antibiotic": "Cefmenoxime",
+   "class": "Third-generation-cephalosporins",
+   "atc": "J01DD05",
+   "category": "Watch",
+   "eml": "No"
+  },
+  {
+   "antibiotic": "Cefmetazole",
+   "class": "Second-generation-cephalosporins",
+   "atc": "J01DC09",
+   "category": "Watch",
+   "eml": "No"
+  },
+  {
+   "antibiotic": "Cefminox",
+   "class": "Second-generation-cephalosporins",
+   "atc": "J01DC12",
+   "category": "Watch",
+   "eml": "No"
+  },
+  {
+   "antibiotic": "Cefodizime",
+   "class": "Third-generation-cephalosporins",
+   "atc": "J01DD09",
+   "category": "Watch",
+   "eml": "No"
+  },
+  {
+   "antibiotic": "Cefonicid",
+   "class": "Second-generation-cephalosporins",
+   "atc": "J01DC06",
+   "category": "Watch",
+   "eml": "No"
+  },
+  {
+   "antibiotic": "Cefoperazone",
+   "class": "Third-generation-cephalosporins",
+   "atc": "J01DD12",
+   "category": "Watch",
+   "eml": "No"
+  },
+  {
+   "antibiotic": "Ceforanide",
+   "class": "Second-generation-cephalosporins",
+   "atc": "J01DC11",
+   "category": "Watch",
+   "eml": "No"
+  },
+  {
+   "antibiotic": "Cefoselis",
+   "class": "Fourth-generation-cephalosporins",
+   "atc": "to be assigned",
+   "category": "Watch",
+   "eml": "No"
+  },
+  {
+   "antibiotic": "Cefotaxime",
+   "class": "Third-generation-cephalosporins",
+   "atc": "J01DD01",
+   "category": "Watch",
+   "eml": "Yes"
+  },
+  {
+   "antibiotic": "Cefotetan",
+   "class": "Second-generation-cephalosporins",
+   "atc": "J01DC05",
+   "category": "Watch",
+   "eml": "No"
+  },
+  {
+   "antibiotic": "Cefotiam",
+   "class": "Second-generation-cephalosporins",
+   "atc": "J01DC07",
+   "category": "Watch",
+   "eml": "No"
+  },
+  {
+   "antibiotic": "Cefoxitin",
+   "class": "Second-generation-cephalosporins",
+   "atc": "J01DC01",
+   "category": "Watch",
+   "eml": "No"
+  },
+  {
+   "antibiotic": "Cefozopran",
+   "class": "Fourth-generation-cephalosporins",
+   "atc": "J01DE03",
+   "category": "Watch",
+   "eml": "No"
+  },
+  {
+   "antibiotic": "Cefpiramide",
+   "class": "Third-generation-cephalosporins",
+   "atc": "J01DD11",
+   "category": "Watch",
+   "eml": "No"
+  },
+  {
+   "antibiotic": "Cefpirome",
+   "class": "Fourth-generation-cephalosporins",
+   "atc": "J01DE02",
+   "category": "Watch",
+   "eml": "No"
+  },
+  {
+   "antibiotic": "Cefpodoxime-proxetil",
+   "class": "Third-generation-cephalosporins",
+   "atc": "J01DD13",
+   "category": "Watch",
+   "eml": "No"
+  },
+  {
+   "antibiotic": "Cefprozil",
+   "class": "Second-generation-cephalosporins",
+   "atc": "J01DC10",
+   "category": "Watch",
+   "eml": "No"
+  },
+  {
+   "antibiotic": "Cefradine",
+   "class": "First-generation-cephalosporins",
+   "atc": "J01DB09",
+   "category": "Access",
+   "eml": "No"
+  },
+  {
+   "antibiotic": "Cefroxadine",
+   "class": "First-generation-cephalosporins",
+   "atc": "J01DB11",
+   "category": "Access",
+   "eml": "No"
+  },
+  {
+   "antibiotic": "Cefsulodin",
+   "class": "Third-generation-cephalosporins",
+   "atc": "J01DD03",
+   "category": "Watch",
+   "eml": "No"
+  },
+  {
+   "antibiotic": "Ceftaroline-fosamil",
+   "class": "Fifth-generation cephalosporins",
+   "atc": "J01DI02",
+   "category": "Reserve",
+   "eml": "No"
+  },
+  {
+   "antibiotic": "Ceftazidime",
+   "class": "Third-generation-cephalosporins",
+   "atc": "J01DD02",
+   "category": "Watch",
+   "eml": "Yes"
+  },
+  {
+   "antibiotic": "Ceftazidime/avibactam",
+   "class": "Third-generation-cephalosporins",
+   "atc": "J01DD52",
+   "category": "Reserve",
+   "eml": "Yes"
+  },
+  {
+   "antibiotic": "Cefteram-pivoxil",
+   "class": "Third-generation-cephalosporins",
+   "atc": "J01DD18",
+   "category": "Watch",
+   "eml": "No"
+  },
+  {
+   "antibiotic": "Ceftezole",
+   "class": "First-generation-cephalosporins",
+   "atc": "J01DB12",
+   "category": "Access",
+   "eml": "No"
+  },
+  {
+   "antibiotic": "Ceftibuten",
+   "class": "Third-generation-cephalosporins",
+   "atc": "J01DD14",
+   "category": "Watch",
+   "eml": "No"
+  },
+  {
+   "antibiotic": "Ceftizoxime",
+   "class": "Third-generation-cephalosporins",
+   "atc": "J01DD07",
+   "category": "Watch",
+   "eml": "No"
+  },
+  {
+   "antibiotic": "Ceftobiprole-medocaril",
+   "class": "Fifth-generation cephalosporins",
+   "atc": "J01DI01",
+   "category": "Reserve",
+   "eml": "No"
+  },
+  {
+   "antibiotic": "Ceftolozane/tazobactam",
+   "class": "Fifth-generation cephalosporins",
+   "atc": "J01DI54",
+   "category": "Reserve",
+   "eml": "Yes"
+  },
+  {
+   "antibiotic": "Ceftriaxone",
+   "class": "Third-generation-cephalosporins",
+   "atc": "J01DD04",
+   "category": "Watch",
+   "eml": "Yes"
+  },
+  {
+   "antibiotic": "Cefuroxime",
+   "class": "Second-generation-cephalosporins",
+   "atc": "J01DC02",
+   "category": "Watch",
+   "eml": "Yes"
+  },
+  {
+   "antibiotic": "Chloramphenicol",
+   "class": "Amphenicols",
+   "atc": "J01BA01",
+   "category": "Access",
+   "eml": "Yes"
+  },
+  {
+   "antibiotic": "Chlortetracycline",
+   "class": "Tetracyclines",
+   "atc": "J01AA03",
+   "category": "Watch",
+   "eml": "No"
+  },
+  {
+   "antibiotic": "Cinoxacin",
+   "class": "Quinolones",
+   "atc": "J01MB06",
+   "category": "Watch",
+   "eml": "No"
+  },
+  {
+   "antibiotic": "Ciprofloxacin",
+   "class": "Fluoroquinolones",
+   "atc": "J01MA02",
+   "category": "Watch",
+   "eml": "Yes"
+  },
+  {
+   "antibiotic": "Clarithromycin",
+   "class": "Macrolides",
+   "atc": "J01FA09",
+   "category": "Watch",
+   "eml": "Yes"
+  },
+  {
+   "antibiotic": "Clindamycin",
+   "class": "Lincosamides",
+   "atc": "J01FF01",
+   "category": "Access",
+   "eml": "Yes"
+  },
+  {
+   "antibiotic": "Clofoctol",
+   "class": "Phenol derivatives",
+   "atc": "J01XX03",
+   "category": "Watch",
+   "eml": "No"
+  },
+  {
+   "antibiotic": "Clometocillin",
+   "class": "Penicillins",
+   "atc": "J01CE07",
+   "category": "Access",
+   "eml": "No"
+  },
+  {
+   "antibiotic": "Clomocycline",
+   "class": "Tetracyclines",
+   "atc": "J01AA11",
+   "category": "Watch",
+   "eml": "No"
+  },
+  {
+   "antibiotic": "Cloxacillin",
+   "class": "Penicillins",
+   "atc": "J01CF02",
+   "category": "Access",
+   "eml": "Yes"
+  },
+  {
+   "antibiotic": "Colistin_IV",
+   "class": "Polymyxins",
+   "atc": "J01XB01",
+   "category": "Reserve",
+   "eml": "Yes"
+  },
+  {
+   "antibiotic": "Colistin_oral",
+   "class": "Polymyxins",
+   "atc": "A07AA10",
+   "category": "Reserve",
+   "eml": "No"
+  },
+  {
+   "antibiotic": "Dalbavancin",
+   "class": "Glycopeptides",
+   "atc": "J01XA04",
+   "category": "Reserve",
+   "eml": "No"
+  },
+  {
+   "antibiotic": "Dalfopristin/quinupristin",
+   "class": "Streptogramins",
+   "atc": "J01FG02",
+   "category": "Reserve",
+   "eml": "No"
+  },
+  {
+   "antibiotic": "Daptomycin",
+   "class": "Lipopeptides",
+   "atc": "J01XX09",
+   "category": "Reserve",
+   "eml": "No"
+  },
+  {
+   "antibiotic": "Delafloxacin",
+   "class": "Fluoroquinolones",
+   "atc": "J01MA23",
+   "category": "Watch",
+   "eml": "No"
+  },
+  {
+   "antibiotic": "Demeclocycline",
+   "class": "Tetracyclines",
+   "atc": "J01AA01",
+   "category": "Watch",
+   "eml": "No"
+  },
+  {
+   "antibiotic": "Dibekacin",
+   "class": "Aminoglycosides",
+   "atc": "J01GB09",
+   "category": "Watch",
+   "eml": "No"
+  },
+  {
+   "antibiotic": "Dicloxacillin",
+   "class": "Penicillins",
+   "atc": "J01CF01",
+   "category": "Access",
+   "eml": "Yes (therapeutic alternative to cloxacillin)"
+  },
+  {
+   "antibiotic": "Dirithromycin",
+   "class": "Macrolides",
+   "atc": "J01FA13",
+   "category": "Watch",
+   "eml": "No"
+  },
+  {
+   "antibiotic": "Doripenem",
+   "class": "Carbapenems",
+   "atc": "J01DH04",
+   "category": "Watch",
+   "eml": "No"
+  },
+  {
+   "antibiotic": "Doxycycline",
+   "class": "Tetracyclines",
+   "atc": "J01AA02",
+   "category": "Access",
+   "eml": "Yes"
+  },
+  {
+   "antibiotic": "Enoxacin",
+   "class": "Fluoroquinolones",
+   "atc": "J01MA04",
+   "category": "Watch",
+   "eml": "No"
+  },
+  {
+   "antibiotic": "Epicillin",
+   "class": "Penicillins",
+   "atc": "J01CA07",
+   "category": "Access",
+   "eml": "No"
+  },
+  {
+   "antibiotic": "Eravacycline",
+   "class": "Tetracyclines",
+   "atc": "J01AA13",
+   "category": "Reserve",
+   "eml": "No"
+  },
+  {
+   "antibiotic": "Ertapenem",
+   "class": "Carbapenems",
+   "atc": "J01DH03",
+   "category": "Watch",
+   "eml": "No"
+  },
+  {
+   "antibiotic": "Erythromycin",
+   "class": "Macrolides",
+   "atc": "J01FA01",
+   "category": "Watch",
+   "eml": "Yes (therapeutic alternative to clarithromycin (EMLc))"
+  },
+  {
+   "antibiotic": "Faropenem",
+   "class": "Penems",
+   "atc": "J01DI03",
+   "category": "Reserve",
+   "eml": "No"
+  },
+  {
+   "antibiotic": "Fidaxomicin",
+   "class": "Macrolides",
+   "atc": "A07AA12",
+   "category": "Watch",
+   "eml": "No"
+  },
+  {
+   "antibiotic": "Fleroxacin",
+   "class": "Fluoroquinolones",
+   "atc": "J01MA08",
+   "category": "Watch",
+   "eml": "No"
+  },
+  {
+   "antibiotic": "Flomoxef",
+   "class": "Second-generation-cephalosporins",
+   "atc": "J01DC14",
+   "category": "Watch",
+   "eml": "No"
+  },
+  {
+   "antibiotic": "Flucloxacillin",
+   "class": "Penicillins",
+   "atc": "J01CF05",
+   "category": "Access",
+   "eml": "Yes (therapeutic alternative to cloxacillin)"
+  },
+  {
+   "antibiotic": "Flumequine",
+   "class": "Quinolones",
+   "atc": "J01MB07",
+   "category": "Watch",
+   "eml": "No"
+  },
+  {
+   "antibiotic": "Flurithromycin",
+   "class": "Macrolides",
+   "atc": "J01FA14",
+   "category": "Watch",
+   "eml": "No"
+  },
+  {
+   "antibiotic": "Fosfomycin_IV",
+   "class": "Phosphonics",
+   "atc": "J01XX01",
+   "category": "Reserve",
+   "eml": "Yes"
+  },
+  {
+   "antibiotic": "Fosfomycin_oral",
+   "class": "Phosphonics",
+   "atc": "J01XX01",
+   "category": "Watch",
+   "eml": "No"
+  },
+  {
+   "antibiotic": "Furazidin",
+   "class": "Nitrofuran derivatives",
+   "atc": "J01XE03",
+   "category": "Access",
+   "eml": "No"
+  },
+  {
+   "antibiotic": "Fusidic-acid",
+   "class": "Steroid antibacterials",
+   "atc": "J01XC01",
+   "category": "Watch",
+   "eml": "No"
+  },
+  {
+   "antibiotic": "Garenoxacin",
+   "class": "Fluoroquinolones",
+   "atc": "J01MA19",
+   "category": "Watch",
+   "eml": "No"
+  },
+  {
+   "antibiotic": "Gatifloxacin",
+   "class": "Fluoroquinolones",
+   "atc": "J01MA16",
+   "category": "Watch",
+   "eml": "No"
+  },
+  {
+   "antibiotic": "Gemifloxacin",
+   "class": "Fluoroquinolones",
+   "atc": "J01MA15",
+   "category": "Watch",
+   "eml": "No"
+  },
+  {
+   "antibiotic": "Gentamicin",
+   "class": "Aminoglycosides",
+   "atc": "J01GB03",
+   "category": "Access",
+   "eml": "Yes"
+  },
+  {
+   "antibiotic": "Grepafloxacin",
+   "class": "Fluoroquinolones",
+   "atc": "J01MA11",
+   "category": "Watch",
+   "eml": "No"
+  },
+  {
+   "antibiotic": "Hetacillin",
+   "class": "Penicillins",
+   "atc": "J01CA18",
+   "category": "Access",
+   "eml": "No"
+  },
+  {
+   "antibiotic": "Iclaprim",
+   "class": "Trimethoprim-derivatives",
+   "atc": "J01EA03",
+   "category": "Reserve",
+   "eml": "No"
+  },
+  {
+   "antibiotic": "Imipenem/cilastatin",
+   "class": "Carbapenems",
+   "atc": "J01DH51",
+   "category": "Watch",
+   "eml": "Yes (therapeutic alternative to meropenem)"
+  },
+  {
+   "antibiotic": "Imipenem/cilastatin/relebactam",
+   "class": "Carbapenems",
+   "atc": "J01DH56",
+   "category": "Reserve",
+   "eml": "No"
+  },
+  {
+   "antibiotic": "Isepamicin",
+   "class": "Aminoglycosides",
+   "atc": "J01GB11",
+   "category": "Watch",
+   "eml": "No"
+  },
+  {
+   "antibiotic": "Josamycin",
+   "class": "Macrolides",
+   "atc": "J01FA07",
+   "category": "Watch",
+   "eml": "No"
+  },
+  {
+   "antibiotic": "Kanamycin_IV",
+   "class": "Aminoglycosides",
+   "atc": "J01GB04",
+   "category": "Watch",
+   "eml": "No"
+  },
+  {
+   "antibiotic": "Kanamycin_oral",
+   "class": "Aminoglycosides",
+   "atc": "A07AA08",
+   "category": "Watch",
+   "eml": "No"
+  },
+  {
+   "antibiotic": "Lascufloxacin",
+   "class": "Fluoroquinolones",
+   "atc": "J01MA25",
+   "category": "Watch",
+   "eml": "No"
+  },
+  {
+   "antibiotic": "Latamoxef",
+   "class": "Third-generation-cephalosporins",
+   "atc": "J01DD06",
+   "category": "Watch",
+   "eml": "No"
+  },
+  {
+   "antibiotic": "Lefamulin",
+   "class": "Pleuromutilin",
+   "atc": "J01XX12",
+   "category": "Reserve",
+   "eml": "No"
+  },
+  {
+   "antibiotic": "Levofloxacin",
+   "class": "Fluoroquinolones",
+   "atc": "J01MA12",
+   "category": "Watch",
+   "eml": "No"
+  },
+  {
+   "antibiotic": "Levonadifloxacin",
+   "class": "Fluoroquinolones",
+   "atc": "J01MA24",
+   "category": "Watch",
+   "eml": "No"
+  },
+  {
+   "antibiotic": "Lincomycin",
+   "class": "Lincosamides",
+   "atc": "J01FF02",
+   "category": "Watch",
+   "eml": "No"
+  },
+  {
+   "antibiotic": "Linezolid",
+   "class": "Oxazolidinones",
+   "atc": "J01XX08",
+   "category": "Reserve",
+   "eml": "Yes"
+  },
+  {
+   "antibiotic": "Lomefloxacin",
+   "class": "Fluoroquinolones",
+   "atc": "J01MA07",
+   "category": "Watch",
+   "eml": "No"
+  },
+  {
+   "antibiotic": "Loracarbef",
+   "class": "Second-generation-cephalosporins",
+   "atc": "J01DC08",
+   "category": "Watch",
+   "eml": "No"
+  },
+  {
+   "antibiotic": "Lymecycline",
+   "class": "Tetracyclines",
+   "atc": "J01AA04",
+   "category": "Watch",
+   "eml": "No"
+  },
+  {
+   "antibiotic": "Mecillinam",
+   "class": "Penicillins",
+   "atc": "J01CA11",
+   "category": "Access",
+   "eml": "No"
+  },
+  {
+   "antibiotic": "Meropenem",
+   "class": "Carbapenems",
+   "atc": "J01DH02",
+   "category": "Watch",
+   "eml": "Yes"
+  },
+  {
+   "antibiotic": "Meropenem/vaborbactam",
+   "class": "Carbapenems",
+   "atc": "J01DH52",
+   "category": "Reserve",
+   "eml": "Yes"
+  },
+  {
+   "antibiotic": "Metacycline",
+   "class": "Tetracyclines",
+   "atc": "J01AA05",
+   "category": "Watch",
+   "eml": "No"
+  },
+  {
+   "antibiotic": "Metampicillin",
+   "class": "Penicillins",
+   "atc": "J01CA14",
+   "category": "Access",
+   "eml": "No"
+  },
+  {
+   "antibiotic": "Meticillin",
+   "class": "Penicillins",
+   "atc": "J01CF03",
+   "category": "Access",
+   "eml": "Yes (therapeutic alternative to cloxacillin)"
+  },
+  {
+   "antibiotic": "Metronidazole_IV",
+   "class": "Imidazoles",
+   "atc": "J01XD01",
+   "category": "Access",
+   "eml": "Yes"
+  },
+  {
+   "antibiotic": "Metronidazole_oral",
+   "class": "Imidazoles",
+   "atc": "P01AB01",
+   "category": "Access",
+   "eml": "Yes"
+  },
+  {
+   "antibiotic": "Mezlocillin",
+   "class": "Penicillins",
+   "atc": "J01CA10",
+   "category": "Watch",
+   "eml": "No"
+  },
+  {
+   "antibiotic": "Micronomicin",
+   "class": "Aminoglycosides",
+   "atc": "to be assigned",
+   "category": "Watch",
+   "eml": "No"
+  },
+  {
+   "antibiotic": "Midecamycin",
+   "class": "Macrolides",
+   "atc": "J01FA03",
+   "category": "Watch",
+   "eml": "No"
+  },
+  {
+   "antibiotic": "Minocycline_IV",
+   "class": "Tetracyclines",
+   "atc": "J01AA08",
+   "category": "Reserve",
+   "eml": "No"
+  },
+  {
+   "antibiotic": "Minocycline_oral",
+   "class": "Tetracyclines",
+   "atc": "J01AA08",
+   "category": "Watch",
+   "eml": "No"
+  },
+  {
+   "antibiotic": "Miocamycin",
+   "class": "Macrolides",
+   "atc": "J01FA11",
+   "category": "Watch",
+   "eml": "No"
+  },
+  {
+   "antibiotic": "Moxifloxacin",
+   "class": "Fluoroquinolones",
+   "atc": "J01MA14",
+   "category": "Watch",
+   "eml": "No"
+  },
+  {
+   "antibiotic": "Nafcillin",
+   "class": "Penicillins",
+   "atc": "J01CF06",
+   "category": "Access",
+   "eml": "Yes (therapeutic alternative to cloxacillin)"
+  },
+  {
+   "antibiotic": "Nemonoxacin",
+   "class": "Quinolones",
+   "atc": "J01MB08",
+   "category": "Watch",
+   "eml": "No"
+  },
+  {
+   "antibiotic": "Neomycin_IV",
+   "class": "Aminoglycosides",
+   "atc": "J01GB05",
+   "category": "Watch",
+   "eml": "No"
+  },
+  {
+   "antibiotic": "Neomycin_oral",
+   "class": "Aminoglycosides",
+   "atc": "A07AA01",
+   "category": "Watch",
+   "eml": "No"
+  },
+  {
+   "antibiotic": "Netilmicin",
+   "class": "Aminoglycosides",
+   "atc": "J01GB07",
+   "category": "Watch",
+   "eml": "No"
+  },
+  {
+   "antibiotic": "Nifurtoinol",
+   "class": "Nitrofuran derivatives",
+   "atc": "J01XE02",
+   "category": "Access",
+   "eml": "No"
+  },
+  {
+   "antibiotic": "Nitrofurantoin",
+   "class": "Nitrofuran-derivatives",
+   "atc": "J01XE01",
+   "category": "Access",
+   "eml": "Yes"
+  },
+  {
+   "antibiotic": "Norfloxacin",
+   "class": "Fluoroquinolones",
+   "atc": "J01MA06",
+   "category": "Watch",
+   "eml": "No"
+  },
+  {
+   "antibiotic": "Ofloxacin",
+   "class": "Fluoroquinolones",
+   "atc": "J01MA01",
+   "category": "Watch",
+   "eml": "No"
+  },
+  {
+   "antibiotic": "Oleandomycin",
+   "class": "Macrolides",
+   "atc": "J01FA05",
+   "category": "Watch",
+   "eml": "No"
+  },
+  {
+   "antibiotic": "Omadacycline",
+   "class": "Tetracyclines",
+   "atc": "J01AA15",
+   "category": "Reserve",
+   "eml": "No"
+  },
+  {
+   "antibiotic": "Oritavancin",
+   "class": "Glycopeptides",
+   "atc": "J01XA05",
+   "category": "Reserve",
+   "eml": "No"
+  },
+  {
+   "antibiotic": "Ornidazole_IV",
+   "class": "Imidazoles",
+   "atc": "J01XD03",
+   "category": "Access",
+   "eml": "No"
+  },
+  {
+   "antibiotic": "Ornidazole_oral",
+   "class": "Imidazoles",
+   "atc": "P01AB03",
+   "category": "Access",
+   "eml": "No"
+  },
+  {
+   "antibiotic": "Oxacillin",
+   "class": "Penicillins",
+   "atc": "J01CF04",
+   "category": "Access",
+   "eml": "Yes (therapeutic alternative to cloxacillin)"
+  },
+  {
+   "antibiotic": "Oxolinic-acid",
+   "class": "Quinolones",
+   "atc": "J01MB05",
+   "category": "Watch",
+   "eml": "No"
+  },
+  {
+   "antibiotic": "Oxytetracycline",
+   "class": "Tetracyclines",
+   "atc": "J01AA06",
+   "category": "Watch",
+   "eml": "No"
+  },
+  {
+   "antibiotic": "Panipenem",
+   "class": "Carbapenems",
+   "atc": "J01DH55",
+   "category": "Watch",
+   "eml": "No"
+  },
+  {
+   "antibiotic": "Pazufloxacin",
+   "class": "Fluoroquinolones",
+   "atc": "J01MA18",
+   "category": "Watch",
+   "eml": "No"
+  },
+  {
+   "antibiotic": "Pefloxacin",
+   "class": "Fluoroquinolones",
+   "atc": "J01MA03",
+   "category": "Watch",
+   "eml": "No"
+  },
+  {
+   "antibiotic": "Penamecillin",
+   "class": "Penicillins",
+   "atc": "J01CE06",
+   "category": "Access",
+   "eml": "No"
+  },
+  {
+   "antibiotic": "Penimepicycline",
+   "class": "Tetracyclines",
+   "atc": "J01AA10",
+   "category": "Watch",
+   "eml": "No"
+  },
+  {
+   "antibiotic": "Pheneticillin",
+   "class": "Penicillins",
+   "atc": "J01CE05",
+   "category": "Watch",
+   "eml": "No"
+  },
+  {
+   "antibiotic": "Phenoxymethylpenicillin",
+   "class": "Penicillins",
+   "atc": "J01CE02",
+   "category": "Access",
+   "eml": "Yes"
+  },
+  {
+   "antibiotic": "Pipemidic-acid",
+   "class": "Quinolones",
+   "atc": "J01MB04",
+   "category": "Watch",
+   "eml": "No"
+  },
+  {
+   "antibiotic": "Piperacillin",
+   "class": "Penicillins",
+   "atc": "J01CA12",
+   "category": "Watch",
+   "eml": "No"
+  },
+  {
+   "antibiotic": "Piperacillin/tazobactam",
+   "class": "Beta-lactam/beta-lactamase-inhibitor_anti-pseudomonal",
+   "atc": "J01CR05",
+   "category": "Watch",
+   "eml": "Yes"
+  },
+  {
+   "antibiotic": "Piromidic-acid",
+   "class": "Quinolones",
+   "atc": "J01MB03",
+   "category": "Watch",
+   "eml": "No"
+  },
+  {
+   "antibiotic": "Pivampicillin",
+   "class": "Penicillins",
+   "atc": "J01CA02",
+   "category": "Access",
+   "eml": "No"
+  },
+  {
+   "antibiotic": "Pivmecillinam",
+   "class": "Penicillins",
+   "atc": "J01CA08",
+   "category": "Access",
+   "eml": "No"
+  },
+  {
+   "antibiotic": "Plazomicin",
+   "class": "Aminoglycosides",
+   "atc": "J01GB14",
+   "category": "Reserve",
+   "eml": "Yes"
+  },
+  {
+   "antibiotic": "Polymyxin-B_IV",
+   "class": "Polymyxins",
+   "atc": "J01XB02",
+   "category": "Reserve",
+   "eml": "Yes"
+  },
+  {
+   "antibiotic": "Polymyxin-B_oral",
+   "class": "Polymyxins",
+   "atc": "A07AA05",
+   "category": "Reserve",
+   "eml": "No"
+  },
+  {
+   "antibiotic": "Pristinamycin",
+   "class": "Streptogramins",
+   "atc": "J01FG01",
+   "category": "Watch",
+   "eml": "No"
+  },
+  {
+   "antibiotic": "Procaine-benzylpenicillin",
+   "class": "Penicillins",
+   "atc": "J01CE09",
+   "category": "Access",
+   "eml": "Yes"
+  },
+  {
+   "antibiotic": "Propicillin",
+   "class": "Penicillins",
+   "atc": "J01CE03",
+   "category": "Access",
+   "eml": "No"
+  },
+  {
+   "antibiotic": "Prulifloxacin",
+   "class": "Fluoroquinolones",
+   "atc": "J01MA17",
+   "category": "Watch",
+   "eml": "No"
+  },
+  {
+   "antibiotic": "Ribostamycin",
+   "class": "Aminoglycosides",
+   "atc": "J01GB10",
+   "category": "Watch",
+   "eml": "No"
+  },
+  {
+   "antibiotic": "Rifabutin",
+   "class": "Rifamycins",
+   "atc": "J04AB04",
+   "category": "Watch",
+   "eml": "No"
+  },
+  {
+   "antibiotic": "Rifampicin",
+   "class": "Rifamycins",
+   "atc": "J04AB02",
+   "category": "Watch",
+   "eml": "No"
+  },
+  {
+   "antibiotic": "Rifamycin_IV",
+   "class": "Rifamycins",
+   "atc": "J04AB03",
+   "category": "Watch",
+   "eml": "No"
+  },
+  {
+   "antibiotic": "Rifamycin_oral",
+   "class": "Rifamycins",
+   "atc": "A07AA13",
+   "category": "Watch",
+   "eml": "No"
+  },
+  {
+   "antibiotic": "Rifaximin",
+   "class": "Rifamycins",
+   "atc": "A07AA11",
+   "category": "Watch",
+   "eml": "No"
+  },
+  {
+   "antibiotic": "Rokitamycin",
+   "class": "Macrolides",
+   "atc": "J01FA12",
+   "category": "Watch",
+   "eml": "No"
+  },
+  {
+   "antibiotic": "Rolitetracycline",
+   "class": "Tetracyclines",
+   "atc": "J01AA09",
+   "category": "Watch",
+   "eml": "No"
+  },
+  {
+   "antibiotic": "Rosoxacin",
+   "class": "Quinolones",
+   "atc": "J01MB01",
+   "category": "Watch",
+   "eml": "No"
+  },
+  {
+   "antibiotic": "Roxithromycin",
+   "class": "Macrolides",
+   "atc": "J01FA06",
+   "category": "Watch",
+   "eml": "No"
+  },
+  {
+   "antibiotic": "Rufloxacin",
+   "class": "Fluoroquinolones",
+   "atc": "J01MA10",
+   "category": "Watch",
+   "eml": "No"
+  },
+  {
+   "antibiotic": "Sarecycline",
+   "class": "Tetracyclines",
+   "atc": "J01AA14",
+   "category": "Watch",
+   "eml": "No"
+  },
+  {
+   "antibiotic": "Secnidazole",
+   "class": "Imidazoles",
+   "atc": "P01AB07",
+   "category": "Access",
+   "eml": "No"
+  },
+  {
+   "antibiotic": "Sisomicin",
+   "class": "Aminoglycosides",
+   "atc": "J01GB08",
+   "category": "Watch",
+   "eml": "No"
+  },
+  {
+   "antibiotic": "Sitafloxacin",
+   "class": "Fluoroquinolones",
+   "atc": "J01MA21",
+   "category": "Watch",
+   "eml": "No"
+  },
+  {
+   "antibiotic": "Solithromycin",
+   "class": "Macrolides",
+   "atc": "J01FA16",
+   "category": "Watch",
+   "eml": "No"
+  },
+  {
+   "antibiotic": "Sparfloxacin",
+   "class": "Fluoroquinolones",
+   "atc": "J01MA09",
+   "category": "Watch",
+   "eml": "No"
+  },
+  {
+   "antibiotic": "Spectinomycin",
+   "class": "Aminocyclitols",
+   "atc": "J01XX04",
+   "category": "Access",
+   "eml": "Yes"
+  },
+  {
+   "antibiotic": "Spiramycin",
+   "class": "Macrolides",
+   "atc": "J01FA02",
+   "category": "Watch",
+   "eml": "No"
+  },
+  {
+   "antibiotic": "Streptoduocin",
+   "class": "Aminoglycosides",
+   "atc": "J01GA02",
+   "category": "Watch",
+   "eml": "No"
+  },
+  {
+   "antibiotic": "Streptomycin_IV",
+   "class": "Aminoglycosides",
+   "atc": "J01GA01",
+   "category": "Watch",
+   "eml": "No"
+  },
+  {
+   "antibiotic": "Streptomycin_oral",
+   "class": "Aminoglycosides",
+   "atc": "A07AA04",
+   "category": "Watch",
+   "eml": "No"
+  },
+  {
+   "antibiotic": "Sulbactam",
+   "class": "Beta-lactamase-inhibitors",
+   "atc": "J01CG01",
+   "category": "Access",
+   "eml": "No"
+  },
+  {
+   "antibiotic": "Sulbenicillin",
+   "class": "Penicillins",
+   "atc": "J01CA16",
+   "category": "Watch",
+   "eml": "No"
+  },
+  {
+   "antibiotic": "Sulfadiazine",
+   "class": "Sulfonamides",
+   "atc": "J01EC02",
+   "category": "Access",
+   "eml": "No"
+  },
+  {
+   "antibiotic": "Sulfadiazine/tetroxoprim",
+   "class": "Sulfonamide-trimethoprim-combinations",
+   "atc": "J01EE06",
+   "category": "Access",
+   "eml": "No"
+  },
+  {
+   "antibiotic": "Sulfadiazine/trimethoprim",
+   "class": "Sulfonamide-trimethoprim-combinations",
+   "atc": "J01EE02",
+   "category": "Access",
+   "eml": "No"
+  },
+  {
+   "antibiotic": "Sulfadimethoxine",
+   "class": "Sulfonamides",
+   "atc": "J01ED01",
+   "category": "Access",
+   "eml": "No"
+  },
+  {
+   "antibiotic": "Sulfadimidine",
+   "class": "Sulfonamides",
+   "atc": "J01EB03",
+   "category": "Access",
+   "eml": "No"
+  },
+  {
+   "antibiotic": "Sulfadimidine/trimethoprim",
+   "class": "Sulfonamide-trimethoprim-combinations",
+   "atc": "J01EE05",
+   "category": "Access",
+   "eml": "No"
+  },
+  {
+   "antibiotic": "Sulfafurazole",
+   "class": "Sulfonamides",
+   "atc": "J01EB05",
+   "category": "Access",
+   "eml": "No"
+  },
+  {
+   "antibiotic": "Sulfaisodimidine",
+   "class": "Sulfonamides",
+   "atc": "J01EB01",
+   "category": "Access",
+   "eml": "No"
+  },
+  {
+   "antibiotic": "Sulfalene",
+   "class": "Sulfonamides",
+   "atc": "J01ED02",
+   "category": "Access",
+   "eml": "No"
+  },
+  {
+   "antibiotic": "Sulfamazone",
+   "class": "Sulfonamides",
+   "atc": "J01ED09",
+   "category": "Access",
+   "eml": "No"
+  },
+  {
+   "antibiotic": "Sulfamerazine",
+   "class": "Sulfonamides",
+   "atc": "J01ED07",
+   "category": "Access",
+   "eml": "No"
+  },
+  {
+   "antibiotic": "Sulfamerazine/trimethoprim",
+   "class": "Sulfonamide-trimethoprim-combinations",
+   "atc": "J01EE07",
+   "category": "Access",
+   "eml": "No"
+  },
+  {
+   "antibiotic": "Sulfamethizole",
+   "class": "Sulfonamides",
+   "atc": "J01EB02",
+   "category": "Access",
+   "eml": "No"
+  },
+  {
+   "antibiotic": "Sulfamethoxazole",
+   "class": "Sulfonamides",
+   "atc": "J01EC01",
+   "category": "Access",
+   "eml": "No"
+  },
+  {
+   "antibiotic": "Sulfamethoxazole/trimethoprim",
+   "class": "Sulfonamide-trimethoprim-combinations",
+   "atc": "J01EE01",
+   "category": "Access",
+   "eml": "Yes"
+  },
+  {
+   "antibiotic": "Sulfamethoxypyridazine",
+   "class": "Sulfonamides",
+   "atc": "J01ED05",
+   "category": "Access",
+   "eml": "No"
+  },
+  {
+   "antibiotic": "Sulfametomidine",
+   "class": "Sulfonamides",
+   "atc": "J01ED03",
+   "category": "Access",
+   "eml": "No"
+  },
+  {
+   "antibiotic": "Sulfametoxydiazine",
+   "class": "Sulfonamides",
+   "atc": "J01ED04",
+   "category": "Access",
+   "eml": "No"
+  },
+  {
+   "antibiotic": "Sulfametrole/trimethoprim",
+   "class": "Sulfonamide-trimethoprim-combinations",
+   "atc": "J01EE03",
+   "category": "Access",
+   "eml": "No"
+  },
+  {
+   "antibiotic": "Sulfamoxole",
+   "class": "Sulfonamides",
+   "atc": "J01EC03",
+   "category": "Access",
+   "eml": "No"
+  },
+  {
+   "antibiotic": "Sulfamoxole/trimethoprim",
+   "class": "Sulfonamide-trimethoprim-combinations",
+   "atc": "J01EE04",
+   "category": "Access",
+   "eml": "No"
+  },
+  {
+   "antibiotic": "Sulfanilamide",
+   "class": "Sulfonamides",
+   "atc": "J01EB06",
+   "category": "Access",
+   "eml": "No"
+  },
+  {
+   "antibiotic": "Sulfaperin",
+   "class": "Sulfonamides",
+   "atc": "J01ED06",
+   "category": "Access",
+   "eml": "No"
+  },
+  {
+   "antibiotic": "Sulfaphenazole",
+   "class": "Sulfonamides",
+   "atc": "J01ED08",
+   "category": "Access",
+   "eml": "No"
+  },
+  {
+   "antibiotic": "Sulfapyridine",
+   "class": "Sulfonamides",
+   "atc": "J01EB04",
+   "category": "Access",
+   "eml": "No"
+  },
+  {
+   "antibiotic": "Sulfathiazole",
+   "class": "Sulfonamides",
+   "atc": "J01EB07",
+   "category": "Access",
+   "eml": "No"
+  },
+  {
+   "antibiotic": "Sulfathiourea",
+   "class": "Sulfonamides",
+   "atc": "J01EB08",
+   "category": "Access",
+   "eml": "No"
+  },
+  {
+   "antibiotic": "Sultamicillin",
+   "class": "Beta-lactam/beta-lactamase-inhibitor",
+   "atc": "J01CR04",
+   "category": "Access",
+   "eml": "No"
+  },
+  {
+   "antibiotic": "Talampicillin",
+   "class": "Penicillins",
+   "atc": "J01CA15",
+   "category": "Access",
+   "eml": "No"
+  },
+  {
+   "antibiotic": "Tazobactam",
+   "class": "Beta-lactamase-inhibitors",
+   "atc": "J01CG02",
+   "category": "Watch",
+   "eml": "No"
+  },
+  {
+   "antibiotic": "Tebipenem",
+   "class": "Carbapenems",
+   "atc": "J01DH06",
+   "category": "Watch",
+   "eml": "No"
+  },
+  {
+   "antibiotic": "Tedizolid",
+   "class": "Oxazolidinones",
+   "atc": "J01XX11",
+   "category": "Reserve",
+   "eml": "Yes (therapeutic alternative to linezolid (EML))"
+  },
+  {
+   "antibiotic": "Teicoplanin",
+   "class": "Glycopeptides",
+   "atc": "J01XA02",
+   "category": "Watch",
+   "eml": "No"
+  },
+  {
+   "antibiotic": "Telavancin",
+   "class": "Glycopeptides",
+   "atc": "J01XA03",
+   "category": "Reserve",
+   "eml": "No"
+  },
+  {
+   "antibiotic": "Telithromycin",
+   "class": "Macrolides",
+   "atc": "J01FA15",
+   "category": "Watch",
+   "eml": "No"
+  },
+  {
+   "antibiotic": "Temafloxacin",
+   "class": "Fluoroquinolones",
+   "atc": "J01MA05",
+   "category": "Watch",
+   "eml": "No"
+  },
+  {
+   "antibiotic": "Temocillin",
+   "class": "Penicillins",
+   "atc": "J01CA17",
+   "category": "Watch",
+   "eml": "No"
+  },
+  {
+   "antibiotic": "Tetracycline",
+   "class": "Tetracyclines",
+   "atc": "J01AA07",
+   "category": "Access",
+   "eml": "No"
+  },
+  {
+   "antibiotic": "Thiamphenicol",
+   "class": "Amphenicols",
+   "atc": "J01BA02",
+   "category": "Access",
+   "eml": "No"
+  },
+  {
+   "antibiotic": "Ticarcillin",
+   "class": "Penicillins",
+   "atc": "J01CA13",
+   "category": "Watch",
+   "eml": "No"
+  },
+  {
+   "antibiotic": "Tigecycline",
+   "class": "Glycylcyclines",
+   "atc": "J01AA12",
+   "category": "Reserve",
+   "eml": "No"
+  },
+  {
+   "antibiotic": "Tinidazole_IV",
+   "class": "Imidazoles",
+   "atc": "J01XD02",
+   "category": "Access",
+   "eml": "No"
+  },
+  {
+   "antibiotic": "Tinidazole_oral",
+   "class": "Imidazoles",
+   "atc": "P01AB02",
+   "category": "Access",
+   "eml": "No"
+  },
+  {
+   "antibiotic": "Tobramycin",
+   "class": "Aminoglycosides",
+   "atc": "J01GB01",
+   "category": "Watch",
+   "eml": "No"
+  },
+  {
+   "antibiotic": "Tosufloxacin",
+   "class": "Fluoroquinolones",
+   "atc": "J01MA22",
+   "category": "Watch",
+   "eml": "No"
+  },
+  {
+   "antibiotic": "Trimethoprim",
+   "class": "Trimethoprim-derivatives",
+   "atc": "J01EA01",
+   "category": "Access",
+   "eml": "Yes"
+  },
+  {
+   "antibiotic": "Troleandomycin",
+   "class": "Macrolides",
+   "atc": "J01FA08",
+   "category": "Watch",
+   "eml": "No"
+  },
+  {
+   "antibiotic": "Trovafloxacin",
+   "class": "Fluoroquinolones",
+   "atc": "J01MA13",
+   "category": "Watch",
+   "eml": "No"
+  },
+  {
+   "antibiotic": "Vancomycin_IV",
+   "class": "Glycopeptides",
+   "atc": "J01XA01",
+   "category": "Watch",
+   "eml": "Yes"
+  },
+  {
+   "antibiotic": "Vancomycin_oral",
+   "class": "Glycopeptides",
+   "atc": "A07AA09",
+   "category": "Watch",
+   "eml": "Yes"
+  }
+ ]
+}

@@ -1,0 +1,700 @@
+{
+ "batch": 10,
+ "language_note": "Written from the saved official labels (docs/antibiotics/labels). Delamanid: EU SmPC (EMA). Fusidic acid: UK SmPC (eMC). Pristinamycin: French ANSM RCP, translated.",
+ "drugs": [
+  {
+   "id": "delamanid",
+   "n": {
+    "ar": "ديلامانيد",
+    "en": "Delamanid"
+   },
+   "aware": "",
+   "cls": {
+    "ar": "نيتروإيميدازولات (مضادات السل)",
+    "en": "Nitroimidazoles (antituberculosis)"
+   },
+   "uses": {
+    "ar": "السل الرئوي المقاوم للأدوية المتعددة، ضمن نظام مركب مناسب، للبالغين والأطفال.",
+    "en": "Multidrug-resistant pulmonary tuberculosis, as part of a suitable combination, in adults and children."
+   },
+   "dose": {
+    "ar": "للبالغين: 100 ملغ مرتين يومياً مع الطعام لمدة 24 أسبوعاً، بعلاج تحت الإشراف المباشر. الأطفال حسب الوزن.",
+    "en": "Adults: 100 mg twice a day with food for 24 weeks, as directly observed therapy. Children by weight."
+   },
+   "renal": {
+    "ar": "لا تعديل في ضعف الكلى الخفيف أو المتوسط؛ الشديد: لا يُنصح به (لا بيانات). ضعف الكبد المتوسط إلى الشديد: لا يُنصح به.",
+    "en": "No change for mild or moderate kidney impairment; severe: not recommended (no data). Moderate to severe liver impairment: not recommended."
+   },
+   "timing": {
+    "ar": "مع الطعام. تخطيط قلب قبل العلاج وشهرياً؛ لا يُبدأ أو يُوقف إذا تجاوز QTc ‏500 ms. ممنوع إذا كان ألبومين الدم أقل من 2.8 غ/دل.",
+    "en": "With food. ECG before and monthly; do not start, or stop, if QTc goes over 500 ms. Contraindicated when serum albumin is under 2.8 g/dL."
+   },
+   "inter": [
+    {
+     "with": {
+      "ar": "محفزات CYP3A4 القوية (كاربامازيبين، ريفامبيسين)",
+      "en": "Strong CYP3A4 inducers (carbamazepine, rifampicin)"
+     },
+     "desc": {
+      "ar": "ممنوع: تخفض مستواه (حتى 45% مع الريفامبيسين).",
+      "en": "Contraindicated: they lower its level (up to 45% with rifampicin)."
+     },
+     "sev": "major",
+     "r": [
+      117
+     ]
+    },
+    {
+     "with": {
+      "ar": "الأدوية التي تطيل QT (ومنها بعض مضادات الملاريا والفلوروكينولونات)",
+      "en": "QT-prolonging drugs (including some antimalarials and fluoroquinolones)"
+     },
+     "desc": {
+      "ar": "إطالة إضافية لـ QT: يُتجنب أو مراقبة دقيقة.",
+      "en": "Additive QT prolongation: avoid or monitor closely."
+     },
+     "sev": "major",
+     "r": [
+      117
+     ]
+    },
+    {
+     "with": {
+      "ar": "اللوبينافير/ريتونافير ومثبطات CYP3A4 القوية",
+      "en": "Lopinavir/ritonavir and strong CYP3A4 inhibitors"
+     },
+     "desc": {
+      "ar": "يرتفع مستوى مستقلبه قليلاً: تخطيط قلب أكثر.",
+      "en": "Its metabolite rises slightly: more frequent ECGs."
+     },
+     "sev": "moderate",
+     "r": [
+      117
+     ]
+    }
+   ],
+   "src": [
+    117
+   ]
+  },
+  {
+   "id": "pretomanid",
+   "n": {
+    "ar": "بريتومانيد",
+    "en": "Pretomanid"
+   },
+   "aware": "",
+   "cls": {
+    "ar": "نيتروإيميدازولات (مضادات السل)",
+    "en": "Nitroimidazoles (antituberculosis)"
+   },
+   "uses": {
+    "ar": "مع البيداكويلين واللينزوليد فقط: السل الرئوي شديد المقاومة، أو المقاوم للإيزونيازيد والريفامبين عند عدم التحمل أو عدم الاستجابة، للبالغين. ليس للسل الحساس أو الكامن أو خارج الرئة.",
+    "en": "With bedaquiline and linezolid only: extensively resistant pulmonary TB, or TB resistant to isoniazid and rifampin with intolerance or no response, in adults. Not for sensitive, latent or extrapulmonary TB."
+   },
+   "dose": {
+    "ar": "200 ملغ مرة يومياً لمدة 26 أسبوعاً، مع البيداكويلين (400 ملغ يومياً أسبوعين ثم 200 ملغ 3 مرات أسبوعياً، أو 200 ملغ يومياً 8 أسابيع ثم 100 ملغ يومياً) واللينزوليد (600 ملغ يومياً هو المفضل).",
+    "en": "200 mg once a day for 26 weeks, with bedaquiline (400 mg daily for 2 weeks then 200 mg three times a week, or 200 mg daily for 8 weeks then 100 mg daily) and linezolid (600 mg daily preferred)."
+   },
+   "renal": {
+    "ar": "أثر ضعف الكلى أو الكبد غير معروف.",
+    "en": "The effect of kidney or liver impairment is not known."
+   },
+   "timing": {
+    "ar": "مع الطعام، يُبلع كاملاً مع الماء، تحت الإشراف المباشر. فحص الكبد قبل العلاج وبعد أسبوعين ثم شهرياً. لا كحول ولا أدوية أو أعشاب سامة للكبد.",
+    "en": "With food, swallowed whole with water, directly observed. Liver tests before, at 2 weeks, then monthly. No alcohol and no liver-toxic drugs or herbs."
+   },
+   "inter": [
+    {
+     "with": {
+      "ar": "محفزات CYP3A4 القوية أو المتوسطة (ريفامبين، إيفافيرينز)",
+      "en": "Strong or moderate CYP3A4 inducers (rifampin, efavirenz)"
+     },
+     "desc": {
+      "ar": "تخفض مستواه: يُتجنب الجمع.",
+      "en": "Lower its level: avoid together."
+     },
+     "sev": "major",
+     "r": [
+      118
+     ]
+    },
+    {
+     "with": {
+      "ar": "ركائز OAT3 (ميثوتريكسات، إندوميثاسين، سيبروفلوكساسين…)",
+      "en": "OAT3 substrates (methotrexate, indomethacin, ciprofloxacin…)"
+     },
+     "desc": {
+      "ar": "قد ترتفع مستوياتها: مراقبة وربما خفض الجرعة.",
+      "en": "Their levels may rise: monitor and perhaps lower the dose."
+     },
+     "sev": "moderate",
+     "r": [
+      118
+     ]
+    },
+    {
+     "with": {
+      "ar": "الكحول والأدوية السامة للكبد",
+      "en": "Alcohol and liver-toxic drugs"
+     },
+     "desc": {
+      "ar": "زيادة خطر أذى الكبد.",
+      "en": "Higher risk of liver injury."
+     },
+     "sev": "major",
+     "r": [
+      118
+     ]
+    }
+   ],
+   "src": [
+    118
+   ]
+  },
+  {
+   "id": "chloramph",
+   "n": {
+    "ar": "كلورامفينيكول (حقن)",
+    "en": "Chloramphenicol (injection)"
+   },
+   "aware": "access",
+   "cls": {
+    "ar": "أمفينيكولات",
+    "en": "Amphenicols"
+   },
+   "uses": {
+    "ar": "العدوى الخطيرة فقط عندما لا تنفع أدوية أقل خطراً (مثل السالمونيلا ومنها التيفوئيد، والمستدمية النزلية، والريكتسيا). لا يُستعمل للعدوى البسيطة أو الزكام أو التهاب الحلق أو للوقاية.",
+    "en": "Serious infections only, when less dangerous drugs will not work (such as Salmonella including typhoid, Haemophilus influenzae and rickettsiae). Not for trivial infections, colds, sore throat or prevention."
+   },
+   "dose": {
+    "ar": "للبالغين: 50 ملغ/كغ يومياً مقسمة كل 6 ساعات؛ استثناءً حتى 100 ملغ/كغ يومياً ثم تُخفض بأسرع وقت. حديثو الولادة: 25 ملغ/كغ يومياً مقسمة كل 6 ساعات (خطر المتلازمة الرمادية).",
+    "en": "Adults: 50 mg/kg a day divided every 6 h; exceptionally up to 100 mg/kg a day, reduced as soon as possible. Newborns: 25 mg/kg a day divided every 6 h (risk of grey syndrome)."
+   },
+   "renal": {
+    "ar": "ضعف الكبد أو الكلى: تعديل الجرعة وقياس المستوى في الدم.",
+    "en": "Liver or kidney impairment: adjust the dose and measure blood levels."
+   },
+   "timing": {
+    "ar": "وريدياً. فحص الدم المناسب أثناء العلاج (تحذير الملصق: فقر دم لا تنسجي قاتل)، ويُفضل في المستشفى.",
+    "en": "IV. Proper blood tests during treatment (label warning: fatal aplastic anaemia), preferably in hospital."
+   },
+   "inter": [
+    {
+     "with": {
+      "ar": "الأدوية المثبطة لنخاع العظم",
+      "en": "Drugs that suppress the bone marrow"
+     },
+     "desc": {
+      "ar": "يُتجنب الجمع.",
+      "en": "Avoid the combination."
+     },
+     "sev": "major",
+     "r": [
+      119
+     ]
+    }
+   ],
+   "src": [
+    119
+   ]
+  },
+  {
+   "id": "colistin",
+   "n": {
+    "ar": "كوليستيمثات (كوليستين)",
+    "en": "Colistimethate (colistin)"
+   },
+   "aware": "reserve",
+   "cls": {
+    "ar": "بوليميكسينات",
+    "en": "Polymyxins"
+   },
+   "uses": {
+    "ar": "العدوى الحادة أو المزمنة بالعصيات سلبية الغرام الحساسة (الأمعائيات، الإشريكية، الكلبسيلة، الزائفة الزنجارية).",
+    "en": "Acute or chronic infections by susceptible Gram-negative bacilli (Enterobacter, E. coli, Klebsiella, Pseudomonas aeruginosa)."
+   },
+   "dose": {
+    "ar": "البالغون والأطفال، وريدياً أو عضلياً: 2.5 إلى 5 ملغ/كغ يومياً من الكوليستين القاعدي، مقسمة 2 إلى 4 جرعات، لا تتجاوز 5 ملغ/كغ يومياً. السمنة: بالوزن المثالي.",
+    "en": "Adults and children, IV or IM: 2.5 to 5 mg/kg a day of colistin base, in 2 to 4 doses, not over 5 mg/kg a day. Obesity: ideal weight."
+   },
+   "renal": {
+    "ar": "التصفية 50 إلى 79 ← 2.5 إلى 3.8 ملغ/كغ يومياً على جرعتين؛ 30 إلى 49 ← 2.5 ملغ/كغ يومياً مرة أو على جرعتين؛ 10 إلى 29 ← 1.5 ملغ/كغ كل 36 ساعة.",
+    "en": "Clearance 50 to 79 → 2.5 to 3.8 mg/kg a day in 2 doses; 30 to 49 → 2.5 mg/kg a day once or in 2 doses; 10 to 29 → 1.5 mg/kg every 36 h."
+   },
+   "timing": {
+    "ar": "حقن وريدي بطيء خلال 3 إلى 5 دقائق، أو تسريب. الجرعات بالكوليستين القاعدي (قارورة 150 ملغ).",
+    "en": "Slow IV injection over 3 to 5 minutes, or infusion. Doses as colistin base (150 mg vial)."
+   },
+   "inter": [
+    {
+     "with": {
+      "ar": "المرخيات العضلية الكورارية وأدوية أخرى سامة للأعصاب (سكساميثونيوم، الإيثر، سترات الصوديوم)",
+      "en": "Curare-like muscle relaxants and other neurotoxic drugs (succinylcholine, ether, sodium citrate)"
+     },
+     "desc": {
+      "ar": "خطر حصار عصبي عضلي وتثبيط التنفس.",
+      "en": "Risk of neuromuscular blockade and breathing depression."
+     },
+     "sev": "major",
+     "r": [
+      120
+     ]
+    },
+    {
+     "with": {
+      "ar": "الأمينوغليكوزيدات والأدوية السامة للكلى",
+      "en": "Aminoglycosides and nephrotoxic drugs"
+     },
+     "desc": {
+      "ar": "سمية إضافية للكلى والأعصاب: بحذر شديد.",
+      "en": "Additive kidney and nerve toxicity: only with great caution."
+     },
+     "sev": "major",
+     "r": [
+      120
+     ]
+    },
+    {
+     "with": {
+      "ar": "السيفالوثين الصوديوم",
+      "en": "Sodium cephalothin"
+     },
+     "desc": {
+      "ar": "يزيد السمية الكلوية: يُتجنب.",
+      "en": "Increases kidney toxicity: avoid."
+     },
+     "sev": "moderate",
+     "r": [
+      120
+     ]
+    }
+   ],
+   "src": [
+    120
+   ]
+  },
+  {
+   "id": "polymyxin_b",
+   "n": {
+    "ar": "بوليميكسين ب",
+    "en": "Polymyxin B"
+   },
+   "aware": "reserve",
+   "cls": {
+    "ar": "بوليميكسينات",
+    "en": "Polymyxins"
+   },
+   "uses": {
+    "ar": "العدوى الحادة بالزائفة الزنجارية الحساسة (ومنها المسالك والسحايا وتجرثم الدم)، وبعض سلبيات الغرام الأخرى عند عدم ملاءمة الأدوية الأقل سمية.",
+    "en": "Acute infections by susceptible Pseudomonas aeruginosa (including urinary, meningeal and bloodstream), and some other Gram-negative infections when less toxic drugs are unsuitable."
+   },
+   "dose": {
+    "ar": "وريدياً: 15000 إلى 25000 وحدة/كغ يومياً (لا تتجاوز 25000)، يمكن كل 12 ساعة. عضلياً (غير مفضل للألم): 25000 إلى 30000 وحدة/كغ يومياً مقسمة كل 4 إلى 6 ساعات. داخل القراب (السحايا): 50000 وحدة يومياً 3 إلى 4 أيام ثم يوماً بعد يوم.",
+    "en": "IV: 15,000 to 25,000 units/kg a day (not over 25,000), can be every 12 h. IM (not preferred, painful): 25,000 to 30,000 units/kg a day divided every 4 to 6 h. Intrathecal (meningitis): 50,000 units daily for 3 to 4 days, then every other day."
+   },
+   "renal": {
+    "ar": "ضعف الكلى: تُخفض من 15000 وحدة/كغ نزولاً (لا يعطي الملصق جدولاً). يُوقف عند نقص البول وارتفاع اليوريا.",
+    "en": "Kidney impairment: reduce downward from 15,000 units/kg (the label gives no table). Stop if urine output falls and urea rises."
+   },
+   "timing": {
+    "ar": "وريدياً بالتنقيط المستمر في دكستروز 5%. في المستشفى مع مراقبة الكلى (تحذير الملصق: سمية كلوية وعصبية).",
+    "en": "IV by continuous drip in 5% dextrose. In hospital with kidney monitoring (label warning: kidney and nerve toxicity)."
+   },
+   "inter": [
+    {
+     "with": {
+      "ar": "المرخيات العضلية الكورارية وأدوية أخرى سامة للأعصاب (سكساميثونيوم، الإيثر، سترات الصوديوم)",
+      "en": "Curare-like muscle relaxants and other neurotoxic drugs (succinylcholine, ether, sodium citrate)"
+     },
+     "desc": {
+      "ar": "خطر حصار عصبي عضلي وتثبيط التنفس.",
+      "en": "Risk of neuromuscular blockade and breathing depression."
+     },
+     "sev": "major",
+     "r": [
+      121
+     ]
+    },
+    {
+     "with": {
+      "ar": "الأمينوغليكوزيدات والأدوية السامة للكلى",
+      "en": "Aminoglycosides and nephrotoxic drugs"
+     },
+     "desc": {
+      "ar": "سمية إضافية للكلى والأعصاب: بحذر شديد.",
+      "en": "Additive kidney and nerve toxicity: only with great caution."
+     },
+     "sev": "major",
+     "r": [
+      121
+     ]
+    }
+   ],
+   "src": [
+    121
+   ]
+  },
+  {
+   "id": "fusidic",
+   "n": {
+    "ar": "حمض الفوسيديك (فموي)",
+    "en": "Fusidic acid (oral)"
+   },
+   "aware": "watch",
+   "cls": {
+    "ar": "ستيرويدات مضادة للجراثيم",
+    "en": "Steroid antibacterials"
+   },
+   "uses": {
+    "ar": "عدوى العنقوديات: الجلد، والتهاب العظم والنقي، والتهاب الرئة، وتسمم الدم، والجروح، والتهاب الشغاف، والتليف الكيسي المختلط.",
+    "en": "Staphylococcal infections: skin, osteomyelitis, pneumonia, septicaemia, wounds, endocarditis, and superinfected cystic fibrosis."
+   },
+   "dose": {
+    "ar": "(فوسيدات الصوديوم) الجلد: 250 ملغ مرتين يومياً 5 إلى 10 أيام. العدوى الأخرى: 500 ملغ 3 مرات يومياً، ويمكن مضاعفتها في الحالات الشديدة.",
+    "en": "(Sodium fusidate) Skin: 250 mg twice a day for 5 to 10 days. Other infections: 500 mg three times a day, doubled in severe cases."
+   },
+   "renal": {
+    "ar": "لا تعديل في ضعف الكلى أو الغسيل (يُطرح في الصفراء). بحذر مع ضعف الكبد ومراقبته.",
+    "en": "No change for kidney impairment or dialysis (excreted in bile). Caution and monitoring with liver impairment."
+   },
+   "timing": {
+    "ar": "فموياً.",
+    "en": "By mouth."
+   },
+   "inter": [
+    {
+     "with": {
+      "ar": "الستاتينات",
+      "en": "Statins"
+     },
+     "desc": {
+      "ar": "لا يُجمعان: انحلال عضلات قاتل؛ يُوقف الستاتين طوال العلاج.",
+      "en": "Never together: fatal rhabdomyolysis; stop the statin for the whole course."
+     },
+     "sev": "major",
+     "r": [
+      122
+     ]
+    },
+    {
+     "with": {
+      "ar": "مضادات التخثر الفموية (الكومارين)",
+      "en": "Oral anticoagulants (coumarins)"
+     },
+     "desc": {
+      "ar": "يزيد أثرها: مراقبة وربما خفض الجرعة.",
+      "en": "Increases their effect: monitor and perhaps lower the dose."
+     },
+     "sev": "moderate",
+     "r": [
+      122
+     ]
+    },
+    {
+     "with": {
+      "ar": "مثبطات البروتياز (فيروس نقص المناعة)",
+      "en": "HIV protease inhibitors"
+     },
+     "desc": {
+      "ar": "بحذر: تداخل محتمل عبر CYP3A4.",
+      "en": "Caution: possible interaction through CYP3A4."
+     },
+     "sev": "moderate",
+     "r": [
+      122
+     ]
+    }
+   ],
+   "src": [
+    122
+   ]
+  },
+  {
+   "id": "fidaxo",
+   "n": {
+    "ar": "فيداكسومايسين",
+    "en": "Fidaxomicin"
+   },
+   "aware": "watch",
+   "cls": {
+    "ar": "ماكروسيكلينات",
+    "en": "Macrocyclic antibiotics"
+   },
+   "uses": {
+    "ar": "إسهال المطثية العسيرة (Clostridioides difficile).",
+    "en": "Clostridioides difficile diarrhoea."
+   },
+   "dose": {
+    "ar": "للبالغين: 200 ملغ مرتين يومياً لمدة 10 أيام.",
+    "en": "Adults: 200 mg twice a day for 10 days."
+   },
+   "renal": {
+    "ar": "لا تعديل في ضعف الكلى.",
+    "en": "No change for kidney impairment."
+   },
+   "timing": {
+    "ar": "مع الطعام أو بدونه. لا يُمتص كثيراً؛ لا يُستعمل للعدوى الجهازية.",
+    "en": "With or without food. Little is absorbed; not for systemic infections."
+   },
+   "inter": [
+    {
+     "with": {
+      "ar": "السيكلوسبورين ومثبطات P-gp",
+      "en": "Cyclosporine and P-gp inhibitors"
+     },
+     "desc": {
+      "ar": "يرتفع مستواه في الدم قليلاً دون أثر مهم: بلا تعديل.",
+      "en": "Its blood level rises slightly without important effect: no change."
+     },
+     "sev": "minor",
+     "r": [
+      123
+     ]
+    }
+   ],
+   "src": [
+    123
+   ]
+  },
+  {
+   "id": "rifaximin",
+   "n": {
+    "ar": "ريفاكسيمين",
+    "en": "Rifaximin"
+   },
+   "aware": "watch",
+   "cls": {
+    "ar": "ريفاميسينات (غير ممتصة)",
+    "en": "Rifamycins (non-absorbed)"
+   },
+   "uses": {
+    "ar": "إسهال المسافرين بالإشريكية غير الغازية (12 سنة فأكثر)، وتقليل عودة اعتلال الدماغ الكبدي، والقولون العصبي مع الإسهال.",
+    "en": "Travellers diarrhoea by non-invasive E. coli (12 and over), lowering the return of hepatic encephalopathy, and irritable bowel syndrome with diarrhoea."
+   },
+   "dose": {
+    "ar": "إسهال المسافرين: 200 ملغ 3 مرات يومياً 3 أيام. اعتلال الدماغ الكبدي: 550 ملغ مرتين يومياً. القولون العصبي: 550 ملغ 3 مرات يومياً 14 يوماً (يمكن تكراره مرتين).",
+    "en": "Travellers diarrhoea: 200 mg three times a day for 3 days. Hepatic encephalopathy: 550 mg twice a day. IBS with diarrhoea: 550 mg three times a day for 14 days (may be repeated twice)."
+   },
+   "renal": {
+    "ar": "لم يُدرس في ضعف الكلى. يرتفع مستواه في ضعف الكبد الشديد.",
+    "en": "Not studied in kidney impairment. Its level rises in severe liver impairment."
+   },
+   "timing": {
+    "ar": "مع الطعام أو بدونه. لا يُستعمل لإسهال مع حمى أو دم في البراز.",
+    "en": "With or without food. Not for diarrhoea with fever or blood in the stool."
+   },
+   "inter": [
+    {
+     "with": {
+      "ar": "السيكلوسبورين ومثبطات P-gp",
+      "en": "Cyclosporine and P-gp inhibitors"
+     },
+     "desc": {
+      "ar": "ترفع مستواه كثيراً، خاصة مع ضعف الكبد: بحذر.",
+      "en": "Raise its level a lot, especially with liver impairment: use with caution."
+     },
+     "sev": "moderate",
+     "r": [
+      124
+     ]
+    },
+    {
+     "with": {
+      "ar": "الوارفارين",
+      "en": "Warfarin"
+     },
+     "desc": {
+      "ar": "تغير INR: مراقبة INR وتعديل الجرعة.",
+      "en": "INR changes: monitor INR and adjust the dose."
+     },
+     "sev": "moderate",
+     "r": [
+      124
+     ]
+    }
+   ],
+   "src": [
+    124
+   ]
+  },
+  {
+   "id": "lefamulin",
+   "n": {
+    "ar": "ليفامولين",
+    "en": "Lefamulin"
+   },
+   "aware": "reserve",
+   "cls": {
+    "ar": "بليوروموتيلينات",
+    "en": "Pleuromutilins"
+   },
+   "uses": {
+    "ar": "التهاب الرئة الجرثومي المكتسب من المجتمع للبالغين.",
+    "en": "Community-acquired bacterial pneumonia in adults."
+   },
+   "dose": {
+    "ar": "150 ملغ وريدياً خلال 60 دقيقة كل 12 ساعة 5 إلى 7 أيام (يمكن التحويل إلى الأقراص)، أو 600 ملغ فموياً كل 12 ساعة 5 أيام.",
+    "en": "150 mg IV over 60 minutes every 12 h for 5 to 7 days (switching to tablets is possible), or 600 mg by mouth every 12 h for 5 days."
+   },
+   "renal": {
+    "ar": "لا تعديل في ضعف الكلى أو الغسيل. ضعف الكبد الشديد (Child-Pugh C): الوريدي 150 ملغ كل 24 ساعة؛ الأقراص لا يُنصح بها في الضعف المتوسط أو الشديد.",
+    "en": "No change for kidney impairment or dialysis. Severe liver impairment (Child-Pugh C): IV 150 mg every 24 h; tablets not recommended in moderate or severe impairment."
+   },
+   "timing": {
+    "ar": "الأقراص قبل الطعام بساعة أو بعده بساعتين، تُبلع كاملة مع الماء. يطيل QT. قد يضر الجنين: التأكد من عدم الحمل.",
+    "en": "Tablets 1 hour before or 2 hours after a meal, swallowed whole with water. Prolongs QT. May harm the fetus: check for pregnancy."
+   },
+   "inter": [
+    {
+     "with": {
+      "ar": "ركائز CYP3A التي تطيل QT (بيموزيد وغيره) مع الأقراص",
+      "en": "CYP3A substrates that prolong QT (pimozide and others) with the tablets"
+     },
+     "desc": {
+      "ar": "ممنوع.",
+      "en": "Contraindicated."
+     },
+     "sev": "major",
+     "r": [
+      125
+     ]
+    },
+    {
+     "with": {
+      "ar": "مضادات اضطراب النظم من الفئة IA وIII وأدوية QT الأخرى",
+      "en": "Class IA and III antiarrhythmics and other QT drugs"
+     },
+     "desc": {
+      "ar": "يُتجنب: إطالة QT.",
+      "en": "Avoid: QT prolongation."
+     },
+     "sev": "major",
+     "r": [
+      125
+     ]
+    },
+    {
+     "with": {
+      "ar": "محفزات CYP3A أو P-gp القوية والمتوسطة",
+      "en": "Strong and moderate CYP3A or P-gp inducers"
+     },
+     "desc": {
+      "ar": "تخفض مستواه: يُتجنب إلا للضرورة.",
+      "en": "Lower its level: avoid unless essential."
+     },
+     "sev": "major",
+     "r": [
+      125
+     ]
+    },
+    {
+     "with": {
+      "ar": "مثبطات CYP3A أو P-gp القوية (مع الأقراص)",
+      "en": "Strong CYP3A or P-gp inhibitors (with the tablets)"
+     },
+     "desc": {
+      "ar": "يُتجنب.",
+      "en": "Avoid."
+     },
+     "sev": "major",
+     "r": [
+      125
+     ]
+    },
+    {
+     "with": {
+      "ar": "الميدازولام وركائز CYP3A الحساسة",
+      "en": "Midazolam and sensitive CYP3A substrates"
+     },
+     "desc": {
+      "ar": "مراقبة الآثار الجانبية.",
+      "en": "Monitor side effects."
+     },
+     "sev": "moderate",
+     "r": [
+      125
+     ]
+    }
+   ],
+   "src": [
+    125
+   ]
+  },
+  {
+   "id": "pristina",
+   "n": {
+    "ar": "بريستيناميسين",
+    "en": "Pristinamycin"
+   },
+   "aware": "watch",
+   "cls": {
+    "ar": "ستربتوغرامينات (سينرجيستينات)",
+    "en": "Streptogramins (synergistins)"
+   },
+   "uses": {
+    "ar": "للبالغين والأطفال: التهاب الجيوب الفكية الحاد، وتفاقم التهاب القصبات المزمن، والتهاب الرئة المكتسب الخفيف إلى المتوسط، وعدوى الجلد والأنسجة الرخوة.",
+    "en": "Adults and children: acute maxillary sinusitis, exacerbations of chronic bronchitis, mild to moderate community pneumonia, and skin and soft tissue infections."
+   },
+   "dose": {
+    "ar": "للبالغين: الجيوب 1 غرام مرتين يومياً 4 أيام؛ القصبات 1 غرام 3 مرات يومياً 4 أيام؛ الرئة 1 غرام 3 مرات يومياً 7 إلى 14 يوماً؛ الجلد 1 غرام مرتين إلى 3 مرات يومياً 8 إلى 14 يوماً؛ حتى 4 غرامات يومياً في الحالات الشديدة. الأطفال: 50 ملغ/كغ يومياً على 2 أو 3 جرعات (حتى 100 ملغ/كغ، دون تجاوز جرعة البالغ).",
+    "en": "Adults: sinusitis 1 g twice a day for 4 days; bronchitis 1 g three times a day for 4 days; pneumonia 1 g three times a day for 7 to 14 days; skin 1 g two to three times a day for 8 to 14 days; up to 4 g a day in severe cases. Children: 50 mg/kg a day in 2 or 3 doses (up to 100 mg/kg, not over the adult dose)."
+   },
+   "renal": {
+    "ar": "لا تعديل في ضعف الكلى.",
+    "en": "No change for kidney impairment."
+   },
+   "timing": {
+    "ar": "مع الوجبات، والأقراص مع مشروب.",
+    "en": "With meals; swallow the tablets with a drink."
+   },
+   "inter": [
+    {
+     "with": {
+      "ar": "الكولشيسين",
+      "en": "Colchicine"
+     },
+     "desc": {
+      "ar": "ممنوع: آثار جانبية قد تكون قاتلة.",
+      "en": "Contraindicated: possibly fatal side effects."
+     },
+     "sev": "major",
+     "r": [
+      126
+     ]
+    },
+    {
+     "with": {
+      "ar": "مضادات فيتامين K (الوارفارين…)",
+      "en": "Vitamin K antagonists (warfarin…)"
+     },
+     "desc": {
+      "ar": "زيادة النزف: مراقبة INR أكثر أثناء العلاج وبعده.",
+      "en": "More bleeding: check INR more often during and after treatment."
+     },
+     "sev": "moderate",
+     "r": [
+      126
+     ]
+    },
+    {
+     "with": {
+      "ar": "مثبطات المناعة (سيكلوسبورين، تاكروليمس…)",
+      "en": "Immunosuppressants (cyclosporine, tacrolimus…)"
+     },
+     "desc": {
+      "ar": "ترتفع مستوياتها: قياس المستوى والكلى وتعديل الجرعة.",
+      "en": "Their levels rise: measure levels and kidney function and adjust."
+     },
+     "sev": "moderate",
+     "r": [
+      126
+     ]
+    }
+   ],
+   "src": [
+    126
+   ]
+  }
+ ]
+}

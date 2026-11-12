@@ -1,0 +1,43 @@
+{
+ "id": "methenamine",
+ "query": "https://api.fda.gov/drug/label.json?search=openfda.generic_name:(\"methenamine\"+AND+\"hippurate\")+AND+openfda.product_type:\"HUMAN+PRESCRIPTION+DRUG\"&limit=100",
+ "set_id": "a3eeacd4-1983-49ec-a60d-3abaf505ce57",
+ "version": "2",
+ "effective_time": "20260807",
+ "brand": [
+  "Methenamine Hippurate"
+ ],
+ "generic": [
+  "METHENAMINE HIPPURATE"
+ ],
+ "route": [
+  "ORAL"
+ ],
+ "manufacturer": [
+  "ANI Pharmaceuticals, Inc."
+ ],
+ "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=a3eeacd4-1983-49ec-a60d-3abaf505ce57",
+ "sections": {
+  "indications_and_usage": [
+   "INDICATIONS & USAGE Methenamine hippurate tablets are indicated for prophylactic or suppressive treatment of frequently recurring urinary tract infections when long-term therapy is considered necessary. This drug should only be used after eradication of the infection by other appropriate antimicrobial agents. To reduce the development of drug-resistant bacteria and maintain the effectiveness of methenamine hippurate tablets and other antibacterial drugs, methenamine hippurate tablets should be used only to treat or prevent infections that are proven or strongly suspected to be caused by susceptible bacteria. When culture and susceptibility information are available, they should be considered in selecting or modifying antibacterial therapy. In the absence of such data, local epidemiology and susceptibility patterns may contribute to the empiric selection of therapy."
+  ],
+  "dosage_and_administration": [
+   "DOSAGE & ADMINISTRATION 1 tablet (1.0 g) twice daily (morning and night) for adults and pediatric patients over 12 years of age. 1/2 to 1 tablet (0.5 to 1.0 g) twice daily (morning and night) for pediatric patients 6 to 12 years of age. Since the antibacterial activity of methenamine hippurate tablets is greater in acid urine, restriction of alkalinizing foods and medications is desirable. If necessary, as indicated by urinary pH and clinical response, supplemental acidification of the urine should be instituted. The efficacy of therapy should be monitored by repeated urine cultures."
+  ],
+  "contraindications": [
+   "CONTRAINDICATIONS Methenamine hippurate tablets are contraindicated in patients with renal insufficiency, severe hepatic insufficiency, or severe dehydration. Methenamine preparations should not be given to patients taking sulfonamides because some sulfonamides may form an insoluble precipitate with formaldehyde in the urine."
+  ],
+  "warnings": [
+   "WARNINGS Large doses of methenamine (8 grams daily for 3 to 4 weeks) have caused bladder irritation, painful and frequent micturition, albuminuria, and gross hematuria."
+  ],
+  "precautions": [
+   "PRECAUTIONS Prescribing methenamine hippurate tablets in the absence of a proven or strongly suspected bacterial infection or a prophylactic indication is unlikely to provide benefit to the patient and increases the risk of the development of drug-resistant bacteria. Care should be taken to maintain an acid pH of the urine, especially when treating infections due to urea-splitting organisms such as Proteus and strains of Pseudomonas . In a few instances in one study, the serum transaminase levels were slightly elevated during treatment but returned to normal while the patients were still taking methenamine hippurate tablets. Because of this report, it is recommended that liver function studies be performed periodically on patients taking the drug, especially those with liver dysfunction. Use in Pregnancy: In early pregnancy the safe use of methenamine hippurate tablets is not established. In the last trimester, safety is suggested, but not definitely proved. No adverse effects on the fetus were seen in studies in pregnant rats and rabbits. Methenamine hippurate tablets taken during pregnancy can interfere with laboratory tests of urine estriol (resulting in unmeasurably low values) when acid hydrolysis is used in the laboratory procedure. This interference is due to the presence in the urine of methenamine and/or formaldehyde. Enzymatic hydrolysis, in place of acid hydrolysis, will circumvent this problem. This product contains FD&C Yellow No. 5 (tartrazine), which may cause allergic-type reactions (including bronchial asthma) in certain susceptible individuals. Although the overall incidence of FD&C Yellow No. 5 (tartrazine) sensitivity in the general population is low, it is frequently seen in patients who also have aspirin hypersensitivity. GERIATRIC USE Clinical studies of methenamine hippurate tablets did not include sufficient numbers of subjects aged 65 and over to determine whether they respond differently from younger subjects. Other reported clinical experience has not identified differences in responses between the elderly and younger patients. In general, dose selection for an elderly patient should be cautious, usually starting at the low end of the dosing range, reflecting the greater frequency of decreased hepatic, renal or cardiac function, and of concomitant disease or other drug therapy. Methenamine hippurate tablets are contraindicated in patients with renal insufficiency and severe hepatic insufficiency ( see CONTRAINDICATIONS ). INFORMATION FOR PATIENTS Patients should be counseled that antibacterial drugs including methenamine hippurate tablets should only be used to treat bacterial infections. They do not treat viral infections (e.g., the common cold). When methenamine hippurate tablets are prescribed to treat a bacterial infection, patients should be told that although it is common to feel better early in the course of therapy, the medication should be taken exactly as directed. Skipping doses or not completing the full course of therapy may (1) decrease the effectiveness of the immediate treatment and (2) increase the likelihood that bacteria will develop resistance and will not be treatable by methenamine hippurate tablets or other antibacterial drugs in the future."
+  ],
+  "geriatric_use": [
+   "GERIATRIC USE Clinical studies of methenamine hippurate tablets did not include sufficient numbers of subjects aged 65 and over to determine whether they respond differently from younger subjects. Other reported clinical experience has not identified differences in responses between the elderly and younger patients. In general, dose selection for an elderly patient should be cautious, usually starting at the low end of the dosing range, reflecting the greater frequency of decreased hepatic, renal or cardiac function, and of concomitant disease or other drug therapy. Methenamine hippurate tablets are contraindicated in patients with renal insufficiency and severe hepatic insufficiency ( see CONTRAINDICATIONS )."
+  ],
+  "information_for_patients": [
+   "INFORMATION FOR PATIENTS Patients should be counseled that antibacterial drugs including methenamine hippurate tablets should only be used to treat bacterial infections. They do not treat viral infections (e.g., the common cold). When methenamine hippurate tablets are prescribed to treat a bacterial infection, patients should be told that although it is common to feel better early in the course of therapy, the medication should be taken exactly as directed. Skipping doses or not completing the full course of therapy may (1) decrease the effectiveness of the immediate treatment and (2) increase the likelihood that bacteria will develop resistance and will not be treatable by methenamine hippurate tablets or other antibacterial drugs in the future."
+  ]
+ }
+}

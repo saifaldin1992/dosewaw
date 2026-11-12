@@ -1,0 +1,854 @@
+{
+ "batch": 7,
+ "language_note": "Written from the saved official labels (docs/antibiotics/labels). Norfloxacin: French ANSM RCP (Norfloxacine EG 400 mg), translated. Gemifloxacin: last US label (Factive, 2016).",
+ "drugs": [
+  {
+   "id": "lincomycin",
+   "n": {
+    "ar": "لينكومايسين",
+    "en": "Lincomycin"
+   },
+   "aware": "watch",
+   "cls": {
+    "ar": "لينكوزاميدات",
+    "en": "Lincosamides"
+   },
+   "uses": {
+    "ar": "عدوى خطيرة بالعقديات والمكورات الرئوية والعنقوديات الحساسة، عند حساسية البنسلين أو عدم ملاءمته.",
+    "en": "Serious infections by susceptible streptococci, pneumococci and staphylococci, when penicillin is not suitable or the patient is allergic."
+   },
+   "dose": {
+    "ar": "للبالغين عضلياً: 600 ملغ كل 24 ساعة، والأشد كل 12 ساعة أو أكثر. وريدياً: 600 ملغ إلى 1 غرام كل 8 إلى 12 ساعة، حتى 8 غرامات يومياً في الحالات المهددة للحياة. الأطفال فوق شهر: عضلياً 10 ملغ/كغ كل 12 إلى 24 ساعة، أو وريدياً 10 إلى 20 ملغ/كغ يومياً مقسمة.",
+    "en": "Adults IM: 600 mg every 24 h, more severe every 12 h or more often. IV: 600 mg to 1 g every 8 to 12 h, up to 8 g a day in life-threatening cases. Children over 1 month: IM 10 mg/kg every 12 to 24 h, or IV 10 to 20 mg/kg a day divided."
+   },
+   "renal": {
+    "ar": "ضعف الكلى الشديد: 25 إلى 30% من الجرعة المعتادة. لا يزيله الغسيل. الحذر مع ضعف الكبد.",
+    "en": "Severe kidney impairment: 25 to 30% of the usual dose. Not removed by dialysis. Caution with liver impairment."
+   },
+   "timing": {
+    "ar": "كل 1 غرام يُخفف في 100 مل على الأقل ويُسرّب خلال ساعة على الأقل. لا يُحقن وريدياً دفعة واحدة. يُوقف عند الإسهال الشديد.",
+    "en": "Each 1 g diluted in at least 100 mL and infused over at least 1 hour. Never as a direct IV push. Stop if significant diarrhoea occurs."
+   },
+   "inter": [
+    {
+     "with": {
+      "ar": "المرخيات العضلية",
+      "en": "Neuromuscular blockers"
+     },
+     "desc": {
+      "ar": "له خواص حاصرة عصبية عضلية تزيد أثرها: بحذر.",
+      "en": "It has neuromuscular blocking properties that add to theirs: use with caution."
+     },
+     "sev": "moderate",
+     "r": [
+      87
+     ]
+    }
+   ],
+   "src": [
+    87
+   ]
+  },
+  {
+   "id": "minocycline",
+   "n": {
+    "ar": "مينوسايكلين",
+    "en": "Minocycline"
+   },
+   "aware": "watch",
+   "cls": {
+    "ar": "تتراسيكلينات",
+    "en": "Tetracyclines"
+   },
+   "uses": {
+    "ar": "عدوى الريكتسيا، والميكوبلازما التنفسية، والكلاميديا (ومنها التهاب الإحليل غير السيلاني والتراخوما)، والطاعون، والتولاريميا، والكوليرا، والبروسيلا (مع الستربتومايسين)، والسيلان والزهري عند حساسية البنسلين، وحامل المكورات السحائية، ومساعد في حب الشباب الشديد.",
+    "en": "Rickettsial infections, Mycoplasma respiratory infection, chlamydia (including non-gonococcal urethritis and trachoma), plague, tularaemia, cholera, brucellosis (with streptomycin), gonorrhoea and syphilis with penicillin allergy, meningococcal carriers, and as an add-on in severe acne."
+   },
+   "dose": {
+    "ar": "للبالغين: 200 ملغ أولاً ثم 100 ملغ كل 12 ساعة. التهاب الإحليل السيلاني عند الرجال: 100 ملغ كل 12 ساعة 5 أيام. حامل المكورات السحائية: 100 ملغ كل 12 ساعة 5 أيام. الأطفال فوق 8 سنوات: 4 ملغ/كغ أولاً ثم 2 ملغ/كغ كل 12 ساعة (لا تتجاوز جرعة البالغ).",
+    "en": "Adults: 200 mg first, then 100 mg every 12 h. Gonococcal urethritis in men: 100 mg every 12 h for 5 days. Meningococcal carriers: 100 mg every 12 h for 5 days. Children over 8: 4 mg/kg first, then 2 mg/kg every 12 h (not over the adult dose)."
+   },
+   "renal": {
+    "ar": "ضعف الكلى: قد يتراكم ويسبب سمية كبدية؛ لا يتجاوز 200 ملغ في 24 ساعة، مع مراقبة الكرياتينين واليوريا. لا يزيله الغسيل.",
+    "en": "Kidney impairment: it may accumulate and harm the liver; not over 200 mg in 24 h, with creatinine and urea monitoring. Not removed by dialysis."
+   },
+   "timing": {
+    "ar": "مع الطعام أو بدونه، مع كمية كافية من الماء، ويُبلع كاملاً. لا يُعطى تحت 8 سنوات (تلون الأسنان) إلا للضرورة.",
+    "en": "With or without food, with enough water, swallowed whole. Not under 8 years (tooth discoloration) unless essential."
+   },
+   "inter": [
+    {
+     "with": {
+      "ar": "مضادات الحموضة (ألومنيوم، كالسيوم، مغنيسيوم) والحديد",
+      "en": "Antacids (aluminium, calcium, magnesium) and iron"
+     },
+     "desc": {
+      "ar": "تقلل امتصاصه بشدة: تُفصل عنه.",
+      "en": "Strongly reduce its absorption: keep them apart."
+     },
+     "sev": "moderate",
+     "r": [
+      88
+     ]
+    },
+    {
+     "with": {
+      "ar": "الوارفارين ومضادات التخثر",
+      "en": "Warfarin and anticoagulants"
+     },
+     "desc": {
+      "ar": "قد يلزم خفض جرعة مضاد التخثر: مراقبة INR.",
+      "en": "The anticoagulant dose may need lowering: monitor INR."
+     },
+     "sev": "moderate",
+     "r": [
+      88
+     ]
+    },
+    {
+     "with": {
+      "ar": "البنسلين",
+      "en": "Penicillin"
+     },
+     "desc": {
+      "ar": "قد يُضعف أثره القاتل للجراثيم: يُتجنب الجمع.",
+      "en": "May weaken its bactericidal effect: avoid the combination."
+     },
+     "sev": "moderate",
+     "r": [
+      88
+     ]
+    },
+    {
+     "with": {
+      "ar": "الإيزوتريتينوين",
+      "en": "Isotretinoin"
+     },
+     "desc": {
+      "ar": "كلاهما قد يسبب ارتفاع الضغط داخل الجمجمة: يُتجنب قبل العلاج وأثناءه وبعده بقليل.",
+      "en": "Both can raise pressure inside the skull: avoid shortly before, during and shortly after treatment."
+     },
+     "sev": "major",
+     "r": [
+      88
+     ]
+    },
+    {
+     "with": {
+      "ar": "موانع الحمل الفموية",
+      "en": "Oral contraceptives"
+     },
+     "desc": {
+      "ar": "قد تقل فعاليتها.",
+      "en": "May work less well."
+     },
+     "sev": "moderate",
+     "r": [
+      88
+     ]
+    },
+    {
+     "with": {
+      "ar": "قلويدات الإرغوت",
+      "en": "Ergot alkaloids"
+     },
+     "desc": {
+      "ar": "خطر تسمم الإرغوت.",
+      "en": "Risk of ergotism."
+     },
+     "sev": "major",
+     "r": [
+      88
+     ]
+    }
+   ],
+   "src": [
+    88
+   ]
+  },
+  {
+   "id": "tetracycline",
+   "n": {
+    "ar": "تتراسيكلين",
+    "en": "Tetracycline"
+   },
+   "aware": "access",
+   "cls": {
+    "ar": "تتراسيكلينات",
+    "en": "Tetracyclines"
+   },
+   "uses": {
+    "ar": "عدوى الجهاز التنفسي العلوي والسفلي والجلد بالجراثيم الحساسة، والريكتسيا، والكلاميديا، والميكوبلازما، والبروسيلا (مع الستربتومايسين)، والكوليرا، والزهري والسيلان عند حساسية البنسلين، ومساعد في حب الشباب الشديد.",
+    "en": "Upper and lower respiratory and skin infections by susceptible bacteria, rickettsiae, chlamydia, Mycoplasma, brucellosis (with streptomycin), cholera, syphilis and gonorrhoea with penicillin allergy, and as an add-on in severe acne."
+   },
+   "dose": {
+    "ar": "للبالغين: 1 غرام يومياً (500 ملغ مرتين أو 250 ملغ 4 مرات)، وحتى 500 ملغ 4 مرات في الشديدة. الكلاميديا: 500 ملغ 4 مرات 7 أيام على الأقل. الزهري المبكر: 500 ملغ 4 مرات 15 يوماً (أكثر من سنة: 30 يوماً). البروسيلا: 500 ملغ 4 مرات 3 أسابيع مع الستربتومايسين. حب الشباب: 1 غرام يومياً ثم 125 إلى 500 ملغ يومياً. الأطفال فوق 8 سنوات: 25 إلى 50 ملغ/كغ يومياً على 4 جرعات.",
+    "en": "Adults: 1 g a day (500 mg twice or 250 mg four times), up to 500 mg four times in severe cases. Chlamydia: 500 mg four times a day for at least 7 days. Early syphilis: 500 mg four times a day for 15 days (over a year: 30 days). Brucellosis: 500 mg four times a day for 3 weeks with streptomycin. Acne: 1 g a day, then 125 to 500 mg a day. Children over 8: 25 to 50 mg/kg a day in 4 doses."
+   },
+   "renal": {
+    "ar": "ضعف الكلى: تقليل الجرعة الكلية بخفض الجرعات أو إطالة الفواصل؛ قد يتراكم ويسبب سمية كبدية.",
+    "en": "Kidney impairment: lower the total dose by smaller doses or longer intervals; it may accumulate and harm the liver."
+   },
+   "timing": {
+    "ar": "مع كمية كافية من الماء. الطعام والحليب ومشتقاته تقلل الامتصاص. لا يُعطى تحت 8 سنوات (تلون الأسنان) إلا للضرورة. العقديات: 10 أيام.",
+    "en": "With enough water. Food and dairy reduce absorption. Not under 8 years (tooth discoloration) unless essential. Streptococcal infections: 10 days."
+   },
+   "inter": [
+    {
+     "with": {
+      "ar": "مضادات الحموضة (ألومنيوم، كالسيوم، مغنيسيوم) والحديد والزنك وبيكربونات الصوديوم",
+      "en": "Antacids (aluminium, calcium, magnesium) and iron, zinc and sodium bicarbonate"
+     },
+     "desc": {
+      "ar": "تقلل امتصاصه بشدة: تُفصل عنه.",
+      "en": "Strongly reduce its absorption: keep them apart."
+     },
+     "sev": "moderate",
+     "r": [
+      89
+     ]
+    },
+    {
+     "with": {
+      "ar": "الوارفارين ومضادات التخثر",
+      "en": "Warfarin and anticoagulants"
+     },
+     "desc": {
+      "ar": "قد يلزم خفض جرعة مضاد التخثر: مراقبة INR.",
+      "en": "The anticoagulant dose may need lowering: monitor INR."
+     },
+     "sev": "moderate",
+     "r": [
+      89
+     ]
+    },
+    {
+     "with": {
+      "ar": "البنسلين وغيره من المضادات القاتلة للجراثيم",
+      "en": "Penicillin and other bactericidal antibiotics"
+     },
+     "desc": {
+      "ar": "قد يُضعف أثرها: يُتجنب الجمع.",
+      "en": "May weaken their effect: avoid the combination."
+     },
+     "sev": "moderate",
+     "r": [
+      89
+     ]
+    },
+    {
+     "with": {
+      "ar": "موانع الحمل الفموية",
+      "en": "Oral contraceptives"
+     },
+     "desc": {
+      "ar": "قد تقل فعاليتها.",
+      "en": "May work less well."
+     },
+     "sev": "moderate",
+     "r": [
+      89
+     ]
+    }
+   ],
+   "src": [
+    89
+   ]
+  },
+  {
+   "id": "tigecycline",
+   "n": {
+    "ar": "تيجيسايكلين",
+    "en": "Tigecycline"
+   },
+   "aware": "reserve",
+   "cls": {
+    "ar": "غليسيلسايكلينات (قريبة من التتراسيكلينات)",
+    "en": "Glycylcyclines (related to tetracyclines)"
+   },
+   "uses": {
+    "ar": "عدوى الجلد المعقدة، وعدوى البطن المعقدة، والتهاب الرئة المكتسب من المجتمع، للبالغين، عندما لا تناسب البدائل. ليس لعدوى القدم السكرية ولا التهاب الرئة في المستشفى.",
+    "en": "Complicated skin infections, complicated intra-abdominal infections, and community-acquired pneumonia in adults, when alternatives are not suitable. Not for diabetic foot infection or hospital pneumonia."
+   },
+   "dose": {
+    "ar": "100 ملغ أولاً ثم 50 ملغ كل 12 ساعة وريدياً خلال 30 إلى 60 دقيقة. الجلد والبطن: 5 إلى 14 يوماً؛ الرئة: 7 إلى 14 يوماً.",
+    "en": "100 mg first, then 50 mg every 12 h IV over 30 to 60 minutes. Skin and abdomen: 5 to 14 days; pneumonia: 7 to 14 days."
+   },
+   "renal": {
+    "ar": "لا تعديل في ضعف الكلى ولا الغسيل. ضعف الكبد الشديد (Child-Pugh C): 100 ملغ ثم 25 ملغ كل 12 ساعة.",
+    "en": "No change for kidney impairment or dialysis. Severe liver impairment (Child-Pugh C): 100 mg, then 25 mg every 12 h."
+   },
+   "timing": {
+    "ar": "تسريب وريدي خلال 30 إلى 60 دقيقة. فحص التخثر والفيبرينوجين قبل العلاج وأثناءه. تحذير الملصق: زيادة الوفيات مقارنة بالبدائل.",
+    "en": "IV infusion over 30 to 60 minutes. Check clotting and fibrinogen before and during treatment. Label warning: higher all-cause mortality than comparators."
+   },
+   "inter": [
+    {
+     "with": {
+      "ar": "الوارفارين ومضادات التخثر",
+      "en": "Warfarin and anticoagulants"
+     },
+     "desc": {
+      "ar": "قد يلزم خفض جرعة مضاد التخثر: مراقبة INR.",
+      "en": "The anticoagulant dose may need lowering: monitor INR."
+     },
+     "sev": "moderate",
+     "r": [
+      90
+     ]
+    },
+    {
+     "with": {
+      "ar": "مثبطات الكالسينيورين (تاكروليمس، سيكلوسبورين)",
+      "en": "Calcineurin inhibitors (tacrolimus, cyclosporine)"
+     },
+     "desc": {
+      "ar": "ترتفع مستوياتها: قياس المستوى.",
+      "en": "Their levels rise: measure them."
+     },
+     "sev": "moderate",
+     "r": [
+      90
+     ]
+    },
+    {
+     "with": {
+      "ar": "موانع الحمل الفموية",
+      "en": "Oral contraceptives"
+     },
+     "desc": {
+      "ar": "قد تقل فعاليتها.",
+      "en": "May work less well."
+     },
+     "sev": "moderate",
+     "r": [
+      90
+     ]
+    }
+   ],
+   "src": [
+    90
+   ]
+  },
+  {
+   "id": "omadacycline",
+   "n": {
+    "ar": "أومادا سايكلين",
+    "en": "Omadacycline"
+   },
+   "aware": "reserve",
+   "cls": {
+    "ar": "تتراسيكلينات (أمينوميثيل سايكلين)",
+    "en": "Tetracyclines (aminomethylcycline)"
+   },
+   "uses": {
+    "ar": "التهاب الرئة الجرثومي المكتسب من المجتمع، وعدوى الجلد الجرثومية الحادة، للبالغين.",
+    "en": "Community-acquired bacterial pneumonia and acute bacterial skin infections in adults."
+   },
+   "dose": {
+    "ar": "التهاب الرئة: اليوم الأول 200 ملغ وريدياً (أو 100 ملغ مرتين) أو 300 ملغ فموياً مرتين، ثم 100 ملغ وريدياً أو 300 ملغ فموياً مرة يومياً. الجلد: اليوم الأول 200 ملغ وريدياً (أو 100 ملغ مرتين)، أو 450 ملغ فموياً مرة يومياً في اليومين الأول والثاني، ثم 100 ملغ وريدياً أو 300 ملغ فموياً مرة يومياً. المدة 7 إلى 14 يوماً.",
+    "en": "Pneumonia: day 1, 200 mg IV (or 100 mg twice) or 300 mg by mouth twice, then 100 mg IV or 300 mg by mouth once a day. Skin: day 1, 200 mg IV (or 100 mg twice), or 450 mg by mouth once a day on days 1 and 2, then 100 mg IV or 300 mg by mouth once a day. 7 to 14 days."
+   },
+   "renal": {
+    "ar": "لا تعديل في ضعف الكلى أو الكبد، ولا مع الغسيل.",
+    "en": "No change for kidney or liver impairment, or dialysis."
+   },
+   "timing": {
+    "ar": "الأقراص: صيام 4 ساعات قبلها، ثم بالماء فقط، ولا طعام أو شراب ساعتين بعدها، ولا ألبان أو مضادات حموضة أو فيتامينات 4 ساعات. الوريدي لا يُعطى مع محاليل الكالسيوم أو المغنيسيوم في الخط نفسه.",
+    "en": "Tablets: fast for 4 hours before, take with water only, no food or drink for 2 hours after, and no dairy, antacids or multivitamins for 4 hours. IV: not with calcium or magnesium solutions in the same line."
+   },
+   "inter": [
+    {
+     "with": {
+      "ar": "مضادات الحموضة (ألومنيوم، كالسيوم، مغنيسيوم)، والبزموت، والحديد",
+      "en": "Antacids (aluminium, calcium, magnesium), bismuth and iron"
+     },
+     "desc": {
+      "ar": "تقلل امتصاص الأقراص: 4 ساعات بعد الجرعة.",
+      "en": "Reduce tablet absorption: wait 4 hours after the dose."
+     },
+     "sev": "moderate",
+     "r": [
+      91
+     ]
+    },
+    {
+     "with": {
+      "ar": "مضادات التخثر",
+      "en": "Anticoagulants"
+     },
+     "desc": {
+      "ar": "قد يلزم خفض جرعتها.",
+      "en": "Their dose may need lowering."
+     },
+     "sev": "moderate",
+     "r": [
+      91
+     ]
+    }
+   ],
+   "src": [
+    91
+   ]
+  },
+  {
+   "id": "eravacycline",
+   "n": {
+    "ar": "إيرافا سايكلين",
+    "en": "Eravacycline"
+   },
+   "aware": "reserve",
+   "cls": {
+    "ar": "تتراسيكلينات (فلوروسايكلين)",
+    "en": "Tetracyclines (fluorocycline)"
+   },
+   "uses": {
+    "ar": "عدوى البطن المعقدة للبالغين.",
+    "en": "Complicated intra-abdominal infection in adults."
+   },
+   "dose": {
+    "ar": "1 ملغ/كغ كل 12 ساعة وريدياً خلال 60 دقيقة تقريباً، 4 إلى 14 يوماً.",
+    "en": "1 mg/kg every 12 h IV over about 60 minutes, for 4 to 14 days."
+   },
+   "renal": {
+    "ar": "لا تعديل في ضعف الكلى. ضعف الكبد الشديد (Child-Pugh C): 1 ملغ/كغ كل 12 ساعة في اليوم الأول، ثم كل 24 ساعة.",
+    "en": "No change for kidney impairment. Severe liver impairment (Child-Pugh C): 1 mg/kg every 12 h on day 1, then every 24 h."
+   },
+   "timing": {
+    "ar": "تسريب وريدي خلال 60 دقيقة تقريباً.",
+    "en": "IV infusion over about 60 minutes."
+   },
+   "inter": [
+    {
+     "with": {
+      "ar": "محفزات CYP3A القوية (ريفامبين وغيره)",
+      "en": "Strong CYP3A inducers (rifampin and others)"
+     },
+     "desc": {
+      "ar": "تخفض مستواه: 1.5 ملغ/كغ كل 12 ساعة.",
+      "en": "Lower its level: give 1.5 mg/kg every 12 h."
+     },
+     "sev": "major",
+     "r": [
+      92
+     ]
+    },
+    {
+     "with": {
+      "ar": "مضادات التخثر",
+      "en": "Anticoagulants"
+     },
+     "desc": {
+      "ar": "قد يلزم خفض جرعتها.",
+      "en": "Their dose may need lowering."
+     },
+     "sev": "moderate",
+     "r": [
+      92
+     ]
+    }
+   ],
+   "src": [
+    92
+   ]
+  },
+  {
+   "id": "moxi",
+   "n": {
+    "ar": "موكسيفلوكساسين",
+    "en": "Moxifloxacin"
+   },
+   "aware": "watch",
+   "cls": {
+    "ar": "فلوروكينولونات",
+    "en": "Fluoroquinolones"
+   },
+   "uses": {
+    "ar": "التهاب الرئة المكتسب، وعدوى الجلد البسيطة والمعقدة، وعدوى البطن المعقدة، والطاعون، والتهاب الجيوب الحاد، وتفاقم التهاب القصبات المزمن (للجيوب والقصبات عند عدم وجود بديل).",
+    "en": "Community-acquired pneumonia, uncomplicated and complicated skin infections, complicated intra-abdominal infections, plague, acute sinusitis and exacerbations of chronic bronchitis (sinusitis and bronchitis only when there is no alternative)."
+   },
+   "dose": {
+    "ar": "400 ملغ مرة يومياً فموياً أو وريدياً: الرئة 7 إلى 14 يوماً؛ الجلد البسيط 7، والمعقد 7 إلى 21؛ البطن 5 إلى 14؛ الطاعون 10 إلى 14؛ الجيوب 10؛ القصبات 5.",
+    "en": "400 mg once a day by mouth or IV: pneumonia 7 to 14 days; uncomplicated skin 7, complicated 7 to 21; abdomen 5 to 14; plague 10 to 14; sinusitis 10; bronchitis 5."
+   },
+   "renal": {
+    "ar": "لا تعديل في ضعف الكلى (ومنه الغسيل) أو الكبد.",
+    "en": "No change for kidney impairment (including dialysis) or liver impairment."
+   },
+   "timing": {
+    "ar": "مع الطعام أو بدونه، مع سوائل كافية. قبل منتجات المغنيسيوم والألومنيوم والحديد والزنك بـ 4 ساعات أو بعدها بـ 8. تحذير الملصق: التهاب الأوتار وتمزقها، والأعصاب الطرفية، والجهاز العصبي، وتفاقم الوهن العضلي.",
+    "en": "With or without food, with plenty of fluids. 4 hours before or 8 hours after magnesium, aluminium, iron or zinc products. Label warning: tendon inflammation and rupture, peripheral nerves, central nervous system, and worsening of myasthenia gravis."
+   },
+   "inter": [
+    {
+     "with": {
+      "ar": "مضادات الحموضة والسكرالفات والفيتامينات المتعددة والحديد والزنك",
+      "en": "Antacids, sucralfate, multivitamins, iron and zinc"
+     },
+     "desc": {
+      "ar": "تقلل امتصاصه: الأقراص قبلها بـ 4 ساعات أو بعدها بـ 8.",
+      "en": "Reduce its absorption: tablets 4 hours before or 8 hours after them."
+     },
+     "sev": "moderate",
+     "r": [
+      93
+     ]
+    },
+    {
+     "with": {
+      "ar": "الوارفارين",
+      "en": "Warfarin"
+     },
+     "desc": {
+      "ar": "زيادة أثر مضاد التخثر: مراقبة INR والنزف.",
+      "en": "Stronger anticoagulant effect: monitor INR and bleeding."
+     },
+     "sev": "moderate",
+     "r": [
+      93
+     ]
+    },
+    {
+     "with": {
+      "ar": "مضادات اضطراب النظم من الفئة IA وIII (كينيدين، بروكاييناميد، أميودارون، سوتالول)",
+      "en": "Class IA and III antiarrhythmics (quinidine, procainamide, amiodarone, sotalol)"
+     },
+     "desc": {
+      "ar": "إطالة QT: يُتجنب الجمع.",
+      "en": "QT prolongation: avoid the combination."
+     },
+     "sev": "major",
+     "r": [
+      93
+     ]
+    },
+    {
+     "with": {
+      "ar": "أدوية السكري (السلفونيل يوريا، الإنسولين)",
+      "en": "Diabetes medicines (sulfonylureas, insulin)"
+     },
+     "desc": {
+      "ar": "هبوط أو ارتفاع شديد في السكر: مراقبة السكر، ويُوقف الدواء عند الهبوط.",
+      "en": "Severe low or high blood sugar: monitor glucose; stop the drug if hypoglycaemia occurs."
+     },
+     "sev": "major",
+     "r": [
+      93
+     ]
+    },
+    {
+     "with": {
+      "ar": "مضادات الالتهاب غير الستيرويدية",
+      "en": "NSAIDs"
+     },
+     "desc": {
+      "ar": "قد تزيد خطر التنبيه العصبي والاختلاج.",
+      "en": "May increase the risk of nervous system stimulation and seizures."
+     },
+     "sev": "moderate",
+     "r": [
+      93
+     ]
+    }
+   ],
+   "src": [
+    93
+   ]
+  },
+  {
+   "id": "oflox",
+   "n": {
+    "ar": "أوفلوكساسين",
+    "en": "Ofloxacin"
+   },
+   "aware": "watch",
+   "cls": {
+    "ar": "فلوروكينولونات",
+    "en": "Fluoroquinolones"
+   },
+   "uses": {
+    "ar": "تفاقم التهاب القصبات المزمن، والتهاب الرئة المكتسب، وعدوى الجلد البسيطة، والسيلان والكلاميديا في الإحليل وعنق الرحم، والتهاب الحوض الحاد، والتهاب المثانة، وعدوى المسالك المعقدة، والتهاب البروستات.",
+    "en": "Exacerbations of chronic bronchitis, community-acquired pneumonia, uncomplicated skin infection, gonorrhoea and chlamydia of the urethra and cervix, acute pelvic inflammatory disease, cystitis, complicated urinary infection, and prostatitis."
+   },
+   "dose": {
+    "ar": "القصبات والرئة والجلد: 400 ملغ كل 12 ساعة 10 أيام. السيلان: 400 ملغ مرة واحدة. الكلاميديا: 300 ملغ كل 12 ساعة 7 أيام. التهاب الحوض: 400 ملغ كل 12 ساعة 10 إلى 14 يوماً. التهاب المثانة: 200 ملغ كل 12 ساعة 3 أيام (الإشريكية أو الكلبسيلة) أو 7 أيام. المسالك المعقدة: 200 ملغ كل 12 ساعة 10 أيام. البروستات: 300 ملغ كل 12 ساعة 6 أسابيع.",
+    "en": "Bronchitis, pneumonia, skin: 400 mg every 12 h for 10 days. Gonorrhoea: 400 mg once. Chlamydia: 300 mg every 12 h for 7 days. PID: 400 mg every 12 h for 10 to 14 days. Cystitis: 200 mg every 12 h for 3 days (E. coli or Klebsiella) or 7 days. Complicated urinary: 200 mg every 12 h for 10 days. Prostatitis: 300 mg every 12 h for 6 weeks."
+   },
+   "renal": {
+    "ar": "بعد جرعة أولى عادية: التصفية 20 إلى 50 ← الجرعة المعتادة كل 24 ساعة؛ أقل من 20 ← نصف الجرعة كل 24 ساعة. تليف الكبد الشديد: لا يتجاوز 400 ملغ يومياً.",
+    "en": "After a normal first dose: clearance 20 to 50 → the usual dose every 24 h; under 20 → half the dose every 24 h. Severe cirrhosis: not over 400 mg a day."
+   },
+   "timing": {
+    "ar": "مع الطعام أو بدونه. لا مضادات حموضة أو حديد أو زنك أو سكرالفات خلال ساعتين قبله أو بعده. تحذير الملصق: الأوتار والأعصاب والجهاز العصبي والوهن العضلي.",
+    "en": "With or without food. No antacids, iron, zinc or sucralfate within 2 hours before or after. Label warning: tendons, nerves, central nervous system and myasthenia gravis."
+   },
+   "inter": [
+    {
+     "with": {
+      "ar": "مضادات الحموضة والسكرالفات والحديد والزنك",
+      "en": "Antacids, sucralfate, iron and zinc"
+     },
+     "desc": {
+      "ar": "تقلل امتصاصه: لا تُؤخذ خلال ساعتين قبله أو بعده.",
+      "en": "Reduce its absorption: not within 2 hours before or after."
+     },
+     "sev": "moderate",
+     "r": [
+      94
+     ]
+    },
+    {
+     "with": {
+      "ar": "الثيوفيلين",
+      "en": "Theophylline"
+     },
+     "desc": {
+      "ar": "قد يرتفع مستواه وآثاره (منها الاختلاج): مراقبة وتعديل.",
+      "en": "Its level and effects (including seizures) may rise: monitor and adjust."
+     },
+     "sev": "major",
+     "r": [
+      94
+     ]
+    },
+    {
+     "with": {
+      "ar": "الوارفارين",
+      "en": "Warfarin"
+     },
+     "desc": {
+      "ar": "قد يزيد أثره: مراقبة INR.",
+      "en": "May increase its effect: monitor INR."
+     },
+     "sev": "moderate",
+     "r": [
+      94
+     ]
+    },
+    {
+     "with": {
+      "ar": "مضادات اضطراب النظم من الفئة IA وIII (كينيدين، بروكاييناميد، أميودارون، سوتالول)",
+      "en": "Class IA and III antiarrhythmics (quinidine, procainamide, amiodarone, sotalol)"
+     },
+     "desc": {
+      "ar": "إطالة QT: يُتجنب الجمع.",
+      "en": "QT prolongation: avoid the combination."
+     },
+     "sev": "major",
+     "r": [
+      94
+     ]
+    },
+    {
+     "with": {
+      "ar": "أدوية السكري (السلفونيل يوريا، الإنسولين)",
+      "en": "Diabetes medicines (sulfonylureas, insulin)"
+     },
+     "desc": {
+      "ar": "هبوط أو ارتفاع شديد في السكر: مراقبة السكر، ويُوقف الدواء عند الهبوط.",
+      "en": "Severe low or high blood sugar: monitor glucose; stop the drug if hypoglycaemia occurs."
+     },
+     "sev": "major",
+     "r": [
+      94
+     ]
+    },
+    {
+     "with": {
+      "ar": "السيكلوسبورين",
+      "en": "Cyclosporine"
+     },
+     "desc": {
+      "ar": "ارتفاع مستواه مع كينولونات أخرى: مراقبة.",
+      "en": "Its level rose with other quinolones: monitor."
+     },
+     "sev": "minor",
+     "r": [
+      94
+     ]
+    }
+   ],
+   "src": [
+    94
+   ]
+  },
+  {
+   "id": "norflox",
+   "n": {
+    "ar": "نورفلوكساسين",
+    "en": "Norfloxacin"
+   },
+   "aware": "watch",
+   "cls": {
+    "ar": "فلوروكينولونات",
+    "en": "Fluoroquinolones"
+   },
+   "uses": {
+    "ar": "للبالغين: التهاب المثانة الحاد غير المعقد (عند عدم ملاءمة الخيارات المعتادة) والمعقد، والتهاب الإحليل وعنق الرحم السيلاني، والتهاب البروستات الجرثومي، والتهاب الحويضة والكلية غير المعقد، والوقاية من التهاب السائل الحبني التلقائي في تليف الكبد.",
+    "en": "Adults: acute uncomplicated cystitis (when the usual options are unsuitable) and complicated cystitis, gonococcal urethritis and cervicitis, bacterial prostatitis, uncomplicated pyelonephritis, and prevention of spontaneous bacterial peritonitis in cirrhosis."
+   },
+   "dose": {
+    "ar": "التهاب المثانة غير المعقد: 400 ملغ مرتين يومياً 3 أيام. العدوى البولية الأخرى والسيلان: 800 ملغ يومياً (400 ملغ مرتين)، والمدة حسب الحالة. الوقاية في تليف الكبد: 400 ملغ مرة يومياً.",
+    "en": "Uncomplicated cystitis: 400 mg twice a day for 3 days. Other urinary infections and gonorrhoea: 800 mg a day (400 mg twice), duration by condition. Prevention in cirrhosis: 400 mg once a day."
+   },
+   "renal": {
+    "ar": "الجرعة نفسها ما دامت التصفية أكثر من 30. أقل من 30: لم تُحدد الجرعة وشروط الاستعمال.",
+    "en": "Same dose while clearance is over 30. Under 30: dose and conditions of use not established."
+   },
+   "timing": {
+    "ar": "مع كوب كبير من الماء، وليس مع الحليب أو مشتقاته. ممنوع للأطفال حتى نهاية النمو، ومع سوابق التهاب الأوتار بالكينولونات، وأثناء الرضاعة.",
+    "en": "With a large glass of water, not with milk or dairy. Contraindicated in children until growth ends, with a history of quinolone tendinopathy, and during breastfeeding."
+   },
+   "inter": [
+    {
+     "with": {
+      "ar": "مضادات الحموضة (مغنيسيوم، ألومنيوم، كالسيوم)",
+      "en": "Antacids (magnesium, aluminium, calcium)"
+     },
+     "desc": {
+      "ar": "تقلل امتصاصه: فاصل 4 ساعات إن أمكن.",
+      "en": "Reduce its absorption: 4 hours apart if possible."
+     },
+     "sev": "moderate",
+     "r": [
+      95
+     ]
+    },
+    {
+     "with": {
+      "ar": "الحديد والزنك والسكرالفات والديدانوسين",
+      "en": "Iron, zinc, sucralfate and didanosine"
+     },
+     "desc": {
+      "ar": "تقلل امتصاصه: فاصل ساعتين إن أمكن.",
+      "en": "Reduce its absorption: 2 hours apart if possible."
+     },
+     "sev": "moderate",
+     "r": [
+      95
+     ]
+    },
+    {
+     "with": {
+      "ar": "الثيوفيلين والأمينوفيلين",
+      "en": "Theophylline and aminophylline"
+     },
+     "desc": {
+      "ar": "ارتفاع الثيوفيلين وخطر التسمم: مراقبة.",
+      "en": "Theophylline rises with a risk of toxicity: monitor."
+     },
+     "sev": "major",
+     "r": [
+      95
+     ]
+    },
+    {
+     "with": {
+      "ar": "مضادات التخثر الفموية",
+      "en": "Oral anticoagulants"
+     },
+     "desc": {
+      "ar": "زيادة أثرها والنزف: مراقبة INR أثناء العلاج وبعده.",
+      "en": "Stronger effect and bleeding: monitor INR during and after treatment."
+     },
+     "sev": "moderate",
+     "r": [
+      95
+     ]
+    },
+    {
+     "with": {
+      "ar": "الكافيين",
+      "en": "Caffeine"
+     },
+     "desc": {
+      "ar": "يرتفع مستوى الكافيين.",
+      "en": "Caffeine levels rise."
+     },
+     "sev": "minor",
+     "r": [
+      95
+     ]
+    }
+   ],
+   "src": [
+    95
+   ]
+  },
+  {
+   "id": "gemiflox",
+   "n": {
+    "ar": "جيميفلوكساسين",
+    "en": "Gemifloxacin"
+   },
+   "aware": "watch",
+   "cls": {
+    "ar": "فلوروكينولونات",
+    "en": "Fluoroquinolones"
+   },
+   "uses": {
+    "ar": "تفاقم التهاب القصبات المزمن، والتهاب الرئة المكتسب الخفيف إلى المتوسط، للبالغين. آخر ملصق أمريكي من 2016.",
+    "en": "Exacerbations of chronic bronchitis and mild to moderate community-acquired pneumonia in adults. The last US label is from 2016."
+   },
+   "dose": {
+    "ar": "320 ملغ مرة يومياً: القصبات 5 أيام؛ الرئة 5 أيام، أو 7 أيام مع المكورات الرئوية متعددة المقاومة أو الكلبسيلة أو الموراكسيلا. لا تُتجاوز الجرعة ولا المدة.",
+    "en": "320 mg once a day: bronchitis 5 days; pneumonia 5 days, or 7 days with multidrug-resistant pneumococcus, Klebsiella or Moraxella. Do not exceed the dose or duration."
+   },
+   "renal": {
+    "ar": "التصفية 40 أو أقل، والغسيل الدموي أو البريتوني: 160 ملغ كل 24 ساعة. لا تعديل لضعف الكبد ولا لكبار السن.",
+    "en": "Clearance 40 or less, and haemodialysis or peritoneal dialysis: 160 mg every 24 h. No change for liver impairment or the elderly."
+   },
+   "timing": {
+    "ar": "مع الطعام أو بدونه، ويُبلع كاملاً مع سوائل كافية. لا مضادات حموضة أو حديد أو زنك خلال 3 ساعات قبله أو ساعتين بعده.",
+    "en": "With or without food, swallowed whole with plenty of liquid. No antacids, iron or zinc within 3 hours before or 2 hours after."
+   },
+   "inter": [
+    {
+     "with": {
+      "ar": "مضادات الحموضة (ألومنيوم، مغنيسيوم)، والحديد، والزنك، والديدانوسين",
+      "en": "Antacids (aluminium, magnesium), iron, zinc and didanosine"
+     },
+     "desc": {
+      "ar": "تقلل امتصاصه بشدة: لا تُؤخذ خلال 3 ساعات قبله أو ساعتين بعده.",
+      "en": "Strongly reduce its absorption: not within 3 hours before or 2 hours after."
+     },
+     "sev": "moderate",
+     "r": [
+      96
+     ]
+    },
+    {
+     "with": {
+      "ar": "مضادات اضطراب النظم من الفئة IA وIII (كينيدين، بروكاييناميد، أميودارون، سوتالول)",
+      "en": "Class IA and III antiarrhythmics (quinidine, procainamide, amiodarone, sotalol)"
+     },
+     "desc": {
+      "ar": "إطالة QT: يُتجنب الجمع.",
+      "en": "QT prolongation: avoid the combination."
+     },
+     "sev": "major",
+     "r": [
+      96
+     ]
+    },
+    {
+     "with": {
+      "ar": "أدوية أخرى تطيل QT (إريثرومايسين، مضادات الذهان، مضادات الاكتئاب ثلاثية الحلقات)",
+      "en": "Other QT-prolonging drugs (erythromycin, antipsychotics, tricyclic antidepressants)"
+     },
+     "desc": {
+      "ar": "قد يزيد خطر اضطراب النظم: بحذر.",
+      "en": "May increase arrhythmia risk: use with caution."
+     },
+     "sev": "moderate",
+     "r": [
+      96
+     ]
+    }
+   ],
+   "src": [
+    96
+   ]
+  }
+ ]
+}

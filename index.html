@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>DOSEWAW</title>
+<meta name="description" content="مرجع الجرعات للصيادلة: جرعات وتداخلات ومصادر رسمية في صفحة واحدة لكل دواء.">
+<meta name="theme-color" content="#0F4D3A">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="brand/logo.svg" type="image/svg+xml">
+<link rel="stylesheet" href="brand/theme.css">
+<link rel="stylesheet" href="css/app.css">
+<script>/* theme before first paint, so dark mode never flashes */try{var t=JSON.parse(localStorage.getItem('dw-theme')||'"auto"');if(t==='dark'||t==='light')document.documentElement.dataset.theme=t}catch(e){}</script>
+</head>
+<body>
+<a class="sr-only" href="#app">تخطي إلى المحتوى</a>
+<header class="top">
+  <div class="in">
+    <a class="brand" href="#/" aria-label="DOSEWAW">
+      <img class="logo" id="blogo" src="brand/logo.svg" width="38" height="38" alt="">
+      <span><span class="word" id="bname">DOSE<b>WAW</b></span><small id="btag"></small></span>
+    </a>
+    <span class="sp"></span>
+    <nav class="topnav" id="topnav" aria-label="الأقسام"></nav>
+    <button class="ib en" type="button" id="hlang">EN</button>
+    <button class="ib" type="button" id="htheme" aria-label="المظهر">☾</button>
+  </div>
+</header>
+<main class="wrap" id="app" tabindex="-1"></main>
+<p class="disc" id="disc"></p>
+<nav class="tabs" id="tabs" aria-label="الأقسام"></nav>
+<script src="brand/brand.js"></script>
+<script src="js/i18n.js"></script>
+<script src="js/engine.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>

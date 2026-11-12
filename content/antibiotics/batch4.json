@@ -1,0 +1,136 @@
+{
+ "batch": 4,
+ "language_note": "Written from the saved official labels (docs/antibiotics/labels). Cefditoren: last US label (Spectracef, 2013; no longer marketed in the US).",
+ "drugs": [
+  {
+   "id": "oxacillin", "n": {"ar": "أوكساسيلين", "en": "Oxacillin"}, "aware": "access",
+   "cls": {"ar": "بنسلينات مقاومة للبنسليناز", "en": "Penicillinase-resistant penicillins"},
+   "uses": {"ar": "عدوى العنقوديات المنتجة للبنسليناز الحساسة له.", "en": "Infections by susceptible penicillinase-producing staphylococci."},
+   "dose": {"ar": "وريدي للبالغين: الخفيفة إلى المتوسطة 250 إلى 500 ملغ كل 4 إلى 6 ساعات؛ الشديدة 1 غرام كل 4 إلى 6 ساعات. عدوى العنقوديات الشديدة: 14 يوماً على الأقل، ويستمر 48 ساعة بعد زوال الحمى والأعراض وسلبية الزرع.", "en": "IV, adults: mild to moderate 250 to 500 mg every 4 to 6 h; severe 1 g every 4 to 6 h. Severe staphylococcal infection: at least 14 days, and 48 h after fever and symptoms stop and cultures are negative."},
+   "renal": {"ar": "إذا كان هناك قصور كلوي معروف أو مشتبه به: يُنظر في تخفيض الجرعة الكلية ومراقبة المستوى لتجنب السمية العصبية. الملصق لا يعطي جدولاً.", "en": "With known or suspected kidney impairment: consider a lower total dose and monitor levels to avoid neurotoxicity. The label gives no table."},
+   "timing": {"ar": "تسريب وريدي مستمر أو متقطع. الحذر من التهاب الوريد خاصة عند كبار السن.", "en": "Continuous or intermittent IV infusion. Watch for thrombophlebitis, especially in older people."},
+   "inter": [
+    {"with": {"ar": "التتراسيكلين", "en": "Tetracycline"}, "desc": {"ar": "قد يضاد أثره: يُتجنب الجمع.", "en": "May antagonise it: avoid together."}, "sev": "moderate", "r": [57]},
+    {"with": {"ar": "البروبينسيد", "en": "Probenecid"}, "desc": {"ar": "يرفع مستوى الأوكساسيلين ويطيله.", "en": "Raises and prolongs oxacillin levels."}, "sev": "minor", "r": [57]}
+   ],
+   "src": [57]
+  },
+  {
+   "id": "cefaclor", "n": {"ar": "سيفاكلور", "en": "Cefaclor"}, "aware": "watch",
+   "cls": {"ar": "سيفالوسبورينات (الجيل الثاني)", "en": "Second-generation cephalosporins"},
+   "uses": {"ar": "التهاب الأذن الوسطى، عدوى الجهاز التنفسي السفلي، التهاب البلعوم واللوزتين، عدوى المسالك البولية، وعدوى الجلد.", "en": "Otitis media, lower respiratory infection, pharyngitis and tonsillitis, urinary tract infection, and skin infection."},
+   "dose": {"ar": "للبالغين: 250 ملغ كل 8 ساعات؛ تُضاعف في العدوى الأشد (مثل الالتهاب الرئوي). المكورات العقدية الحالّة بيتا: 10 أيام على الأقل.", "en": "Adults: 250 mg every 8 h; doubled in more severe infection (such as pneumonia). Beta-haemolytic streptococci: at least 10 days."},
+   "renal": {"ar": "يمكن إعطاؤه مع القصور الكلوي، والجرعة عادة دون تغيير. الغسيل يقصّر عمر نصفه 25 إلى 30%.", "en": "Can be given in kidney impairment; the dose is usually unchanged. Dialysis shortens its half-life by 25 to 30%."},
+   "timing": {"ar": "الامتصاص الكلي نفسه مع الطعام أو بدونه.", "en": "Total absorption is the same with or without food."},
+   "inter": [
+    {"with": {"ar": "مميعات الدم الفموية", "en": "Oral anticoagulants"}, "desc": {"ar": "تقارير عن زيادة أثرها.", "en": "Reports of an increased anticoagulant effect."}, "sev": "moderate", "r": [58]},
+    {"with": {"ar": "البروبينسيد", "en": "Probenecid"}, "desc": {"ar": "يثبط إطراحه الكلوي.", "en": "Inhibits its kidney excretion."}, "sev": "minor", "r": [58]}
+   ],
+   "src": [58]
+  },
+  {
+   "id": "cefprozil", "n": {"ar": "سيفبروزيل", "en": "Cefprozil"}, "aware": "watch",
+   "cls": {"ar": "سيفالوسبورينات (الجيل الثاني)", "en": "Second-generation cephalosporins"},
+   "uses": {"ar": "التهاب البلعوم واللوزتين، التهاب الجيوب الحاد، تفاقم التهاب القصبات المزمن، عدوى الجلد غير المعقدة، والتهاب الأذن الوسطى عند الأطفال.", "en": "Pharyngitis and tonsillitis, acute sinusitis, exacerbation of chronic bronchitis, uncomplicated skin infection, and otitis media in children."},
+   "dose": {"ar": "للبالغين (13 سنة فأكثر) لـ10 أيام: البلعوم 500 ملغ كل 24 ساعة؛ الجيوب 250 أو 500 ملغ كل 12 ساعة؛ القصبات 500 ملغ كل 12 ساعة؛ الجلد 250 ملغ كل 12 ساعة أو 500 ملغ كل 24 أو كل 12 ساعة.", "en": "Adults (13 and over), 10 days: pharyngitis 500 mg every 24 h; sinusitis 250 or 500 mg every 12 h; bronchitis 500 mg every 12 h; skin 250 mg every 12 h, or 500 mg every 24 or 12 h."},
+   "renal": {"ar": "التصفية 30 إلى 120: الجرعة المعتادة. 0 إلى 29: 50% من الجرعة بالفاصل نفسه. يزيله الغسيل جزئياً: يُعطى بعد انتهاء الجلسة.", "en": "Clearance 30 to 120: usual dose. 0 to 29: 50% of the dose at the same interval. Partly removed by dialysis: give after the session."},
+   "timing": {"ar": "الطعام لا يؤثر على امتصاصه.", "en": "Food does not affect its absorption."},
+   "inter": [
+    {"with": {"ar": "الأمينوغليكوزيدات", "en": "Aminoglycosides"}, "desc": {"ar": "تقارير عن سمية كلوية مع الجمع.", "en": "Reports of kidney toxicity together."}, "sev": "moderate", "r": [59]},
+    {"with": {"ar": "البروبينسيد", "en": "Probenecid"}, "desc": {"ar": "يضاعف مستواه (AUC).", "en": "Doubles its exposure (AUC)."}, "sev": "minor", "r": [59]}
+   ],
+   "src": [59]
+  },
+  {
+   "id": "cefpodox", "n": {"ar": "سيفبودوكسيم بروكسيتيل", "en": "Cefpodoxime proxetil"}, "aware": "watch",
+   "cls": {"ar": "سيفالوسبورينات (الجيل الثالث)", "en": "Third-generation cephalosporins"},
+   "uses": {"ar": "التهاب البلعوم واللوزتين، التهاب الرئة المجتمعي، تفاقم التهاب القصبات المزمن، السيلان غير المعقد، عدوى الجلد، التهاب الجيوب الفكية الحاد، والتهاب المسالك البولية غير المعقد.", "en": "Pharyngitis and tonsillitis, community pneumonia, exacerbation of chronic bronchitis, uncomplicated gonorrhoea, skin infection, acute maxillary sinusitis, and uncomplicated urinary infection."},
+   "dose": {"ar": "للبالغين (12 سنة فأكثر): البلعوم 100 ملغ كل 12 ساعة لـ5 إلى 10 أيام؛ الرئة 200 ملغ كل 12 ساعة لـ14 يوماً؛ القصبات 200 ملغ كل 12 ساعة لـ10 أيام؛ السيلان 200 ملغ مرة واحدة؛ الجلد 400 ملغ كل 12 ساعة لـ7 إلى 14 يوماً؛ الجيوب 200 ملغ كل 12 ساعة لـ10 أيام؛ المسالك 100 ملغ كل 12 ساعة لـ7 أيام.", "en": "Adults (12 and over): pharyngitis 100 mg every 12 h for 5 to 10 days; pneumonia 200 mg every 12 h for 14 days; bronchitis 200 mg every 12 h for 10 days; gonorrhoea 200 mg once; skin 400 mg every 12 h for 7 to 14 days; sinusitis 200 mg every 12 h for 10 days; urinary 100 mg every 12 h for 7 days."},
+   "renal": {"ar": "التصفية أقل من 30: يُطال الفاصل إلى كل 24 ساعة. الغسيل الدموي: 3 مرات أسبوعياً بعد الغسيل.", "en": "Clearance under 30: extend the interval to every 24 h. Haemodialysis: 3 times a week after dialysis."},
+   "timing": {"ar": "الأقراص مع الطعام لزيادة الامتصاص.", "en": "Tablets with food to improve absorption."},
+   "inter": [
+    {"with": {"ar": "مضادات الحموضة بجرعات عالية ومضادات مستقبلات H2", "en": "High-dose antacids and H2 blockers"}, "desc": {"ar": "تقلل امتصاصه 27 إلى 32%.", "en": "Reduce its absorption by 27 to 32%."}, "sev": "moderate", "r": [60]},
+    {"with": {"ar": "البروبينسيد", "en": "Probenecid"}, "desc": {"ar": "يرفع مستواه نحو 31%.", "en": "Raises its exposure by about 31%."}, "sev": "minor", "r": [60]},
+    {"with": {"ar": "الأدوية السامة للكلى", "en": "Nephrotoxic drugs"}, "desc": {"ar": "مراقبة وظيفة الكلى عند الجمع.", "en": "Monitor kidney function together."}, "sev": "moderate", "r": [60]}
+   ],
+   "src": [60]
+  },
+  {
+   "id": "cefdinir", "n": {"ar": "سيفدينير", "en": "Cefdinir"}, "aware": "watch",
+   "cls": {"ar": "سيفالوسبورينات (الجيل الثالث)", "en": "Third-generation cephalosporins"},
+   "uses": {"ar": "التهاب الرئة المجتمعي، تفاقم التهاب القصبات المزمن، التهاب الجيوب الفكية الحاد، التهاب البلعوم واللوزتين، وعدوى الجلد غير المعقدة.", "en": "Community pneumonia, exacerbation of chronic bronchitis, acute maxillary sinusitis, pharyngitis and tonsillitis, and uncomplicated skin infection."},
+   "dose": {"ar": "للبالغين: 600 ملغ يومياً. الرئة والجلد 300 ملغ كل 12 ساعة لـ10 أيام؛ القصبات والجيوب والبلعوم 300 ملغ كل 12 ساعة أو 600 ملغ كل 24 ساعة (5 إلى 10 أيام حسب العدوى).", "en": "Adults: 600 mg a day. Pneumonia and skin 300 mg every 12 h for 10 days; bronchitis, sinusitis and pharyngitis 300 mg every 12 h or 600 mg every 24 h (5 to 10 days by infection)."},
+   "renal": {"ar": "التصفية أقل من 30: 300 ملغ مرة يومياً. الغسيل الدموي: 300 ملغ يوماً بعد يوم، و300 ملغ في نهاية كل جلسة.", "en": "Clearance under 30: 300 mg once a day. Haemodialysis: 300 mg every other day, and 300 mg at the end of each session."},
+   "timing": {"ar": "مع الطعام أو بدونه. قبل مضادات الحموضة (ألمنيوم، مغنيسيوم) أو مكملات الحديد بساعتين أو بعدها بساعتين.", "en": "With or without meals. 2 h before or after antacids (aluminium, magnesium) or iron supplements."},
+   "inter": [
+    {"with": {"ar": "مضادات الحموضة (ألمنيوم أو مغنيسيوم)", "en": "Antacids (aluminium or magnesium)"}, "desc": {"ar": "تقلل امتصاصه نحو 40%: فاصل ساعتين.", "en": "Reduce its absorption by about 40%: 2 hours apart."}, "sev": "moderate", "r": [61]},
+    {"with": {"ar": "مكملات الحديد", "en": "Iron supplements"}, "desc": {"ar": "تقلل امتصاصه حتى 80%: فاصل ساعتين.", "en": "Reduce its absorption by up to 80%: 2 hours apart."}, "sev": "moderate", "r": [61]},
+    {"with": {"ar": "البروبينسيد", "en": "Probenecid"}, "desc": {"ar": "يضاعف مستواه تقريباً.", "en": "About doubles its exposure."}, "sev": "minor", "r": [61]}
+   ],
+   "src": [61]
+  },
+  {
+   "id": "cefditoren", "n": {"ar": "سيفديتورين بيفوكسيل", "en": "Cefditoren pivoxil"}, "aware": "watch",
+   "cls": {"ar": "سيفالوسبورينات (الجيل الثالث)", "en": "Third-generation cephalosporins"},
+   "uses": {"ar": "تفاقم التهاب القصبات المزمن، التهاب الرئة المجتمعي، التهاب البلعوم واللوزتين، وعدوى الجلد غير المعقدة.", "en": "Exacerbation of chronic bronchitis, community pneumonia, pharyngitis and tonsillitis, and uncomplicated skin infection."},
+   "dose": {"ar": "للبالغين (12 سنة فأكثر) مع الطعام: الرئة 400 ملغ مرتين يومياً لـ14 يوماً؛ القصبات 400 ملغ مرتين لـ10 أيام؛ البلعوم والجلد 200 ملغ مرتين يومياً.", "en": "Adults (12 and over), with meals: pneumonia 400 mg twice a day for 14 days; bronchitis 400 mg twice a day for 10 days; pharyngitis and skin 200 mg twice a day."},
+   "renal": {"ar": "التصفية 50 إلى 80: لا تعديل. 30 إلى 49: لا يزيد على 200 ملغ مرتين يومياً. أقل من 30: 200 ملغ مرة يومياً. الفشل الكلوي النهائي: الجرعة غير محددة.", "en": "Clearance 50 to 80: no change. 30 to 49: not more than 200 mg twice a day. Under 30: 200 mg once a day. End-stage kidney disease: dose not determined."},
+   "timing": {"ar": "مع الوجبات. لا يُنصح بأخذه مع مضادات الحموضة أو مضادات H2.", "en": "With meals. Not recommended together with antacids or H2 blockers."},
+   "inter": [
+    {"with": {"ar": "مضادات الحموضة (مغنيسيوم وألمنيوم)", "en": "Antacids (magnesium and aluminium)"}, "desc": {"ar": "تقلل امتصاصه: لا يُنصح بالجمع.", "en": "Reduce its absorption: not recommended together."}, "sev": "moderate", "r": [62]},
+    {"with": {"ar": "مضادات مستقبلات H2 (مثل الفاموتيدين)", "en": "H2 blockers (e.g. famotidine)"}, "desc": {"ar": "تقلل امتصاصه: لا يُنصح بالجمع.", "en": "Reduce its absorption: not recommended together."}, "sev": "moderate", "r": [62]}
+   ],
+   "src": [62]
+  },
+  {
+   "id": "cefoxitin", "n": {"ar": "سيفوكسيتين", "en": "Cefoxitin"}, "aware": "watch",
+   "cls": {"ar": "سيفامايسينات (الجيل الثاني)", "en": "Cephamycins (second generation)"},
+   "uses": {"ar": "عدوى خطيرة: الجهاز التنفسي السفلي، المسالك البولية، البطن، العدوى النسائية، تسمم الدم، العظام والمفاصل، والجلد؛ والوقاية الجراحية.", "en": "Serious infections: lower respiratory, urinary, intra-abdominal, gynaecological, septicaemia, bone and joint, and skin; and surgical prophylaxis."},
+   "dose": {"ar": "وريدي للبالغين: 1 إلى 2 غرام كل 6 إلى 8 ساعات. غير المعقدة 1 غرام كل 6 إلى 8 ساعات؛ المتوسطة إلى الشديدة 1 غرام كل 4 ساعات أو 2 غرام كل 6 إلى 8 ساعات؛ الأعلى (مثل الغنغرينا الغازية) 2 غرام كل 4 ساعات أو 3 غرام كل 6 ساعات (12 غرام يومياً).", "en": "IV, adults: 1 to 2 g every 6 to 8 h. Uncomplicated 1 g every 6 to 8 h; moderately severe to severe 1 g every 4 h or 2 g every 6 to 8 h; highest (e.g. gas gangrene) 2 g every 4 h or 3 g every 6 h (12 g a day)."},
+   "renal": {"ar": "جرعة تحميل 1 إلى 2 غرام، ثم: التصفية 30 إلى 50 ← 1 إلى 2 غرام كل 8 إلى 12 ساعة؛ 10 إلى 29 ← 1 إلى 2 غرام كل 12 إلى 24 ساعة؛ 5 إلى 9 ← 0.5 إلى 1 غرام كل 12 إلى 24 ساعة؛ أقل من 5 ← 0.5 إلى 1 غرام كل 24 إلى 48 ساعة. الغسيل: جرعة التحميل بعد كل جلسة.", "en": "Loading dose 1 to 2 g, then: clearance 30 to 50 → 1 to 2 g every 8 to 12 h; 10 to 29 → 1 to 2 g every 12 to 24 h; 5 to 9 → 0.5 to 1 g every 12 to 24 h; under 5 → 0.5 to 1 g every 24 to 48 h. Dialysis: the loading dose after each session."},
+   "timing": {"ar": "حقن وريدي.", "en": "Intravenous."},
+   "inter": [
+    {"with": {"ar": "الأمينوغليكوزيدات", "en": "Aminoglycosides"}, "desc": {"ar": "زيادة السمية الكلوية.", "en": "Increased kidney toxicity."}, "sev": "moderate", "r": [63]}
+   ],
+   "src": [63]
+  },
+  {
+   "id": "cefotetan", "n": {"ar": "سيفوتيتان", "en": "Cefotetan"}, "aware": "watch",
+   "cls": {"ar": "سيفامايسينات (الجيل الثاني)", "en": "Cephamycins (second generation)"},
+   "uses": {"ar": "عدوى المسالك البولية، الجهاز التنفسي السفلي، الجلد، العدوى النسائية، البطن، العظام والمفاصل، والوقاية الجراحية.", "en": "Urinary, lower respiratory, skin, gynaecological, intra-abdominal and bone and joint infections, and surgical prophylaxis."},
+   "dose": {"ar": "للبالغين وريدياً أو عضلياً: عادة 1 أو 2 غرام كل 12 ساعة حسب العدوى؛ المهددة للحياة 3 غرام كل 12 ساعة (حد أقصى 6 غرام يومياً). الوقاية: 1 أو 2 غرام مرة واحدة قبل الجراحة بـ30 إلى 60 دقيقة.", "en": "IV or IM, adults: usually 1 or 2 g every 12 h by infection; life-threatening 3 g every 12 h (at most 6 g a day). Prophylaxis: 1 or 2 g once, 30 to 60 minutes before surgery."},
+   "renal": {"ar": "التصفية أكثر من 30: كل 12 ساعة. 10 إلى 30: كل 24 ساعة. أقل من 10: كل 48 ساعة (أو نصف الجرعة ثم ربعها كل 12 ساعة). الغسيل الدموي: ربع الجرعة كل 24 ساعة بين الجلسات ونصفها يوم الغسيل.", "en": "Clearance over 30: every 12 h. 10 to 30: every 24 h. Under 10: every 48 h (or half, then a quarter of the dose every 12 h). Haemodialysis: a quarter of the dose every 24 h between sessions and half on the dialysis day."},
+   "timing": {"ar": "حقن وريدي أو عضلي. لا يُخلط مع الأمينوغليكوزيدات.", "en": "IV or IM. Do not mix with aminoglycosides."},
+   "inter": [
+    {"with": {"ar": "الأمينوغليكوزيدات", "en": "Aminoglycosides"}, "desc": {"ar": "قد تزيد السمية الكلوية: مراقبة الكلى، ولا يُخلطان في حقنة واحدة.", "en": "May increase kidney toxicity: monitor the kidneys, and never mix in one injection."}, "sev": "moderate", "r": [64]}
+   ],
+   "src": [64]
+  },
+  {
+   "id": "cefotaxime", "n": {"ar": "سيفوتاكسيم", "en": "Cefotaxime"}, "aware": "watch",
+   "cls": {"ar": "سيفالوسبورينات (الجيل الثالث)", "en": "Third-generation cephalosporins"},
+   "uses": {"ar": "عدوى خطيرة: الجهاز التنفسي السفلي، المسالك البولية، العدوى النسائية، تسمم الدم، الجلد، البطن، العظام والمفاصل، الجهاز العصبي المركزي (السحايا)، والسيلان؛ والوقاية الجراحية.", "en": "Serious infections: lower respiratory, urinary, gynaecological, septicaemia, skin, intra-abdominal, bone and joint, central nervous system (meningitis) and gonorrhoea; and surgical prophylaxis."},
+   "dose": {"ar": "للبالغين وريدياً أو عضلياً: السيلان 0.5 إلى 1 غرام عضلياً مرة واحدة؛ غير المعقدة 1 غرام كل 12 ساعة؛ المتوسطة إلى الشديدة 1 إلى 2 غرام كل 8 ساعات؛ تسمم الدم 2 غرام كل 6 إلى 8 ساعات؛ المهددة للحياة 2 غرام كل 4 ساعات (حد أقصى 12 غرام يومياً). الوقاية: 1 غرام قبل الجراحة بـ30 إلى 90 دقيقة.", "en": "IV or IM, adults: gonorrhoea 0.5 to 1 g IM once; uncomplicated 1 g every 12 h; moderate to severe 1 to 2 g every 8 h; septicaemia 2 g every 6 to 8 h; life-threatening 2 g every 4 h (at most 12 g a day). Prophylaxis: 1 g 30 to 90 minutes before surgery."},
+   "renal": {"ar": "التصفية أقل من 20: نصف الجرعة.", "en": "Clearance under 20: half the dose."},
+   "timing": {"ar": "حقن وريدي أو عضلي.", "en": "IV or IM."},
+   "inter": [
+    {"with": {"ar": "البروبينسيد", "en": "Probenecid"}, "desc": {"ar": "يقلل إطراحه نحو 50% ويرفع مستواه.", "en": "Cuts its clearance by about 50% and raises its level."}, "sev": "minor", "r": [65]},
+    {"with": {"ar": "الأدوية السامة للكلى (أمينوغليكوزيدات، مضادات الالتهاب غير الستيرويدية، فوروسيميد)", "en": "Nephrotoxic drugs (aminoglycosides, NSAIDs, furosemide)"}, "desc": {"ar": "قد يزيد سميتها الكلوية.", "en": "May increase their kidney toxicity."}, "sev": "moderate", "r": [65]}
+   ],
+   "src": [65]
+  },
+  {
+   "id": "ceftaz", "n": {"ar": "سيفتازيديم", "en": "Ceftazidime"}, "aware": "watch",
+   "cls": {"ar": "سيفالوسبورينات (الجيل الثالث)", "en": "Third-generation cephalosporins"},
+   "uses": {"ar": "عدوى الجهاز التنفسي السفلي، الجلد، المسالك البولية، تسمم الدم، العظام والمفاصل، العدوى النسائية، البطن، والجهاز العصبي المركزي.", "en": "Lower respiratory, skin, urinary, septicaemia, bone and joint, gynaecological, intra-abdominal and central nervous system infections."},
+   "dose": {"ar": "للبالغين وريدياً أو عضلياً: عادة 1 غرام كل 8 إلى 12 ساعة. المسالك غير المعقدة 250 ملغ كل 12 ساعة؛ المعقدة 500 ملغ كل 8 إلى 12 ساعة؛ العظام 2 غرام كل 12 ساعة؛ الرئة غير المعقدة والجلد الخفيف 500 ملغ إلى 1 غرام كل 8 ساعات؛ النسائية والبطن والسحايا والمهددة للحياة 2 غرام وريدياً كل 8 ساعات.", "en": "IV or IM, adults: usually 1 g every 8 to 12 h. Uncomplicated urinary 250 mg every 12 h; complicated 500 mg every 8 to 12 h; bone 2 g every 12 h; uncomplicated pneumonia and mild skin 500 mg to 1 g every 8 h; gynaecological, abdominal, meningitis and life-threatening 2 g IV every 8 h."},
+   "renal": {"ar": "جرعة تحميل 1 غرام، ثم: التصفية 31 إلى 50 ← 1 غرام كل 12 ساعة؛ 16 إلى 30 ← 1 غرام كل 24 ساعة؛ 6 إلى 15 ← 500 ملغ كل 24 ساعة؛ أقل من 5 ← 500 ملغ كل 48 ساعة. الغسيل الدموي: 1 غرام تحميل ثم 1 غرام بعد كل جلسة. البريتوني: 1 غرام ثم 500 ملغ كل 24 ساعة.", "en": "Loading dose 1 g, then: clearance 31 to 50 → 1 g every 12 h; 16 to 30 → 1 g every 24 h; 6 to 15 → 500 mg every 24 h; under 5 → 500 mg every 48 h. Haemodialysis: 1 g loading then 1 g after each session. Peritoneal: 1 g then 500 mg every 24 h."},
+   "timing": {"ar": "حقن وريدي أو عضلي.", "en": "IV or IM."},
+   "inter": [
+    {"with": {"ar": "الأمينوغليكوزيدات ومدرات البول القوية (فوروسيميد)", "en": "Aminoglycosides and potent diuretics (furosemide)"}, "desc": {"ar": "تقارير سمية كلوية: مراقبة دقيقة للكلى.", "en": "Reports of kidney toxicity: monitor the kidneys closely."}, "sev": "moderate", "r": [66]},
+    {"with": {"ar": "الكلورامفينيكول", "en": "Chloramphenicol"}, "desc": {"ar": "تضاد محتمل: يُتجنب الجمع.", "en": "Possible antagonism: avoid together."}, "sev": "moderate", "r": [66]}
+   ],
+   "src": [66]
+  }
+ ]
+}

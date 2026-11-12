@@ -1,0 +1,134 @@
+{
+ "batch": 3,
+ "language_note": "Written from the saved official labels (docs/antibiotics/labels). Temocillin: French RCP (no US label). Penicillin G: Pfizerpen label (the newest generic label shows its dose table only as an image).",
+ "drugs": [
+  {
+   "id": "ampicillin", "n": {"ar": "أمبيسيلين", "en": "Ampicillin"}, "aware": "access",
+   "cls": {"ar": "بنسلينات واسعة الطيف", "en": "Aminopenicillins"},
+   "uses": {"ar": "عدوى الجهاز التنفسي، التهاب السحايا الجرثومي، تسمم الدم والتهاب الشغاف، وعدوى المسالك البولية والجهاز الهضمي.", "en": "Respiratory tract infections, bacterial meningitis, septicaemia and endocarditis, and urinary tract and gastrointestinal infections."},
+   "dose": {"ar": "حقن وريدي أو عضلي للبالغين (40 كغ فأكثر): الجهاز التنفسي والأنسجة الرخوة 250 إلى 500 ملغ كل 6 ساعات؛ الجهاز الهضمي والبولي التناسلي 500 ملغ كل 6 ساعات؛ التهاب الإحليل السيلاني عند الرجال جرعتان 500 ملغ بينهما 8 إلى 12 ساعة؛ التهاب السحايا 150 إلى 200 ملغ/كغ يومياً مقسمة كل 3 إلى 4 ساعات.", "en": "IV or IM, adults (40 kg or more): respiratory and soft tissue 250 to 500 mg every 6 h; gastrointestinal and genitourinary 500 mg every 6 h; gonococcal urethritis in men two 500 mg doses 8 to 12 h apart; meningitis 150 to 200 mg/kg a day divided every 3 to 4 h."},
+   "renal": {"ar": "الملصق لا يعطي جدول تعديل للكلى. يزيله الغسيل الدموي ولا يزيله الغسيل البريتوني.", "en": "The label gives no kidney table. Haemodialysis removes it; peritoneal dialysis does not."},
+   "timing": {"ar": "حقن وريدي أو عضلي، ويمكن الانتقال إلى الفم عند المناسبة.", "en": "Intravenous or intramuscular; switch to oral when appropriate."},
+   "inter": [
+    {"with": {"ar": "الألوبيورينول", "en": "Allopurinol"}, "desc": {"ar": "يزيد كثيراً من الطفح الجلدي.", "en": "Substantially increases skin rashes."}, "sev": "minor", "r": [47]}
+   ],
+   "src": [47]
+  },
+  {
+   "id": "amp_sulb", "n": {"ar": "أمبيسيلين–سولباكتام", "en": "Ampicillin–sulbactam"}, "aware": "access",
+   "cls": {"ar": "بنسلينات مع مثبط بيتالاكتاماز", "en": "Penicillins with a beta-lactamase inhibitor"},
+   "uses": {"ar": "عدوى الجلد والأنسجة، عدوى البطن، والعدوى النسائية بالسلالات المنتجة للبيتالاكتاماز.", "en": "Skin, intra-abdominal and gynaecological infections by beta-lactamase-producing strains."},
+   "dose": {"ar": "للبالغين: 1.5 غرام (أمبيسيلين 1 + سولباكتام 0.5) إلى 3 غرام (2 + 1) كل 6 ساعات وريدياً خلال 15 إلى 30 دقيقة. السولباكتام لا يتجاوز 4 غرام يومياً. لا تتجاوز مدة الحقن عادة 14 يوماً.", "en": "Adults: 1.5 g (ampicillin 1 + sulbactam 0.5) to 3 g (2 + 1) every 6 h IV over 15 to 30 minutes. Sulbactam at most 4 g a day. IV course usually not over 14 days."},
+   "renal": {"ar": "التصفية 30 فأكثر: 1.5 إلى 3 غرام كل 6 إلى 8 ساعات. 15 إلى 29: كل 12 ساعة. 5 إلى 14: كل 24 ساعة.", "en": "Clearance 30 or more: 1.5 to 3 g every 6 to 8 h. 15 to 29: every 12 h. 5 to 14: every 24 h."},
+   "timing": {"ar": "تسريب وريدي خلال 15 إلى 30 دقيقة.", "en": "IV infusion over 15 to 30 minutes."},
+   "inter": [
+    {"with": {"ar": "البروبينسيد", "en": "Probenecid"}, "desc": {"ar": "يرفع مستواه ويطيله.", "en": "Raises and prolongs its levels."}, "sev": "minor", "r": [48]},
+    {"with": {"ar": "الألوبيورينول", "en": "Allopurinol"}, "desc": {"ar": "يزيد الطفح الجلدي (مع الأمبيسيلين).", "en": "More skin rashes (with ampicillin)."}, "sev": "minor", "r": [48]},
+    {"with": {"ar": "الأمينوغليكوزيدات", "en": "Aminoglycosides"}, "desc": {"ar": "لا تُحل أو تُخلط معاً: الأمبيسيلين يعطّلها خارج الجسم.", "en": "Do not reconstitute or mix together: ampicillin inactivates them in vitro."}, "sev": "moderate", "r": [48]}
+   ],
+   "src": [48]
+  },
+  {
+   "id": "pen_v", "n": {"ar": "بنسلين V (فينوكسي ميثيل بنسلين)", "en": "Penicillin V"}, "aware": "access",
+   "cls": {"ar": "بنسلينات", "en": "Penicillins"},
+   "uses": {"ar": "عدوى خفيفة إلى متوسطة بالجراثيم الحساسة للبنسلين: المكورات العقدية والرئوية، عدوى الجلد العنقودية الخفيفة، التهاب فنسان، والوقاية من تكرار الحمى الرثوية.", "en": "Mild to moderate infections by penicillin-sensitive organisms: streptococcal and pneumococcal infections, mild staphylococcal skin infections, Vincent's infection, and prevention of recurrent rheumatic fever."},
+   "dose": {"ar": "للبالغين والأطفال من 12 سنة: المكورات العقدية 125 إلى 250 ملغ كل 6 إلى 8 ساعات لـ10 أيام؛ المكورات الرئوية 250 إلى 500 ملغ كل 6 ساعات حتى زوال الحمى بيومين؛ العنقوديات والتهاب فنسان 250 إلى 500 ملغ كل 6 إلى 8 ساعات؛ الوقاية من الحمى الرثوية 125 إلى 250 ملغ مرتين يومياً بشكل مستمر.", "en": "Adults and children 12 and over: streptococcal 125 to 250 mg every 6 to 8 h for 10 days; pneumococcal 250 to 500 mg every 6 h until 2 days without fever; staphylococcal and Vincent's 250 to 500 mg every 6 to 8 h; rheumatic fever prevention 125 to 250 mg twice a day, continuing."},
+   "renal": {"ar": "الملصق لا يعطي تعديلاً للكلى.", "en": "The label gives no kidney adjustment."},
+   "timing": {"ar": "يمكن مع الوجبات، لكن المستوى أعلى قليلاً على معدة فارغة.", "en": "May be given with meals, but levels are slightly higher on an empty stomach."},
+   "inter": [], "inter_none": true,
+   "src": [49]
+  },
+  {
+   "id": "benz_pen", "n": {"ar": "بنزاثين بنزيل بنسلين", "en": "Benzathine benzylpenicillin"}, "aware": "access",
+   "cls": {"ar": "بنسلينات طويلة المفعول", "en": "Long-acting penicillins"},
+   "uses": {"ar": "التهاب الجهاز التنفسي العلوي بالمكورات العقدية (أ)، الزهري، الداء العليقي والبجل والبنتا، والوقاية من الحمى الرثوية والتهاب كبيبات الكلى.", "en": "Group A streptococcal upper respiratory infection, syphilis, yaws, bejel and pinta, and prevention of rheumatic fever and glomerulonephritis."},
+   "dose": {"ar": "حقن عضلي عميق فقط للبالغين: المكورات العقدية 1.2 مليون وحدة مرة واحدة؛ الزهري الأولي والثانوي والكامن 2.4 مليون وحدة مرة واحدة؛ الزهري المتأخر 2.4 مليون وحدة أسبوعياً لثلاث جرعات؛ الداء العليقي 1.2 مليون وحدة؛ الوقاية 1.2 مليون وحدة شهرياً أو 600 ألف وحدة كل أسبوعين.", "en": "Deep intramuscular only, adults: streptococcal 1.2 million units once; primary, secondary and latent syphilis 2.4 million units once; late syphilis 2.4 million units weekly for 3 doses; yaws 1.2 million units; prophylaxis 1.2 million units monthly or 600,000 units every 2 weeks."},
+   "renal": {"ar": "الملصق لا يعطي تعديلاً للكلى.", "en": "The label gives no kidney adjustment."},
+   "timing": {"ar": "حقن عضلي عميق في الربع العلوي الخارجي للألية. لا يُعطى وريدياً أبداً، ولا قرب شريان أو عصب.", "en": "Deep intramuscular injection in the upper outer buttock. Never intravenous, and never near an artery or nerve."},
+   "inter": [
+    {"with": {"ar": "التتراسيكلين", "en": "Tetracycline"}, "desc": {"ar": "قد يضاد أثره القاتل للجراثيم: يُتجنب الجمع.", "en": "May antagonise its bactericidal effect: avoid together."}, "sev": "moderate", "r": [50]},
+    {"with": {"ar": "البروبينسيد", "en": "Probenecid"}, "desc": {"ar": "يرفع مستوى البنسلين ويطيله.", "en": "Raises and prolongs penicillin levels."}, "sev": "minor", "r": [50]}
+   ],
+   "src": [50]
+  },
+  {
+   "id": "pen_g", "n": {"ar": "بنزيل بنسلين البوتاسيوم (بنسلين G)", "en": "Penicillin G potassium"}, "aware": "access",
+   "cls": {"ar": "بنسلينات", "en": "Penicillins"},
+   "uses": {"ar": "عدوى خطيرة بالسلالات الحساسة: المكورات العقدية والعنقودية (تسمم الدم، التهاب الشغاف، السحايا)، الجمرة الخبيثة، الفطار الشعي، عدوى المطثيات، الدفتيريا، الليستيريا، الزهري العصبي، والتهاب السحايا بالمكورات السحائية.", "en": "Serious infections by susceptible strains: streptococcal and staphylococcal (septicaemia, endocarditis, meningitis), anthrax, actinomycosis, clostridial infections, diphtheria, listeria, neurosyphilis, and meningococcal meningitis."},
+   "dose": {"ar": "وريدي أو عضلي للبالغين بالمليون وحدة يومياً حسب العدوى، مقسمة عادة كل 4 إلى 6 ساعات: المكورات العقدية 12 إلى 24؛ العنقوديات 5 إلى 24؛ الجمرة الخبيثة 8 على الأقل كل 6 ساعات؛ الزهري العصبي 12 إلى 24 (2 إلى 4 كل 4 ساعات لـ10 إلى 14 يوماً)؛ السحايا بالمكورات السحائية 24 (2 كل ساعتين).", "en": "IV or IM, adults, million units a day by infection, usually divided every 4 to 6 h: streptococci 12 to 24; staphylococci 5 to 24; anthrax at least 8 every 6 h; neurosyphilis 12 to 24 (2 to 4 every 4 h for 10 to 14 days); meningococcal meningitis 24 (2 every 2 h)."},
+   "renal": {"ar": "تعديل فقط في القصور الشديد. التصفية أقل من 10: جرعة تحميل كاملة ثم نصفها كل 8 إلى 10 ساعات. مرضى اليوريميا بتصفية أكثر من 10: جرعة تحميل كاملة ثم نصفها كل 4 إلى 5 ساعات.", "en": "Adjust only in severe impairment. Clearance under 10: a full loading dose, then half of it every 8 to 10 h. Uraemic patients with clearance over 10: a full loading dose, then half of it every 4 to 5 h."},
+   "timing": {"ar": "حقن وريدي أو عضلي. الجرعات العالية (أكثر من 10 ملايين وحدة) ببطء بسبب البوتاسيوم.", "en": "IV or IM. High doses (over 10 million units) slowly, because of the potassium."},
+   "inter": [
+    {"with": {"ar": "المضادات الكابحة للجراثيم (كلورامفينيكول، إريثروميسين، سلفوناميدات، تتراسيكلينات)", "en": "Bacteriostatic antibiotics (chloramphenicol, erythromycins, sulfonamides, tetracyclines)"}, "desc": {"ar": "قد تضاد أثره: يُتجنب الجمع.", "en": "May antagonise it: avoid together."}, "sev": "moderate", "r": [51]},
+    {"with": {"ar": "البروبينسيد", "en": "Probenecid"}, "desc": {"ar": "يطيل مستوى البنسلين.", "en": "Prolongs penicillin levels."}, "sev": "minor", "r": [51]},
+    {"with": {"ar": "الأسبرين والإندوميثاسين والثيازيدات والفوروسيميد وحمض الإيثاكرينيك", "en": "Aspirin, indomethacin, thiazides, furosemide and ethacrynic acid"}, "desc": {"ar": "تنافسه على الإفراز الكلوي فتطيل عمر نصفه.", "en": "Compete for kidney secretion and prolong its half-life."}, "sev": "minor", "r": [51]}
+   ],
+   "src": [51]
+  },
+  {
+   "id": "dicloxa", "n": {"ar": "ديكلوكساسيلين", "en": "Dicloxacillin"}, "aware": "access",
+   "cls": {"ar": "بنسلينات مقاومة للبنسليناز", "en": "Penicillinase-resistant penicillins"},
+   "uses": {"ar": "عدوى العنقوديات المنتجة للبنسليناز الحساسة له.", "en": "Infections by susceptible penicillinase-producing staphylococci."},
+   "dose": {"ar": "للبالغين: الخفيفة إلى المتوسطة 125 ملغ كل 6 ساعات؛ الشديدة 250 ملغ كل 6 ساعات. لا يبدأ به في العدوى الخطيرة المهددة للحياة.", "en": "Adults: mild to moderate 125 mg every 6 h; severe 250 mg every 6 h. Not for starting treatment of serious life-threatening infection."},
+   "renal": {"ar": "الملصق لا يعطي تعديلاً للكلى؛ الغسيل يزيل كمية قليلة فقط.", "en": "The label gives no kidney adjustment; dialysis removes only small amounts."},
+   "timing": {"ar": "على معدة فارغة: قبل الطعام بساعة أو بعده بساعتين، مع 120 مل ماء على الأقل، ولا قبل النوم مباشرة.", "en": "On an empty stomach: 1 h before or 2 h after meals, with at least 120 mL of water, not right before bed."},
+   "inter": [
+    {"with": {"ar": "التتراسيكلين", "en": "Tetracycline"}, "desc": {"ar": "قد يضاد أثره: يُتجنب الجمع.", "en": "May antagonise it: avoid together."}, "sev": "moderate", "r": [52]},
+    {"with": {"ar": "الوارفارين والديكومارول", "en": "Warfarin and dicumarol"}, "desc": {"ar": "قد يقلل أثر مميع الدم: مراقبة زمن البروثرومبين وتعديل الجرعة.", "en": "May reduce the anticoagulant effect: monitor prothrombin time and adjust."}, "sev": "moderate", "r": [52]},
+    {"with": {"ar": "الأمينوغليكوزيدات", "en": "Aminoglycosides"}, "desc": {"ar": "لا تُخلط معاً: يعطّلها خارج الجسم وقد يخفض قياس مستواها.", "en": "Do not mix: inactivates them in vitro and may lower their measured levels."}, "sev": "moderate", "r": [52]},
+    {"with": {"ar": "البروبينسيد", "en": "Probenecid"}, "desc": {"ar": "يرفع مستوى البنسلين ويطيله.", "en": "Raises and prolongs penicillin levels."}, "sev": "minor", "r": [52]}
+   ],
+   "src": [52]
+  },
+  {
+   "id": "pip_tazo", "n": {"ar": "بيبيراسيلين–تازوباكتام", "en": "Piperacillin–tazobactam"}, "aware": "watch",
+   "cls": {"ar": "بنسلينات مع مثبط بيتالاكتاماز", "en": "Penicillins with a beta-lactamase inhibitor"},
+   "uses": {"ar": "عدوى البطن، التهاب الرئة المكتسب في المستشفى، عدوى الجلد، العدوى الحوضية عند النساء، والتهاب الرئة المجتمعي.", "en": "Intra-abdominal infection, hospital-acquired pneumonia, skin infection, female pelvic infection, and community-acquired pneumonia."},
+   "dose": {"ar": "للبالغين: 3.375 غرام كل 6 ساعات (13.5 غرام يومياً)؛ التهاب الرئة في المستشفى 4.5 غرام كل 6 ساعات مع أمينوغليكوزيد. تسريب وريدي خلال 30 دقيقة.", "en": "Adults: 3.375 g every 6 h (13.5 g a day); hospital pneumonia 4.5 g every 6 h with an aminoglycoside. IV infusion over 30 minutes."},
+   "renal": {"ar": "التصفية أكثر من 40: الجرعة المعتادة. 20 إلى 40: 2.25 غرام كل 6 ساعات (التهاب الرئة 3.375 كل 6). أقل من 20: 2.25 كل 8 ساعات (التهاب الرئة 2.25 كل 6). الغسيل الدموي: 2.25 كل 12 ساعة (التهاب الرئة كل 8) مع 0.75 غرام بعد كل جلسة. البريتوني: 2.25 كل 12 ساعة (التهاب الرئة كل 8).", "en": "Clearance over 40: usual dose. 20 to 40: 2.25 g every 6 h (pneumonia 3.375 every 6). Under 20: 2.25 every 8 h (pneumonia 2.25 every 6). Haemodialysis: 2.25 every 12 h (pneumonia every 8) plus 0.75 g after each session. Peritoneal: 2.25 every 12 h (pneumonia every 8)."},
+   "timing": {"ar": "تسريب وريدي خلال 30 دقيقة. يُعطى منفصلاً عن الأمينوغليكوزيدات.", "en": "IV infusion over 30 minutes. Give apart from aminoglycosides."},
+   "inter": [
+    {"with": {"ar": "الفانكومايسين", "en": "Vancomycin"}, "desc": {"ar": "زيادة إصابة الكلى الحادة: مراقبة وظيفة الكلى.", "en": "More acute kidney injury: monitor kidney function."}, "sev": "moderate", "r": [53]},
+    {"with": {"ar": "التوبراميسين", "en": "Tobramycin"}, "desc": {"ar": "يخفض مستواه كثيراً عند مرضى الغسيل: قياس المستوى.", "en": "Lowers its levels markedly in dialysis patients: measure levels."}, "sev": "moderate", "r": [53]},
+    {"with": {"ar": "البروبينسيد", "en": "Probenecid"}, "desc": {"ar": "يطيل عمر نصفه: لا يُجمع إلا إذا زادت الفائدة على الخطر.", "en": "Prolongs its half-life: only together if the benefit outweighs the risk."}, "sev": "moderate", "r": [53]},
+    {"with": {"ar": "الهيبارين ومميعات الدم الفموية", "en": "Heparin and oral anticoagulants"}, "desc": {"ar": "مراقبة عوامل التخثر.", "en": "Monitor coagulation."}, "sev": "moderate", "r": [53]},
+    {"with": {"ar": "الفيكورونيوم ومرخيات العضلات غير المزيلة للاستقطاب", "en": "Vecuronium and other non-depolarising blockers"}, "desc": {"ar": "قد يطيل الإحصار العصبي العضلي.", "en": "May prolong neuromuscular blockade."}, "sev": "moderate", "r": [53]}
+   ],
+   "src": [53]
+  },
+  {
+   "id": "temocillin", "n": {"ar": "تيموسيلين", "en": "Temocillin"}, "aware": "watch",
+   "cls": {"ar": "بنسلينات", "en": "Penicillins"},
+   "uses": {"ar": "عند الاشتباه القوي أو التأكد من بكتيريا سالبة الغرام حساسة: عدوى المسالك البولية المعقدة والتهاب الحويضة الحاد، عدوى الجهاز التنفسي السفلي ومنها المكتسبة في المستشفى، عدوى الجلد الحادة، وتجرثم الدم المرتبط بها.", "en": "When susceptible Gram-negative bacilli are strongly suspected or confirmed: complicated urinary infection and acute pyelonephritis, lower respiratory infection including hospital-acquired, acute skin infection, and related bacteraemia."},
+   "dose": {"ar": "للبالغين مع كلى سليمة (ملصق فرنسي): الجرعة المعيارية 4 غرام يومياً على جرعتين (2 غرام كل 12 ساعة)؛ الجرعة العالية للمرضى الحرجين 6 غرام يومياً على 3 جرعات أو تسريب مستمر بعد جرعة تحميل 2 غرام. يبدأ العلاج في المستشفى.", "en": "Adults with normal kidneys (French label): standard 4 g a day in 2 doses (2 g every 12 h); high dose for critically ill patients 6 g a day in 3 doses or a continuous infusion after a 2 g loading dose. Treatment starts in hospital."},
+   "renal": {"ar": "الجرعة المعيارية حسب التصفية: أكثر من 60 ← 2 غرام كل 12 ساعة؛ 30 إلى 60 ← 1 غرام كل 12 ساعة؛ 10 إلى 30 ← 1 غرام كل 24 ساعة. الغسيل الدموي: 1 غرام وريدياً لكل 24 ساعة بين الجلسات، ويفضل في نهاية الغسيل.", "en": "Standard dose by clearance: over 60 → 2 g every 12 h; 30 to 60 → 1 g every 12 h; 10 to 30 → 1 g every 24 h. Haemodialysis: 1 g IV for each 24 h between sessions, preferably at the end of dialysis."},
+   "timing": {"ar": "حقن وريدي أو عضلي.", "en": "Intravenous or intramuscular."},
+   "inter": [
+    {"with": {"ar": "المضادات الكابحة للجراثيم", "en": "Bacteriostatic antibiotics"}, "desc": {"ar": "يُنصح بعدم الجمع لاحتمال التضاد.", "en": "Not advised together because of possible antagonism."}, "sev": "moderate", "r": [54]}
+   ],
+   "src": [54]
+  },
+  {
+   "id": "sul_dur", "n": {"ar": "سولباكتام–دورلوباكتام", "en": "Sulbactam–durlobactam"}, "aware": "",
+   "cls": {"ar": "بيتالاكتام مع مثبط بيتالاكتاماز", "en": "Beta-lactam with a beta-lactamase inhibitor"},
+   "uses": {"ar": "للبالغين (18 سنة فأكثر): التهاب الرئة المكتسب في المستشفى أو المرتبط بجهاز التنفس، الناتج عن معقد الراكدة البومانية (Acinetobacter baumannii-calcoaceticus) الحساس.", "en": "Adults (18 and over): hospital-acquired and ventilator-associated pneumonia caused by susceptible Acinetobacter baumannii-calcoaceticus complex."},
+   "dose": {"ar": "1 غرام سولباكتام + 1 غرام دورلوباكتام كل 6 ساعات تسريباً وريدياً خلال 3 ساعات (تصفية 45 إلى 129)، لـ7 إلى 14 يوماً.", "en": "1 g sulbactam + 1 g durlobactam every 6 h by 3-hour IV infusion (clearance 45 to 129), for 7 to 14 days."},
+   "renal": {"ar": "حسب التصفية (Cockcroft-Gault): 130 فأكثر ← كل 4 ساعات؛ 45 إلى 129 ← كل 6؛ 30 إلى 44 ← كل 8؛ 15 إلى 29 ← كل 12؛ أقل من 15 ← كل 12 ساعة لأول 3 جرعات ثم كل 24 ساعة. الغسيل الدموي: الجرعة بعد انتهاء الجلسة.", "en": "By clearance (Cockcroft-Gault): 130 or more → every 4 h; 45 to 129 → every 6; 30 to 44 → every 8; 15 to 29 → every 12; under 15 → every 12 h for the first 3 doses then every 24 h. Haemodialysis: dose after the session ends."},
+   "timing": {"ar": "تسريب وريدي خلال 3 ساعات لكل جرعة.", "en": "Every dose by IV infusion over 3 hours."},
+   "inter": [
+    {"with": {"ar": "مثبطات ناقل OAT1 (مثل البروبينسيد)", "en": "OAT1 inhibitors (e.g. probenecid)"}, "desc": {"ar": "ترفع مستوى السولباكتام: لا يُنصح بالجمع.", "en": "Raise sulbactam levels: not recommended together."}, "sev": "moderate", "r": [55]}
+   ],
+   "src": [55]
+  },
+  {
+   "id": "cefadroxil", "n": {"ar": "سيفادروكسيل", "en": "Cefadroxil"}, "aware": "access",
+   "cls": {"ar": "سيفالوسبورينات (الجيل الأول)", "en": "First-generation cephalosporins"},
+   "uses": {"ar": "عدوى المسالك البولية، عدوى الجلد بالعنقوديات أو العقديات، والتهاب البلعوم واللوزتين بالمكورات العقدية (أ).", "en": "Urinary tract infection, staphylococcal or streptococcal skin infection, and group A streptococcal pharyngitis and tonsillitis."},
+   "dose": {"ar": "للبالغين: التهاب المثانة غير المعقد 1 أو 2 غرام يومياً (مرة أو مقسمة مرتين)؛ عدوى المسالك الأخرى 2 غرام يومياً مقسمة مرتين؛ الجلد 1 غرام يومياً؛ البلعوم 1 غرام يومياً لـ10 أيام.", "en": "Adults: uncomplicated cystitis 1 or 2 g a day (once or in 2 doses); other urinary infection 2 g a day in 2 doses; skin 1 g a day; pharyngitis 1 g a day for 10 days."},
+   "renal": {"ar": "جرعة أولى 1000 ملغ ثم 500 ملغ بفاصل حسب التصفية: 25 إلى 50 ← كل 12 ساعة؛ 10 إلى 25 ← كل 24 ساعة؛ 0 إلى 10 ← كل 36 ساعة. أكثر من 50: كالكلى السليمة.", "en": "First dose 1000 mg, then 500 mg at an interval by clearance: 25 to 50 → every 12 h; 10 to 25 → every 24 h; 0 to 10 → every 36 h. Over 50: as for normal kidneys."},
+   "timing": {"ar": "مع الطعام أو بدونه؛ الطعام يقلل اضطراب المعدة.", "en": "With or without meals; food can reduce stomach upset."},
+   "inter": [], "inter_none": true,
+   "src": [56]
+  }
+ ]
+}

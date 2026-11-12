@@ -1,0 +1,12 @@
+{
+  "name": "DOSEWAW",
+  "short_name": "DOSEWAW",
+  "description": "Dose reference for pharmacists",
+  "lang": "ar",
+  "dir": "rtl",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#FAF8F2",
+  "theme_color": "#0F4D3A",
+  "icons": [{"src": "brand/logo.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any"}]
+}

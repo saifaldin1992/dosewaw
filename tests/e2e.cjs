@@ -1,0 +1,47 @@
+const {chromium,devices}=require('playwright');
+const B=process.env.BASE||'http://127.0.0.1:8765/',out=(process.env.OUT||require('path').join(__dirname,'shots'))+'/';
+require('fs').mkdirSync(out,{recursive:true});
+(async()=>{const b=await chromium.launch();const errs=[];let ok=0;
+ const chk=(c,m)=>{if(c)ok++;else errs.push('FAIL '+m)};
+ for(const [n,o] of [['phone',{...devices['iPhone 13']}],['ipad',{...devices['iPad (gen 7)']}],['desktop',{viewport:{width:1440,height:900}}]]){
+  const c=await b.newContext({...o,deviceScaleFactor:1});const p=await c.newPage();
+  p.on('pageerror',e=>errs.push(n+' pageerror: '+e.message));p.on('console',m=>{if(m.type()==='error')errs.push(n+' console: '+m.text())});
+  await p.goto(B,{waitUntil:'networkidle'});
+  chk(await p.locator('.gcard').count()===5,n+' 5 group cards');
+  await p.screenshot({path:out+n+'-home.png',fullPage:true});
+  await p.fill('#q','اموكس');await p.waitForTimeout(100);
+  chk(await p.locator('#sres a').count()>=2,n+' search finds amoxicillin (no hamza)');
+  await p.locator('#sres a').first().click();await p.waitForSelector('#result .rbody');
+  await p.fill('#val','15');await p.waitForTimeout(50);
+  const big=await p.locator('#result .big').innerText();chk(big.includes('337.5'),n+' amox 15 kg severe = 337.5 mg, got '+big);
+  const mls=await p.locator('table.ml td.v').allInnerTexts();chk(mls.length===2&&mls[0].includes('8.4')&&mls[1].includes('4.2'),n+' mL 8.4 / 4.2: '+mls);
+  await p.screenshot({path:out+n+'-amox.png',fullPage:true});
+  const sw=await p.evaluate(()=>document.documentElement.scrollWidth-document.documentElement.clientWidth);chk(sw<=0,n+' no sideways scroll ('+sw+')');
+  if(n==='phone'){
+   await p.click('[data-mode="y"]');await p.fill('#val','2');await p.waitForTimeout(50);
+   chk((await p.locator('#est').innerText()).includes('11.8'),'age 2 y -> WHO median 11.8 kg (boys 12.15, girls 11.48)');
+   await p.click('[data-mode="m"]');await p.fill('#val','2');await p.waitForTimeout(50);
+   chk((await p.locator('#result .warn').first().innerText()).includes('30'),'2 months -> infant 30 mg/kg/day');
+   await p.click('[data-mode="w"]');await p.fill('#val','70');await p.waitForTimeout(50);
+   const t=await p.locator('#result').innerText();chk(/Kidney|الكلى/.test(t)&&/أدخل وظائف الكلى/.test(t),'70 kg adult: kidney row asks for data, never "no change"');
+   await p.click('#kid summary');await p.fill('#kage','60');await p.selectOption('#ksex','f');await p.fill('#kht','160');await p.fill('#kscr','1.0');await p.fill('#val','60');await p.waitForTimeout(50);
+   const t2=await p.locator('#result').innerText();chk(t2.includes('57 '),'CrCl 60y F 60kg 160cm SCr1 = 57: '+t2.slice(0,300));
+   await p.selectOption('#kscru','um');await p.fill('#kscr','265');await p.waitForTimeout(50);
+   const t3=await p.locator('#result').innerText();chk(/250 ملغ كل 12/.test(t3),'SCr 265 µmol/L (=3 mg/dL) -> CrCl<30 -> 250 mg q12h');
+   await p.screenshot({path:out+'phone-adult.png',fullPage:true});
+   await p.goto(B+'#/d/cipro');await p.waitForSelector('#result .rbody');await p.screenshot({path:out+'phone-cipro.png',fullPage:true});
+   await p.goto(B+'#/inter');await p.fill('#iq','سيبرو');await p.locator('[data-add]').first().click();await p.fill('#iq','دوكسي');await p.locator('[data-add]').first().click();
+   chk(await p.locator('#ires .inter').count()>0,'interaction checker lists interactions');await p.screenshot({path:out+'phone-inter.png',fullPage:true});
+   await p.goto(B+'#/calc');chk(await p.locator('.sres a').count()===101,'calculators: 1 child + 100 adult');
+   await p.goto(B+'#/src');chk(await p.locator('.ref-item').count()===126,'126 sources');
+   await p.goto(B+'?lang=en#/d/amox');await p.waitForSelector('#result');await p.fill('#val','15');await p.waitForTimeout(50);
+   chk((await p.locator('html').getAttribute('dir'))==='ltr','english is ltr');await p.screenshot({path:out+'phone-amox-en.png',fullPage:true});
+   // every one of the 100 drugs opens and gives a result for a 70 kg adult with kidney data
+   const ids=await p.evaluate(()=>fetch('data/index.json').then(r=>r.json()).then(x=>x.map(d=>d.id)));let bad=[];
+   for(const id of ids){await p.goto(B+'#/d/'+id);await p.waitForSelector('#result');await p.fill('#val','70');
+     if(await p.locator('#kage').count()){await p.evaluate(()=>document.querySelector('#kid').open=true);await p.fill('#kage','50');await p.selectOption('#ksex','m');await p.fill('#kht','175');await p.fill('#kscr','1');}
+     await p.waitForTimeout(10);const tx=await p.locator('#result').innerText();if(!tx||tx.includes('—\n')||/undefined|NaN/.test(tx))bad.push(id)}
+   chk(!bad.length,'all 100 drugs give a result: bad='+bad);
+  }
+  await c.close()}
+ console.log('ok',ok);console.log(errs.length?errs.join('\n'):'no errors');await b.close();process.exit(errs.length?1:0)})();

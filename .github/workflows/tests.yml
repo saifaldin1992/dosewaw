@@ -1,0 +1,21 @@
+name: tests
+on: [push, pull_request]
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: {node-version: 22}
+      - uses: actions/setup-python@v5
+        with: {python-version: '3.12'}
+      - run: pip install openpyxl==3.1.5
+      - name: data files match content/
+        run: python3 tools/build_data.py && git diff --exit-code data/
+      - name: dose engine and rules
+        run: node tests/engine_test.mjs
+      - name: pages on phone, iPad and computer
+        run: |
+          npm i --no-save playwright@1.48.2 && npx playwright install --with-deps chromium
+          (python3 -m http.server 8765 --bind 127.0.0.1 &) && sleep 1
+          node tests/e2e.cjs
