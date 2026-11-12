@@ -45,8 +45,9 @@ function loginView(msg){
     if(!email||password.length<8)return say(A('pw_rule'));say(T('loading'));
     const {error}=await SB.auth.signUp({email,password});
     // the invitation check runs inside the database; Supabase reports it as «Database error saving new user»
-    if(error)return say(/invitation|invite|database error/i.test(error.message)?A('not_invited'):/already|registered|exists/i.test(error.message)?A('signup_failed'):A('signup_failed'));
-    const r=await SB.auth.signInWithPassword({email,password});if(r.error)return say(A('signup_failed'));adminBoot()};
+    // the technical reason is shown in small text too, so a problem can be diagnosed from a screenshot
+    if(error)return say((/invitation|invite|database error/i.test(error.message)?A('not_invited'):A('signup_failed'))+' ('+error.message+')');
+    const r=await SB.auth.signInWithPassword({email,password});if(r.error)return say(A('signup_failed')+' ('+r.error.message+')');adminBoot()};
 }
 
 /* ---------- the panel ---------- */
