@@ -1,0 +1,65 @@
+/* DOSEWAW · الهوية البصرية (الألوان والخطوط والأشكال)
+   هذا الملف وحده يتحكم في شكل الموقع. غيّر القيم هنا فقط، ولا حاجة لتعديل أي كود آخر.
+   Brand file: every colour, font and shape of the site comes from here. */
+
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap');
+
+:root{
+  /* اللون الأساسي (الأخضر) — Primary */
+  --primary:#0F4D3A;          /* الشريط العلوي، رأس النتيجة، الأزرار المختارة */
+  --primary-deep:#0B3A2C;     /* الطرف الغامق في رأس النتيجة */
+  --primary-mid:#1F7A5A;      /* إطار البحث والعناصر المختارة */
+  --primary-soft:#E3EFE9;     /* خلفيات الأيقونات والوسوم */
+  --primary-tint:#F1F7F3;     /* خلفيات خفيفة جداً */
+  --primary-text:#0F4D3A;     /* النصوص بلون الهوية */
+  --on-primary:#FFFFFF;       /* النص فوق اللون الأساسي */
+
+  /* لون التمييز (الذهبي) — Highlight */
+  --highlight:#C9A24B;        /* زر «نسخ النتيجة»، خط تحت النتيجة */
+  --highlight-text:#A9842F;   /* نصوص ذهبية */
+  --highlight-soft:#F6EDD6;   /* خلفيات ذهبية خفيفة */
+  --on-highlight:#1E1606;     /* النص فوق الذهبي */
+
+  /* الصفحة — Page */
+  --bg:#FAF8F2;               /* خلفية الصفحة (عاجي) */
+  --card:#FFFFFF;             /* البطاقات */
+  --ink:#14231D;              /* النص الرئيسي */
+  --mute:#5D6B64;             /* النص الثانوي */
+  --line:#E4E0D3;             /* الحدود */
+  --header-line:rgba(255,255,255,.22);
+  --badge-bg:#E2F3E8; --badge-text:#17663A;   /* وسم AWaRe */
+
+  /* درجات خطورة التداخلات — Severity */
+  --major:#B42318; --major-bg:#FDECEA;
+  --mod:#9A5B00;   --mod-bg:#FFF4E0;
+  --minor:#3D5A80; --minor-bg:#EAF0F7;
+
+  /* الخطوط — Fonts */
+  --font:'IBM Plex Sans Arabic','Inter',system-ui,-apple-system,'Segoe UI',Tahoma,sans-serif;
+  --font-num:'Inter',system-ui,sans-serif;     /* الأرقام والإنجليزي */
+
+  /* الأشكال — Shapes */
+  --radius:16px;
+  --shadow:0 1px 2px rgba(15,77,58,.06),0 6px 24px rgba(15,77,58,.06);
+  --shadow-strong:0 10px 30px rgba(15,77,58,.18);
+}
+
+/* الوضع الليلي — Dark mode (القيم نفسها مكررة مرتين: تلقائي حسب الجهاز، ويدوي بالزر) */
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --primary-soft:#16352B; --primary-tint:#11271F; --primary-text:#8FD6B5;
+    --highlight-soft:#3A2F17;
+    --bg:#0C1713; --card:#13221C; --ink:#E9F1EC; --mute:#9DB0A6; --line:#22362D;
+    --badge-bg:#16352B; --badge-text:#8FD6B5;
+    --major-bg:#3A1612; --mod-bg:#35260C; --minor-bg:#17263A; --major:#F28B82; --mod:#F2C26B; --minor:#9CC0EA;
+    --shadow:none; --shadow-strong:none;
+  }
+}
+:root[data-theme="dark"]{
+  --primary-soft:#16352B; --primary-tint:#11271F; --primary-text:#8FD6B5;
+  --highlight-soft:#3A2F17;
+  --bg:#0C1713; --card:#13221C; --ink:#E9F1EC; --mute:#9DB0A6; --line:#22362D;
+  --badge-bg:#16352B; --badge-text:#8FD6B5;
+  --major-bg:#3A1612; --mod-bg:#35260C; --minor-bg:#17263A; --major:#F28B82; --mod:#F2C26B; --minor:#9CC0EA;
+  --shadow:none; --shadow-strong:none;
+}
