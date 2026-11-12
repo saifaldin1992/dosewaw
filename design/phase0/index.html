@@ -12,7 +12,7 @@
 /* DOSEWAW · Phase 0 design mockup (not the production site).
    Identity: emerald green + gold on ivory. */
 :root{
-  --green-900:#0B3A2C; --green:#0F4D3A; --green-600:#1F7A5A; --green-100:#E3EFE9; --green-50:#F1F7F3;
+  --green-900:#0B3A2C; --green:#0F4D3A; --green-600:#1F7A5A; --green-100:#E3EFE9; --accent:#0F4D3A; --acc-bg:#E2F3E8; --acc-ink:#17663A; --green-50:#F1F7F3;
   --gold:#C9A24B; --gold-600:#A9842F; --gold-100:#F6EDD6;
   --bg:#FAF8F2; --card:#FFFFFF; --ink:#14231D; --mute:#5D6B64; --line:#E4E0D3;
   --major:#B42318; --major-bg:#FDECEA; --mod:#9A5B00; --mod-bg:#FFF4E0; --minor:#3D5A80; --minor-bg:#EAF0F7;
@@ -21,14 +21,14 @@
 }
 @media (prefers-color-scheme: dark){
   :root:not([data-theme="light"]){
-    --green-100:#16352B; --green-50:#11271F; --gold-100:#3A2F17;
+    --green-100:#16352B; --green-50:#11271F; --gold-100:#3A2F17; --accent:#8FD6B5; --acc-bg:#16352B; --acc-ink:#8FD6B5;
     --bg:#0C1713; --card:#13221C; --ink:#E9F1EC; --mute:#9DB0A6; --line:#22362D;
     --major-bg:#3A1612; --mod-bg:#35260C; --minor-bg:#17263A; --major:#F28B82; --mod:#F2C26B; --minor:#9CC0EA;
     --shadow:none;
   }
 }
 :root[data-theme="dark"]{
-  --green-100:#16352B; --green-50:#11271F; --gold-100:#3A2F17;
+  --green-100:#16352B; --green-50:#11271F; --gold-100:#3A2F17; --accent:#8FD6B5; --acc-bg:#16352B; --acc-ink:#8FD6B5;
   --bg:#0C1713; --card:#13221C; --ink:#E9F1EC; --mute:#9DB0A6; --line:#22362D;
   --major-bg:#3A1612; --mod-bg:#35260C; --minor-bg:#17263A; --major:#F28B82; --mod:#F2C26B; --minor:#9CC0EA;
   --shadow:none;
@@ -39,7 +39,7 @@ html,body{margin:0}
 body{background:var(--bg);color:var(--ink);font-family:var(--font);font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased;padding-bottom:84px}
 .en,.num{font-family:'Inter',var(--font)}
 button,input{font:inherit;color:inherit}
-a{color:var(--green-600)}
+a{color:var(--accent)}
 
 /* Header */
 .top{position:sticky;top:0;z-index:20;background:var(--green);color:#fff;box-shadow:0 2px 10px rgba(0,0,0,.08)}
@@ -55,13 +55,13 @@ a{color:var(--green-600)}
 .wrap{max-width:1200px;margin:0 auto;padding:16px}
 .search{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow);padding:14px}
 .sbox{display:flex;align-items:center;gap:10px;background:var(--green-50);border:2px solid var(--green-600);border-radius:14px;padding:0 14px;height:56px}
-.sbox svg{flex:none;color:var(--green-600)}
+.sbox svg{flex:none;color:var(--accent)}
 .sbox input{border:0;background:transparent;outline:0;flex:1;font-size:18px;font-weight:600;min-width:0}
-.sbox .clr{border:0;background:var(--green-100);border-radius:99px;width:32px;height:32px;cursor:pointer;color:var(--green)}
+.sbox .clr{border:0;background:var(--green-100);border-radius:99px;width:32px;height:32px;cursor:pointer;color:var(--accent)}
 .chips{display:flex;gap:8px;overflow-x:auto;padding:12px 2px 2px;scrollbar-width:none}
 .chips::-webkit-scrollbar{display:none}
 .chip{flex:none;display:inline-flex;align-items:center;gap:6px;border:1px solid var(--line);background:var(--card);border-radius:99px;padding:7px 14px;font-size:14px;font-weight:500;white-space:nowrap;cursor:pointer}
-.chip[aria-pressed="true"]{background:var(--green);border-color:var(--green);color:#fff}
+.chip[aria-pressed="true"]{background:var(--green);border-color:var(--accent);color:#fff}
 .chip .dot{width:8px;height:8px;border-radius:50%;background:var(--gold)}
 .chip.soon{color:var(--mute)}
 .chip.soon em{font-style:normal;font-size:11px;background:var(--gold-100);color:var(--gold-600);border-radius:99px;padding:1px 7px}
@@ -70,13 +70,13 @@ a{color:var(--green-600)}
 
 /* Drug head */
 .dhead{display:flex;align-items:flex-start;gap:14px;margin:18px 2px 12px}
-.dicon{flex:none;width:52px;height:52px;border-radius:14px;background:var(--green-100);display:grid;place-items:center;color:var(--green)}
+.dicon{flex:none;width:52px;height:52px;border-radius:14px;background:var(--green-100);display:grid;place-items:center;color:var(--accent)}
 .dhead h1{margin:0;font-size:24px;line-height:1.3}
 .dhead h1 .en{font-size:15px;font-weight:500;color:var(--mute);margin-inline-start:8px}
 .tags{display:flex;gap:6px;flex-wrap:wrap;margin-top:6px}
-.tag{font-size:12px;border-radius:99px;padding:2px 10px;background:var(--green-100);color:var(--green);font-weight:600}
+.tag{font-size:12px;border-radius:99px;padding:2px 10px;background:var(--green-100);color:var(--accent);font-weight:600}
 .tag.gold{background:var(--gold-100);color:var(--gold-600)}
-.tag.access{background:#E2F3E8;color:#17663A}
+.tag.access{background:var(--acc-bg);color:var(--acc-ink)}
 
 /* Layout */
 .grid{display:grid;gap:16px}
@@ -92,16 +92,16 @@ a{color:var(--green-600)}
 .grid>*,.calc-col>*,.info>*{min-width:0}
 .card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow);padding:16px}
 .card h2{margin:0 0 12px;font-size:17px;display:flex;align-items:center;gap:8px}
-.card h2 .ic{width:30px;height:30px;border-radius:9px;display:grid;place-items:center;background:var(--green-100);color:var(--green);font-size:16px}
+.card h2 .ic{width:30px;height:30px;border-radius:9px;display:grid;place-items:center;background:var(--green-100);color:var(--accent);font-size:16px}
 .card h2 .cnt{margin-inline-start:auto;font-size:12px;font-weight:600;color:var(--mute)}
 
 /* Patient input */
 .seg{display:grid;grid-template-columns:repeat(3,1fr);background:var(--green-50);border:1px solid var(--line);border-radius:14px;padding:4px;gap:4px}
 .seg.two{grid-template-columns:1fr 1fr}
 .seg button{border:0;background:transparent;border-radius:10px;min-height:44px;font-weight:600;font-size:15px;cursor:pointer;color:var(--mute)}
-.seg button[aria-pressed="true"]{background:var(--card);color:var(--green);box-shadow:0 1px 3px rgba(0,0,0,.08);outline:2px solid var(--green-600)}
+.seg button[aria-pressed="true"]{background:var(--card);color:var(--accent);box-shadow:0 1px 3px rgba(0,0,0,.08);outline:2px solid var(--green-600)}
 .numin{display:flex;align-items:center;gap:10px;margin-top:12px;border:2px solid var(--line);border-radius:14px;padding:0 16px;height:64px;background:var(--card)}
-.numin:focus-within{border-color:var(--green-600)}
+.numin:focus-within{border-color:var(--accent)}
 .numin input{border:0;outline:0;background:transparent;flex:1;width:100%;font-size:30px;font-weight:700;min-width:0;font-family:'Inter',sans-serif;text-align:start}
 .numin span{color:var(--mute);font-weight:600}
 .est{font-size:13px;color:var(--gold-600);background:var(--gold-100);border-radius:10px;padding:6px 10px;margin-top:8px}
@@ -109,10 +109,10 @@ a{color:var(--green-600)}
 .opts{display:grid;gap:6px}
 .opt{display:flex;align-items:center;gap:10px;border:1px solid var(--line);border-radius:12px;padding:10px 12px;min-height:48px;cursor:pointer;background:var(--card);text-align:start;font-size:14.5px}
 .opt i{flex:none;width:20px;height:20px;border-radius:50%;border:2px solid var(--mute)}
-.opt[aria-pressed="true"]{border-color:var(--green-600);background:var(--green-50)}
+.opt[aria-pressed="true"]{border-color:var(--accent);background:var(--green-50)}
 .opt[aria-pressed="true"] i{border:6px solid var(--green-600)}
 .check{display:flex;align-items:center;gap:10px;margin-top:10px;font-size:14px;color:var(--mute);cursor:pointer}
-.check input{width:20px;height:20px;accent-color:var(--green-600)}
+.check input{width:20px;height:20px;accent-color:var(--accent)}
 
 /* Result */
 .result{padding:0;overflow:hidden;border:0;box-shadow:0 10px 30px rgba(15,77,58,.18)}
@@ -126,7 +126,7 @@ a{color:var(--green-600)}
 table.ml{width:100%;border-collapse:collapse;font-size:15px}
 table.ml th{font-size:12px;color:var(--mute);font-weight:600;text-align:start;padding:4px 0 8px}
 table.ml td{padding:10px 0;border-top:1px solid var(--line)}
-table.ml td.v{font-family:'Inter',sans-serif;font-weight:700;font-size:20px;color:var(--green);text-align:end;white-space:nowrap}
+table.ml td.v{font-family:'Inter',sans-serif;font-weight:700;font-size:20px;color:var(--accent);text-align:end;white-space:nowrap}
 table.ml td.v small{font-family:var(--font);font-size:13px;color:var(--mute);font-weight:500}
 table.ml tr.best td{background:var(--gold-100)}
 table.ml tr.best td:first-child{border-start-start-radius:10px;border-end-start-radius:10px;padding-inline-start:8px}
@@ -170,7 +170,7 @@ ol.refs .d{color:var(--mute);font-size:12.5px}
 .tabs{position:fixed;bottom:0;inset-inline:0;z-index:30;background:var(--card);border-top:1px solid var(--line);display:grid;grid-template-columns:repeat(4,1fr);padding:6px 6px calc(6px + env(safe-area-inset-bottom))}
 .tabs button{border:0;background:transparent;display:flex;flex-direction:column;align-items:center;gap:2px;font-size:12px;font-weight:600;color:var(--mute);padding:4px 0;cursor:pointer}
 .tabs button svg{width:24px;height:24px}
-.tabs button[aria-current="page"]{color:var(--green)}
+.tabs button[aria-current="page"]{color:var(--accent)}
 .tabs button[aria-current="page"] .pill{background:var(--green-100)}
 .tabs .pill{border-radius:99px;padding:3px 18px;display:grid;place-items:center}
 .side{display:none}
@@ -305,7 +305,7 @@ ol.refs .d{color:var(--mute);font-size:12.5px}
       <section class="card">
         <h2><span class="ic">📚</span>المصادر</h2>
         <ol class="refs">
-          <li id="r1"><a href="https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=06e5c07d-d95c-4955-8d35-a4703ca2359e" target="_blank" rel="noopener">DailyMed — Amoxicillin (FDA label)</a><br><span class="d">نسخة النشرة: 2026-07-07 · الأقسام 2.2، 2.3، 2.5، 7، 8</span></li>
+          <li id="r1"><a href="https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=06e5c07d-d95c-4955-8d35-a4703ca2359e" target="_blank" rel="noopener">DailyMed — Amoxicillin (FDA label)</a><br><span class="d">نسخة النشرة: <bdi class="num">2026-07-07</bdi> · الأقسام 2.2، 2.3، 2.5، 7، 8</span></li>
         </ol>
       </section>
     </div>
@@ -364,7 +364,7 @@ function render(){
 function body(warn,rows,daily){
   const best=rows.length?rows.reduce((b,r)=>Math.abs(r[1]-5)<Math.abs(b[1]-5)?r:b,rows[0])[0]:null;
   const t=rows.length?`<table class="ml"><tr><th>تركيز الشراب</th><th style="text-align:end">الكمية لكل جرعة</th></tr>${rows.map(([c,ml])=>`<tr class="${c===best?'best':''}"><td><span class="num">${c} mg / 5 mL</span>${c===best?' <small style="color:var(--gold-600);font-weight:600">· الأنسب للقياس</small>':''}</td><td class="v">${fmt(ml)} <small>مل</small></td></tr>`).join('')}</table>`:'';
-  return `<div class="rbody">${t}${warn}<div class="facts"><div class="fact"><b>المجموع اليومي</b><span class="num">${fmt(daily)} mg</span></div><div class="fact"><b>المدة</b><span>48–72 ساعة بعد زوال الأعراض</span></div></div><p class="src">حسب المصدر: <a href="#r1">DailyMed · Amoxicillin [1]</a> · نسخة 2026-07-07 · القسم 2.2</p><div class="acts"><button class="btn pri" type="button">نسخ النتيجة</button><button class="btn" type="button">طباعة</button><button class="btn" type="button">مشاركة</button></div></div>`;
+  return `<div class="rbody">${t}${warn}<div class="facts"><div class="fact"><b>المجموع اليومي</b><span class="num">${fmt(daily)} mg</span></div><div class="fact"><b>المدة</b><span>48–72 ساعة بعد زوال الأعراض</span></div></div><p class="src">حسب المصدر: <a href="#r1">DailyMed · Amoxicillin [1]</a> · نسخة <bdi class="num">2026-07-07</bdi> · القسم 2.2</p><div class="acts"><button class="btn pri" type="button">نسخ النتيجة</button><button class="btn" type="button">طباعة</button><button class="btn" type="button">مشاركة</button></div></div>`;
 }
 render();
 </script>
