@@ -14,9 +14,10 @@ const FAKE=fs.readFileSync(path.join(__dirname,'fake_supabase.js'),'utf8');
  const go=async h=>{await p.goto(B+'#/'+h);await p.waitForTimeout(300)};
  // the owner creates the account (invited), signs in, seeds
  await go('admin');await p.waitForSelector('#lf');
- await p.fill('#le','stranger@x.com');await p.fill('#lp','password123');await p.click('#lsu');await p.waitForTimeout(200);
+ await p.click('#lsw');await p.waitForSelector('#lp2');const su=async(e,pw)=>{await p.fill('#le',e);await p.fill('#lp',pw);await p.fill('#lp2',pw);await p.click('#lf button[type=submit]')};
+ await su('stranger@x.com','password123');await p.waitForTimeout(200);
  chk((await p.innerText('#lmsg')).includes('غير مدعو'),'a stranger cannot create an account');
- await p.fill('#le','owner@x.com');await p.click('#lsu');await p.waitForSelector('#seed');chk(true,'owner account created');
+ await su('owner@x.com','password123');await p.waitForSelector('#seed');chk(true,'owner account created');
  await p.screenshot({path:out+'admin-seed.png',fullPage:true});
  await p.click('#seed');await p.waitForSelector('[data-at="review"]');
  chk((await p.innerText('#app')).includes('1'),'seeded: version 1');
@@ -36,7 +37,7 @@ const FAKE=fs.readFileSync(path.join(__dirname,'fake_supabase.js'),'utf8');
  chk((await p.innerText('#apane')).includes('ph@x.com'),'invitation listed');
  await p.screenshot({path:out+'admin-team.png',fullPage:true});
  // the pharmacist: account by invitation, edit waits for review, cannot see owner tabs
- await p.click('#aout');await p.waitForSelector('#lf');await p.fill('#le','ph@x.com');await p.fill('#lp','password456');await p.click('#lsu');await p.waitForSelector('#dsel');
+ await p.click('#aout');await p.waitForSelector('#lf');await p.click('#lsw');await p.waitForSelector('#lp2');await su('ph@x.com','password456');await p.waitForSelector('#dsel');
  chk(!(await p.$('[data-at="publish"]'))&&!(await p.$('[data-at="brand"]')),'pharmacist has no publish or brand tab');
  await p.selectOption('#dsel','cipro');await p.waitForSelector('#iadd');await p.click('#iadd');
  const last='#irows [data-ir]:last-child ';await p.fill(last+'[data-k="with.ar"]','الثيوفيلين');await p.fill(last+'[data-k="with.en"]','Theophylline');

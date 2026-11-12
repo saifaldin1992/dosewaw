@@ -28,21 +28,30 @@ async function adminBoot(){
 function panelHead(){return `<div class="page-h"><span class="dicon">🔐</span><h1>${esc(A('title'))}</h1>${window.DW_CFG&&window.DW_CFG.test?`<span class="tag gold">${esc(A('test_db'))}</span>`:''}</div>`}
 
 /* ---------- sign in / first sign-up by invitation ---------- */
-function loginView(msg){
-  app().innerHTML=panelHead()+`<section class="card mw460">
+/* two screens: «sign in» and «create the account» (first time, invited e-mail only) */
+function loginView(msg,signup){
+  app().innerHTML=panelHead()+`<section class="card mw460"><h2><span class="ic">${signup?'🆕':'🔑'}</span>${esc(signup?A('su_title'):A('sign_in'))}</h2>
+    ${signup?`<p class="hint m0 mb10">${esc(A('su_hint'))}</p>`:''}
     <form id="lf" class="fields" autocomplete="on">
       <div class="fld"><label for="le">${esc(A('email'))}</label><input id="le" type="email" autocomplete="username" required dir="ltr"></div>
-      <div class="fld"><label for="lp">${esc(A('password'))}</label><input id="lp" type="password" autocomplete="current-password" minlength="8" required dir="ltr"></div>
-      <button class="btn pri" type="submit">${esc(A('sign_in'))}</button>
-      <button class="btn" type="button" id="lsu">${esc(A('first_time'))}</button>
+      <div class="fld"><label for="lp">${esc(A('password'))}</label><input id="lp" type="password" autocomplete="${signup?'new-password':'current-password'}" minlength="8" required dir="ltr"></div>
+      ${signup?`<div class="fld"><label for="lp2">${esc(A('password2'))}</label><input id="lp2" type="password" autocomplete="new-password" minlength="8" required dir="ltr"></div>`:''}
+      <button class="btn pri" type="submit">${esc(signup?A('su_btn'):A('sign_in'))}</button>
+      <button class="btn" type="button" id="lsw">${esc(signup?A('have_account'):A('first_time'))}</button>
       <p class="hint" id="lmsg" role="alert">${msg?esc(msg):esc(A('invite_only'))}</p>
     </form></section>`;
   const say=t=>{$('#lmsg').textContent=t};
-  $('#lf').onsubmit=async e=>{e.preventDefault();say(T('loading'));
+  $('#lsw').onclick=()=>loginView('',!signup);
+  $('#lf').onsubmit=async e=>{e.preventDefault();
+    if(signup)return createAccount(say);
+    say(T('loading'));
     const {error}=await SB.auth.signInWithPassword({email:$('#le').value.trim(),password:$('#lp').value});
-    if(error)return say(A('bad_login'));adminBoot()};
-  $('#lsu').onclick=async()=>{const email=$('#le').value.trim(),password=$('#lp').value;
-    if(!email||password.length<8)return say(A('pw_rule'));say(T('loading'));
+    if(error)return say(A('bad_login')+' ('+error.message+')');adminBoot()};
+}
+async function createAccount(say){
+  {const email=$('#le').value.trim(),password=$('#lp').value;
+    if(!email||password.length<8)return say(A('pw_rule'));
+    if(password!==$('#lp2').value)return say(A('pw_same'));say(T('loading'));
     const {error}=await SB.auth.signUp({email,password});
     // the invitation check runs inside the database; Supabase reports it as «Database error saving new user»
     // the technical reason is shown in small text too, so a problem can be diagnosed from a screenshot
