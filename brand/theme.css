@@ -29,6 +29,9 @@
   --header-line:rgba(255,255,255,.22);
   --badge-bg:#E2F3E8; --badge-text:#17663A;   /* وسم AWaRe */
 
+  /* رأس النتيجة عند الخطر (مثل نقص شديد) — Alert result */
+  --alert:#7A1F14; --alert-deep:#4A120B;
+
   /* درجات خطورة التداخلات — Severity */
   --major:#B42318; --major-bg:#FDECEA;
   --mod:#9A5B00;   --mod-bg:#FFF4E0;

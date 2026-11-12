@@ -1,0 +1,13 @@
+d n_d h_d
+b12 n_b12 h_b12
+fol n_fol h_fol
+fe n_fe h_fe
+ca n_ca h_ca
+mg n_mg h_mg
+c n_c h_c
+zn n_zn h_zn
+preg n_preg h_preg
+inf n_inf h_inf
+vac n_vac h_vac
+bar n_bar h_bar
+thi n_thi h_thi

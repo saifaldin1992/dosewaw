@@ -27,7 +27,8 @@ const ICON={
  drug:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="3" y="8" width="18" height="8" rx="4" transform="rotate(-35 12 12)"/></svg>',
  search:'<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>'
 };
-const GROUPS=[{id:'ab',live:true},{id:'an'},{id:'ah'},{id:'gi'},{id:'vit'}];
+const GROUPS=[{id:'ab',live:true},{id:'an'},{id:'ah'},{id:'gi'},{id:'vit',live:true}];
+const HREF=d=>(d.g==='vit'?'#/v/':'#/d/')+encodeURIComponent(d.id);
 
 /* ---------- data (static files; fetched once, kept in memory; the service worker keeps them offline) ---------- */
 const CACHE={};
@@ -62,8 +63,9 @@ function markNav(base){$$('[data-nav]').forEach(a=>{const on=a.dataset.nav===bas
 function route(){
   const h=location.hash.replace(/^#/,'')||'/';const p=h.split('/').filter(Boolean);
   const view=p[0]||'';window.scrollTo(0,0);
-  const base={'':'#/',d:'#/',g:'#/',inter:'#/inter',calc:'#/calc',src:'#/src',menu:'#/menu'}[view]||'#/';markNav(base);
+  const base={'':'#/',d:'#/',v:'#/',g:'#/',inter:'#/inter',calc:'#/calc',src:'#/src',menu:'#/menu'}[view]||'#/';markNav(base);
   if(view==='d'&&p[1])return viewDrug(decodeURIComponent(p[1]));
+  if(view==='v'&&p[1])return viewVit(decodeURIComponent(p[1]));
   if(view==='g'&&p[1])return viewGroup(p[1]);
   if(view==='inter')return viewInter();
   if(view==='calc')return viewCalc();
@@ -98,7 +100,7 @@ function wireSearch(){
     const list=(INDEX||[]).filter(d=>!SG||d.g===SG).map(d=>{const n=normAr(d.n.ar+' '+d.n.en),c=normAr(d.c.ar+' '+d.c.en);
       const sc=!v?3:(normAr(d.n.ar).startsWith(v)||normAr(d.n.en).startsWith(v))?0:n.includes(v)?1:c.includes(v)?2:-1;return [sc,d]}).filter(x=>x[0]>=0)
       .sort((a,b)=>a[0]-b[0]||LT(a[1].n).localeCompare(LT(b[1].n),LANG)).slice(0,v?12:200).map(x=>x[1]);
-    out.innerHTML=list.length?list.map(d=>`<a href="#/d/${encodeURIComponent(d.id)}"><b>${esc(LT(d.n))}</b>${LANG==='ar'?`<span class="en">${esc(d.n.en)}</span>`:''}<span class="c">${esc(LT(d.c))}</span></a>`).join(''):`<p class="none">${esc(T('none_found'))}</p>`;
+    out.innerHTML=list.length?list.map(d=>`<a href="${HREF(d)}"><b>${esc(LT(d.n))}</b>${LANG==='ar'?`<span class="en">${esc(d.n.en)}</span>`:''}<span class="c">${esc(LT(d.c))}</span></a>`).join(''):`<p class="none">${esc(T('none_found'))}</p>`;
   };
   q.oninput=run;$('#qclr').onclick=()=>{q.value='';SG='';$$('[data-g]').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.g==='')));run();q.focus()};
   $$('[data-g]').forEach(b=>b.onclick=()=>{SG=b.dataset.g;$$('[data-g]').forEach(x=>x.setAttribute('aria-pressed',String(x===b)));run()});
@@ -110,8 +112,7 @@ function wireSearch(){
 async function viewHome(){
   SG='';
   try{INDEX=INDEX||await getJSON('index.json')}catch(e){return failed()}
-  const name=id=>{const d=INDEX.find(x=>x.id===id);return d?LT(d.n):null};
-  const chipsOf=ids=>ids.map(id=>name(id)?`<a class="chip" href="#/d/${encodeURIComponent(id)}">${esc(name(id))}</a>`:'').join('');
+  const chipsOf=ids=>ids.map(id=>{const d=INDEX.find(x=>x.id===id);return d?`<a class="chip" href="${HREF(d)}">${esc(LT(d.n))}</a>`:''}).join('');
   const count=g=>INDEX.filter(d=>d.g===g).length;
   app().innerHTML=`<div class="hero"><h1>${esc(T('hero_t'))}</h1><p>${esc(T('hero_s'))}</p></div>
   ${searchBox('', '')}
@@ -278,7 +279,72 @@ function drawInfo(){
   <section class="card wide"><h2><span class="ic">📚</span>${esc(T('s_src'))}</h2><ol class="refs">${S.map(s=>`<li class="ref-item" id="r${s.id}" value="${s.id}"><a href="${esc(s.url)}" target="_blank" rel="noopener">${esc(s.title)}</a><span class="k">${esc(T('k_'+s.kind))}</span><br><span class="d">${esc(s.org)}</span></li>`).join('')}</ol></section>`;
 }
 /* a source number anywhere on the page scrolls to that source and marks it */
-document.addEventListener('click',e=>{const a=e.target.closest('[data-ref]');if(!a)return;e.preventDefault();const t=document.getElementById('r'+a.dataset.ref);if(t){$$('.ref-item.hl').forEach(x=>x.classList.remove('hl'));t.classList.add('hl');t.scrollIntoView({behavior:'smooth',block:'center'})}});
+document.addEventListener('click',e=>{const a=e.target.closest('[data-ref]');if(!a)return;e.preventDefault();const id=a.dataset.ref,t=document.getElementById('r'+id)||document.getElementById('rv'+id);if(t){$$('.ref-item.hl').forEach(x=>x.classList.remove('hl'));t.classList.add('hl');t.scrollIntoView({behavior:'smooth',block:'center'})}});
+
+
+/* ---------- vitamins: the VITAWAW calculators (js/rules/vitamins.js), drawn in this design ---------- */
+/* type of a vitamin source, from its publisher: official label / data sheet, guideline, evidence review, other */
+function vKind(org){const o=String(org);
+  if(/label|Data Sheet|SmPC|package leaflet|prescribing information|DailyMed|FDA/i.test(o))return 'd';
+  if(/Cochrane|Family Physician|Lancet|BMJ|Nutrients/i.test(o))return 'r';
+  if(/MSD Manual/i.test(o))return 's';
+  return 'g';}
+const VIKEYS={preg:['fe','ca','fol','d'],inf:['fe','d'],vac:[],bar:['fe','ca','d','b12','zn'],thi:[]};
+const VPT={};
+async function viewVit(k){
+  loading();
+  try{await loadScript('js/rules/vitamins.js');INDEX=INDEX||await getJSON('index.json')}catch(e){return failed()}
+  const meta=INDEX.find(d=>d.g==='vit'&&d.id===k);if(!meta){location.hash='#/';return}
+  pushRecent(k);VIT.setLang(LANG);
+  const fav=favs().includes(k);
+  app().innerHTML=`${searchBox('', '')}
+  <div class="dhead"><div class="dicon" aria-hidden="true">${ICON.vit}</div>
+    <div><h1>${esc(LT(meta.n))}</h1><div class="tags"><span class="tag">${esc(T('g_vit'))}</span><span class="tag gold">${esc(LT(meta.c))}</span></div></div>
+    <button class="star" type="button" id="fav" aria-pressed="${fav}" aria-label="${esc(T(fav?'fav_rm':'fav_add'))}">${fav?'★':'☆'}</button></div>
+  <div class="grid"><div class="calc-col">
+    <section class="card vform" aria-labelledby="pt"><h2 id="pt"><span class="ic">👤</span>${esc(T('patient'))}</h2><div id="vform">${VIT.FORM}</div></section>
+    <section class="card result" aria-live="polite" id="result"></section>
+  </div><div class="info" id="info"></div></div>`;
+  wireSearch();
+  $('#fav').onclick=()=>{toggleFav(k);const on=favs().includes(k);$('#fav').textContent=on?'★':'☆';$('#fav').setAttribute('aria-pressed',on)};
+  const F=$('#vform');
+  F.querySelectorAll('[data-t]').forEach(e=>{const v=VIT.T(e.dataset.t);if(v)e.textContent=v});
+  F.querySelectorAll('[data-ph]').forEach(e=>{const v=VIT.T(e.dataset.ph);if(v)e.placeholder=v});
+  F.querySelectorAll('[data-th]').forEach(e=>{const v=VIT.T(e.dataset.th);if(v)e.innerHTML=v});
+  VIT.showFor(k);
+  // the same patient across vitamin calculators (memory only)
+  F.querySelectorAll('input,select').forEach(e=>{if(e.id in VPT){if(e.type==='checkbox')e.checked=VPT[e.id];else e.value=VPT[e.id]}});
+  const go=e=>{if(e&&e.target&&e.target.id)VPT[e.target.id]=e.target.type==='checkbox'?e.target.checked:e.target.value;vitCalc(k)};
+  F.addEventListener('input',go);F.addEventListener('change',go);
+  vitCalc(k);vitInfo(k);
+}
+function vitCalc(k){
+  const R=$('#result');let out;
+  try{out=VIT.run(k,LANG)}catch(e){out={err:true};console.error(e)}
+  if(!out||out.empty||out.err){
+    const need=out&&out.missing?out.missing.map(id=>VIT.T(id)).filter(Boolean):[];
+    R.innerHTML=`<div class="empty">${esc(VIT.T('e_empty_t')||T('enter_w'))}${need.length?`<br><small>${esc(VIT.T('e_need'))} ${need.map(esc).join('، ')}</small>`:''}</div>`;return}
+  const r=out.r,tone={ok:'',info:'',warn:' warn',bad:' bad'}[r.tone]||'';
+  const urgent=(r.notes||[]).filter(n=>n.u),rest=(r.notes||[]).filter(n=>!n.u);
+  R.innerHTML=`<div class="rhead${tone}"><div class="k"><span>${esc(T('result'))}</span><span class="vbadge">${r.badge||''}</span></div>
+    <div class="bigtxt">${r.title||''}</div>${r.sub?`<div class="sub">${r.sub}</div>`:''}</div>
+    <div class="rbody">
+    ${urgent.map(n=>`<div class="warn red">${n.t}</div>`).join('')}
+    ${r.plan&&r.plan.length?`<div class="lbl first">${esc(VIT.T('plan'))}</div><ol class="vplan">${r.plan.map(s=>`<li><b>${s.h}</b>${s.d?`<span>${s.d}</span>`:''}</li>`).join('')}</ol>`:''}
+    ${r.opts&&r.opts.length?`<div class="rrows">${r.opts.map(o=>`<div class="rrow"><b>${o.h}</b>${o.b}${o.d?`<div class="hint" style="margin:2px 0 0">${o.d}</div>`:''}</div>`).join('')}</div>`:''}
+    ${r.kv&&r.kv.length?`<div class="facts">${r.kv.map(x=>`<div class="fact"><b>${x[0]}</b><span>${x[1]}</span></div>`).join('')}</div>`:''}
+    ${rest.map(n=>`<p class="hint">${n.t}</p>`).join('')}
+    ${actions()}</div>`;
+  wireActions();
+}
+function vitInfo(k){
+  const keys=VIKEYS[k]||[k];
+  const inter=VIT.INTER.filter(x=>keys.includes(x[0]));
+  const ids=[...new Set(VIT.REFGROUP[k]||[])].filter(n=>VIT.REFS[n]).sort((a,b)=>a-b);
+  $('#info').innerHTML=`
+  ${inter.length?`<section class="card wide"><h2><span class="ic">⚠️</span>${esc(T('s_inter'))}<span class="cnt">${esc(T('n_inter',{n:inter.length}))}</span></h2><div class="ilist">${inter.map(x=>`<div class="inter"><div class="grow"><b>${keys.length>1?esc(L(x[1][0],x[1][1]))+' + ':''}${esc(L(x[2][0],x[2][1]))}</b><p>${esc(L(x[3][0],x[3][1]))}${(x[4]||[]).map(n=>`<a class="ref" href="#" data-ref="v${n}">${n}</a>`).join('')}</p></div></div>`).join('')}</div></section>`:''}
+  <section class="card wide"><h2><span class="ic">📚</span>${esc(T('s_src'))}</h2><ol class="refs">${ids.map(n=>{const x=VIT.REFS[n];return `<li class="ref-item" id="rv${n}" value="${n}"><a href="${esc(x[2])}" target="_blank" rel="noopener">${esc(x[1])}</a><span class="k">${esc(T('k_'+vKind(x[0])))}</span><br><span class="d">${esc(x[0])} · ${esc(L(x[3],x[4]))}</span></li>`}).join('')}</ol></section>`;
+}
 
 /* ---------- interaction checker ---------- */
 const PICK=[];
@@ -307,20 +373,24 @@ async function viewInter(){
 /* ---------- calculators ---------- */
 async function viewCalc(){
   loading();let ab;try{[ab]=await loadAB()}catch(e){return failed()}
-  const kids=ab.filter(d=>PEDS[d.id]),adults=ab.filter(d=>ABC_RULES[d.id]);
+  INDEX=INDEX||await getJSON('index.json');
+  const kids=ab.filter(d=>PEDS[d.id]),adults=ab.filter(d=>ABC_RULES[d.id]),vits=INDEX.filter(d=>d.g==='vit');
   const li=list=>list.map(d=>`<a href="#/d/${encodeURIComponent(d.id)}"><b>${esc(LT(d.n))}</b><span class="c">${esc(LT(d.cls))}</span></a>`).join('');
   app().innerHTML=`<div class="page-h"><span class="dicon">${ICON.calc}</span><h1>${esc(T('calc_t'))}</h1></div><p class="hint" style="margin:0 4px 12px">${esc(T('calc_s'))}</p>
   <section class="card"><h2><span class="ic">👶</span>${esc(T('calc_peds'))}<span class="cnt">${kids.length}</span></h2><div class="sres">${li(kids)}</div></section>
+  <section class="card" style="margin-top:16px"><h2><span class="ic">💧</span>${esc(T('g_vit'))}<span class="cnt">${vits.length}</span></h2><div class="sres">${vits.map(d=>`<a href="${HREF(d)}"><b>${esc(LT(d.n))}</b><span class="c">${esc(LT(d.c))}</span></a>`).join('')}</div></section>
   <section class="card" style="margin-top:16px"><h2><span class="ic">🫘</span>${esc(T('calc_adult'))}<span class="cnt">${adults.length}</span></h2><div class="sres">${li(adults)}</div></section>`;
 }
 
 /* ---------- sources and method ---------- */
 async function viewSources(hl){
-  loading();let src;try{src=await getJSON('sources.json')}catch(e){return failed()}
+  loading();let src;try{src=await getJSON('sources.json');await loadScript('js/rules/vitamins.js')}catch(e){return failed()}
+  const vr=Object.entries(VIT.REFS).sort((a,b)=>a[0]-b[0]);
   app().innerHTML=`<div class="page-h"><span class="dicon">📚</span><h1>${esc(T('src_t'))}</h1></div>
   <section class="card"><h2><span class="ic">🧭</span>${esc(T('method'))}</h2><div class="prose"><p>${esc(T('method_p'))}</p></div></section>
-  <section class="card" style="margin-top:16px"><h2><span class="ic">📚</span>${esc(T('s_src'))}<span class="cnt">${esc(T('src_n',{n:src.length}))}</span></h2>
-  <ol class="refs">${src.map(s=>`<li class="ref-item${String(s.id)===hl?' hl':''}" id="r${s.id}" value="${s.id}"><a href="${esc(s.url)}" target="_blank" rel="noopener">${esc(s.title)}</a><span class="k">${esc(T('k_'+s.kind))}</span><br><span class="d">${esc(s.org)} · ${esc(L(s.use_ar,s.use_en))}</span></li>`).join('')}</ol></section>`;
+  <section class="card" style="margin-top:16px"><h2><span class="ic">📚</span>${esc(T('s_src'))}<span class="cnt">${esc(T('src_n',{n:src.length+vr.length}))}</span></h2>
+  <div class="sec-title">${esc(T('g_ab'))}</div><ol class="refs">${src.map(s=>`<li class="ref-item${String(s.id)===hl?' hl':''}" id="r${s.id}" value="${s.id}"><a href="${esc(s.url)}" target="_blank" rel="noopener">${esc(s.title)}</a><span class="k">${esc(T('k_'+s.kind))}</span><br><span class="d">${esc(s.org)} · ${esc(L(s.use_ar,s.use_en))}</span></li>`).join('')}</ol>
+  <div class="sec-title">${esc(T('g_vit'))}</div><ol class="refs">${vr.map(([n,x])=>`<li class="ref-item${'v'+n===hl?' hl':''}" id="rv${n}" value="${n}"><a href="${esc(x[2])}" target="_blank" rel="noopener">${esc(x[1])}</a><span class="k">${esc(T('k_'+vKind(x[0])))}</span><br><span class="d">${esc(x[0])} · ${esc(L(x[3],x[4]))}</span></li>`).join('')}</ol></section>`;
   if(hl){const t=document.getElementById('r'+hl);if(t)t.scrollIntoView({block:'center'})}
 }
 

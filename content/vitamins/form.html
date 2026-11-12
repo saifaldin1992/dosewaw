@@ -1,0 +1,97 @@
+<div class="grid">
+      <div class="f" data-not="inf vac"><label class="l" for="age"><span data-t="age">العمر (سنة، 0 للرضيع)</span> <span class="req">*</span></label><input type="number" id="age" min="0" max="110" step="1" inputmode="numeric" placeholder="مثال: 35" data-ph="ph_age"></div>
+      <div class="f" data-not="inf vac preg"><label class="l" for="sex" data-t="sex">الجنس والحالة</label><select id="sex"><option value="m" data-t="sx_m">ذكر</option><option value="f" data-t="sx_f" selected>أنثى</option><option value="p" data-t="sx_p">حامل</option><option value="l" data-t="sx_l">مرضع</option></select></div>
+      <div class="f" data-for="inf vac"><label class="l" for="mon"><span data-t="mon">العمر بالأشهر</span> <span class="req">*</span></label><input type="number" id="mon" min="0" max="59" step="1" inputmode="numeric" placeholder="مثال: 5" data-ph="ph_mon"></div>
+      <div class="f" data-for="d fe mg inf"><label class="l" for="wt" data-t="wt">الوزن (كغم)</label><input type="number" id="wt" min="2" max="250" inputmode="decimal" placeholder="مثال: 70" data-ph="ph_wt"></div>
+      <div class="f" data-for="d"><label class="l" for="ht" data-t="ht">الطول (سم)</label><input type="number" id="ht" min="40" max="230" inputmode="decimal" placeholder="مثال: 165" data-ph="ph_ht"></div>
+    </div>
+
+    <div data-for="d" class="block">
+      <label class="l" for="dlab"><span data-t="dlab">نتيجة تحليل ⁦25(OH)D⁩</span> <span class="req">*</span></label>
+      <div class="unit"><input type="number" id="dlab" min="1" max="400" step="0.5" inputmode="decimal" placeholder="مثال: 14" data-ph="ph_d"><select id="dunit" aria-label="unit"><option value="ng">ng/mL</option><option value="nmol">nmol/L</option></select></div>
+      <p class="hint" id="dconv"></p>
+      <label class="chk"><input type="checkbox" id="mal"><span><span data-t="mal">سوء امتصاص أو عملية تكميم/تحويل مسار</span><small data-t="mal_s">من حالات الاحتياج الأعلى في إرشادات Endocrine Society</small></span></label>
+      <label class="chk"><input type="checkbox" id="med"><span><span data-t="med">أدوية تقلل فيتامين D</span><small data-t="med_s">مثل مضادات الصرع والكورتيكوستيرويدات وأدوية HIV</small></span></label>
+    </div>
+
+    <div data-for="b12" class="block">
+      <label class="l" for="b12v"><span data-t="b12v">مستوى B12 الكلي في المصل</span> <span class="req">*</span></label>
+      <div class="unit"><input type="number" id="b12v" min="20" max="3000" step="5" inputmode="decimal" placeholder="مثال: 160" data-ph="ph_b12"><select id="b12u" aria-label="unit"><option value="pg">pg/mL = ng/L</option><option value="pmol">pmol/L</option></select></div>
+      <label class="l" for="ab12" data-t="ab12">Active B12 (اختياري)</label>
+      <div class="unit"><input type="number" id="ab12" min="5" max="300" step="1" inputmode="decimal" placeholder="مثال: 40" data-ph="ph_ab12"><span class="u">pmol/L</span></div>
+      <p class="hint" data-t="ab12_h">Holotranscobalamin: أقل من 25 نقص، 25 – 70 غير حاسم، أكثر من 70 نقص غير مرجّح (NICE)</p>
+      <div class="block"><label class="l" for="b12c" data-t="b12c">السبب المرجّح</label><select id="b12c"><option value="unk" data-t="c_unk">غير معروف بعد</option><option value="diet" data-t="c_diet">غذائي (نباتي صرف)</option><option value="malab" data-t="c_malab">سوء امتصاص أو فقر الدم الخبيث أو جراحة معدة</option></select></div>
+      <label class="chk"><input type="checkbox" id="neuro"><span><span data-t="neuro">توجد أعراض عصبية</span><small data-t="neuro_s">تنميل، اضطراب توازن، ضعف ذاكرة، أعراض بصرية</small></span></label>
+    </div>
+
+    <div data-for="fol" class="block">
+      <label class="l" for="folg" data-t="state">الحالة</label>
+      <select id="folg"><option value="rda" data-t="fo_rda">الاحتياج اليومي</option><option value="plan" data-t="fo_plan">التخطيط للحمل والأشهر الثلاثة الأولى</option><option value="ntd" data-t="fo_ntd">خطورة عالية لعيوب الأنبوب العصبي</option><option value="def" data-t="fo_def">فقر دم بعوز الفولات (مؤكد مخبرياً)</option></select>
+    </div>
+
+    <div data-for="preg" class="block">
+      <label class="l" for="tri" data-t="tri">المرحلة</label>
+      <select id="tri"><option value="plan" data-t="tr_plan">التخطيط للحمل</option><option value="t1" data-t="tr_t1">الثلث الأول (حتى الأسبوع 13)</option><option value="t2" data-t="tr_t2" selected>الثلث الثاني (14 – 27)</option><option value="t3" data-t="tr_t3">الثلث الثالث (28 فأكثر)</option><option value="lac" data-t="tr_lac">الرضاعة الطبيعية</option></select>
+      <label class="chk"><input type="checkbox" id="ntd"><span><span data-t="ntd">حمل سابق بعيب في الأنبوب العصبي</span><small data-t="ntd_s">أو عامل خطورة عالٍ آخر يحدده الطبيب</small></span></label>
+      <label class="chk"><input type="checkbox" id="lowca"><span><span data-t="lowca">غذاء قليل الكالسيوم</span><small data-t="lowca_s">قليل الحليب ومشتقاته</small></span></label>
+      <label class="chk"><input type="checkbox" id="veg"><span data-t="veg">نظام نباتي صرف</span></label>
+    </div>
+
+    <div data-for="fe preg" class="block">
+      <label class="l" for="hb" data-t="hb">الهيموغلوبين (اختياري)</label>
+      <div class="unit"><input type="number" id="hb" min="3" max="25" step="0.1" inputmode="decimal" placeholder="مثال: 10.5" data-ph="ph_hb"><span class="u">g/dL</span></div>
+    </div>
+
+    <div data-for="fe" class="block">
+      <div id="fetriw" class="block" hidden><label class="l" for="fetri" data-t="fetri">ثلث الحمل</label>
+      <select id="fetri"><option value="" data-t="fetri_0">غير محدد</option><option value="1" data-t="tr_t1">الثلث الأول (حتى الأسبوع 13)</option><option value="2" data-t="tr_t2">الثلث الثاني (14 – 27)</option><option value="3" data-t="tr_t3">الثلث الثالث (28 فأكثر)</option></select></div>
+      <label class="l" for="fer" data-t="fer">Ferritin (اختياري)</label>
+      <div class="unit"><input type="number" id="fer" min="1" max="5000" step="1" inputmode="decimal" placeholder="مثال: 12" data-ph="ph_fer"><span class="u">ng/mL</span></div>
+      <label class="chk"><input type="checkbox" id="infl"><span><span data-t="infl">التهاب أو عدوى حالياً</span><small data-t="infl_s">يرفع Ferritin، فيُستخدم حد أعلى (WHO)</small></span></label>
+      <div id="fegw" class="block">
+        <label class="l" for="feg" data-t="fe_or">بدون Ferritin: اختر الحالة</label>
+        <select id="feg"><option value="ida" data-t="fe_ida">فقر دم بعوز الحديد</option><option value="id" data-t="fe_id">نقص مخزون الحديد بدون فقر دم</option><option value="rda" data-t="fe_rda">الاحتياج اليومي الوقائي</option></select>
+      </div>
+    </div>
+
+    <div data-for="inf" class="block">
+      <label class="l" for="feed" data-t="feed">التغذية</label>
+      <select id="feed"><option value="bf" data-t="fd_bf">رضاعة طبيعية فقط</option><option value="mix" data-t="fd_mix">مختلطة</option><option value="ff" data-t="fd_ff">حليب صناعي فقط</option></select>
+      <label class="chk"><input type="checkbox" id="pre"><span><span data-t="pre">مولود قبل الأوان (خديج)</span><small data-t="pre_s">قبل الأسبوع 37</small></span></label>
+    </div>
+
+    <div data-for="vac" class="block">
+      <label class="l" for="vag" data-t="vag">السبب</label>
+      <select id="vag"><option value="prev" data-t="va_prev">الوقاية (برنامج WHO)</option><option value="xer" data-t="va_xer">علاج جفاف الملتحمة والقرنية (Xerophthalmia)</option><option value="mea" data-t="va_mea">الحصبة</option></select>
+    </div>
+
+    <div data-for="bar" class="block">
+      <label class="l" for="bsp" data-t="bsp">نوع العملية</label>
+      <select id="bsp"><option value="sg" data-t="bs_sg">تكميم المعدة (SG)</option><option value="rygb" data-t="bs_rygb">تحويل المسار (RYGB)</option><option value="lagb" data-t="bs_lagb">ربط المعدة (LAGB)</option><option value="bpd" data-t="bs_bpd">تحويل الاثني عشر (BPD/DS)</option></select>
+      <label class="chk"><input type="checkbox" id="banem"><span><span data-t="banem">سبقت الإصابة بفقر الدم</span><small data-t="banem_s">يرفع جرعة الحديد الوقائية</small></span></label>
+    </div>
+
+    <div data-for="thi" class="block">
+      <label class="l" for="thg" data-t="state">الحالة</label>
+      <select id="thg"><option value="mild" data-t="th_mild">نقص خفيف</option><option value="sev" data-t="th_sev">نقص شديد</option><option value="alc" data-t="th_alc">الاعتماد على الكحول (الوقاية بالفم)</option><option value="risk" data-t="th_risk">خطورة عالية لاعتلال فيرنيكه</option><option value="we" data-t="th_we">اشتباه اعتلال فيرنيكه (طوارئ)</option></select>
+      <p class="hint" data-t="th_h">اعتلال فيرنيكه: اضطراب حركة العين، أو عدم ثبات المشي، أو تشوش ذهني.</p>
+    </div>
+
+    <div data-for="ca" class="block">
+      <label class="l" for="cadiet" data-t="cadiet">الكالسيوم من الطعام تقريباً (ملغ/يوم)</label>
+      <input type="number" id="cadiet" min="0" max="4000" step="50" inputmode="numeric" placeholder="مثال: 500" data-ph="ph_ca">
+      <p class="hint" data-t="cadiet_h">كوب الحليب أو اللبن نحو 300 ملغ تقريباً. اتركه فارغاً إذا لم يكن معروفاً.</p>
+    </div>
+
+    <div data-for="mg" class="block">
+      <label class="l" for="mgv"><span data-t="mgv">مستوى المغنيسيوم في المصل</span> <span class="req">*</span></label>
+      <div class="unit"><input type="number" id="mgv" min="0.2" max="6" step="0.05" inputmode="decimal" placeholder="مثال: 1.5" data-ph="ph_mg"><select id="mgu" aria-label="unit"><option value="mgdl">mg/dL</option><option value="mmol">mmol/L</option></select></div>
+      <label class="chk"><input type="checkbox" id="mgsx"><span><span data-t="mgsx">أعراض شديدة</span><small data-t="mgsx_s">تشنجات، اضطراب نظم القلب، رعشة شديدة</small></span></label>
+    </div>
+
+    <div data-for="c zn" class="block">
+      <label class="l" for="czg" data-t="goal">الهدف</label>
+      <select id="czg"><option value="rda" data-t="g_rda">الاحتياج اليومي</option><option value="cold" data-t="g_cold">نزلات البرد</option><option value="dia" data-t="g_dia">إسهال الأطفال (WHO)</option></select>
+      <label class="chk" data-for="c"><input type="checkbox" id="smk"><span><span data-t="smk">مدخّن</span><small data-t="smk_s">يحتاج 35 ملغ إضافية من فيتامين C يومياً</small></span></label>
+    </div>
+    <label class="chk" data-not="inf vac thi"><input type="checkbox" id="ckd"><span><span data-t="ckd">قصور كلوي مزمن متقدم</span><small data-t="ckd_s">eGFR أقل من 30، أو غسيل كلى: تظهر تحذيرات كل حاسبة</small></span></label>

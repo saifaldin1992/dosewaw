@@ -16,6 +16,7 @@
 | `js/engine.js` | محرك الجرعات (البالغون وتعديل الكلى، الأطفال بالوزن والمل، تقدير الوزن من العمر) |
 | `js/rules/antibiotics.js` | قواعد جرعات 100 مضاد حيوي (من BIOTICWAW، كل رقم من نشرة رسمية) |
 | `js/rules/peds.js` | جرعات الأطفال بالوزن (حالياً: أموكسيسيلين) |
+| `js/rules/vitamins.js` | حاسبات الفيتامينات الـ13 من VITAWAW (ملف مولّد بـ `tools/import_vitawaw.py --rebuild` من `content/vitamins/src/`) |
 | `content/antibiotics/` | البيانات الأصلية: الدفعات، والنشرات المحفوظة `labels/`، والمصادر |
 | `content/growth/` | جداول WHO للوزن حسب العمر |
 | `design/phase0/` | نموذج التصميم المعتمد (المرحلة 0) |
@@ -26,4 +27,5 @@ python3 tools/build_data.py        # يبني data/ من content/
 node tests/engine_test.mjs         # 2020 فحصاً للقواعد والمحرك
 python3 -m http.server 8765 &      # ثم:
 node tests/e2e.cjs                 # الجوال والآيباد والكمبيوتر، عربي وإنجليزي، كل الأدوية المئة
+node tests/vitamin_cases.cjs       # 66 حالة طبية للفيتامينات من VITAWAW
 ```

@@ -39,5 +39,15 @@ dump('who_wfa.json', {'boys': med('boys'), 'girls': med('girls'),
 
 # search index for every group (small file loaded first)
 idx = [{'id': d['id'], 'g': 'ab', 'n': d['n'], 'c': d['cls']} for d in ab]
+# vitamins: the 13 calculators (names from the VITAWAW texts)
+vt = open(C('vitamins', 'src', 'i18n.js'), encoding='utf-8').read()
+def txt(key):
+    m = re.search(r"\b" + key + r":\['((?:[^'\\]|\\.)*)','((?:[^'\\]|\\.)*)'\]", vt)
+    clean = lambda x: re.sub(r'\\u([0-9a-fA-F]{4})', lambda u: chr(int(u.group(1), 16)), x)
+    return {'ar': clean(m.group(1)), 'en': clean(m.group(2))}
+for line in open(C('vitamins', 'keys.txt')).read().split('\n'):
+    if line.strip():
+        k, n, h = line.split()
+        idx.append({'id': k, 'g': 'vit', 'n': txt(n), 'c': txt(h)})
 dump('index.json', idx)
 print('antibiotics', len(ab), '· sources', len(sources), '· index', len(idx))

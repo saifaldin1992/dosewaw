@@ -32,13 +32,18 @@ require('fs').mkdirSync(out,{recursive:true});
    await p.goto(B+'#/d/cipro');await p.waitForSelector('#result .rbody');await p.screenshot({path:out+'phone-cipro.png',fullPage:true});
    await p.goto(B+'#/inter');await p.fill('#iq','سيبرو');await p.locator('[data-add]').first().click();await p.fill('#iq','دوكسي');await p.locator('[data-add]').first().click();
    chk(await p.locator('#ires .inter').count()>0,'interaction checker lists interactions');await p.screenshot({path:out+'phone-inter.png',fullPage:true});
-   await p.goto(B+'#/calc');chk(await p.locator('.sres a').count()===101,'calculators: 1 child + 100 adult');
-   await p.goto(B+'#/src');chk(await p.locator('.ref-item').count()===126,'126 sources');
+   await p.goto(B+'#/calc');await p.waitForSelector('.sres a');chk(await p.locator('.sres a').count()===114,'calculators: 1 child + 13 vitamins + 100 adult');
+   await p.goto(B+'#/src');await p.waitForSelector('.ref-item');chk(await p.locator('.ref-item').count()===126+52,'126 antibiotic + 52 vitamin sources');
+   await p.goto(B+'#/v/d');await p.waitForSelector('#vform');await p.fill('#age','40');await p.fill('#dlab','12');await p.waitForTimeout(50);
+   chk((await p.locator('#result').innerText()).includes('50,000'),'vitamin D 40 y, 12 ng/mL -> 50,000 IU weekly');await p.screenshot({path:out+'phone-vitd.png',fullPage:true});
+   await p.goto(B+'?lang=en#/v/fe');await p.waitForSelector('#vform');await p.fill('#age','30');await p.fill('#hb','10.5');await p.fill('#fer','8');await p.waitForTimeout(50);
+   chk(/elemental iron/i.test(await p.locator('#result').innerText()),'iron in English');await p.screenshot({path:out+'phone-iron-en.png',fullPage:true});
+   await p.goto(B+'?lang=ar#/');
    await p.goto(B+'?lang=en#/d/amox');await p.waitForSelector('#result');await p.fill('#val','15');await p.waitForTimeout(50);
    chk((await p.locator('html').getAttribute('dir'))==='ltr','english is ltr');await p.screenshot({path:out+'phone-amox-en.png',fullPage:true});
    // every one of the 100 drugs opens and gives a result for a 70 kg adult with kidney data
-   const ids=await p.evaluate(()=>fetch('data/index.json').then(r=>r.json()).then(x=>x.map(d=>d.id)));let bad=[];
-   for(const id of ids){await p.goto(B+'#/d/'+id);await p.waitForSelector('#result');await p.fill('#val','70');
+   const ids=await p.evaluate(()=>fetch('data/index.json').then(r=>r.json()).then(x=>x.filter(d=>d.g==='ab').map(d=>d.id)));let bad=[];
+   for(const id of ids){await p.goto(B+'#/d/'+id);await p.waitForSelector('#val');await p.fill('#val','70');
      if(await p.locator('#kage').count()){await p.evaluate(()=>document.querySelector('#kid').open=true);await p.fill('#kage','50');await p.selectOption('#ksex','m');await p.fill('#kht','175');await p.fill('#kscr','1');}
      await p.waitForTimeout(10);const tx=await p.locator('#result').innerText();if(!tx||tx.includes('—\n')||/undefined|NaN/.test(tx))bad.push(id)}
    chk(!bad.length,'all 100 drugs give a result: bad='+bad);

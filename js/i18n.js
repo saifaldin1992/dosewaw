@@ -54,7 +54,7 @@ const I18N = {
   src_t:['المصادر والمنهجية','Sources and method'], src_n:['{n} مصدراً','{n} sources'],
   method:['كيف نعمل','How we work'],
   method_p:['نأخذ كل جرعة وتداخل من النشرة الرسمية للدواء (FDA وDailyMed أولاً، ثم نشرات الوكالات الأوروبية) مع تاريخ النشرة. إذا لم تذكر النشرة رقماً لا نضع رقماً من عندنا. كل محتوى جديد يراجعه صيدلي قبل النشر.','Every dose and interaction comes from the official label (FDA / DailyMed first, then European agencies), with the label date. If the label gives no number, we do not add one. New content is reviewed by a pharmacist before publishing.'],
-  k_d:['نشرة رسمية','Label'], k_g:['إرشاد','Guideline'], k_s:['مرجع ثانوي','Secondary'],
+  k_d:['نشرة رسمية','Label'], k_g:['إرشاد','Guideline'], k_r:['مراجعة علمية','Evidence review'], k_s:['مرجع ثانوي','Secondary'],
   settings:['الإعدادات','Settings'], lang:['اللغة','Language'], theme:['المظهر','Theme'], th_auto:['تلقائي','Auto'], th_light:['فاتح','Light'], th_dark:['ليلي','Dark'],
   about:['عن DOSEWAW','About DOSEWAW'],
   about_p:['مرجع جرعات مجاني للصيادلة، بالعربية والإنجليزية، يعمل على الجوال وبدون إنترنت بعد أول زيارة.','A free dose reference for pharmacists, in Arabic and English, that works on phones and offline after the first visit.'],

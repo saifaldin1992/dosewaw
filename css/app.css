@@ -220,3 +220,34 @@ html[dir="ltr"] .rhead .big,html[dir="ltr"] .numin input{text-align:start}
   body{background:#fff;color:#000}
   .result{box-shadow:none;border:1px solid #999}
 }
+
+/* ===== vitamins (form of the VITAWAW calculators, drawn in this design) ===== */
+.vform .grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.vform .f,.vform .block{display:grid;gap:6px;min-width:0}
+.vform .block{margin-top:12px}
+.vform .block .block{margin-top:6px}
+.vform .l{font-size:12.5px;font-weight:600;color:var(--mute)}
+.vform .req{color:var(--major)}
+.vform input[type=number],.vform select{height:48px;border:1px solid var(--line);border-radius:12px;background:var(--card);padding:0 12px;font-size:16px;width:100%;min-width:0;color:var(--ink)}
+.vform input[type=number]{font-family:var(--font-num);font-size:18px;font-weight:600}
+.vform input:focus,.vform select:focus{outline:2px solid var(--primary-mid);border-color:transparent}
+.vform input.bad{border-color:var(--major)}
+.vform .err{color:var(--major);font-size:12.5px;margin:0}
+.vform .unit{display:flex;gap:6px}
+.vform .unit input{flex:1}
+.vform .unit select{width:auto;flex:none;font-size:13px;padding:0 6px}
+.vform .unit .u{align-self:center;color:var(--mute);font-size:13px;font-family:var(--font-num);white-space:nowrap}
+.vform .chk{align-items:flex-start;margin-top:8px}
+.vform .chk input{margin-top:3px;flex:none}
+.vform .chk small{display:block;color:var(--mute);font-size:12.5px}
+.vform .hint{margin:0}
+.vform [hidden]{display:none!important}
+.rhead.warn:after{background:var(--mod)}
+.rhead.bad{background:linear-gradient(135deg,var(--alert) 0%,var(--alert-deep) 100%)}
+.vbadge{background:rgba(255,255,255,.14);border-radius:99px;padding:1px 10px;font-weight:600}
+.rhead .sub a,.rhead .bigtxt a{color:inherit}
+.rhead .ref{background:rgba(255,255,255,.18);color:inherit}
+ol.vplan{margin:0 0 10px;padding-inline-start:20px;display:grid;gap:6px;font-size:14.5px}
+ol.vplan b{display:block}
+ol.vplan span{color:var(--mute);font-size:13.5px}
+.empty small{display:block;margin-top:6px}
