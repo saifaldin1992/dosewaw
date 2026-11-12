@@ -219,7 +219,7 @@ function pedsResult(P){
   const r=pedsCalc(peds,P,s);
   const best=easiest(r.ml);
   const warn=r.notes.map(n=>n.k==='infant'?`<div class="warn">${esc(T('infant_w',{m:n.v.mgkgday,h:n.v.every,r:n.v.ref}))}</div>`:`<div class="warn red">${esc(T('cap_w',{m:n.v}))}</div>`).join('');
-  const table=r.ml.length?`<table class="ml"><tr><th>${esc(T('susp'))}</th><th style="text-align:end">${esc(T('per_dose'))}</th></tr>${r.ml.map(x=>`<tr class="${x.c===best?'best':''}"><td><span class="num">${x.c} mg / 5 mL</span>${x.c===best?` <small style="color:var(--highlight-text);font-weight:600">· ${esc(T('easiest'))}</small>`:''}</td><td class="v">${num(mlRound(x.ml))} <small>${esc(T('ml'))}</small></td></tr>`).join('')}</table>`:'';
+  const table=r.ml.length?`<table class="ml"><tr><th>${esc(T('susp'))}</th><th class="ta-e">${esc(T('per_dose'))}</th></tr>${r.ml.map(x=>`<tr class="${x.c===best?'best':''}"><td><span class="num">${x.c} mg / 5 mL</span>${x.c===best?` <small class="easy">· ${esc(T('easiest'))}</small>`:''}</td><td class="v">${num(mlRound(x.ml))} <small>${esc(T('ml'))}</small></td></tr>`).join('')}</table>`:'';
   R.innerHTML=`<div class="rhead"><div class="k"><span>${esc(T('result'))}</span><span>${num(P.W)} ${esc(T('u_kg'))}${P.est?' ≈':''}</span></div>
     <div class="big">${num(r.mg)} <small>${esc(T('mg'))}</small></div>
     <div class="sub">${esc(T('every',{h:r.every}))} · ${esc(T('per_day',{m:r.mgkgday,n:24/r.every}))}</div></div>
@@ -332,7 +332,7 @@ function vitCalc(k){
     <div class="rbody">
     ${urgent.map(n=>`<div class="warn red">${n.t}</div>`).join('')}
     ${r.plan&&r.plan.length?`<div class="lbl first">${esc(VIT.T('plan'))}</div><ol class="vplan">${r.plan.map(s=>`<li><b>${s.h}</b>${s.d?`<span>${s.d}</span>`:''}</li>`).join('')}</ol>`:''}
-    ${r.opts&&r.opts.length?`<div class="rrows">${r.opts.map(o=>`<div class="rrow"><b>${o.h}</b>${o.b}${o.d?`<div class="hint" style="margin:2px 0 0">${o.d}</div>`:''}</div>`).join('')}</div>`:''}
+    ${r.opts&&r.opts.length?`<div class="rrows">${r.opts.map(o=>`<div class="rrow"><b>${o.h}</b>${o.b}${o.d?`<div class="hint m0 mt2">${o.d}</div>`:''}</div>`).join('')}</div>`:''}
     ${r.kv&&r.kv.length?`<div class="facts">${r.kv.map(x=>`<div class="fact"><b>${x[0]}</b><span>${x[1]}</span></div>`).join('')}</div>`:''}
     ${rest.map(n=>`<p class="hint">${n.t}</p>`).join('')}
     ${actions()}</div>`;
@@ -363,9 +363,9 @@ async function viewInter(){
       chosen.map(d=>`<div class="sec-title">${esc(T('inter_with',{d:LT(d.n)}))}</div><div class="ilist">${[...(d.inter||[])].sort((a,b)=>(sevRank[a.sev]??3)-(sevRank[b.sev]??3)).map(i=>`<div class="inter ${esc(i.sev)}"><div class="grow"><b>${esc(LT(i.with))}</b><p>${esc(LT(i.desc))}</p></div><span class="sev">${esc(T('sev_'+i.sev))}</span></div>`).join('')}</div>`).join('');
     $$('[data-rm]').forEach(b=>b.onclick=()=>{PICK.splice(PICK.indexOf(b.dataset.rm),1);draw()});
   };
-  app().innerHTML=`<div class="page-h"><span class="dicon">${ICON.inter}</span><h1>${esc(T('inter_t'))}</h1></div><p class="hint" style="margin:0 4px 12px">${esc(T('inter_s'))}</p>
+  app().innerHTML=`<div class="page-h"><span class="dicon">${ICON.inter}</span><h1>${esc(T('inter_t'))}</h1></div><p class="hint lead">${esc(T('inter_s'))}</p>
   <section class="search"><label class="sbox">${ICON.search}<input id="iq" type="search" placeholder="${esc(T('inter_add'))}" autocomplete="off" dir="auto" aria-label="${esc(T('inter_add'))}"></label><div class="sres" id="ilist"></div><div class="picked" id="ichosen"></div></section>
-  <section class="card" style="margin-top:16px"><div class="ilist" id="ires"></div></section>`;
+  <section class="card mt16"><div class="ilist" id="ires"></div></section>`;
   const q=$('#iq');q.oninput=()=>{const v=normAr(q.value);$('#ilist').innerHTML=v?ab.filter(d=>normAr(d.n.ar+' '+d.n.en).includes(v)&&!PICK.includes(d.id)).slice(0,8).map(d=>`<a href="#" data-add="${d.id}"><b>${esc(LT(d.n))}</b><span class="c">${esc(LT(d.cls))}</span></a>`).join(''):'';
     $$('[data-add]').forEach(a=>a.onclick=e=>{e.preventDefault();PICK.push(a.dataset.add);q.value='';$('#ilist').innerHTML='';draw();q.focus()})};
   draw();
@@ -377,10 +377,10 @@ async function viewCalc(){
   INDEX=INDEX||await getJSON('index.json');
   const kids=ab.filter(d=>PEDS[d.id]),adults=ab.filter(d=>ABC_RULES[d.id]),vits=INDEX.filter(d=>d.g==='vit');
   const li=list=>list.map(d=>`<a href="#/d/${encodeURIComponent(d.id)}"><b>${esc(LT(d.n))}</b><span class="c">${esc(LT(d.cls))}</span></a>`).join('');
-  app().innerHTML=`<div class="page-h"><span class="dicon">${ICON.calc}</span><h1>${esc(T('calc_t'))}</h1></div><p class="hint" style="margin:0 4px 12px">${esc(T('calc_s'))}</p>
+  app().innerHTML=`<div class="page-h"><span class="dicon">${ICON.calc}</span><h1>${esc(T('calc_t'))}</h1></div><p class="hint lead">${esc(T('calc_s'))}</p>
   <section class="card"><h2><span class="ic">👶</span>${esc(T('calc_peds'))}<span class="cnt">${kids.length}</span></h2><div class="sres">${li(kids)}</div></section>
-  <section class="card" style="margin-top:16px"><h2><span class="ic">💧</span>${esc(T('g_vit'))}<span class="cnt">${vits.length}</span></h2><div class="sres">${vits.map(d=>`<a href="${HREF(d)}"><b>${esc(LT(d.n))}</b><span class="c">${esc(LT(d.c))}</span></a>`).join('')}</div></section>
-  <section class="card" style="margin-top:16px"><h2><span class="ic">🫘</span>${esc(T('calc_adult'))}<span class="cnt">${adults.length}</span></h2><div class="sres">${li(adults)}</div></section>`;
+  <section class="card mt16"><h2><span class="ic">💧</span>${esc(T('g_vit'))}<span class="cnt">${vits.length}</span></h2><div class="sres">${vits.map(d=>`<a href="${HREF(d)}"><b>${esc(LT(d.n))}</b><span class="c">${esc(LT(d.c))}</span></a>`).join('')}</div></section>
+  <section class="card mt16"><h2><span class="ic">🫘</span>${esc(T('calc_adult'))}<span class="cnt">${adults.length}</span></h2><div class="sres">${li(adults)}</div></section>`;
 }
 
 /* ---------- sources and method ---------- */
@@ -389,7 +389,7 @@ async function viewSources(hl){
   const vr=Object.entries(VIT.REFS).sort((a,b)=>a[0]-b[0]);
   app().innerHTML=`<div class="page-h"><span class="dicon">📚</span><h1>${esc(T('src_t'))}</h1></div>
   <section class="card"><h2><span class="ic">🧭</span>${esc(T('method'))}</h2><div class="prose"><p>${esc(T('method_p'))}</p></div></section>
-  <section class="card" style="margin-top:16px"><h2><span class="ic">📚</span>${esc(T('s_src'))}<span class="cnt">${esc(T('src_n',{n:src.length+vr.length}))}</span></h2>
+  <section class="card mt16"><h2><span class="ic">📚</span>${esc(T('s_src'))}<span class="cnt">${esc(T('src_n',{n:src.length+vr.length}))}</span></h2>
   <div class="sec-title">${esc(T('g_ab'))}</div><ol class="refs">${src.map(s=>`<li class="ref-item${String(s.id)===hl?' hl':''}" id="r${s.id}" value="${s.id}"><a href="${esc(s.url)}" target="_blank" rel="noopener">${esc(s.title)}</a><span class="k">${esc(T('k_'+s.kind))}</span><br><span class="d">${esc(s.org)} · ${esc(L(s.use_ar,s.use_en))}</span></li>`).join('')}</ol>
   <div class="sec-title">${esc(T('g_vit'))}</div><ol class="refs">${vr.map(([n,x])=>`<li class="ref-item${'v'+n===hl?' hl':''}" id="rv${n}" value="${n}"><a href="${esc(x[2])}" target="_blank" rel="noopener">${esc(x[1])}</a><span class="k">${esc(T('k_'+vKind(x[0])))}</span><br><span class="d">${esc(x[0])} · ${esc(L(x[3],x[4]))}</span></li>`).join('')}</ol></section>`;
   if(hl){const t=document.getElementById('r'+hl);if(t)t.scrollIntoView({block:'center'})}
@@ -403,7 +403,7 @@ function viewMenu(){
   <section class="card"><h2><span class="ic">⚙️</span>${esc(T('settings'))}</h2>
     <div class="lbl first">${esc(T('lang'))}</div><div class="seg two"><button type="button" data-lang="ar" aria-pressed="${LANG==='ar'}">العربية</button><button type="button" data-lang="en" aria-pressed="${LANG==='en'}">English</button></div>
     <div class="lbl">${esc(T('theme'))}</div><div class="seg">${['auto','light','dark'].map(t=>`<button type="button" data-th="${t}" aria-pressed="${th===t}">${esc(T('th_'+t))}</button>`).join('')}</div></section>
-  <section class="card" style="margin-top:16px"><h2><span class="ic">ℹ️</span>${esc(T('about'))}</h2><div class="prose"><p>${esc(T('about_p'))}</p><p class="hint">v${VERSION}</p></div></section>`;
+  <section class="card mt16"><h2><span class="ic">ℹ️</span>${esc(T('about'))}</h2><div class="prose"><p>${esc(T('about_p'))}</p><p class="hint">v${VERSION}</p></div></section>`;
   $$('[data-lang]').forEach(b=>b.onclick=()=>setLang(b.dataset.lang));
   $$('[data-th]').forEach(b=>b.onclick=()=>{setTheme(b.dataset.th);viewMenu()});
 }

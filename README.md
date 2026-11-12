@@ -33,7 +33,7 @@
 ```
 python3 tools/build_data.py        # يبني data/ من content/
 node tests/engine_test.mjs         # 2020 فحصاً للقواعد والمحرك
-python3 -m http.server 8765 &      # ثم:
+node tests/serve.cjs 8765 &       # خادم محلي بنفس رؤوس الأمان، ثم:
 node tests/e2e.cjs                 # الجوال والآيباد والكمبيوتر، عربي وإنجليزي، كل الأدوية المئة
 node tests/vitamin_cases.cjs       # 66 حالة طبية للفيتامينات من VITAWAW
 node tests/worker_test.mjs         # خادم Cloudflare

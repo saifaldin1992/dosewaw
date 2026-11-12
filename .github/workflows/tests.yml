@@ -24,7 +24,7 @@ jobs:
       - name: pages on phone, iPad and computer
         run: |
           npm i --no-save playwright@1.48.2 && npx playwright install --with-deps chromium
-          (python3 -m http.server 8765 --bind 127.0.0.1 &) && sleep 1
+          (node tests/serve.cjs 8765 &) && sleep 1
           node tests/e2e.cjs
           node tests/vitamin_cases.cjs
           node tests/admin_flow.cjs
