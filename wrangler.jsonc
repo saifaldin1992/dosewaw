@@ -1,5 +1,5 @@
 // DOSEWAW on Cloudflare Workers. Deployed by Workers Builds from GitHub:
-// branch "main" -> production (LIVE database), any other branch -> preview (TEST database).
+// branch "main" -> production, any other branch -> preview (TEST database «dosewaw-test»).
 {
   "name": "dosewaw",
   "compatibility_date": "2026-11-01",
@@ -11,12 +11,15 @@
     // only these run the worker; every other request is a free static asset
     "run_worker_first": ["/data/*", "/js/config.js"]
   },
-  // public values only (the anon key is meant to be public; the data is protected by row security)
+  // public values only (publishable keys are meant to be public; the data is protected by row security)
   "vars": {
+    // production stays on the static content until the release («انشر»): the LIVE database has no tables yet.
+    // At release: run the migrations on LIVE, then set SUPABASE_ANON_KEY to LIVE_SUPABASE_ANON_KEY.
     "SUPABASE_URL": "https://kryoddbkwljbpjhhwhut.supabase.co",
-    "SUPABASE_ANON_KEY": "PASTE_LIVE_ANON_KEY",
+    "SUPABASE_ANON_KEY": "PASTE_AT_RELEASE",
+    "LIVE_SUPABASE_ANON_KEY": "sb_publishable_1PAEVs5CRpdOGYFfPCj8UA_f1Q7w5Fp",
     "TEST_SUPABASE_URL": "https://oqynswsbhtgnnuyjwrea.supabase.co",
-    "TEST_SUPABASE_ANON_KEY": "PASTE_TEST_ANON_KEY"
+    "TEST_SUPABASE_ANON_KEY": "sb_publishable_lRWnMQdT5GvHhc-0b3ec9w_gAFM5K81"
   },
   "triggers": { "crons": ["23 3 * * *"] },
   "observability": { "enabled": true },
@@ -24,7 +27,7 @@
   "previews": {
     "vars": {
       "SUPABASE_URL": "https://oqynswsbhtgnnuyjwrea.supabase.co",
-      "SUPABASE_ANON_KEY": "PASTE_TEST_ANON_KEY",
+      "SUPABASE_ANON_KEY": "sb_publishable_lRWnMQdT5GvHhc-0b3ec9w_gAFM5K81",
       "IS_TEST": "1"
     }
   }

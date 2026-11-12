@@ -86,7 +86,7 @@ export default {
     return env.ASSETS.fetch(request);
   },
   async scheduled(event, env, ctx) {
-    for (const [u, k] of [[env.SUPABASE_URL, env.SUPABASE_ANON_KEY], [env.TEST_SUPABASE_URL, env.TEST_SUPABASE_ANON_KEY]]) {
+    for (const [u, k] of [[env.SUPABASE_URL, env.LIVE_SUPABASE_ANON_KEY || env.SUPABASE_ANON_KEY], [env.TEST_SUPABASE_URL, env.TEST_SUPABASE_ANON_KEY]]) {
       if (u && k && !k.startsWith('PASTE')) ctx.waitUntil(fetch(u.replace(/\/$/, '') + '/rest/v1/published?id=eq.1&select=version', { headers: { apikey: k, Authorization: 'Bearer ' + k } }).catch(() => {}));
     }
   }
