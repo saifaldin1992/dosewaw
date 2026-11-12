@@ -14,9 +14,17 @@ jobs:
         run: python3 tools/build_data.py && python3 tools/import_vitawaw.py --rebuild && git diff --exit-code data/ js/rules/vitamins.js
       - name: dose engine and rules
         run: node tests/engine_test.mjs
+      - name: edge worker
+        run: node tests/worker_test.mjs
+      - name: database rules (PostgreSQL)
+        run: |
+          sudo systemctl start postgresql.service
+          sudo -u postgres psql -v ON_ERROR_STOP=1 -q -c "create database t"
+          for f in tests/sql/supabase_shim.sql supabase/migrations/*.sql tests/sql/core_test.sql; do sudo -u postgres psql -d t -v ON_ERROR_STOP=1 -q -f "$f"; done
       - name: pages on phone, iPad and computer
         run: |
           npm i --no-save playwright@1.48.2 && npx playwright install --with-deps chromium
           (python3 -m http.server 8765 --bind 127.0.0.1 &) && sleep 1
           node tests/e2e.cjs
           node tests/vitamin_cases.cjs
+          node tests/admin_flow.cjs

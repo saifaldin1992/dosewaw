@@ -48,7 +48,7 @@ const sevRank={major:0,moderate:1,minor:2};
 /* ---------- shell: header, language, theme, navigation ---------- */
 function applyLang(){
   document.documentElement.lang=LANG;document.documentElement.dir=LANG==='ar'?'rtl':'ltr';
-  const B=window.BRAND||{};$('#btag').textContent=LT(B.tagline);document.title=(B.name||['DOSE','WAW']).join('')+' — '+LT(B.tagline);
+  const B=window.BRAND||{};drawBrand();document.title=(B.name||['DOSE','WAW']).join('')+' — '+LT(B.tagline);
   $('#hlang').textContent=LANG==='ar'?'EN':'ع';$('#hlang').setAttribute('aria-label',LANG==='ar'?'English':'العربية');
   $('#topnav').innerHTML=[['#/','nav_drugs'],['#/inter','nav_inter_long'],['#/calc','nav_calc'],['#/src','nav_src']].map(([h,k])=>`<a href="${h}" data-nav="${h}">${esc(T(k))}</a>`).join('');
   $('#tabs').innerHTML=[['#/','nav_drugs','drug'],['#/inter','nav_inter','inter'],['#/calc','nav_calc','calc'],['#/menu','nav_menu','menu']].map(([h,k,i])=>`<a href="${h}" data-nav="${h}"><span class="pill">${ICON[i]}</span>${esc(T(k))}</a>`).join('');
@@ -63,7 +63,8 @@ function markNav(base){$$('[data-nav]').forEach(a=>{const on=a.dataset.nav===bas
 function route(){
   const h=location.hash.replace(/^#/,'')||'/';const p=h.split('/').filter(Boolean);
   const view=p[0]||'';window.scrollTo(0,0);
-  const base={'':'#/',d:'#/',v:'#/',g:'#/',inter:'#/inter',calc:'#/calc',src:'#/src',menu:'#/menu'}[view]||'#/';markNav(base);
+  const base={'':'#/',d:'#/',v:'#/',g:'#/',inter:'#/inter',calc:'#/calc',src:'#/src',menu:'#/menu',admin:'#/menu'}[view]||'#/';markNav(base);
+  if(view==='admin'){loading();return loadScript('js/admin.js').then(()=>adminBoot()).catch(failed)}
   if(view==='d'&&p[1])return viewDrug(decodeURIComponent(p[1]));
   if(view==='v'&&p[1])return viewVit(decodeURIComponent(p[1]));
   if(view==='g'&&p[1])return viewGroup(p[1]);
@@ -398,7 +399,7 @@ async function viewSources(hl){
 function viewMenu(){
   const th=store.get('dw-theme','auto');
   app().innerHTML=`<div class="page-h"><span class="dicon">${ICON.menu}</span><h1>${esc(T('nav_menu'))}</h1></div>
-  <nav class="menu"><a href="#/src">📚 ${esc(T('nav_src'))}</a><a href="#/inter">⚠️ ${esc(T('nav_inter_long'))}</a><a href="#/calc">🧮 ${esc(T('nav_calc'))}</a></nav>
+  <nav class="menu"><a href="#/src">📚 ${esc(T('nav_src'))}</a><a href="#/admin">🔐 ${esc(T('a_title'))}</a><a href="#/inter">⚠️ ${esc(T('nav_inter_long'))}</a><a href="#/calc">🧮 ${esc(T('nav_calc'))}</a></nav>
   <section class="card"><h2><span class="ic">⚙️</span>${esc(T('settings'))}</h2>
     <div class="lbl first">${esc(T('lang'))}</div><div class="seg two"><button type="button" data-lang="ar" aria-pressed="${LANG==='ar'}">العربية</button><button type="button" data-lang="en" aria-pressed="${LANG==='en'}">English</button></div>
     <div class="lbl">${esc(T('theme'))}</div><div class="seg">${['auto','light','dark'].map(t=>`<button type="button" data-th="${t}" aria-pressed="${th===t}">${esc(T('th_'+t))}</button>`).join('')}</div></section>
@@ -407,10 +408,35 @@ function viewMenu(){
   $$('[data-th]').forEach(b=>b.onclick=()=>{setTheme(b.dataset.th);viewMenu()});
 }
 
+/* ---------- visual identity: brand/ files first, then the published brand (data/brand.json) on top ---------- */
+const TOKRE=/^--[a-z-]{2,30}$/;
+const isColor=v=>/^(#[0-9a-f]{3,8}|rgba?\(\s*\d{1,3}\s*,\s*\d{1,3}\s*,\s*\d{1,3}\s*(,\s*(0|1|0?\.\d+)\s*)?\))$/i.test(String(v).trim());
+const isLogo=v=>/^data:image\/(png|svg\+xml|webp|jpeg);base64,[A-Za-z0-9+/=]+$/.test(String(v||''))||/^brand\/[\w.-]+\.(svg|png|webp)$/.test(String(v||''));
+let BRAND_SHEET=null;
+function drawBrand(){
+  const B=window.BRAND;if(!B)return;
+  const n=$('#bname');n.textContent=B.name[0];const g=document.createElement('b');g.textContent=B.name[1]||'';n.appendChild(g);
+  if(isLogo(B.logo))$('#blogo').src=B.logo;$('.brand').setAttribute('aria-label',B.name.join(''));
+  const m=$('meta[name=theme-color]');if(m&&isColor(B.themeColor))m.content=B.themeColor;
+  $('#btag').textContent=LT(B.tagline);
+}
+/* colours go into a constructed style sheet (allowed by the page's security policy), only known tokens with plain colour values */
+function applyBrand(b){
+  if(!b||typeof b!=='object')return;
+  const rules=m=>Object.entries((b.colors||{})[m]||{}).filter(([k,v])=>TOKRE.test(k)&&isColor(v)).map(([k,v])=>k+':'+String(v).trim()).join(';');
+  const css=`:root{${rules('light')}}@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){${rules('dark')}}}:root[data-theme="dark"]{${rules('dark')}}`;
+  try{if(!BRAND_SHEET){BRAND_SHEET=new CSSStyleSheet();document.adoptedStyleSheets=[...document.adoptedStyleSheets,BRAND_SHEET]}BRAND_SHEET.replaceSync(css)}catch(e){}
+  const B=window.BRAND=Object.assign({},window.BRAND||{});
+  if(Array.isArray(b.name)&&b.name[0])B.name=[String(b.name[0]).slice(0,15),String(b.name[1]||'').slice(0,15)];
+  if(b.tagline&&(b.tagline.ar||b.tagline.en))B.tagline={ar:b.tagline.ar||B.tagline.ar,en:b.tagline.en||B.tagline.en};
+  if(isLogo(b.logo))B.logo=b.logo;
+  if(b.colors&&b.colors.light&&isColor(b.colors.light['--primary']))B.themeColor=b.colors.light['--primary'];
+  drawBrand();
+}
+
 /* ---------- start ---------- */
 function start(){
-  const B=window.BRAND;
-  if(B){const n=$('#bname');n.textContent=B.name[0];const g=document.createElement('b');g.textContent=B.name[1]||'';n.appendChild(g);$('#blogo').src=B.logo;$('.brand').setAttribute('aria-label',B.name.join(''));const m=$('meta[name=theme-color]');if(m)m.content=B.themeColor}
+  drawBrand();getJSON('brand.json').then(applyBrand).catch(()=>{});
   const th=store.get('dw-theme','auto');setTheme(th);
   $('#htheme').onclick=()=>setTheme(themeNow()==='dark'?'light':'dark');
   $('#hlang').onclick=()=>setLang(LANG==='ar'?'en':'ar');

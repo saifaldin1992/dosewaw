@@ -251,3 +251,12 @@ ol.vplan{margin:0 0 10px;padding-inline-start:20px;display:grid;gap:6px;font-siz
 ol.vplan b{display:block}
 ol.vplan span{color:var(--mute);font-size:13.5px}
 .empty small{display:block;margin-top:6px}
+/* owner panel */
+.toks{display:grid;gap:6px}
+@media (min-width:700px){.toks{grid-template-columns:1fr 1fr;column-gap:16px}}
+.tokrow{display:grid;grid-template-columns:1fr 44px 104px;gap:8px;align-items:center;min-height:44px}
+.tokn{font-size:13.5px;font-weight:500}
+.tokrow input[type=color]{width:44px;height:40px;border:1px solid var(--line);border-radius:10px;padding:2px;background:var(--card)}
+.tokrow input[data-ct]{height:40px;border:1px solid var(--line);border-radius:10px;padding:0 8px;font-family:var(--font-num);font-size:13px;width:100%;min-width:0;background:var(--card);color:var(--ink)}
+textarea.ta{border:1px solid var(--line);border-radius:12px;padding:10px 12px;font:inherit;font-size:15px;width:100%;background:var(--card);color:var(--ink);resize:vertical}
+.fld input[type=email],.fld input[type=password],.fld input:not([type]){font-family:var(--font)}

@@ -3,7 +3,7 @@
 -- Supabase assigns (supabase_migrations), so both projects stay in step.
 --
 -- How the data flows:
---   pharmacist / owner edits  →  public.changes (pending; the owner's own edits are approved at once)
+--   pharmacist / owner edits  →  public.changes (pending; the owner's edits are approved at once)
 --   owner approves             →  status 'approved'
 --   owner presses «نشر»        →  public.publish_site(): approved changes are applied to the published bundle,
 --                                  the version goes up, the old bundle is kept in public.history (rollback)
@@ -64,7 +64,7 @@ drop trigger if exists dosewaw_add_member on auth.users;
 create trigger dosewaw_guard_signup before insert on auth.users for each row execute function private.guard_signup();
 create trigger dosewaw_add_member  after  insert on auth.users for each row execute function private.add_member();
 
-create policy "a member reads himself; the owner reads all" on public.members
+create policy "a member reads their own row; the owner reads all" on public.members
   for select to authenticated using (user_id = auth.uid() or private.my_role() = 'owner');
 -- no insert/update/delete policies: members change only through the owner functions below
 
@@ -107,7 +107,7 @@ create table if not exists public.changes (
 );
 create index if not exists changes_status_idx on public.changes(status, created_at);
 alter table public.changes enable row level security;
-create policy "the owner reads all changes; a pharmacist reads his own" on public.changes
+create policy "the owner reads all changes; a pharmacist reads their own" on public.changes
   for select to authenticated using (private.my_role() = 'owner' or (author = auth.uid() and private.my_role() = 'pharmacist'));
 -- no write policies: changes are written only through submit_change / review_change / publish_site
 
@@ -231,7 +231,7 @@ create or replace function public.set_member_active(p_user uuid, p_active boolea
 language plpgsql security definer set search_path = '' as $$
 begin
   if private.my_role() is distinct from 'owner' then raise exception 'DOSEWAW: only the owner'; end if;
-  if p_user = auth.uid() then raise exception 'DOSEWAW: the owner cannot stop his own account'; end if;
+  if p_user = auth.uid() then raise exception 'DOSEWAW: the owner cannot stop their own account'; end if;
   update public.members set active = p_active where user_id = p_user;
 end $$;
 create or replace function public.pending_invites() returns table(email text, role text, name text, created_at timestamptz)

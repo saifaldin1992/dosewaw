@@ -8,3 +8,5 @@ node_modules
 wrangler.jsonc
 README.md
 *.py
+src
+supabase

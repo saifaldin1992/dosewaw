@@ -50,4 +50,5 @@ for line in open(C('vitamins', 'keys.txt')).read().split('\n'):
         k, n, h = line.split()
         idx.append({'id': k, 'g': 'vit', 'n': txt(n), 'c': txt(h)})
 dump('index.json', idx)
+if not os.path.exists(D('brand.json')): dump('brand.json', {})  # the published brand comes from Supabase (worker)
 print('antibiotics', len(ab), '· sources', len(sources), '· index', len(idx))
