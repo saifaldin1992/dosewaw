@@ -13,6 +13,7 @@ const noTags=s=>!/[<>]/.test(s);
 const A=k=>T('a_'+k);
 
 async function adminBoot(){
+  try{INDEX=INDEX||await getJSON('index.json')}catch(e){}
   app().innerHTML=`<p class="empty">${esc(T('loading'))}</p>`;
   try{await loadScript('js/config.js')}catch(e){}
   if(!window.DW_CFG){app().innerHTML=panelHead()+`<section class="card"><p class="prose">${esc(A('not_linked'))}</p></section>`;return}
@@ -22,7 +23,7 @@ async function adminBoot(){
   if(!session)return loginView();
   const {data:m}=await SB.from('members').select('user_id,email,name,role,active').eq('user_id',session.user.id).maybeSingle();
   if(!m||!m.active){await SB.auth.signOut();return loginView(A('no_member'))}
-  ME=m;const allowed=ME.role==='owner'?['review','publish','brand','drugs','team']:['drugs','mine'];if(!allowed.includes(ATAB))ATAB=allowed[0];
+  ME=m;const allowed=ME.role==='owner'?['review','reports','publish','brand','drugs','team']:['drugs','mine'];if(!allowed.includes(ATAB))ATAB=allowed[0];
   panel();
 }
 function panelHead(){return `<div class="page-h"><span class="dicon">🔐</span><h1>${esc(A('title'))}</h1>${window.DW_CFG&&window.DW_CFG.test?`<span class="tag gold">${esc(A('test_db'))}</span>`:''}</div>`}
@@ -62,7 +63,7 @@ async function createAccount(say){
 /* ---------- the panel ---------- */
 async function panel(){
   const {data:pub}=await SB.from('published').select('version,data,note,published_at').eq('id',1).maybeSingle();PUB=pub;
-  const tabs=ME.role==='owner'?['review','publish','brand','drugs','team']:['drugs','mine'];
+  const tabs=ME.role==='owner'?['review','reports','publish','brand','drugs','team']:['drugs','mine'];
   app().innerHTML=panelHead()+`<div class="chips mb12" role="tablist">${tabs.map(t=>`<button class="chip" role="tab" data-at="${t}" aria-pressed="${ATAB===t}">${esc(A('t_'+t))}</button>`).join('')}
     <button class="chip" id="aout" type="button">${esc(A('sign_out'))}</button></div>
     <p class="hint lead">${esc(A('signed_as'))} <b>${esc(ME.name||ME.email)}</b> · ${esc(A('r_'+ME.role))}${PUB?` · ${esc(A('live_v'))} ${PUB.version}`:''}</p>
@@ -70,7 +71,7 @@ async function panel(){
   $$('[data-at]').forEach(b=>b.onclick=()=>{ATAB=b.dataset.at;panel()});
   $('#aout').onclick=async()=>{await SB.auth.signOut();ME=null;loginView()};
   if(!PUB&&ME.role==='owner')return seedPane();
-  ({review:reviewPane,publish:publishPane,brand:brandPane,drugs:drugsPane,team:teamPane,mine:minePane}[ATAB]||drugsPane)();
+  ({review:reviewPane,reports:reportsPane,publish:publishPane,brand:brandPane,drugs:drugsPane,team:teamPane,mine:minePane}[ATAB]||drugsPane)();
 }
 const pane=()=>$('#apane');
 const errBox=e=>`<div class="warn red">${esc(A('error'))}: ${esc(e&&e.message||String(e))}</div>`;
@@ -116,6 +117,16 @@ function diffHTML(c){const cur=current(c)||{};
     :k==='logo'?`<div class="rrow"><b>${esc(FIELD_NAME(k))}</b>${isLogo(c.data.logo)?`<img src="${esc(c.data.logo)}" alt="" class="h48">`:''}</div>`
     :`<div class="rrow"><b>${esc(FIELD_NAME(k))}</b><div class="hint m0 strike">${esc(show(cur[k]))}</div><div>${esc(show(c.data[k]))}</div></div>`).join('')}</div>`}
 async function memberNames(){const {data}=await SB.from('members').select('user_id,name,email');return Object.fromEntries((data||[]).map(m=>[m.user_id,m.name||m.email]))}
+
+/* error reports sent by visitors: open the page, mark as handled */
+async function reportsPane(){
+  const {data,error}=await SB.from('reports').select('id,page,msg,lang,created_at').eq('status','new').order('id',{ascending:false}).limit(100);
+  if(error)return pane().innerHTML=errBox(error);
+  const name=pg=>{const [g,id]=pg.split('/');const d=(INDEX||[]).find(x=>x.id===id&&(g==='v'?x.g==='vit':x.g!=='vit'));return d?LT(d.n):pg};
+  pane().innerHTML=`<section class="card"><h2><span class="ic">⚑</span>${esc(A('t_reports'))}<span class="cnt">${data.length}</span></h2><div class="ilist">${data.length?data.map(r=>`<div class="inter moderate"><div class="grow"><b>${esc(name(r.page))}</b><p>${esc(r.msg)}</p><p class="hint m0">${esc(String(r.created_at).slice(0,16).replace('T',' '))}</p></div>
+    <div class="fields"><a class="btn" href="#/${esc(r.page)}">${esc(A('open_page'))}</a><button class="btn" type="button" data-done="${r.id}">${esc(A('done'))}</button></div></div>`).join(''):`<p class="hint">${esc(A('no_reports'))}</p>`}</div></section>`;
+  $$('[data-done]').forEach(b=>b.onclick=async()=>{const {error}=await SB.rpc('report_done',{p_id:+b.dataset.done});if(error)return alert(error.message);reportsPane()});
+}
 
 /* publish: approved changes waiting, the note, the history with rollback */
 async function publishPane(){

@@ -9,12 +9,24 @@ require('fs').mkdirSync(out,{recursive:true});
   await p.goto(B,{waitUntil:'networkidle'});
   chk(await p.locator('.gcard').count()===5,n+' 5 group cards');
   await p.screenshot({path:out+n+'-home.png',fullPage:true});
+  for(const [q,want] of [['amoxicilin','Amoxicillin'],['اموكسلين','أموكسيسيلين'],['سبروفلوكساسين','سيبروفلوكساسين'],['azitromycin','Azithromycin']]){
+    await p.fill('#q',q);await p.waitForTimeout(60);chk((await p.locator('#sres a').first().innerText()).includes(want),n+' typo «'+q+'» finds '+want)}
   await p.fill('#q','اموكس');await p.waitForTimeout(100);
   chk(await p.locator('#sres a').count()>=2,n+' search finds amoxicillin (no hamza)');
   await p.locator('#sres a').first().click();await p.waitForSelector('#result .rbody');
   await p.fill('#val','15');await p.waitForTimeout(50);
   const big=await p.locator('#result .big').innerText();chk(big.includes('337.5'),n+' amox 15 kg severe = 337.5 mg, got '+big);
-  const mls=await p.locator('table.ml td.v').allInnerTexts();chk(mls.length===2&&mls[0].includes('8.4')&&mls[1].includes('4.2'),n+' mL 8.4 / 4.2: '+mls);
+  const mls=await p.locator('.rbody > table.ml td.v').allInnerTexts();chk(mls.length===2&&mls[0].includes('8.4')&&mls[1].includes('4.2'),n+' mL 8.4 / 4.2: '+mls);
+  if(n==='phone'){
+   // review line, reconstitution water, patient card (label 2.6, Table 3)
+   const head=await p.locator('.revline').innerText();chk(head.includes('2026-11-10')&&head.includes('2026-07-07'),'review date and label date shown: '+head);
+   await p.click('details.recon summary');const rec=await p.locator('details.recon').innerText();chk(rec.includes('36')&&rec.includes('76'),'water for 400 mg/5 mL 50 mL = 36 mL, 200 mg/5 mL 100 mL = 76 mL');
+   await p.click('#bcard');await p.waitForSelector('.pcard');let card=await p.locator('.pcard').innerText();
+   chk(card.includes('4.2')&&card.includes('400 mg / 5 mL')&&card.includes('رجّ'),'patient card: 4.2 mL of 400 mg/5 mL, shake well');
+   await p.click('[data-pk="200"]');card=await p.locator('.pcard').innerText();chk(card.includes('8.4'),'patient card: 200 mg/5 mL gives 8.4 mL');
+   await p.click('[data-cl="en"]');card=await p.locator('.pcard').innerText();chk(card.includes('Shake the bottle')&&card.includes('every 12 hours'),'patient card in English');
+   await p.screenshot({path:out+'phone-card.png'});await p.click('#pcclose');chk(!(await p.$('#sheet')),'card closes');
+  }
   await p.screenshot({path:out+n+'-amox.png',fullPage:true});
   const sw=await p.evaluate(()=>document.documentElement.scrollWidth-document.documentElement.clientWidth);chk(sw<=0,n+' no sideways scroll ('+sw+')');
   if(n==='phone'){

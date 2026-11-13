@@ -17,7 +17,17 @@ const PEDS = {
     ],
     def:'sev',
     duration:{ar:'48 إلى 72 ساعة بعد زوال الأعراض، و10 أيام على الأقل لعدوى المكورات العقدية الحالّة',en:'48–72 h after symptoms stop; at least 10 days for Streptococcus pyogenes'},
-    renalKids:{ar:'لا توجد توصيات جرعة للأطفال مع قصور الكلى في النشرة (2.3).',en:'The label gives no dose for children with impaired kidney function (2.3).'}
+    renalKids:{ar:'لا توجد توصيات جرعة للأطفال مع قصور الكلى في النشرة (2.3).',en:'The label gives no dose for children with impaired kidney function (2.3).'},
+    // label 2.6, Table 3: total water to add, by strength and bottle size (mL)
+    recon:{ref:'2.6',rows:{200:[[50,39],[75,57],[100,76]],400:[[50,36],[75,54],[100,71]]},
+      how:{ar:'انقر العبوة حتى يتحرك المسحوق، أضف ثلث الماء ورجّ بقوة، ثم أضف الباقي ورجّ بقوة مرة أخرى.',en:'Tap the bottle until the powder flows, add about 1/3 of the water and shake hard, then add the rest and shake hard again.'}},
+    // for the patient card: every sentence is from the label (2.1, 2.6)
+    patient:[
+      {ar:'رجّ العبوة جيداً قبل كل جرعة.',en:'Shake the bottle well before each dose.'},
+      {ar:'يُعطى مع بداية الوجبة.',en:'Give it at the start of a meal.'},
+      {ar:'ضع الكمية على لسان الطفل مباشرة، أو اخلطها مع الحليب أو العصير أو الماء البارد وأعطها فوراً.',en:'Put the dose straight on the child’s tongue, or mix it with milk, juice or cold water and give it at once.'},
+      {ar:'أغلق العبوة جيداً. يُفضّل حفظها في الثلاجة، وتُتلف الكمية المتبقية بعد 14 يوماً.',en:'Keep the bottle tightly closed. The fridge is preferred. Throw away what is left after 14 days.'}
+    ]
   }
 };
 if(typeof module!=='undefined')module.exports={PEDS};

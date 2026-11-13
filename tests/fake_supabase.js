@@ -16,6 +16,7 @@
     if(t==='published')return S.published?[S.published]:[];
     if(t==='history')return role()?S.history:[];
     if(t==='changes')return role()==='owner'?S.changes:role()?S.changes.filter(c=>c.author===S.session):null;
+    if(t==='reports')return role()==='owner'?(S.reports||[]):null;
     return [];
   };
   function query(t){
@@ -40,7 +41,9 @@
       S.history.unshift({version:cur.version,data:cur.data,note:cur.note,published_at:cur.published_at});S.published={id:1,version:v,data:old.data,note:'rollback to '+p_version,published_at:new Date().toISOString()};return {data:v,error:null}},
     invite_member({p_email,p_role,p_name}){if(role()!=='owner')return err('only the owner invites');S.invites[p_email.toLowerCase()]={role:p_role,name:p_name};return {data:null,error:null}},
     set_member_active({p_user,p_active}){if(role()!=='owner')return err('only the owner');if(p_user===S.session)return err('cannot stop own account');S.members[p_user].active=p_active;return {data:null,error:null}},
-    pending_invites(){return {data:role()==='owner'?Object.entries(S.invites).filter(([e,i])=>!i.used).map(([email,i])=>({email,role:i.role,name:i.name})):[],error:null}}
+    submit_report({p_page,p_msg,p_lang}){if(!/^[a-z]\/[a-z0-9_]{1,40}$/.test(p_page)||!p_msg||p_msg.length<5||/[<>]/.test(p_msg))return err('invalid report');S.reports=S.reports||[];S.reports.push({id:S.next++,page:p_page,msg:p_msg,lang:p_lang,status:'new',created_at:new Date().toISOString()});return {data:null,error:null}},
+    report_done({p_id}){if(role()!=='owner')return err('only the owner');const r=(S.reports||[]).find(x=>x.id===p_id);if(r)r.status='done';return {data:null,error:null}},
+        pending_invites(){return {data:role()==='owner'?Object.entries(S.invites).filter(([e,i])=>!i.used).map(([email,i])=>({email,role:i.role,name:i.name})):[],error:null}}
   };
   window.__fake=S;
   window.supabase={createClient(){return {

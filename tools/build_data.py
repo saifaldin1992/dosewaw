@@ -16,6 +16,9 @@ for n in range(1, 11):
     ab += json.load(open(C('antibiotics', f'batch{n}.json'), encoding='utf-8'))['drugs']
 keep = ('id', 'n', 'aware', 'cls', 'uses', 'dose', 'renal', 'timing', 'inter', 'src')
 ab = [{k: d[k] for k in keep if k in d} for d in ab]
+# the last pharmacist review of each drug (later reviews come from the owner panel, see 0003_review_and_reports.sql)
+rev = json.load(open(C('antibiotics', 'review.json'), encoding='utf-8'))
+for d in ab: d['rev'] = {'at': rev['at'], 'by': rev['by']}
 assert len(ab) == len({d['id'] for d in ab}) == 100, 'expected 100 unique antibiotics'
 dump('antibiotics.json', ab)
 

@@ -32,6 +32,9 @@
   /* رأس النتيجة عند الخطر (مثل نقص شديد) — Alert result */
   --alert:#7A1F14; --alert-deep:#4A120B;
 
+  /* بطاقة المريض (ورقة بيضاء دائماً، حتى في الوضع الليلي) — Patient card paper */
+  --paper:#FFFFFF; --paper-ink:#111111; --paper-mute:#555555;
+
   /* درجات خطورة التداخلات — Severity */
   --major:#B42318; --major-bg:#FDECEA;
   --mod:#9A5B00;   --mod-bg:#FFF4E0;

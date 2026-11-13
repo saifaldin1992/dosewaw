@@ -58,7 +58,7 @@ do $$ declare d jsonb := (select data from public.published); begin
 end $$;
 do $$ declare v int; begin v := public.rollback_to(1); assert v = 3, 'rollback is a new version'; end $$;
 do $$ begin assert (select data->'antibiotics'->0->'dose'->>'en' from public.published) = 'old', 'rollback restored version 1'; end $$;
-select pg_temp.expect_error($$select public.set_member_active('00000000-0000-0000-0000-000000000001', false)$$, 'owner stopping himself');
+select pg_temp.expect_error($$select public.set_member_active('00000000-0000-0000-0000-000000000001', false)$$, 'owner stopping their own account');
 select public.set_member_active('00000000-0000-0000-0000-000000000002', false);
 reset role; set role authenticated; select pg_temp.as_user('00000000-0000-0000-0000-000000000002');
 select pg_temp.expect_error($$select public.submit_change('drug','amox','{}')$$, 'stopped pharmacist submitting');

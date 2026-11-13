@@ -12,7 +12,16 @@ const LT=o=>o?L(o.ar,o.en):'';
 const T=(k,v)=>{let s=(I18N[k]||[k,k])[LANG==='en'?1:0];if(v)for(const n in v)s=s.split('{'+n+'}').join(v[n]);return s};
 const num=n=>{const r=Math.round(n*10)/10;return r.toLocaleString('en-US',{maximumFractionDigits:1})};
 /* Arabic-insensitive search: no diacritics or tatweel, one form of alef, ya and ta marbuta */
-const normAr=s=>String(s||'').toLowerCase().replace(/[ً-ٰٟـ]/g,'').replace(/[أإآٱ]/g,'ا').replace(/ى/g,'ي').replace(/ة/g,'ه').replace(/[–—\-]/g,' ').replace(/\s+/g,' ').trim();
+const normAr=s=>String(s||'').toLowerCase().replace(/[ً-ٰٟـ]/g,'').replace(/[أإآٱ]/g,'ا').replace(/ى/g,'ي').replace(/ة/g,'ه').replace(/ؤ/g,'و').replace(/ئ/g,'ي').replace(/[–—\-]/g,' ').replace(/\s+/g,' ').trim();
+/* spelling mistakes: the smallest number of edits that turns the query into any part of the name
+   (letters left out, added, swapped or wrong). «amoxicilin», «اموكسلين» still find amoxicillin. */
+function editIn(q,t){
+  q=q.replace(/\s/g,'');t=t.replace(/\s/g,'');if(!q)return 0;
+  let prev=new Array(t.length+1).fill(0),cur;
+  for(let i=1;i<=q.length;i++){cur=[i];for(let j=1;j<=t.length;j++)cur[j]=Math.min(prev[j]+1,cur[j-1]+1,prev[j-1]+(q[i-1]===t[j-1]?0:1));prev=cur}
+  return Math.min(...prev);
+}
+const allowedEdits=n=>n<4?0:n<6?1:n<9?2:3;
 
 /* ---------- groups (antibiotics and vitamins first; the three new groups come from official labels later) ---------- */
 const ICON={
@@ -99,7 +108,9 @@ function wireSearch(){
     if(!v&&!SG){out.innerHTML='';return}
     if(SG&&!GROUPS.find(g=>g.id===SG).live){out.innerHTML=`<p class="none">${esc(T('soon_long'))}</p>`;return}
     const list=(INDEX||[]).filter(d=>!SG||d.g===SG).map(d=>{const n=normAr(d.n.ar+' '+d.n.en),c=normAr(d.c.ar+' '+d.c.en);
-      const sc=!v?3:(normAr(d.n.ar).startsWith(v)||normAr(d.n.en).startsWith(v))?0:n.includes(v)?1:c.includes(v)?2:-1;return [sc,d]}).filter(x=>x[0]>=0)
+      let sc=!v?3:(normAr(d.n.ar).startsWith(v)||normAr(d.n.en).startsWith(v))?0:n.includes(v)?1:c.includes(v)?2:-1;
+      if(sc<0&&v.length>=4){const e=Math.min(editIn(v,normAr(d.n.ar)),editIn(v,normAr(d.n.en)));if(e<=allowedEdits(v.length))sc=2.5+e/10}
+      return [sc,d]}).filter(x=>x[0]>=0)
       .sort((a,b)=>a[0]-b[0]||LT(a[1].n).localeCompare(LT(b[1].n),LANG)).slice(0,v?12:200).map(x=>x[1]);
     out.innerHTML=list.length?list.map(d=>`<a href="${HREF(d)}"><b>${esc(LT(d.n))}</b>${LANG==='ar'?`<span class="en">${esc(d.n.en)}</span>`:''}<span class="c">${esc(LT(d.c))}</span></a>`).join(''):`<p class="none">${esc(T('none_found'))}</p>`;
   };
@@ -149,7 +160,7 @@ async function viewDrug(id){
   <div class="dhead">
     <div class="dicon" aria-hidden="true">${ICON.ab}</div>
     <div><h1>${esc(LT(d.n))}${LANG==='ar'?` <span class="en">${esc(d.n.en)}</span>`:''}</h1>
-      <div class="tags"><span class="tag">${esc(LT(d.cls))}</span>${d.aware?`<span class="tag access">AWaRe · ${esc(d.aware[0].toUpperCase()+d.aware.slice(1))}</span>`:''}</div></div>
+      <div class="tags"><span class="tag">${esc(LT(d.cls))}</span>${d.aware?`<span class="tag access">AWaRe · ${esc(d.aware[0].toUpperCase()+d.aware.slice(1))}</span>`:''}</div>${revLine(d,src)}</div>
     <button class="star" type="button" id="fav" aria-pressed="${fav}" aria-label="${esc(T(fav?'fav_rm':'fav_add'))}">${fav?'★':'☆'}</button>
   </div>
   <div class="grid">
@@ -172,13 +183,13 @@ async function viewDrug(id){
       <section class="card" id="opts" hidden></section>
     </div>
     <div class="info" id="info"></div>
-  </div>`;
+  </div>${reportBtn()}`;
   wireSearch();
   $('#fav').onclick=()=>{toggleFav(id);const on=favs().includes(id);$('#fav').textContent=on?'★':'☆';$('#fav').setAttribute('aria-pressed',on);$('#fav').setAttribute('aria-label',T(on?'fav_rm':'fav_add'))};
   $$('[data-mode]').forEach(b=>b.onclick=()=>{PT.mode=b.dataset.mode;$$('[data-mode]').forEach(x=>x.setAttribute('aria-pressed',String(x===b)));PT.val='';$('#val').value='';calc();$('#val').focus()});
   const bind=(sel,key,ev='input')=>{const e=$(sel);if(e)e.addEventListener(ev,()=>{PT[key]=e.type==='checkbox'?e.checked:e.value;calc()})};
   bind('#val','val');bind('#inf','infant','change');bind('#kage','age');bind('#ksex','sex','change');bind('#kht','ht');bind('#kscr','scr');bind('#kscru','scrU','change');
-  drawInfo();calc();
+  drawInfo();calc();wireReport('d/'+id);
 }
 
 /* the patient as numbers. W = actual or estimated weight; months = age in months when entered by age */
@@ -206,10 +217,10 @@ function srcLine(ids,label,ref){
   const s=(ids||[]).map(i=>D.src.find(x=>x.id===i)).filter(Boolean)[0];
   return `<p class="src">${esc(T('by_src'))} ${s?`<a href="#" data-ref="${s.id}">${esc(s.title)} [${s.id}]</a>`:''}${label?' · '+esc(label):''}${ref?' · '+esc(T('label_v',{r:ref})):''}</p>`;
 }
-function actions(){return `<div class="acts"><button class="btn pri" type="button" id="bcopy">${esc(T('copy'))}</button><button class="btn" type="button" id="bprint">${esc(T('print'))}</button><button class="btn" type="button" id="bshare">${esc(T('share'))}</button></div>`}
+function actions(card){return `${card?`<button class="btn pri w100 mt12" type="button" id="bcard">🪪 ${esc(T('pcard'))}</button>`:''}<div class="acts"><button class="btn${card?'':' pri'}" type="button" id="bcopy">${esc(T('copy'))}</button><button class="btn" type="button" id="bprint">${esc(T('print'))}</button><button class="btn" type="button" id="bshare">${esc(T('share'))}</button></div>`}
 function wireActions(){
   const head=()=>LT(D.d.n)+' · '+new Date().toISOString().slice(0,10)+' · DOSEWAW';
-  const body=()=>head()+'\n\n'+$('#result').innerText.replace(new RegExp(T('copy')+'|'+T('print')+'|'+T('share'),'g'),'').replace(/\n{3,}/g,'\n\n').trim();
+  const body=()=>head()+'\n\n'+$('#result').innerText.replace(new RegExp(T('copy')+'|'+T('print')+'|'+T('share')+'|🪪 '+T('pcard'),'g'),'').replace(/\n{3,}/g,'\n\n').trim();
   $('#bcopy').onclick=()=>copyText(body());$('#bprint').onclick=()=>window.print();
   $('#bshare').onclick=async()=>{if(navigator.share){try{await navigator.share({title:head(),text:body()})}catch(e){}}else copyText(body())};
 }
@@ -225,8 +236,10 @@ function pedsResult(P){
     <div class="sub">${esc(T('every',{h:r.every}))} · ${esc(T('per_day',{m:r.mgkgday,n:24/r.every}))}</div></div>
     <div class="rbody">${table}${warn}
     <div class="facts"><div class="fact"><b>${esc(T('daily'))}</b><span class="num">${num(r.daily)} mg</span></div><div class="fact"><b>${esc(T('duration'))}</b><span>${esc(LT(peds.duration))}</span></div></div>
-    ${srcLine(peds.srcIds,'',r.ref)}${actions()}</div>`;
+    ${peds.recon&&r.ml.length?reconHTML(peds,best):''}
+    ${srcLine(peds.srcIds,'',r.ref)}${actions(true)}</div>`;
   wireActions();
+  $('#bcard').onclick=()=>patientCard({kind:'peds',r,best});
   const O=$('#opts');O.hidden=false;
   O.innerHTML=`<div class="lbl first">${esc(T('ind'))}</div><div class="opts" role="group" aria-label="${esc(T('ind'))}">${peds.inds.map(i=>`<button type="button" class="opt" data-ind="${i.id}" aria-pressed="${i.id===s.ind}"><i></i>${esc(LT(i.n))}</button>`).join('')}</div>
     ${P.infant?'':`<div class="lbl">${esc(T('freq'))}</div><div class="seg two" role="group" aria-label="${esc(T('freq'))}">${peds.freq.map(f=>`<button type="button" data-every="${f}" aria-pressed="${f===s.every}">${esc(T('every',{h:f}))}</button>`).join('')}</div>`}`;
@@ -251,14 +264,90 @@ function adultResult(P){
   R.innerHTML=`<div class="rhead"><div class="k"><span>${esc(T('result'))}${main?' · '+esc(LT(main.k)):''}</span><span>${P.W?num(P.W)+' '+esc(T('u_kg'))+(P.est?' ≈':''):''}</span></div>
     <div class="bigtxt">${main?esc(LT(main.v)):'—'}</div></div>
     <div class="rbody">${kidsWarn?`<div class="warn">${esc(T('kids_adult_calc',{r:rule.pedsRef?' ('+rule.pedsRef+')':''}))}</div>`:''}
-    <div class="rrows">${rowsH}</div>${crH}${egH}<p class="hint">${esc(LT(r.notes))}</p>${srcLine(rule.srcIds,rule.label)}${actions()}</div>`;
+    <div class="rrows">${rowsH}</div>${crH}${egH}<p class="hint">${esc(LT(r.notes))}</p>${srcLine(rule.srcIds,rule.label)}${actions(!!main)}</div>`;
   wireActions();
+  if(main)$('#bcard').onclick=()=>patientCard({kind:'adult',text:main.v});
   if(!rule.inputs.length){O.hidden=true;O.innerHTML='';return}
   O.hidden=false;
   O.innerHTML=`<div class="lbl first">${esc(T('options'))}</div><div class="fields">${rule.inputs.map(f=>f.type==='select'
     ?`<div class="fld"><label for="ab_${f.id}">${esc(LT(f.label))}</label><select id="ab_${f.id}">${f.options.map(o=>`<option value="${esc(o[0])}"${x[f.id]===o[0]?' selected':''}>${esc(LT(o[1]))}</option>`).join('')}</select></div>`
     :`<label class="chk"><input type="checkbox" id="ab_${f.id}"${x[f.id]?' checked':''}><span>${esc(LT(f.label))}</span></label>`).join('')}</div>`;
   rule.inputs.forEach(f=>{const e=$('#ab_'+f.id);e.onchange=()=>{x[f.id]=f.type==='select'?e.value:e.checked;calc()}});
+}
+
+/* how much water to add, per bottle size, for the suspension strengths in the label */
+function reconHTML(peds,best){
+  const rows=peds.recon.rows,sizes=(rows[best]||Object.values(rows)[0]).map(x=>x[0]);
+  return `<details class="recon mt10"${PT.reconOpen?' open':''}><summary>💧 ${esc(T('recon'))}</summary>
+    <table class="ml"><tr><th>${esc(T('susp'))}</th>${sizes.map(v=>`<th class="ta-e">${esc(T('bottle',{v}))}</th>`).join('')}</tr>
+    ${Object.entries(rows).map(([c,list])=>`<tr class="${+c===best?'best':''}"><td><span class="num">${c} mg / 5 mL</span></td>${list.map(x=>`<td class="v">${x[1]} <small>${esc(T('ml'))}</small></td>`).join('')}</tr>`).join('')}</table>
+    <p class="hint">${esc(LT(peds.recon.how))} (${esc(T('label_v',{r:peds.recon.ref}))})</p></details>`;
+}
+document.addEventListener('toggle',e=>{if(e.target.classList&&e.target.classList.contains('recon'))PT.reconOpen=e.target.open},true);
+
+/* ---------- patient card: plain words for the patient, in Arabic or English, to print or send ---------- */
+let CARDL=null;
+function patientCard(o){
+  const {d,peds}=D;CARDL=CARDL||LANG;
+  const CT=o2=>o2?(CARDL==='en'?o2.en:o2.ar):'';
+  const tk=(k,v)=>{let s2=(I18N[k]||[k,k])[CARDL==='en'?1:0];if(v)for(const n in v)s2=s2.split('{'+n+'}').join(v[n]);return s2};
+  let pick=o.best,lines=[],tips=[];
+  const draw=()=>{
+    if(o.kind==='peds'){const x=o.r.ml.find(m=>m.c===pick)||o.r.ml[0];
+      lines=[[tk('pc_med'),`${CT(d.n)} · ${tk('pc_susp')} ${x.c} mg / 5 mL`],[tk('pc_dose'),`${num(mlRound(x.ml))} ${tk('ml')}`],
+        [tk('pc_when'),tk('pc_every',{h:o.r.every,n:24/o.r.every})],[tk('duration'),CT(peds.duration)]];
+      tips=peds.patient?peds.patient.map(CT):[];
+    }else{lines=[[tk('pc_med'),CT(d.n)],[tk('pc_dose'),CT(o.text)]];tips=[];
+      const t=CT(d.timing).split(/[.؛]/)[0].trim();if(t&&!/label|ملصق|نشرة/i.test(t))lines.push([tk('pc_how'),t]);}
+    $('#pcard').innerHTML=`<div class="pcard" dir="${CARDL==='en'?'ltr':'rtl'}" lang="${CARDL}">
+      <div class="pc-h"><b>${esc((window.BRAND&&window.BRAND.name||['DOSE','WAW']).join(''))}</b><span>${new Date().toISOString().slice(0,10)}</span></div>
+      <dl>${lines.map(([k,v])=>`<dt>${esc(k)}</dt><dd>${esc(v)}</dd>`).join('')}</dl>
+      ${tips.length?`<ul>${tips.map(t=>`<li>${esc(t)}</li>`).join('')}</ul>`:''}
+      <p class="pc-f">${esc(tk('pc_foot'))}</p></div>
+    ${o.kind==='peds'&&o.r.ml.length>1?`<div class="lbl">${esc(T('susp'))}</div><div class="seg two">${o.r.ml.map(m=>`<button type="button" data-pk="${m.c}" aria-pressed="${m.c===pick}">${m.c} mg / 5 mL</button>`).join('')}</div>`:''}
+    <div class="lbl">${esc(T('pc_lang'))}</div><div class="seg two"><button type="button" data-cl="ar" aria-pressed="${CARDL==='ar'}">العربية</button><button type="button" data-cl="en" aria-pressed="${CARDL==='en'}">English</button></div>
+    <div class="acts"><button class="btn pri" type="button" id="pcprint">${esc(T('print'))}</button><button class="btn" type="button" id="pcshare">${esc(T('share'))}</button><button class="btn" type="button" id="pcclose">${esc(T('close'))}</button></div>`;
+    $$('[data-pk]').forEach(b=>b.onclick=()=>{pick=+b.dataset.pk;draw()});
+    $$('[data-cl]').forEach(b=>b.onclick=()=>{CARDL=b.dataset.cl;draw()});
+    const text=()=>lines.map(([k,v])=>k+': '+v).concat(tips.map(t=>'• '+t)).join('\n');
+    $('#pcprint').onclick=()=>{document.body.classList.add('printcard');const done=()=>{document.body.classList.remove('printcard');removeEventListener('afterprint',done)};addEventListener('afterprint',done);window.print();setTimeout(done,1500)};
+    $('#pcshare').onclick=async()=>{if(navigator.share){try{await navigator.share({title:CT(d.n),text:text()})}catch(e){}}else copyText(text())};
+    $('#pcclose').onclick=closeSheet;
+  };
+  openSheet('pcard',T('pcard'));draw();
+}
+/* a floating window above the page (patient card, error report) */
+function openSheet(id,title){
+  closeSheet();const s=document.createElement('div');s.className='sheet';s.id='sheet';s.setAttribute('role','dialog');s.setAttribute('aria-modal','true');s.setAttribute('aria-label',title);
+  s.innerHTML=`<div class="sheet-in"><div class="sheet-h"><b>${esc(title)}</b><button type="button" class="ib2" id="sheetx" aria-label="${esc(T('close'))}">×</button></div><div id="${id}"></div></div>`;
+  document.body.appendChild(s);$('#sheetx').onclick=closeSheet;s.addEventListener('click',e=>{if(e.target===s)closeSheet()});
+  document.addEventListener('keydown',escClose);
+}
+function escClose(e){if(e.key==='Escape')closeSheet()}
+function closeSheet(){const s=$('#sheet');if(s)s.parentNode.removeChild(s);document.removeEventListener('keydown',escClose)}
+
+
+/* «last review» line: the pharmacist review recorded with the drug, and the date of its official label */
+function revLine(d,src){
+  const lab=(d.src||[]).map(i=>src.find(x=>x.id===i)).find(x=>x&&x.kind==='d'),m=lab&&String(lab.org).match(/\d{4}-\d{2}-\d{2}/);
+  if(!d.rev&&!m)return '';
+  return `<div class="revline">${d.rev?`<span>✔ ${esc(T('rev'))}: <b>${esc(d.rev.at)}</b> · ${esc(LT(d.rev.by))}</span>`:''}${m?`<span>${esc(T('label_date'))}: <bdi>${esc(m[0])}</bdi></span>`:''}</div>`;
+}
+
+/* ---------- report an error: a short note to the owner (public function submit_report, limited in the database) ---------- */
+const reportBtn=()=>window.DW_CFG?`<button type="button" class="report-btn" id="brep">⚑ ${esc(T('report'))}</button>`:'';
+function wireReport(page){
+  const b=$('#brep');if(!b)return;
+  b.onclick=()=>{openSheet('rep',T('report_t'));
+    $('#rep').innerHTML=`<p class="hint m0 mb10">${esc(T('report_p'))}</p><textarea id="rept" class="ta" rows="4" maxlength="500"></textarea>
+      <div class="acts two"><button class="btn pri" type="button" id="reps">${esc(T('report_send'))}</button><button class="btn" type="button" id="repc">${esc(T('close'))}</button></div><p class="hint" id="repm" role="status"></p>`;
+    $('#repc').onclick=closeSheet;
+    $('#reps').onclick=async()=>{const msg=$('#rept').value.trim();if(msg.length<5||/[<>]/.test(msg))return $('#repm').textContent=T('report_short');
+      $('#reps').disabled=true;
+      try{const C=window.DW_CFG,r=await fetch(C.url+'/rest/v1/rpc/submit_report',{method:'POST',headers:{apikey:C.anon,'Content-Type':'application/json'},body:JSON.stringify({p_page:page,p_msg:msg,p_lang:LANG})});
+        if(!r.ok)throw new Error(r.status);$('#rep').innerHTML=`<p class="prose">${esc(T('report_ok'))}</p><button class="btn w100" type="button" id="repc2">${esc(T('close'))}</button>`;$('#repc2').onclick=closeSheet}
+      catch(e){$('#repm').textContent=T('report_err');$('#reps').disabled=false}};
+    $('#rept').focus()};
 }
 
 /* the information part of the drug page: interactions, kidney, dose per label, dispensing, uses, sources */
@@ -305,7 +394,7 @@ async function viewVit(k){
   <div class="grid"><div class="calc-col">
     <section class="card vform" aria-labelledby="pt"><h2 id="pt"><span class="ic">👤</span>${esc(T('patient'))}</h2><div id="vform">${VIT.FORM}</div></section>
     <section class="card result" aria-live="polite" id="result"></section>
-  </div><div class="info" id="info"></div></div>`;
+  </div><div class="info" id="info"></div></div>${reportBtn()}`;
   wireSearch();
   $('#fav').onclick=()=>{toggleFav(k);const on=favs().includes(k);$('#fav').textContent=on?'★':'☆';$('#fav').setAttribute('aria-pressed',on)};
   const F=$('#vform');
@@ -317,7 +406,7 @@ async function viewVit(k){
   F.querySelectorAll('input,select').forEach(e=>{if(e.id in VPT){if(e.type==='checkbox')e.checked=VPT[e.id];else e.value=VPT[e.id]}});
   const go=e=>{if(e&&e.target&&e.target.id)VPT[e.target.id]=e.target.type==='checkbox'?e.target.checked:e.target.value;vitCalc(k)};
   F.addEventListener('input',go);F.addEventListener('change',go);
-  vitCalc(k);vitInfo(k);
+  vitCalc(k);vitInfo(k);wireReport('v/'+k);
 }
 function vitCalc(k){
   const R=$('#result');let out;

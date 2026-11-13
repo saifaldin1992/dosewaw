@@ -10,7 +10,7 @@ const FAKE=fs.readFileSync(path.join(__dirname,'fake_supabase.js'),'utf8');
  const errs=[];let ok=0;const chk=(v,m)=>{if(v)ok++;else errs.push('FAIL '+m)};
  p.on('pageerror',e=>errs.push('pageerror: '+e.message));p.on('dialog',d=>{if(d.type()==='alert')errs.push('alert: '+d.message());d.accept()});
  await p.route('**/supabase-js@2.45.4/**',r=>r.fulfill({body:FAKE,contentType:'text/javascript'}));
- await p.route('**/js/config.js*',r=>r.fulfill({body:'window.DW_CFG={url:"https://fake",anon:"x",test:true};',contentType:'text/javascript'}));
+ await p.route('**/js/config.js*',r=>r.fulfill({body:'window.DW_CFG={url:"https://oqynswsbhtgnnuyjwrea.supabase.co",anon:"x",test:true};',contentType:'text/javascript'}));
  const go=async h=>{await p.goto(B+'#/'+h);await p.waitForTimeout(300)};
  // the owner creates the account (invited), signs in, seeds
  await go('admin');await p.waitForSelector('#lf');
@@ -57,4 +57,16 @@ const FAKE=fs.readFileSync(path.join(__dirname,'fake_supabase.js'),'utf8');
  chk(pub.data.antibiotics.find(d=>d.id==='cipro').inter.some(i=>i.with.en==='Theophylline'&&i.sev==='major'),'pharmacist interaction published after approval');
  await p.click('[data-at="publish"]');await p.waitForSelector('[data-rb]');await p.screenshot({path:out+'admin-publish.png',fullPage:true});
  await p.click('[data-rb="1"]');await p.waitForTimeout(300);chk((await p.evaluate(()=>window.__fake.published.version))===3,'rollback makes version 3');
+ // a visitor reports an error; the owner sees and closes it
+ let sent=null;await p.route("https://oqynswsbhtgnnuyjwrea.supabase.co/rest/v1/rpc/submit_report",r=>{sent=JSON.parse(r.request().postData());r.fulfill({status:204,body:''})});
+ await go('d/amox');await p.waitForSelector('#brep');await p.click('#brep');await p.fill('#rept','x');await p.click('#reps');
+ chk((await p.innerText('#repm')).length>0,'too short report refused in the page');
+ await p.fill('#rept','الجرعة تختلف عن النشرة');await p.click('#reps');await p.waitForTimeout(300);
+ chk(sent&&sent.p_page==='d/amox'&&sent.p_msg==='الجرعة تختلف عن النشرة','report sent with page and text');
+ chk((await p.innerText('#rep')).includes('شكراً'),'report thanks shown');await p.click('#repc2');
+ await p.evaluate(()=>{const S=window.__fake;S.reports=[{id:999,page:'d/amox',msg:'الجرعة تختلف عن النشرة',status:'new',created_at:new Date().toISOString()}];sessionStorage.setItem('__fake',JSON.stringify(S))});
+ await go('admin');await p.waitForSelector('[data-at="reports"]');await p.click('[data-at="reports"]');await p.waitForSelector('[data-done]');
+ chk((await p.innerText('#apane')).includes('أموكسيسيلين'),'report listed with the drug name');
+ await p.screenshot({path:out+'admin-reports.png',fullPage:true});
+ await p.click('[data-done]');await p.waitForTimeout(200);chk((await p.innerText('#apane')).includes('لا توجد بلاغات'),'report closed');
  console.log('ok',ok);console.log(errs.length?errs.join('\n'):'no errors');await b.close();process.exit(errs.length?1:0)})();

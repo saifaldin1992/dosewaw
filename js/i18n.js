@@ -60,7 +60,17 @@ const I18N = {
   about_p:['مرجع جرعات مجاني للصيادلة، بالعربية والإنجليزية، يعمل على الجوال وبدون إنترنت بعد أول زيارة.','A free dose reference for pharmacists, in Arabic and English, that works on phones and offline after the first visit.'],
   offline:['يعمل بدون إنترنت','Works offline'], back:['رجوع','Back'], loading:['جارٍ التحميل…','Loading…'],
   load_err:['تعذر تحميل البيانات. تحقق من الاتصال ثم أعد المحاولة.','Could not load the data. Check the connection and try again.'],
-  aware:['AWaRe','AWaRe']
+  aware:['AWaRe','AWaRe'],
+  pcard:['بطاقة المريض','Patient card'], close:['إغلاق','Close'], pc_lang:['لغة البطاقة','Card language'],
+  pc_med:['الدواء','Medicine'], pc_susp:['شراب','suspension'], pc_dose:['الجرعة','Dose'], pc_when:['المواعيد','When'],
+  pc_every:['كل {h} ساعة ({n} مرات في اليوم)','every {h} hours ({n} times a day)'], pc_how:['طريقة الأخذ','How to take'],
+  pc_foot:['أكمل المدة كاملة حتى لو تحسنت الأعراض، إلا إذا قال الطبيب غير ذلك. لأي سؤال راجع الصيدلي.','Finish the full course even if you feel better, unless the doctor says otherwise. Ask the pharmacist about anything.'],
+  recon:['تحضير الشراب: كمية الماء لكل عبوة','Mixing: water for each bottle'], bottle:['عبوة {v} مل','{v} mL bottle'],
+  rev:['آخر مراجعة','Last review'], label_date:['النشرة','Label'],
+  report:['أبلغ عن خطأ في هذه الصفحة','Report an error on this page'], report_t:['الإبلاغ عن خطأ','Report an error'],
+  report_p:['صف الخطأ باختصار، ومن أين يأتي الرقم الصحيح إن أمكن. لا تكتب أي بيانات للمريض.','Describe the error briefly, and where the correct number comes from if you can. Do not write any patient data.'],
+  report_send:['إرسال','Send'], report_ok:['شكراً، وصل البلاغ وسيراجعه الصيدلي المسؤول.','Thank you. The report reached the reviewing pharmacist.'],
+  report_err:['تعذر الإرسال الآن. حاول لاحقاً.','Could not send now. Please try later.'], report_short:['اكتب 5 أحرف على الأقل، بدون < أو >.','Write at least 5 characters, without < or >.']
 };
 
 /* owner panel (js/admin.js) */
@@ -106,6 +116,7 @@ Object.assign(I18N,{
   a_s_pending:['ينتظر','Waiting'], a_s_approved:['معتمد','Approved'], a_s_rejected:['مرفوض','Rejected'], a_s_applied:['منشور','Published'], a_none_yet:['لا توجد تعديلات بعد.','No changes yet.'],
   a_stop:['إيقاف','Stop'], a_restore:['إعادة','Restore'], a_invited:['دعوات لم تُستعمل بعد','Invitations not used yet'], a_invite:['دعوة صيدلي','Invite a pharmacist'],
   a_name:['الاسم','Name'], a_invite_b:['إرسال الدعوة','Invite'], a_invite_h:['يدخل الصيدلي إلى «لوحة المالك» وينشئ حسابه بنفس البريد. لا تُرسل رسالة تلقائية: أخبره بنفسك.','The pharmacist opens «Owner panel» and creates the account with the same e-mail. No e-mail is sent: tell them yourself.'],
-  a_bad_email:['البريد غير صحيح.','Invalid e-mail.'], a_d_added:['مضاف','Added'], a_d_removed:['محذوف','Removed'], a_d_changed:['معدّل','Changed'],
+  a_bad_email:['البريد غير صحيح.','Invalid e-mail.'],
+  a_t_reports:['البلاغات','Reports'], a_no_reports:['لا توجد بلاغات جديدة.','No new reports.'], a_done:['تمت المعالجة','Handled'], a_open_page:['فتح الصفحة','Open the page'], a_d_added:['مضاف','Added'], a_d_removed:['محذوف','Removed'], a_d_changed:['معدّل','Changed'],
   a_dark_h:['اتركه فارغاً ليبقى كما هو.','Leave empty to keep it as it is.'], a_invited_ok:['تمت الدعوة','Invited']
 });
