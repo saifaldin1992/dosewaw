@@ -74,11 +74,47 @@
  {
   "id": 152,
   "org": "World Health Organization, 2010",
-  "title": "WHO Model Formulary for Children 2010 (section 3: chlorphenamine)",
+  "title": "WHO Model Formulary for Children 2010 (section 3: chlorphenamine, dexamethasone, hydrocortisone, prednisolone)",
   "url": "https://iris.who.int/handle/10665/44309",
   "kind": "g",
-  "use_ar": "جرعات الكلورفينيرامين للأطفال من سنة، والكلى والكبد",
-  "use_en": "Chlorphenamine doses for children from 1 year; kidney and liver",
+  "use_ar": "جرعات الكلورفينيرامين والبريدنيزولون للأطفال، والكلى والكبد، وتداخلات الكورتيزونات",
+  "use_en": "Chlorphenamine and prednisolone doses for children; kidney and liver; corticosteroid interactions",
   "evidence": "content/antihistamines/who_mfc_2010_3.txt"
+ },
+ {
+  "id": 154,
+  "label": "prednisolone_sol",
+  "use_ar": "جرعات محلول البريدنيزولون للكبار والأطفال، وجرعة الربو، والتحذيرات",
+  "use_en": "Prednisolone oral solution doses for adults and children, asthma burst, warnings"
+ },
+ {
+  "id": 155,
+  "label": "prednisone",
+  "use_ar": "جرعات البريدنيزون، ووقت الأخذ، والتداخلات",
+  "use_en": "Prednisone doses, timing, interactions"
+ },
+ {
+  "id": 156,
+  "label": "dexamethasone",
+  "use_ar": "جرعات الديكساميثازون للكبار والأطفال، وتكافؤ الكورتيزونات",
+  "use_en": "Dexamethasone doses for adults and children; corticosteroid equivalents"
+ },
+ {
+  "id": 157,
+  "label": "methylprednisolone",
+  "use_ar": "جرعات الميثيل بريدنيزولون والتحذيرات",
+  "use_en": "Methylprednisolone doses and warnings"
+ },
+ {
+  "id": 158,
+  "label": "hydrocortisone",
+  "use_ar": "جرعات الهيدروكورتيزون والتحذيرات",
+  "use_en": "Hydrocortisone doses and warnings"
+ },
+ {
+  "id": 159,
+  "label": "prednisolone_syr",
+  "use_ar": "محلول البريدنيزولون 15 ملغ/5 مل",
+  "use_en": "Prednisolone oral solution 15 mg/5 mL"
  }
 ]

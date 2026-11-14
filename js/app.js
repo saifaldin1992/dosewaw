@@ -345,7 +345,7 @@ function adultResult(P){
 /* children of the analgesics group: the label chart (by age or weight) or mg per kg (WHO / prescription label) */
 function bandResult(P){
   const {d,band}=D,R=$('#result'),O=$('#opts');
-  const x=PT.x[d.id+'_kid']||(PT.x[d.id+'_kid']={why:'fever',hot:false});
+  const x=PT.x[d.id+'_kid']||(PT.x[d.id+'_kid']={why:band.defWhy||'fever',hot:false});
   const extra=(PT.conc[d.id]||[]);
   const r=bandCalc(band,P,x,extra);
   const head=(big,sub)=>`<div class="rhead"><div class="k"><span>${esc(T('result'))}</span><span>${P.W&&!band.ageOnly?num(P.W)+' '+esc(T('u_kg'))+(P.est?' ≈':''):''}</span></div>${big}${sub?`<div class="sub">${sub}</div>`:''}</div>`;
@@ -356,35 +356,35 @@ function bandResult(P){
   if(r.kind==='needW'){R.innerHTML=`<div class="empty">${esc(T('need_weight'))}</div>`;return}
   if(r.kind==='needAge'){R.innerHTML=`<div class="empty">${esc(T('need_age_chart'))}</div>`;return}
   const best=easiest(r.ml),row=r.row||{};
-  const ev=row.freq?LT(row.freq):r.everyH[0]===r.everyH[1]?T('every',{h:r.everyH[0]}):T('every_r',{a:r.everyH[0],b:r.everyH[1]});
-  const lim=row.max?LT(row.max):r.maxDoses?T('max_doses',{n:r.maxDoses}):r.maxDay?T('max_day',{m:num(r.maxDay)}):'';
+  const ev=r.w&&r.w.freq?LT(r.w.freq):row.freq?LT(row.freq):r.everyH[0]===r.everyH[1]?T('every',{h:r.everyH[0]}):T('every_r',{a:r.everyH[0],b:r.everyH[1]});
+  const lim=r.kind==='mgkgRange'?(r.w.maxMg?T('max_day',{m:r.w.maxMg}):''):row.max?LT(row.max):r.maxDoses?T('max_doses',{n:r.maxDoses}):r.maxDay?T('max_day',{m:num(r.maxDay)}):'';
   const mlx=q=>{const two=r.ml2&&r.ml2.find(z=>z.c===q.c);return num(mlRound(q.ml))+(two?'–'+num(mlRound(two.ml)):'')};
   const why=r.kind==='chart'&&r.row.lb?T(r.by==='age'?'by_age_chart':'by_wt_chart',{a:r.row.age[0]===r.row.age[1]?r.row.age[0]:r.row.age[0]+'–'+r.row.age[1],l:r.row.lb[0]+'–'+r.row.lb[1],k:num(r.row.lb[0]/LB)+'–'+num((r.row.lb[1]+1)/LB)})
     :T('by_mgkg',{m:r.mgkg});
-  const whyTxt=r.kind==='chart'&&!row.lb?T('by_age_chart',{a:row.age[0]===row.age[1]?row.age[0]:row.age[0]+'–'+row.age[1]}):why;
+  const whyTxt=r.kind==='mgkgRange'?T('by_mgkg_day',{a:r.w.mgkgDay[0],b:r.w.mgkgDay[1]}):r.kind==='chart'&&!row.lb?T('by_age_chart',{a:row.age[0]===row.age[1]?row.age[0]:row.age[0]+'–'+row.age[1]}):why;
   const warns=[];
   if(r.kind==='mgkg'&&r.seg.note)warns.push(`<div class="warn">${esc(LT(r.seg.note))}</div>`);
-  if(r.capped)warns.push(`<div class="warn red">${esc(T('cap_mg',{m:r.seg.maxMg}))}</div>`);
+  if(r.capped)warns.push(`<div class="warn red">${esc(r.kind==='mgkgRange'?T('cap_day_src',{m:r.w.maxMg}):T('cap_mg',{m:r.seg.maxMg}))}</div>`);
   // weight only and under the chart: the youngest age rule cannot be checked, so it is said
   const doc=band.segs.find(s2=>s2.kind==='doctor');
-  if(PT.mode==='w'&&r.kind==='mgkg'&&doc)warns.push(`<div class="warn">${esc(T('if_younger',{m:doc.ageM[1]}))} ${esc(LT(doc.msg))}</div>`);
+  if(PT.mode==='w'&&(r.kind==='mgkg')&&doc)warns.push(`<div class="warn">${esc(T('if_younger',{m:doc.ageM[1]}))} ${esc(LT(doc.msg))}</div>`);
   if(r.kind==='chart'&&PT.mode==='w')warns.push(`<p class="hint">${esc(T('adult_use_age'))}</p>`);
   const table=`<table class="ml"><tr><th>${esc(T('susp'))}</th><th class="ta-e">${esc(T('per_dose'))}</th></tr>${r.ml.map(q=>`<tr class="${q.c===best?'best':''}"><td><span class="num">${q.c} mg / 5 mL</span>${q.c===best?` <small class="easy">· ${esc(T('easiest'))}</small>`:''}${band.strengths.some(s2=>s2.c===q.c)?'':` <small class="hint">· ${esc(T('your_conc'))}</small>`}</td><td class="v">${mlx(q)} <small>${esc(T('ml'))}</small></td></tr>`).join('')}</table>
     <div class="conc mt8"><input id="conc" inputmode="decimal" placeholder="${esc(T('conc_ph'))}" aria-label="${esc(T('conc_ph'))}"><span>mg / 5 mL</span><button class="btn" type="button" id="concadd">${esc(T('conc_add'))}</button></div>`;
   const noLiquid=!band.strengths.length&&!extra.length;
-  R.innerHTML=head(`<div class="big">${num(r.mg)}${r.mg2?'–'+num(r.mg2):''} <small>${esc(T(r.seg.perDay?'mg_day':'mg'))}</small></div>`,`${esc(ev)}${lim?' · '+esc(lim):''}`)+
+  R.innerHTML=head(`<div class="big">${num(r.mg)}${r.mg2?'–'+num(r.mg2):''} <small>${esc(T(r.perDay||r.seg.perDay?'mg_day':'mg'))}</small></div>`,`${esc(ev)}${lim?' · '+esc(lim):''}`)+
     `<div class="rbody">${noLiquid?'':table}${warns.join('')}<p class="hint">${esc(whyTxt)}</p>
     <div class="facts"><div class="fact"><b>${esc(T('duration'))}</b><span>${esc(LT(band.duration))}</span></div><div class="fact"><b>${esc(T('pc_when'))}</b><span>${esc(ev)}</span></div></div>
-    ${srcLine([r.seg.ref])}${actions(true)}</div>`;
+    ${srcLine(r.ref?[r.ref,...(r.capped&&r.w.maxRef?[r.w.maxRef]:[])]:[r.seg.ref])}${actions(true)}</div>`;
   wireActions();
-  $('#bcard').onclick=()=>patientCard({kind:'peds',r:{ml:r.ml,ml2:r.ml2,every:r.everyH&&r.everyH[0],everyH:r.everyH,maxDoses:r.maxDoses,freq:row.freq,max:row.max,mg:r.mg,mg2:r.mg2},best});
+  $('#bcard').onclick=()=>patientCard({kind:'peds',r:{ml:r.ml,ml2:r.ml2,every:r.everyH&&r.everyH[0],everyH:r.everyH,maxDoses:r.maxDoses,freq:(r.w&&r.w.freq)||row.freq,max:row.max,mg:r.mg,mg2:r.mg2},best});
   if(noLiquid)$('#bcard').hidden=true;
   $('#concadd')&&($('#concadd').onclick=()=>{const c=parseFloat(String($('#conc').value).replace(',','.'));if(!(c>0&&c<=1000))return;PT.conc[d.id]=[...new Set([...extra,c])];calc()});
   // ibuprofen under 2 years: the dose depends on fever or pain, and on the temperature
-  if(r.kind==='mgkg'&&band.opts){
+  if((r.kind==='mgkg'||r.kind==='mgkgRange')&&band.opts){
     O.hidden=false;
     O.innerHTML=`<div class="lbl first">${esc(T('why'))}</div><div class="seg two">${band.opts[0].options.map(o=>`<button type="button" data-why="${o[0]}" aria-pressed="${x.why===o[0]}">${esc(LT(o[1]))}</button>`).join('')}</div>
-      ${x.why==='fever'?`<label class="chk"><input type="checkbox" id="hot"${x.hot?' checked':''}><span>${esc(LT(band.opts[1].label))}</span></label>`:''}`;
+      ${x.why==='fever'&&band.opts[1]?`<label class="chk"><input type="checkbox" id="hot"${x.hot?' checked':''}><span>${esc(LT(band.opts[1].label))}</span></label>`:''}`;
     $$('[data-why]').forEach(b=>b.onclick=()=>{x.why=b.dataset.why;calc()});
     const h=$('#hot');if(h)h.onchange=()=>{x.hot=h.checked;calc()};
   }
@@ -480,6 +480,7 @@ function drawInfo(){
     ${peds&&peds.renalKids?`<div class="row"><b>${esc(T('kids'))}</b><span>${esc(LT(peds.renalKids))}${refChips(peds.srcIds)}</span></div>`:''}
     <div class="row"><b>${esc(T('adults'))}</b><span>${esc(LT(d.renal))}${refChips(d.src&&d.src.slice(0,1))}</span></div></section>
   ${d.hepatic?`<section class="card"><h2><span class="ic">🩺</span>${esc(T('s_liver'))}</h2><div class="prose"><p>${esc(LT(d.hepatic))}</p></div></section>`:''}
+  ${d.eq?`<section class="card"><h2><span class="ic">⚖️</span>${esc(T('s_eq'))}</h2><div class="prose"><p>${esc(LT(d.eq))}</p></div></section>`:''}
   ${d.preg?`<section class="card"><h2><span class="ic">🤰</span>${esc(T('s_preg'))}</h2><div class="prose"><p>${esc(LT(d.preg))}</p></div></section>`:''}
   <section class="card"><h2><span class="ic">💊</span>${esc(T('s_disp'))}</h2><div class="prose"><p>${esc(LT(d.timing))}</p></div></section>
   <section class="card"><h2><span class="ic">📋</span>${esc(T('s_dose'))}</h2><div class="prose"><p>${esc(LT(d.dose))}</p></div></section>

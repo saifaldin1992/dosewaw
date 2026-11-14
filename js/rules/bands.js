@@ -112,4 +112,21 @@ Object.assign(BANDS, {
       {kind:'adult', ageM:[216,1e9], ref:151, text:{ar:'الحكة: 25 ملغ 3 أو 4 مرات يومياً؛ القلق: 50 إلى 100 ملغ 4 مرات يومياً',en:'Itching: 25 mg three or four times a day; anxiety: 50 to 100 mg four times a day'}}],
     duration:{ar:'حسب الطبيب',en:'As the doctor directs'}, patient:[]}
 });
+/* oral corticosteroids for children: a daily range in mg per kg (mgkgRange). The labels set no upper age; adults from 18. */
+Object.assign(BANDS, {
+  prednisolone: { strengths:[{c:10,ref:154},{c:15,ref:154},{c:20,ref:154},{c:25,ref:154}], defWhy:'asthma',
+    opts:[{id:'why',options:[['asthma',{ar:'ربو غير منضبط (دفعة قصيرة)',en:'Uncontrolled asthma (short burst)'}],['gen',{ar:'أمراض أخرى (الجرعة الأولى)',en:'Other conditions (initial dose)'}]]}],
+    segs:[
+      {kind:'mgkgRange', ageM:[0,216], lb:[0,96], byWhy:{
+        asthma:{mgkgDay:[1,2], maxMg:60, maxRef:152, ref:154, freq:{ar:'في اليوم، مرة واحدة أو مقسمة، لمدة 3 إلى 10 أيام عادة',en:'a day, once or divided, usually for 3 to 10 days'}},
+        gen:{mgkgDay:[0.14,2], ref:154, freq:{ar:'في اليوم، مقسمة على 3 أو 4 جرعات',en:'a day, in 3 or 4 divided doses'}}}},
+      {kind:'adult', ageM:[216,1e9], lb:[96,1e9], ref:154, text:{ar:'5 إلى 60 ملغ يومياً حسب المرض',en:'5 to 60 mg a day by disease'}}],
+    duration:{ar:'حسب الطبيب؛ لا يُوقف فجأة بعد أكثر من بضعة أيام',en:'As the doctor directs; do not stop suddenly after more than a few days'},
+    patient:[{ar:'يُعطى مع الطعام أو الحليب.',en:'Give with food or milk.'},{ar:'لا توقفه فجأة دون الطبيب إذا استمر أكثر من بضعة أيام.',en:'Do not stop it suddenly without the doctor if used for more than a few days.'},{ar:'راجع الطبيب فوراً إذا خالط الطفل مصاباً بالجديري أو الحصبة.',en:'See the doctor at once if the child is exposed to chickenpox or measles.'}]},
+  dexamethasone: { strengths:[], defWhy:'gen',
+    segs:[
+      {kind:'mgkgRange', ageM:[0,216], lb:[0,96], byWhy:{gen:{mgkgDay:[0.02,0.3], ref:156, freq:{ar:'في اليوم، مقسمة على 3 أو 4 جرعات',en:'a day, in 3 or 4 divided doses'}}}},
+      {kind:'adult', ageM:[216,1e9], lb:[96,1e9], ref:156, text:{ar:'0.75 إلى 9 ملغ يومياً حسب المرض',en:'0.75 to 9 mg a day by disease'}}],
+    duration:{ar:'حسب الطبيب؛ يُخفض تدريجياً',en:'As the doctor directs; taper gradually'}, patient:[]}
+});
 if(typeof module!=='undefined')module.exports={BANDS};

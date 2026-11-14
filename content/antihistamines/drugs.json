@@ -1,6 +1,6 @@
 {
  "group": "ah",
- "note": "Antihistamines first (corticosteroids next). Every text comes from the label or WHO source named in src.",
+ "note": "Antihistamines and oral corticosteroids. Every text comes from the label or WHO source named in src.",
  "drugs": [
   {
    "id": "cetirizine",
@@ -525,6 +525,764 @@
    "src": [
     151
    ]
+  },
+  {
+   "id": "prednisolone",
+   "n": {
+    "ar": "بريدنيزولون",
+    "en": "Prednisolone"
+   },
+   "cls": {
+    "ar": "كورتيزون (جلوكوكورتيكويد) فموي",
+    "en": "Oral corticosteroid (glucocorticoid)"
+   },
+   "uses": {
+    "ar": "الحساسية الشديدة، والربو، وأمراض الجلد الالتهابية، والروماتيزم، وأمراض المناعة، وغيرها حسب النشرة.",
+    "en": "Severe allergic states, asthma, inflammatory skin, rheumatic and immune diseases, and more as listed in the label."
+   },
+   "dose": {
+    "ar": "الكبار: 5 إلى 60 ملغ يومياً حسب المرض، ثم أقل جرعة تحافظ على الاستجابة. الأطفال: 0.14 إلى 2 ملغ/كغ يومياً مقسمة على 3 أو 4 جرعات؛ الربو غير المنضبط: 1 إلى 2 ملغ/كغ يومياً مرة واحدة أو مقسمة لمدة 3 إلى 10 أيام عادة (النشرة)، وWHO: الحد المعتاد 60 ملغ. التهاب الكلى المتلازمي عند الأطفال: 60 ملغ/م² يومياً على 3 جرعات 4 أسابيع، ثم 40 ملغ/م² يوماً بعد يوم 4 أسابيع.",
+    "en": "Adults: 5 to 60 mg a day by disease, then the lowest dose that keeps the response. Children: 0.14 to 2 mg/kg a day in 3 or 4 divided doses; uncontrolled asthma: 1 to 2 mg/kg a day in one or divided doses, usually for 3 to 10 days (label); WHO: usual maximum 60 mg. Nephrotic syndrome in children: 60 mg/m² a day in 3 doses for 4 weeks, then 40 mg/m² every other day for 4 weeks."
+   },
+   "renal": {
+    "ar": "لا يلزم تخفيض الجرعة (WHO).",
+    "en": "No dose reduction needed (WHO)."
+   },
+   "hepatic": {
+    "ar": "الآثار الجانبية أكثر مع قصور الكبد (WHO).",
+    "en": "Adverse effects more common in hepatic impairment (WHO)."
+   },
+   "timing": {
+    "ar": "لا يُوقف فجأة بعد أكثر من بضعة أيام: يُسحب تدريجياً. يزيد قابلية العدوى ويخفيها (الجديري والحصبة خطيرة لغير المحصنين). ممنوع مع العدوى الفطرية الجهازية.",
+    "en": "Do not stop suddenly after more than a few days: withdraw gradually. Increases and masks infections (chickenpox and measles are serious in the non-immune). Contraindicated with systemic fungal infections."
+   },
+   "preg": {
+    "ar": "الحمل: الكورتيزونات قد تضر الجنين في الدراسات الحيوانية؛ تُستعمل إذا رجحت الفائدة، ويُراقب المولود لقصور الغدة الكظرية. الرضاعة: تظهر في حليب الأم وقد تؤثر على نمو الرضيع؛ يُقرر إيقاف الرضاعة أو الدواء.",
+    "en": "Pregnancy: corticosteroids are teratogenic in animals; use only if the benefit justifies the risk, and watch the newborn for adrenal insufficiency. Breast-feeding: they appear in milk and could suppress growth; decide whether to stop nursing or the drug."
+   },
+   "inter": [
+    {
+     "with": {
+      "ar": "الأسبرين ومضادات الالتهاب غير الستيرويدية",
+      "en": "Aspirin and NSAIDs"
+     },
+     "desc": {
+      "ar": "يزيد خطر النزف والقرحة الهضمية؛ ومع إيقاف الكورتيزون قد يرتفع مستوى الساليسيلات.",
+      "en": "More GI bleeding and ulcers; salicylate levels may rise when the steroid is stopped."
+     },
+     "sev": "moderate",
+     "r": [
+      154
+     ]
+    },
+    {
+     "with": {
+      "ar": "اللقاحات الحية أو المضعفة",
+      "en": "Live or live-attenuated vaccines"
+     },
+     "desc": {
+      "ar": "ممنوعة مع الجرعات المثبطة للمناعة؛ اللقاحات المعطلة ممكنة لكن الاستجابة قد تضعف.",
+      "en": "Contraindicated with immunosuppressive doses; inactivated vaccines may be given but the response may be weaker."
+     },
+     "sev": "major",
+     "r": [
+      154
+     ]
+    },
+    {
+     "with": {
+      "ar": "محفزات الإنزيمات: ريفامبين، فينيتوين، باربيتورات",
+      "en": "Enzyme inducers: rifampin, phenytoin, barbiturates"
+     },
+     "desc": {
+      "ar": "تسرّع تكسير الكورتيزون فيضعف أثره؛ قد تلزم زيادة الجرعة.",
+      "en": "Speed up steroid clearance and weaken its effect; a higher dose may be needed."
+     },
+     "sev": "moderate",
+     "r": [
+      154
+     ]
+    },
+    {
+     "with": {
+      "ar": "الكيتوكونازول",
+      "en": "Ketoconazole"
+     },
+     "desc": {
+      "ar": "ترفع مستوى الكورتيزون وتزيد آثاره الجانبية.",
+      "en": "Raise steroid levels and side effects."
+     },
+     "sev": "moderate",
+     "r": [
+      154
+     ]
+    },
+    {
+     "with": {
+      "ar": "الوارفارين ومميعات الدم",
+      "en": "Warfarin and other anticoagulants"
+     },
+     "desc": {
+      "ar": "قد يزيد أو يقلل أثر المميع؛ يُراقب INR.",
+      "en": "May increase or decrease the anticoagulant effect; monitor INR."
+     },
+     "sev": "moderate",
+     "r": [
+      154
+     ]
+    },
+    {
+     "with": {
+      "ar": "أدوية السكري",
+      "en": "Antidiabetic drugs"
+     },
+     "desc": {
+      "ar": "يرفع سكر الدم وقد تلزم زيادة جرعتها.",
+      "en": "Raises blood glucose; their dose may need increasing."
+     },
+     "sev": "moderate",
+     "r": [
+      154
+     ]
+    },
+    {
+     "with": {
+      "ar": "مدرات البول والأمفوتيريسين B (المخفضة للبوتاسيوم)",
+      "en": "Diuretics and amphotericin B (potassium-lowering)"
+     },
+     "desc": {
+      "ar": "يزيد خطر نقص البوتاسيوم؛ يُراقب.",
+      "en": "Higher risk of low potassium; monitor."
+     },
+     "sev": "moderate",
+     "r": [
+      154
+     ]
+    },
+    {
+     "with": {
+      "ar": "الديجوكسين",
+      "en": "Digoxin"
+     },
+     "desc": {
+      "ar": "نقص البوتاسيوم يزيد خطر اضطراب النظم.",
+      "en": "Low potassium raises the arrhythmia risk."
+     },
+     "sev": "moderate",
+     "r": [
+      154
+     ]
+    },
+    {
+     "with": {
+      "ar": "الإستروجينات وحبوب منع الحمل",
+      "en": "Estrogens and oral contraceptives"
+     },
+     "desc": {
+      "ar": "قد تقلل تكسير الكورتيزون فيزيد أثره.",
+      "en": "May slow steroid clearance and increase its effect."
+     },
+     "sev": "minor",
+     "r": [
+      154
+     ]
+    },
+    {
+     "with": {
+      "ar": "الميثوتريكسات",
+      "en": "Methotrexate"
+     },
+     "desc": {
+      "ar": "يزيد خطر السمية الدموية (WHO).",
+      "en": "Higher risk of blood toxicity (WHO)."
+     },
+     "sev": "major",
+     "r": [
+      152
+     ]
+    }
+   ],
+   "src": [
+    154,
+    159,
+    152,
+    155
+   ],
+   "eq": {
+    "ar": "تكافؤ الجرعات: بريدنيزولون 5 ملغ = بريدنيزون 5 ملغ = ميثيل بريدنيزولون 4 ملغ = ديكساميثازون 0.75 ملغ = هيدروكورتيزون 20 ملغ.",
+    "en": "Equivalent doses: prednisolone 5 mg = prednisone 5 mg = methylprednisolone 4 mg = dexamethasone 0.75 mg = hydrocortisone 20 mg."
+   }
+  },
+  {
+   "id": "prednisone",
+   "n": {
+    "ar": "بريدنيزون",
+    "en": "Prednisone"
+   },
+   "cls": {
+    "ar": "كورتيزون (جلوكوكورتيكويد) فموي",
+    "en": "Oral corticosteroid (glucocorticoid)"
+   },
+   "uses": {
+    "ar": "الحساسية الشديدة، والربو، وأمراض الجلد الالتهابية، والروماتيزم، وأمراض المناعة، وغيرها حسب النشرة.",
+    "en": "Severe allergic states, asthma, inflammatory skin, rheumatic and immune diseases, and more as listed in the label."
+   },
+   "dose": {
+    "ar": "5 إلى 60 ملغ يومياً حسب المرض. الجرعة الواحدة صباحاً قبل التاسعة، والجرعات المتعددة موزعة بالتساوي على اليوم. التصلب المتعدد (نوبة حادة): 200 ملغ يومياً أسبوعاً ثم 80 ملغ يوماً بعد يوم شهراً. العلاج يوماً بعد يوم: ضعف الجرعة اليومية كل صباح ثانٍ.",
+    "en": "5 to 60 mg a day by disease. A single daily dose in the morning before 9 am; multiple doses evenly spaced. Multiple sclerosis (acute flare): 200 mg a day for a week, then 80 mg every other day for a month. Alternate-day therapy: twice the daily dose every other morning."
+   },
+   "renal": {
+    "ar": "لا تذكر النشرة تعديلاً كلوياً.",
+    "en": "The label gives no kidney adjustment."
+   },
+   "timing": {
+    "ar": "مع الطعام أو الحليب لتقليل تهيج المعدة، وصباحاً قبل التاسعة. لا يُوقف دون استشارة الطبيب، ولا يُسحب فجأة. لا يُوقف فجأة بعد أكثر من بضعة أيام: يُسحب تدريجياً. يزيد قابلية العدوى ويخفيها (الجديري والحصبة خطيرة لغير المحصنين). ممنوع مع العدوى الفطرية الجهازية.",
+    "en": "With food or milk to reduce stomach irritation, in the morning before 9 am. Do not stop without the doctor; avoid abrupt withdrawal. Do not stop suddenly after more than a few days: withdraw gradually. Increases and masks infections (chickenpox and measles are serious in the non-immune). Contraindicated with systemic fungal infections."
+   },
+   "preg": {
+    "ar": "الحمل: الكورتيزونات قد تضر الجنين في الدراسات الحيوانية؛ تُستعمل إذا رجحت الفائدة، ويُراقب المولود لقصور الغدة الكظرية. الرضاعة: تظهر في حليب الأم وقد تؤثر على نمو الرضيع؛ يُقرر إيقاف الرضاعة أو الدواء.",
+    "en": "Pregnancy: corticosteroids are teratogenic in animals; use only if the benefit justifies the risk, and watch the newborn for adrenal insufficiency. Breast-feeding: they appear in milk and could suppress growth; decide whether to stop nursing or the drug."
+   },
+   "inter": [
+    {
+     "with": {
+      "ar": "الأسبرين ومضادات الالتهاب غير الستيرويدية",
+      "en": "Aspirin and NSAIDs"
+     },
+     "desc": {
+      "ar": "يزيد خطر النزف والقرحة الهضمية؛ ومع إيقاف الكورتيزون قد يرتفع مستوى الساليسيلات.",
+      "en": "More GI bleeding and ulcers; salicylate levels may rise when the steroid is stopped."
+     },
+     "sev": "moderate",
+     "r": [
+      155
+     ]
+    },
+    {
+     "with": {
+      "ar": "اللقاحات الحية أو المضعفة",
+      "en": "Live or live-attenuated vaccines"
+     },
+     "desc": {
+      "ar": "ممنوعة مع الجرعات المثبطة للمناعة؛ اللقاحات المعطلة ممكنة لكن الاستجابة قد تضعف.",
+      "en": "Contraindicated with immunosuppressive doses; inactivated vaccines may be given but the response may be weaker."
+     },
+     "sev": "major",
+     "r": [
+      155
+     ]
+    },
+    {
+     "with": {
+      "ar": "محفزات الإنزيمات: ريفامبين، فينيتوين، كاربامازيبين، باربيتورات",
+      "en": "Enzyme inducers: rifampin, phenytoin, carbamazepine, barbiturates"
+     },
+     "desc": {
+      "ar": "تسرّع تكسير الكورتيزون فيضعف أثره؛ قد تلزم زيادة الجرعة.",
+      "en": "Speed up steroid clearance and weaken its effect; a higher dose may be needed."
+     },
+     "sev": "moderate",
+     "r": [
+      155
+     ]
+    },
+    {
+     "with": {
+      "ar": "الكيتوكونازول والمضادات الحيوية الماكروليدية",
+      "en": "Ketoconazole and macrolide antibiotics"
+     },
+     "desc": {
+      "ar": "ترفع مستوى الكورتيزون وتزيد آثاره الجانبية.",
+      "en": "Raise steroid levels and side effects."
+     },
+     "sev": "moderate",
+     "r": [
+      155
+     ]
+    },
+    {
+     "with": {
+      "ar": "الوارفارين ومميعات الدم",
+      "en": "Warfarin and other anticoagulants"
+     },
+     "desc": {
+      "ar": "قد يزيد أو يقلل أثر المميع؛ يُراقب INR.",
+      "en": "May increase or decrease the anticoagulant effect; monitor INR."
+     },
+     "sev": "moderate",
+     "r": [
+      155
+     ]
+    },
+    {
+     "with": {
+      "ar": "أدوية السكري",
+      "en": "Antidiabetic drugs"
+     },
+     "desc": {
+      "ar": "يرفع سكر الدم وقد تلزم زيادة جرعتها.",
+      "en": "Raises blood glucose; their dose may need increasing."
+     },
+     "sev": "moderate",
+     "r": [
+      155
+     ]
+    },
+    {
+     "with": {
+      "ar": "مدرات البول والأمفوتيريسين B (المخفضة للبوتاسيوم)",
+      "en": "Diuretics and amphotericin B (potassium-lowering)"
+     },
+     "desc": {
+      "ar": "يزيد خطر نقص البوتاسيوم؛ يُراقب.",
+      "en": "Higher risk of low potassium; monitor."
+     },
+     "sev": "moderate",
+     "r": [
+      155
+     ]
+    },
+    {
+     "with": {
+      "ar": "الديجوكسين",
+      "en": "Digoxin"
+     },
+     "desc": {
+      "ar": "نقص البوتاسيوم يزيد خطر اضطراب النظم.",
+      "en": "Low potassium raises the arrhythmia risk."
+     },
+     "sev": "moderate",
+     "r": [
+      155
+     ]
+    },
+    {
+     "with": {
+      "ar": "الإستروجينات وحبوب منع الحمل",
+      "en": "Estrogens and oral contraceptives"
+     },
+     "desc": {
+      "ar": "قد تقلل تكسير الكورتيزون فيزيد أثره.",
+      "en": "May slow steroid clearance and increase its effect."
+     },
+     "sev": "minor",
+     "r": [
+      155
+     ]
+    },
+    {
+     "with": {
+      "ar": "الفلوروكينولونات",
+      "en": "Fluoroquinolones"
+     },
+     "desc": {
+      "ar": "يزيد خطر تمزق الأوتار خاصة عند كبار السن.",
+      "en": "Higher risk of tendon rupture, especially in older people."
+     },
+     "sev": "moderate",
+     "r": [
+      155
+     ]
+    }
+   ],
+   "src": [
+    155
+   ],
+   "eq": {
+    "ar": "تكافؤ الجرعات: بريدنيزولون 5 ملغ = بريدنيزون 5 ملغ = ميثيل بريدنيزولون 4 ملغ = ديكساميثازون 0.75 ملغ = هيدروكورتيزون 20 ملغ.",
+    "en": "Equivalent doses: prednisolone 5 mg = prednisone 5 mg = methylprednisolone 4 mg = dexamethasone 0.75 mg = hydrocortisone 20 mg."
+   }
+  },
+  {
+   "id": "dexamethasone",
+   "n": {
+    "ar": "ديكساميثازون",
+    "en": "Dexamethasone"
+   },
+   "cls": {
+    "ar": "كورتيزون (جلوكوكورتيكويد) فموي",
+    "en": "Oral corticosteroid (glucocorticoid)"
+   },
+   "uses": {
+    "ar": "الحساسية الشديدة، والربو، وأمراض الجلد الالتهابية، والروماتيزم، وأمراض المناعة، وغيرها حسب النشرة.",
+    "en": "Severe allergic states, asthma, inflammatory skin, rheumatic and immune diseases, and more as listed in the label."
+   },
+   "dose": {
+    "ar": "الكبار: 0.75 إلى 9 ملغ يومياً حسب المرض، ثم تُخفض تدريجياً إلى أقل جرعة فعالة. التصلب المتعدد (نوبة حادة): 30 ملغ يومياً أسبوعاً ثم 4 إلى 12 ملغ يوماً بعد يوم شهراً. الأطفال: 0.02 إلى 0.3 ملغ/كغ يومياً مقسمة على 3 أو 4 جرعات (0.6 إلى 9 ملغ/م²).",
+    "en": "Adults: 0.75 to 9 mg a day by disease, then tapered to the lowest effective dose. Multiple sclerosis (acute flare): 30 mg a day for a week, then 4 to 12 mg every other day for a month. Children: 0.02 to 0.3 mg/kg a day in 3 or 4 divided doses (0.6 to 9 mg/m²)."
+   },
+   "renal": {
+    "ar": "لا يلزم تخفيض الجرعة (WHO).",
+    "en": "No dose reduction needed (WHO)."
+   },
+   "hepatic": {
+    "ar": "لا يلزم تخفيض الجرعة (WHO).",
+    "en": "No dose reduction needed (WHO)."
+   },
+   "timing": {
+    "ar": "لا يُوقف فجأة بعد أكثر من بضعة أيام: يُسحب تدريجياً. يزيد قابلية العدوى ويخفيها (الجديري والحصبة خطيرة لغير المحصنين). ممنوع مع العدوى الفطرية الجهازية.",
+    "en": "Do not stop suddenly after more than a few days: withdraw gradually. Increases and masks infections (chickenpox and measles are serious in the non-immune). Contraindicated with systemic fungal infections."
+   },
+   "preg": {
+    "ar": "الحمل: الكورتيزونات قد تضر الجنين في الدراسات الحيوانية؛ تُستعمل إذا رجحت الفائدة، ويُراقب المولود لقصور الغدة الكظرية. الرضاعة: تظهر في حليب الأم وقد تؤثر على نمو الرضيع؛ يُقرر إيقاف الرضاعة أو الدواء.",
+    "en": "Pregnancy: corticosteroids are teratogenic in animals; use only if the benefit justifies the risk, and watch the newborn for adrenal insufficiency. Breast-feeding: they appear in milk and could suppress growth; decide whether to stop nursing or the drug."
+   },
+   "inter": [
+    {
+     "with": {
+      "ar": "الأسبرين ومضادات الالتهاب غير الستيرويدية",
+      "en": "Aspirin and NSAIDs"
+     },
+     "desc": {
+      "ar": "يزيد خطر النزف والقرحة الهضمية؛ ومع إيقاف الكورتيزون قد يرتفع مستوى الساليسيلات.",
+      "en": "More GI bleeding and ulcers; salicylate levels may rise when the steroid is stopped."
+     },
+     "sev": "moderate",
+     "r": [
+      156
+     ]
+    },
+    {
+     "with": {
+      "ar": "اللقاحات الحية أو المضعفة",
+      "en": "Live or live-attenuated vaccines"
+     },
+     "desc": {
+      "ar": "ممنوعة مع الجرعات المثبطة للمناعة؛ اللقاحات المعطلة ممكنة لكن الاستجابة قد تضعف.",
+      "en": "Contraindicated with immunosuppressive doses; inactivated vaccines may be given but the response may be weaker."
+     },
+     "sev": "major",
+     "r": [
+      156
+     ]
+    },
+    {
+     "with": {
+      "ar": "محفزات الإنزيمات: ريفامبين، فينيتوين، كاربامازيبين، باربيتورات",
+      "en": "Enzyme inducers: rifampin, phenytoin, carbamazepine, barbiturates"
+     },
+     "desc": {
+      "ar": "تسرّع تكسير الكورتيزون فيضعف أثره؛ قد تلزم زيادة الجرعة.",
+      "en": "Speed up steroid clearance and weaken its effect; a higher dose may be needed."
+     },
+     "sev": "moderate",
+     "r": [
+      156
+     ]
+    },
+    {
+     "with": {
+      "ar": "الكيتوكونازول والمضادات الحيوية الماكروليدية",
+      "en": "Ketoconazole and macrolide antibiotics"
+     },
+     "desc": {
+      "ar": "ترفع مستوى الكورتيزون وتزيد آثاره الجانبية.",
+      "en": "Raise steroid levels and side effects."
+     },
+     "sev": "moderate",
+     "r": [
+      156
+     ]
+    },
+    {
+     "with": {
+      "ar": "الوارفارين ومميعات الدم",
+      "en": "Warfarin and other anticoagulants"
+     },
+     "desc": {
+      "ar": "قد يزيد أو يقلل أثر المميع؛ يُراقب INR.",
+      "en": "May increase or decrease the anticoagulant effect; monitor INR."
+     },
+     "sev": "moderate",
+     "r": [
+      156
+     ]
+    },
+    {
+     "with": {
+      "ar": "أدوية السكري",
+      "en": "Antidiabetic drugs"
+     },
+     "desc": {
+      "ar": "يرفع سكر الدم وقد تلزم زيادة جرعتها.",
+      "en": "Raises blood glucose; their dose may need increasing."
+     },
+     "sev": "moderate",
+     "r": [
+      156
+     ]
+    },
+    {
+     "with": {
+      "ar": "مدرات البول والأمفوتيريسين B (المخفضة للبوتاسيوم)",
+      "en": "Diuretics and amphotericin B (potassium-lowering)"
+     },
+     "desc": {
+      "ar": "يزيد خطر نقص البوتاسيوم؛ يُراقب.",
+      "en": "Higher risk of low potassium; monitor."
+     },
+     "sev": "moderate",
+     "r": [
+      156
+     ]
+    },
+    {
+     "with": {
+      "ar": "الديجوكسين",
+      "en": "Digoxin"
+     },
+     "desc": {
+      "ar": "نقص البوتاسيوم يزيد خطر اضطراب النظم.",
+      "en": "Low potassium raises the arrhythmia risk."
+     },
+     "sev": "moderate",
+     "r": [
+      156
+     ]
+    },
+    {
+     "with": {
+      "ar": "الإستروجينات وحبوب منع الحمل",
+      "en": "Estrogens and oral contraceptives"
+     },
+     "desc": {
+      "ar": "قد تقلل تكسير الكورتيزون فيزيد أثره.",
+      "en": "May slow steroid clearance and increase its effect."
+     },
+     "sev": "minor",
+     "r": [
+      156
+     ]
+    }
+   ],
+   "src": [
+    156,
+    152
+   ],
+   "eq": {
+    "ar": "تكافؤ الجرعات: بريدنيزولون 5 ملغ = بريدنيزون 5 ملغ = ميثيل بريدنيزولون 4 ملغ = ديكساميثازون 0.75 ملغ = هيدروكورتيزون 20 ملغ.",
+    "en": "Equivalent doses: prednisolone 5 mg = prednisone 5 mg = methylprednisolone 4 mg = dexamethasone 0.75 mg = hydrocortisone 20 mg."
+   }
+  },
+  {
+   "id": "methylprednisolone",
+   "n": {
+    "ar": "ميثيل بريدنيزولون",
+    "en": "Methylprednisolone"
+   },
+   "cls": {
+    "ar": "كورتيزون (جلوكوكورتيكويد) فموي",
+    "en": "Oral corticosteroid (glucocorticoid)"
+   },
+   "uses": {
+    "ar": "الحساسية الشديدة، والربو، وأمراض الجلد الالتهابية، والروماتيزم، وأمراض المناعة، وغيرها حسب النشرة.",
+    "en": "Severe allergic states, asthma, inflammatory skin, rheumatic and immune diseases, and more as listed in the label."
+   },
+   "dose": {
+    "ar": "4 إلى 48 ملغ يومياً حسب المرض، ثم تُخفض تدريجياً إلى أقل جرعة فعالة. التصلب المتعدد (نوبة حادة): النشرة تذكر 200 ملغ بريدنيزولون يومياً أسبوعاً ثم 80 ملغ يوماً بعد يوم شهراً، و4 ملغ ميثيل بريدنيزولون تعادل 5 ملغ بريدنيزولون (أي 160 ثم 64 ملغ).",
+    "en": "4 to 48 mg a day by disease, then tapered to the lowest effective dose. Multiple sclerosis (acute flare): the label gives 200 mg of prednisolone a day for a week, then 80 mg every other day for a month, with 4 mg of methylprednisolone equal to 5 mg of prednisolone (that is 160, then 64 mg)."
+   },
+   "renal": {
+    "ar": "لا تذكر النشرة تعديلاً كلوياً.",
+    "en": "The label gives no kidney adjustment."
+   },
+   "timing": {
+    "ar": "لا يُوقف فجأة بعد أكثر من بضعة أيام: يُسحب تدريجياً. يزيد قابلية العدوى ويخفيها (الجديري والحصبة خطيرة لغير المحصنين). ممنوع مع العدوى الفطرية الجهازية.",
+    "en": "Do not stop suddenly after more than a few days: withdraw gradually. Increases and masks infections (chickenpox and measles are serious in the non-immune). Contraindicated with systemic fungal infections."
+   },
+   "preg": {
+    "ar": "الحمل: الكورتيزونات قد تضر الجنين في الدراسات الحيوانية؛ تُستعمل إذا رجحت الفائدة، ويُراقب المولود لقصور الغدة الكظرية. الرضاعة: تظهر في حليب الأم وقد تؤثر على نمو الرضيع؛ يُقرر إيقاف الرضاعة أو الدواء.",
+    "en": "Pregnancy: corticosteroids are teratogenic in animals; use only if the benefit justifies the risk, and watch the newborn for adrenal insufficiency. Breast-feeding: they appear in milk and could suppress growth; decide whether to stop nursing or the drug."
+   },
+   "inter": [
+    {
+     "with": {
+      "ar": "الأسبرين ومضادات الالتهاب غير الستيرويدية",
+      "en": "Aspirin and NSAIDs"
+     },
+     "desc": {
+      "ar": "يزيد خطر النزف والقرحة الهضمية؛ ومع إيقاف الكورتيزون قد يرتفع مستوى الساليسيلات.",
+      "en": "More GI bleeding and ulcers; salicylate levels may rise when the steroid is stopped."
+     },
+     "sev": "moderate",
+     "r": [
+      157
+     ]
+    },
+    {
+     "with": {
+      "ar": "اللقاحات الحية أو المضعفة",
+      "en": "Live or live-attenuated vaccines"
+     },
+     "desc": {
+      "ar": "ممنوعة مع الجرعات المثبطة للمناعة؛ اللقاحات المعطلة ممكنة لكن الاستجابة قد تضعف.",
+      "en": "Contraindicated with immunosuppressive doses; inactivated vaccines may be given but the response may be weaker."
+     },
+     "sev": "major",
+     "r": [
+      157
+     ]
+    },
+    {
+     "with": {
+      "ar": "محفزات الإنزيمات: ريفامبين، فينيتوين",
+      "en": "Enzyme inducers: rifampin, phenytoin"
+     },
+     "desc": {
+      "ar": "تسرّع تكسير الكورتيزون فيضعف أثره؛ قد تلزم زيادة الجرعة.",
+      "en": "Speed up steroid clearance and weaken its effect; a higher dose may be needed."
+     },
+     "sev": "moderate",
+     "r": [
+      157
+     ]
+    },
+    {
+     "with": {
+      "ar": "الكيتوكونازول",
+      "en": "Ketoconazole"
+     },
+     "desc": {
+      "ar": "ترفع مستوى الكورتيزون وتزيد آثاره الجانبية.",
+      "en": "Raise steroid levels and side effects."
+     },
+     "sev": "moderate",
+     "r": [
+      157
+     ]
+    },
+    {
+     "with": {
+      "ar": "الوارفارين ومميعات الدم",
+      "en": "Warfarin and other anticoagulants"
+     },
+     "desc": {
+      "ar": "قد يزيد أو يقلل أثر المميع؛ يُراقب INR.",
+      "en": "May increase or decrease the anticoagulant effect; monitor INR."
+     },
+     "sev": "moderate",
+     "r": [
+      157
+     ]
+    }
+   ],
+   "src": [
+    157
+   ],
+   "eq": {
+    "ar": "تكافؤ الجرعات: بريدنيزولون 5 ملغ = بريدنيزون 5 ملغ = ميثيل بريدنيزولون 4 ملغ = ديكساميثازون 0.75 ملغ = هيدروكورتيزون 20 ملغ.",
+    "en": "Equivalent doses: prednisolone 5 mg = prednisone 5 mg = methylprednisolone 4 mg = dexamethasone 0.75 mg = hydrocortisone 20 mg."
+   }
+  },
+  {
+   "id": "hydrocortisone",
+   "n": {
+    "ar": "هيدروكورتيزون (أقراص)",
+    "en": "Hydrocortisone (tablets)"
+   },
+   "cls": {
+    "ar": "كورتيزون (جلوكوكورتيكويد) فموي",
+    "en": "Oral corticosteroid (glucocorticoid)"
+   },
+   "uses": {
+    "ar": "الحساسية الشديدة، والربو، وأمراض الجلد الالتهابية، والروماتيزم، وأمراض المناعة، وغيرها حسب النشرة.",
+    "en": "Severe allergic states, asthma, inflammatory skin, rheumatic and immune diseases, and more as listed in the label."
+   },
+   "dose": {
+    "ar": "20 إلى 240 ملغ يومياً حسب المرض، ثم تُخفض تدريجياً إلى أقل جرعة فعالة.",
+    "en": "20 to 240 mg a day by disease, then tapered to the lowest effective dose."
+   },
+   "renal": {
+    "ar": "لا تذكر النشرة تعديلاً كلوياً.",
+    "en": "The label gives no kidney adjustment."
+   },
+   "timing": {
+    "ar": "لا يُوقف فجأة بعد أكثر من بضعة أيام: يُسحب تدريجياً. يزيد قابلية العدوى ويخفيها (الجديري والحصبة خطيرة لغير المحصنين). ممنوع مع العدوى الفطرية الجهازية.",
+    "en": "Do not stop suddenly after more than a few days: withdraw gradually. Increases and masks infections (chickenpox and measles are serious in the non-immune). Contraindicated with systemic fungal infections."
+   },
+   "preg": {
+    "ar": "الحمل والرضاعة: لا توجد دراسات كافية؛ يُستعمل إذا رجحت الفائدة على الخطر، ويُراقب المولود لقصور الغدة الكظرية.",
+    "en": "Pregnancy and breast-feeding: no adequate studies; use only if the benefit outweighs the risk, and watch the newborn for adrenal insufficiency."
+   },
+   "inter": [
+    {
+     "with": {
+      "ar": "الأسبرين ومضادات الالتهاب غير الستيرويدية",
+      "en": "Aspirin and NSAIDs"
+     },
+     "desc": {
+      "ar": "يزيد خطر النزف والقرحة الهضمية؛ ومع إيقاف الكورتيزون قد يرتفع مستوى الساليسيلات.",
+      "en": "More GI bleeding and ulcers; salicylate levels may rise when the steroid is stopped."
+     },
+     "sev": "moderate",
+     "r": [
+      158
+     ]
+    },
+    {
+     "with": {
+      "ar": "اللقاحات الحية أو المضعفة",
+      "en": "Live or live-attenuated vaccines"
+     },
+     "desc": {
+      "ar": "ممنوعة مع الجرعات المثبطة للمناعة؛ اللقاحات المعطلة ممكنة لكن الاستجابة قد تضعف.",
+      "en": "Contraindicated with immunosuppressive doses; inactivated vaccines may be given but the response may be weaker."
+     },
+     "sev": "major",
+     "r": [
+      158
+     ]
+    },
+    {
+     "with": {
+      "ar": "محفزات الإنزيمات: ريفامبين، فينيتوين",
+      "en": "Enzyme inducers: rifampin, phenytoin"
+     },
+     "desc": {
+      "ar": "تسرّع تكسير الكورتيزون فيضعف أثره؛ قد تلزم زيادة الجرعة.",
+      "en": "Speed up steroid clearance and weaken its effect; a higher dose may be needed."
+     },
+     "sev": "moderate",
+     "r": [
+      158
+     ]
+    },
+    {
+     "with": {
+      "ar": "الكيتوكونازول",
+      "en": "Ketoconazole"
+     },
+     "desc": {
+      "ar": "ترفع مستوى الكورتيزون وتزيد آثاره الجانبية.",
+      "en": "Raise steroid levels and side effects."
+     },
+     "sev": "moderate",
+     "r": [
+      158
+     ]
+    },
+    {
+     "with": {
+      "ar": "الوارفارين ومميعات الدم",
+      "en": "Warfarin and other anticoagulants"
+     },
+     "desc": {
+      "ar": "قد يزيد أو يقلل أثر المميع؛ يُراقب INR.",
+      "en": "May increase or decrease the anticoagulant effect; monitor INR."
+     },
+     "sev": "moderate",
+     "r": [
+      158
+     ]
+    }
+   ],
+   "src": [
+    158
+   ],
+   "eq": {
+    "ar": "تكافؤ الجرعات: بريدنيزولون 5 ملغ = بريدنيزون 5 ملغ = ميثيل بريدنيزولون 4 ملغ = ديكساميثازون 0.75 ملغ = هيدروكورتيزون 20 ملغ.",
+    "en": "Equivalent doses: prednisolone 5 mg = prednisone 5 mg = methylprednisolone 4 mg = dexamethasone 0.75 mg = hydrocortisone 20 mg."
+   }
   }
  ]
 }

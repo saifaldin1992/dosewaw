@@ -118,6 +118,14 @@ function bandCalc(spec,P,x,extra){
     if(!row)return null;
     return {kind:'chart',seg,row,mg:row.mg,mg2:row.mg2,everyH:seg.everyH,maxDoses:seg.maxDoses,ml:ml(row.mg),ml2:row.mg2?ml(row.mg2):null,by:m!=null?'age':'weight'};
   }
+  // a daily range in mg per kg (corticosteroids), the upper end capped where the source gives a maximum
+  if(seg.kind==='mgkgRange'){
+    if(!P.W)return {kind:'needW',seg};
+    const w=seg.byWhy[x.why]||Object.values(seg.byWhy)[0];
+    let lo=P.W*w.mgkgDay[0],hi=P.W*w.mgkgDay[1],capped=false;
+    if(w.maxMg){if(hi>w.maxMg){hi=w.maxMg;capped=true}if(lo>w.maxMg)lo=w.maxMg}
+    return {kind:'mgkgRange',seg,w,mg:lo,mg2:hi,capped,ml:ml(lo),ml2:ml(hi),perDay:true,ref:w.ref};
+  }
   // mg per kg (needs a weight: actual, or estimated from age by the page)
   if(!P.W)return {kind:'needW',seg};
   let mgkg=seg.mgkg;

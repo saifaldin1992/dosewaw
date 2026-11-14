@@ -36,6 +36,12 @@ GROUPS = {
     'chlorpheniramine': ('chlorpheniramine maleate', r'^CHLORPHENIRAMINE MALEATE$', 'ORAL', OTC, r'4 mg'),
     'diphenhydramine': ('diphenhydramine hydrochloride', r'^DIPHENHYDRAMINE( HYDROCHLORIDE| HCL)?$', 'ORAL', OTC, r'12.5 mg (in|per|/) ?5 mL'),
     'diphenhydramine_adult': ('diphenhydramine hydrochloride', r'^DIPHENHYDRAMINE( HYDROCHLORIDE| HCL)?$', 'ORAL', OTC, r'25 mg'),
+    'prednisolone_sol': ('prednisolone sodium phosphate', r'^PREDNISOLONE( SODIUM PHOSPHATE)?$', 'ORAL', RX, None),
+    'prednisolone_syr': ('prednisolone', r'^PREDNISOLONE$', 'ORAL', RX, r'15 mg (per|/|in) ?5 mL'),
+    'prednisone': ('prednisone', r'^PREDNISONE$', 'ORAL', RX, None),
+    'dexamethasone': ('dexamethasone', r'^DEXAMETHASONE$', 'ORAL', RX, r'tablet'),
+    'methylprednisolone': ('methylprednisolone', r'^METHYLPREDNISOLONE$', 'ORAL', RX, None),
+    'hydrocortisone': ('hydrocortisone', r'^HYDROCORTISONE$', 'ORAL', RX, r'tablet'),
     'hydroxyzine': ('hydroxyzine hydrochloride', r'^HYDROXYZINE( HYDROCHLORIDE| HCL)?$', 'ORAL', RX, None),
   },
   'analgesics': {

@@ -1,5 +1,5 @@
 WHO Model Formulary for Children 2010 (WHO, Geneva), ISBN 978 92 4 159932 0.
-Source: https://iris.who.int/handle/10665/44309 — section 3, chlorphenamine (exact text, kept as evidence for DOSEWAW numbers).
+Source: https://iris.who.int/handle/10665/44309 — section 3: chlorphenamine, dexamethasone, hydrocortisone, prednisolone (exact text, kept as evidence for DOSEWAW numbers).
 
 Chlorphenamine
 ATC code: R06AB04
@@ -73,3 +73,283 @@ Series, 2008, 950 (http://www.who.int/medicines/publications/essentialmeds_commi
 
 28                                                                     WHO Model Formulary for Children 2010
                                                  3    Antiallergics and medicines used in anaphylaxis
+Dexamethasone
+ATC code: H02AB02
+  Injection: 4 mg dexamethasone phosphate (as disodium salt) in 1 ml ampoule
+Indications: Adjunct in the emergency treatment of anaphylaxis; short-term suppression of
+  inflammation in allergic disorders.
+Contraindications: Not relevant to emergency use.
+Precautions: Increased susceptibility to and severity of infection; activation or exacerbation of
+  tuberculosis; amoebiasis; strongyloidiasis; risk of severe chickenpox in non-immune patients
+  (varicella zoster immunoglobulin required if exposed to chickenpox); avoid exposure to
+  measles (normal immunoglobulin possibly required if exposed); diabetes mellitus; peptic ulcer;
+  hypertension; corneal perforation; osteoporosis; myasthenia gravis.
+
+ Dose:
+ Inflammatory and allergic disorders.
+   IM or slow IV injection or infusion:
+   Infant or Child 100–400 micrograms/kg in 1–2 divided doses (maximum 24 mg daily).
+Renal impairment: Dose reduction not necessary.
+Hepatic impairment: Dose reduction not necessary.
+Adverse effects: Incidence of adverse effects is related to dose and duration of treatment. Short
+  courses of high-dose systemic treatment cause fewer adverse effects than prolonged courses of
+  lower doses.
+Common Nausea, increased susceptibility to infection, masking of signs of infection, sodium and
+  water retention, oedema, hypertension, hypokalaemia, hyperglycaemia, increased appetite,
+  dyspepsia, delayed wound healing, bruising, acne, psychiatric effects (see below).
+Intravenous Transient itching, burning or tingling in perineal area (after intravenous bolus).
+Rare Peptic ulceration, posterior subcapsular cataracts, glaucoma, hypersensitivity reactions including
+  anaphylaxis.
+Psychiatric effects Include euphoria, hypomania, depression, disturbances of mood, cognition, sleep
+and behaviour. Delirium or psychosis is less common.
+Interactions with other medicines (* indicates severe):
+  Acetylsalicylic acid: increased risk of gastrointestinal bleeding and ulceration; dexamethasone
+  reduces plasma salicylate concentration.
+  Albendazole: plasma albendazole concentration possibly increased.
+* Amphotericin B: increased risk of hypokalaemia (avoid concomitant use unless dexamethasone
+  needed to control reactions).
+* Carbamazepine: accelerated metabolism of dexamethasone (reduced effect).
+  Contraceptives, oral: oral contraceptives containing estrogens increase plasma concentration of
+  dexamethasone.
+  Digoxin: increased risk of hypokalaemia.
+  Enalapril: antagonism of hypotensive effect.
+  Erythromycin: erythromycin possibly inhibits metabolism of dexamethasone.
+  Furosemide: antagonism of diuretic effect; increased risk of hypokalaemia.
+  Hydrochlorothiazide: antagonism of diuretic effect; increased risk of hypokalaemia.
+  Ibuprofen: increased risk of gastrointestinal bleeding and ulceration.
+  Insulins: antagonism of hypoglycaemic effect.
+* Lopinavir: possibly reduced plasma lopinavir concentration.
+
+WHO Model Formulary for Children 2010                                                                 29
+3        Antiallergics and medicines used in anaphylaxis
+  Metformin: antagonism of hypoglycaemic effect.
+* Methotrexate: increased risk of haematological toxicity.
+* Phenobarbital: metabolism of dexamethasone accelerated (reduced effect).
+* Phenytoin: metabolism of dexamethasone accelerated (reduced effect).
+  Praziquantel: plasma praziquantel concentration reduced.
+  Propranolol: antagonism of hypotensive effect.
+* Rifampicin: accelerated metabolism of dexamethasone (reduced effect).
+  Ritonavir: plasma concentration possibly increased by ritonavir.
+  Salbutamol: increased risk of hypokalaemia if high doses of salbutamol given with dexamethasone.
+  Saquinavir: possibly reduced plasma saquinavir concentration.
+  Spironolactone: antagonism of diuretic effect.
+  Vaccine, influenza: high doses of dexamethasone impair immune response.
+* Vaccine, live: high doses of dexamethasone impair immune response; avoid use of live vaccines.
+* Warfarin: anticoagulant effect possibly enhanced or reduced (high-dose dexamethasone enhances
+  anticoagulant effect).
+References:
+Hill SR, Kouimtzi M, Stuart MC, eds. WHO model formulary. Geneva, World Health Organization, 2008.
+Hodding JH, Kraus DM, Taketomo CK. Pediatric dosage handbook. 16th ed. Hudson, Lexi-Comp, 2009.
+McEvoy GK, ed. AHFS drug information. Bethesda, American Society of Health-System Pharmacists, 2009.
+Paediatric Formulary Committee. British national formulary for children 2009. London, BMJ Group RBS Publishing, 2009.
+Rossi S, ed. Australian medicines handbook. Adelaide, Australian Medicines Handbook, 2009.
+WHO expert committee on the selection and use of essential medicines. The selection and use of essential medicines: report of
+the WHO expert committee, October 2007 (including the model list of essential medicines for children). WHO Technical Report
+Series, 2008, 950 (http://www.who.int/medicines/publications/essentialmeds_committeereports/TRS_950.pdf ).
+
+
+
+Epinephrine (Adrenaline)
+ATC code: C01CA24
+     Injection: 1 mg (as hydrochloride or hydrogen tartrate) in 1 ml ampoule (1:1000)
+
+     Intravenous epinephrine should be used with extreme care by specialists only.
+
+Special Notes: 1 mg/ml = 1:1000 or 0.1%.
+Indications: Severe anaphylactic reaction; severe angioedema.
+Contraindications: Closed-angle glaucoma; use during halothane or cyclopropane anaesthesia.
+Precautions: Hyperthyroidism; hypertension; diabetes mellitus; heart disease; arrhythmias;
+     psychoneurosis; cerebrovascular disease; phaeochromocytoma; susceptibility to closed-angle
+     glaucoma.
+
+    Dose:
+    Anaphylaxis.
+      IM:
+      Infant under 6 months 50 micrograms (0.05 ml of 1 mg/ml solution);
+      Infant or Child 6 months–6 years 150 micrograms (0.15 ml of 1 mg/ml solution);
+      Child 6–12 years 300 micrograms (0.3 ml of 1 mg/ml solution).
+      These doses may be repeated at 5 minute intervals, several times if necessary, depending on
+      blood pressure, pulse and respiratory function.
+      IV (if circulation inadequate):
+      Infant or Child 10 micrograms/kg (0.1 ml/kg of the dilute 1 mg/10 ml solution) given over
+      several minutes.
+
+30                                                                     WHO Model Formulary for Children 2010
+                                                         3    Antiallergics and medicines used in anaphylaxis
+Renal impairment: Dose reduction not necessary.
+Hepatic impairment: Dose reduction not necessary.
+Adverse effects: Common Nausea, vomiting, anxiety, headache, fear, palpitations, tachycardia,
+   restlessness, tremor, dizziness, dyspnoea, weakness, sweating, pallor, hyperglycaemia.
+Uncommon Excessive increase in blood pressure, ventricular arrhythmias, pulmonary oedema (on
+  excessive dosage or extreme sensitivity), angina, cold extremities, peripheral ischaemia and necrosis
+  (at injection site).
+Rare Allergic reaction (sodium metabisulfite in some products).
+Overdose or rapid intravenous administration Arrhythmias (ventricular and
+supraventricular), severe hypertension, cerebral haemorrhage, pulmonary oedema.
+Interactions with other medicines (* indicates severe):
+  Amitriptyline: increased effect or toxicity of epinephrine.
+* Cyclopropane: may precipitate ventricular arrhythmias.
+* Ergot derivatives: may precipitate hypertensive crisis
+  Fluoxetine: increased effect or toxicity of epinephrine.
+* Halothane: may precipitate ventricular arrhythmias.
+  Propranolol: hypertension, bradycardia, resistance to epinephrine effect.
+Notes: 1 mg/ml = 1:1000 or 0.1%.
+Inject intramuscular epinephrine into anterolateral aspect of thigh; do not inject into hands, feet,
+  ears, nose, genitals or buttocks.
+References:
+Hill SR, Kouimtzi M, Stuart MC, eds. WHO model formulary. Geneva, World Health Organization, 2008.
+Klasco RK, ed. Drugdex system. Greenwood Village, Thomson Micromedex, 2010. (http://www.thomsonhc.com, accessed 10
+February 2010).
+Paediatric Formulary Committee. British national formulary for children 2009. London, BMJ Group RBS Publishing, 2009.
+Rossi S, ed. Australian medicines handbook. Adelaide, Australian Medicines Handbook, 2009.
+WHO expert committee on the selection and use of essential medicines. The selection and use of essential medicines: report of
+the WHO expert committee, October 2007 (including the model list of essential medicines for children). WHO Technical Report
+Series, 2008, 950 (http://www.who.int/medicines/publications/essentialmeds_committeereports/TRS_950.pdf ).
+
+
+
+Hydrocortisone
+ATC code: H02AB09
+  Powder for injection: 100 mg (as sodium succinate) in vial
+Indications: Adjunct in the emergency treatment of anaphylaxis.
+Contraindications: Not relevant to emergency use.
+Precautions: Not relevant to emergency use.
+
+ Dose:
+ Anaphylaxis.
+   IM or IV:
+   Infant under 6 months initially 25 mg up to four times daily adjusted according to response.
+   Infant or Child 6 months–6 years initially 50 mg up to four times daily adjusted according to
+   response.
+   Child 6–12 years initially 100 mg up to four times daily adjusted according to response.
+Renal impairment: Dose reduction not necessary.
+Hepatic impairment: Dose reduction not necessary.
+
+
+WHO Model Formulary for Children 2010                                                                                      31
+3       Antiallergics and medicines used in anaphylaxis
+Adverse effects: Incidence of adverse effects is related to dose and duration of treatment. Short
+  courses of high-dose systemic treatment cause fewer adverse effects than prolonged courses of
+  lower doses.
+Common Nausea, increased susceptibility to infection, masking of signs of infection, sodium and
+  water retention, oedema, hypertension, hypokalaemia, hyperglycaemia, increased appetite,
+  dyspepsia, delayed wound healing, bruising, acne, psychiatric effects (including euphoria,
+  hypomania, depression, disturbances of mood, cognition, sleep and behaviour).
+Intravenous Transient itching, burning or tingling in perineal area (after intravenous bolus).
+Rare Peptic ulceration, posterior subcapsular cataracts, glaucoma, hypersensitivity reactions including
+    anaphylaxis, psychiatric effects (including delirium or psychosis).
+Interactions with other medicines (* indicates severe):
+  Acetylsalicylic acid: increased risk of gastrointestinal bleeding and ulceration; hydrocortisone
+  reduces plasma salicylate concentration.
+* Amphotericin B: increased risk of hypokalaemia (avoid concomitant use unless hydrocortisone
+  needed to control reactions).
+* Carbamazepine: accelerated metabolism of hydrocortisone (reduced effect).
+  Digoxin: increased risk of hypokalaemia.
+  Enalapril: antagonism of hypotensive effect.
+  Erythromycin: erythromycin possibly inhibits metabolism of hydrocortisone.
+  Furosemide: antagonism of diuretic effect; increased risk of hypokalaemia.
+  Hydrochlorothiazide: antagonism of diuretic effect; increased risk of hypokalaemia.
+  Ibuprofen: increased risk of gastrointestinal bleeding and ulceration.
+  Insulins: antagonism of hypoglycaemic effect.
+  Metformin: antagonism of hypoglycaemic effect.
+* Methotrexate: increased risk of haematological toxicity.
+* Phenobarbital: metabolism of hydrocortisone accelerated (reduced effect).
+* Phenytoin: metabolism of hydrocortisone accelerated (reduced effect).
+  Propranolol: antagonism of hypotensive effect.
+* Rifampicin: accelerated metabolism of hydrocortisone (reduced effect).
+  Ritonavir: plasma concentration possibly increased by ritonavir.
+  Salbutamol: increased risk of hypokalaemia if high doses of salbutamol given with hydrocortisone.
+  Spironolactone: antagonism of diuretic effect.
+  Vaccine, influenza: high doses of hydrocortisone impairs immune response.
+* Vaccine, live: high doses of hydrocortisone impairs immune response; avoid use of live vaccines.
+* Warfarin: anticoagulant effect possibly enhanced or reduced (high-dose hydrocortisone enhances
+  anticoagulant effect).
+References:
+Hill SR, Kouimtzi M, Stuart MC, eds. WHO model formulary. Geneva, World Health Organization, 2008.
+Paediatric Formulary Committee. British national formulary for children 2009. London, BMJ Group RBS Publishing, 2009.
+Rossi S, ed. Australian medicines handbook. Adelaide, Australian Medicines Handbook, 2009.
+WHO expert committee on the selection and use of essential medicines. The selection and use of essential medicines: report of
+the WHO expert committee, October 2007 (including the model list of essential medicines for children). WHO Technical Report
+Series, 2008, 950 (http://www.who.int/medicines/publications/essentialmeds_committeereports/TRS_950.pdf ).
+
+
+
+
+32                                                                     WHO Model Formulary for Children 2010
+                                              3    Antiallergics and medicines used in anaphylaxis
+Prednisolone
+ATC code: H02AB06
+  Oral liquid: 5 mg/ml
+  Tablet: 5 mg; 25 mg
+Special Notes: Prednisone should be considered equivalent to prednisolone.
+This medicine is listed as a representative of its pharmacological class. Other medicines in the same
+  class may have similar clinical performance and may be selected for local formularies based on
+  availability and price. The information in this monograph only applies to the medicine listed here.
+Indications: Short-term suppression of inflammation.
+Contraindications: Untreated systemic infection; administration of live vaccines: usually not relevant
+  to emergency treatment.
+Precautions: Most precautions do not apply for emergency or short-term use.
+Increased severity of viral infections; recent myocardial infarction; congestive heart failure; renal
+  impairment; hepatic impairment; diabetes mellitus; osteoporosis; glaucoma; corneal perforation;
+  severe psychosis; epilepsy; psoriasis; peptic ulcer; hypothyroidism; history of steroid myopathy.
+
+ Dose:
+ Oral:
+   Infant or Child 1–2 mg/kg once daily (usual maximum 60 mg), reducing after a few days if
+   appropriate. Increased frequency may be required in certain clinical indications.
+Renal impairment: Dose reduction not necessary.
+Hepatic impairment: Adverse effects more common.
+Adverse effects: Incidence of adverse effects is related to dose and duration of treatment. Short
+  courses of high-dose systemic treatment cause fewer adverse effects than prolonged courses of
+  lower doses.
+Common Nausea, increased susceptibility to infection, masking of signs of infection, sodium and
+  water retention, oedema, hypertension, hypokalaemia, hyperglycaemia, increased appetite,
+  dyspepsia, delayed wound healing, bruising, acne, psychiatric effects (including euphoria,
+  hypomania, depression, disturbances of mood, cognition, sleep and behaviour).
+Rare Peptic ulceration, posterior subcapsular cataracts, glaucoma, hypersensitivity reactions including
+  anaphylaxis, psychiatric effects (including delirium and psychosis).
+Interactions with other medicines (* indicates severe):
+  Acetylsalicylic acid: increased risk of gastrointestinal bleeding and ulceration; prednisolone
+  reduces plasma salicylate concentration.
+* Amphotericin B: increased risk of hypokalaemia.
+* Carbamazepine: accelerated metabolism of prednisolone (reduced effect).
+  Ciclosporin: increased plasma concentration of prednisolone.
+  Contraceptives, oral: oral contraceptives containing estrogens increase plasma concentration of
+  prednisolone.
+  Digoxin: increased risk of hypokalaemia.
+  Enalapril: antagonism of hypotensive effect.
+  Erythromycin: erythromycin possibly inhibits metabolism of prednisolone.
+  Furosemide: antagonism of diuretic effect; increased risk of hypokalaemia.
+  Hydrochlorothiazide: antagonism of diuretic effect; increased risk of hypokalaemia.
+  Ibuprofen: increased risk of gastrointestinal bleeding and ulceration.
+
+WHO Model Formulary for Children 2010                                                               33
+3       Antiallergics and medicines used in anaphylaxis
+  Insulins: antagonism of hypoglycaemic effect.
+* Methotrexate: increased risk of haematological toxicity.
+* Phenobarbital: metabolism of prednisolone accelerated (reduced effect).
+* Phenytoin: metabolism of prednisolone accelerated (reduced effect).
+  Propranolol: antagonism of hypotensive effect.
+* Rifampicin: accelerated metabolism of prednisolone (reduced effect).
+  Ritonavir: plasma concentration possibly increased by ritonavir.
+  Salbutamol: increased risk of hypokalaemia if high doses of salbutamol given with prednisolone.
+  Spironolactone: antagonism of diuretic effect.
+  Vaccine, influenza: high doses of prednisolone impair immune response.
+* Vaccine, live: high doses of prednisolone impair immune response; avoid use of live vaccines.
+* Warfarin: anticoagulant effect possibly enhanced or reduced (high-dose prednisolone enhances
+  anticoagulant effect).
+Notes: Take the tablets or oral liquid with food to help reduce stomach upset.
+References:
+Hill SR, Kouimtzi M, Stuart MC, eds. WHO model formulary. Geneva, World Health Organization, 2008.
+Klasco RK, ed. Drugdex system. Greenwood Village, Thomson Micromedex, 2010. (http://www.thomsonhc.com, accessed 10
+February 2010).
+Rossi S, ed. Australian medicines handbook. Adelaide, Australian Medicines Handbook, 2009.
+WHO expert committee on the selection and use of essential medicines. The selection and use of essential medicines: report of
+the WHO expert committee, October 2007 (including the model list of essential medicines for children). WHO Technical Report
+Series, 2008, 950 (http://www.who.int/medicines/publications/essentialmeds_committeereports/TRS_950.pdf ).
+
+
+
+
+34                                                                     WHO Model Formulary for Children 2010
+                                                                                                       ﻿

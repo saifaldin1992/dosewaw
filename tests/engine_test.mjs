@@ -218,7 +218,8 @@ const EVH = {cetirizine_child: ['children 2 to under 6 years of age 2.5 ml once 
 for (const [id, list] of Object.entries(EVH)) { const t = labH(id); for (const q of list) check(t.includes(q), id + ': «' + q + '» in the label'); }
 check(whoH.includes('1–2 years 1 mg twice daily') && whoH.includes('2–6 years 1 mg every 4–6 hours (maximum 6 mg daily)') && whoH.includes('oral liquid: 2 mg/5 ml'), 'WHO chlorphenamine text');
 const ah = JSON.parse(fs.readFileSync(new URL('../data/antihistamines.json', import.meta.url), 'utf8'));
-check(ah.length === 8 && ah.every(d => RULES[d.id] && BANDS[d.id] && txt(d.n) && txt(d.dose) && txt(d.preg) && d.inter.length && d.src.length), 'antihistamines: 8 drugs, each with adult rules, children chart, dose, pregnancy, interactions, sources');
+check(ah.length === 13 && ah.every(d => RULES[d.id] && txt(d.n) && txt(d.dose) && txt(d.preg) && d.inter.length && d.src.length), 'antihistamines and corticosteroids: 13 drugs, each with adult rules, dose, pregnancy, interactions, sources');
+check(ah.filter(d => BANDS[d.id]).length === 10, '10 of them have a children calculator (8 antihistamines, prednisolone, dexamethasone)');
 const hb = (id, m) => band(BANDS[id], { months: m }, {}, []);
 let h = hb('cetirizine', 36); check(h.mg === 2.5 && h.ml[0].ml === 2.5, 'cetirizine 3 years: 2.5 mg = 2.5 mL');
 h = hb('cetirizine', 96); check(h.mg === 5 && h.mg2 === 10 && h.ml2[0].ml === 10, 'cetirizine 8 years: 5-10 mg = 5-10 mL');
@@ -231,5 +232,22 @@ check(hb('diphenhydramine', 48).kind === 'doctor', 'diphenhydramine 4 years: onl
 check(hb('hydroxyzine', 48).mg === 50 && hb('hydroxyzine', 120).mg2 === 100 && hb('hydroxyzine', 216).kind === 'adult', 'hydroxyzine: under 6 50 mg/day; over 6 50-100 mg/day; adults from 18');
 const lv = cr => abEval(RULES.levocetirizine, { hd: false }, { cr }, { kidney: true, age: true, weight: true }).rows.find(r => r.strong).v.en;
 check(/^5 mg/.test(lv(90)) && lv(80) === '2.5 mg once a day' && lv(50) === '2.5 mg once a day' && lv(49) === '2.5 mg every other day' && lv(30) === '2.5 mg every other day' && /twice a week/.test(lv(29)) && /Contraindicated/.test(lv(9)), 'levocetirizine kidney table (80/50/30/10 mL/min)');
+
+// ---------- oral corticosteroids ----------
+const EVS = {prednisolone_sol: ['0.14 to 2 mg/kg/day in three or four divided doses', '1-2 mg/kg/day in single or divided doses', '3 to 10 days', '60 mg/m2/day given in three divided doses for 4 weeks', 'alternate-day therapy at 40 mg/m', '5 to 60 mg prednisolone base) per day', '15 mg prednisolone per 5 ml', '25 mg prednisolone per 5 ml', 'systemic fungal infections'],
+  prednisone: ['5 mg to 60 mg per day', 'daily doses of 200 mg of prednisolone for a week followed by 80 mg every other day for 1 month', 'dosage range is the same for prednisone and prednisolone', 'prior to 9 am', 'with food or milk', 'avoid abrupt withdraw', 'systemic fungal infections'],
+  dexamethasone: ['0.75 mg to 9 mg a day', '0.02 mg/kg/day to 0.3 mg/kg/day in three or four divided doses', 'daily doses of 30 mg of dexamethasone for a week followed by 4 mg to 12 mg every other day for one month', 'prednisolone, 5 mg', 'dexamethasone, 0.75 mg', 'methylprednisolone, 4 mg', 'hydrocortisone, 20 mg', 'prednisone, 5 mg'],
+  methylprednisolone: ['4 mg to 48 mg of methylprednisolone per day', '200 mg of prednisolone for a week followed by 80 mg every other day for 1 month', '4 mg of methylprednisolone is equivalent to 5 mg of prednisolone'],
+  hydrocortisone: ['20 mg to 240 mg of hydrocortisone per day'],
+  prednisolone_syr: ['15 mg of prednisolone in each 5 ml']};
+for (const [id, list] of Object.entries(EVS)) { const t = labH(id).replace(/2bsa/g, '2 bsa'); for (const q of list) check(t.includes(q) || t.replace(/2 bsa/g, '2bsa').includes(q), id + ': «' + q + '» in the label'); }
+check(whoH.includes('infant or child 1–2 mg/kg once daily (usual maximum 60 mg)'), 'WHO prednisolone 1-2 mg/kg, usual maximum 60 mg');
+let st = band(BANDS.prednisolone, { W: 15 }, { why: 'asthma' }, []); check(st.mg === 15 && st.mg2 === 30 && !st.capped && st.ml.find(q => q.c === 15).ml === 5 && st.ml2.find(q => q.c === 15).ml === 10, 'prednisolone 15 kg asthma: 15-30 mg/day = 5-10 mL of 15 mg/5 mL');
+st = band(BANDS.prednisolone, { W: 40, months: 120 }, { why: 'asthma' }, []); check(st.mg === 40 && st.mg2 === 60 && st.capped, 'prednisolone 40 kg asthma: 40-80 capped at 60 mg (WHO)');
+st = band(BANDS.prednisolone, { W: 15 }, { why: 'gen' }, []); check(Math.abs(st.mg - 2.1) < 1e-9 && st.mg2 === 30, 'prednisolone 15 kg other conditions: 2.1-30 mg/day');
+st = band(BANDS.dexamethasone, { W: 20 }, { why: 'gen' }, []); check(Math.abs(st.mg - 0.4) < 1e-9 && Math.abs(st.mg2 - 6) < 1e-9, 'dexamethasone 20 kg: 0.4-6 mg/day');
+check(band(BANDS.prednisolone, { months: 240 }, {}, []).kind === 'adult', 'prednisolone adults from 18');
+const ms = abEval(RULES.dexamethasone, { ind: 'ms' }, { cr: null }, { kidney: false, age: false, weight: false }).rows.find(r => r.strong).v.en;
+check(/^30 mg a day for a week/.test(ms), 'dexamethasone multiple sclerosis regimen');
 console.log(`engine: ${ok} ok, ${fail} failed`);
 process.exit(fail ? 1 : 0);

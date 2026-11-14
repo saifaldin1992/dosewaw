@@ -81,3 +81,23 @@ Object.assign(ABC_RULES, {
     notes:{ar:'يزيد أثر مثبطات الجهاز العصبي فتُخفض جرعاتها. ممنوع مع حساسية السيتريزين أو الليفوسيتريزين.',en:'Potentiates CNS depressants, whose doses should be reduced. Contraindicated with cetirizine or levocetirizine allergy.'}
   }
 });
+
+/* oral corticosteroids (adults): the label's starting range, the multiple sclerosis regimen where the label gives one */
+const ST_TAPER={k:{ar:'الإيقاف',en:'Stopping'},warn:true,rules:[{when:{},text:{ar:'بعد أكثر من بضعة أيام لا يُوقف فجأة: يُسحب تدريجياً',en:'After more than a few days, do not stop suddenly: withdraw gradually'}}]};
+const ST_IND=(ms)=>({id:'ind',type:'select',label:{ar:'الاستعمال',en:'Use'},options:[['gen',{ar:'الجرعة الأولى حسب المرض',en:'Initial dose by disease'}],...(ms?[['ms',{ar:'نوبة حادة من التصلب المتعدد',en:'Acute flare of multiple sclerosis'}]]:[])]});
+const ST=(id,ar,en,label,src,range,ms)=>({name:{ar,en},label,srcIds:src,noRenal:true,inputs:[ST_IND(!!ms)],
+  rows:[{k:{ar:'الجرعة',en:'Dose'},strong:true,rules:[...(ms?[{when:{ind:'ms'},text:ms}]:[]),{when:{},text:range}]},
+    {k:{ar:'بعد الاستجابة',en:'After response'},rules:[{when:{},text:{ar:'تُخفض تدريجياً إلى أقل جرعة تحافظ على الاستجابة',en:'Reduce gradually to the lowest dose that keeps the response'}}]},ST_TAPER],
+  notes:{ar:'ممنوع مع العدوى الفطرية الجهازية. اللقاحات الحية ممنوعة مع الجرعات المثبطة للمناعة.',en:'Contraindicated with systemic fungal infections. Live vaccines are contraindicated with immunosuppressive doses.'}});
+Object.assign(ABC_RULES, {
+  prednisolone: ST('prednisolone','بريدنيزولون','Prednisolone','DailyMed, prednisolone sodium phosphate oral solution (2026-09-04); multiple sclerosis: prednisone tablets label (same range for prednisone and prednisolone)',[154,155],
+    {ar:'5 إلى 60 ملغ يومياً حسب المرض',en:'5 to 60 mg a day by disease'},{ar:'200 ملغ يومياً أسبوعاً، ثم 80 ملغ يوماً بعد يوم لمدة شهر',en:'200 mg a day for a week, then 80 mg every other day for a month'}),
+  prednisone: ST('prednisone','بريدنيزون','Prednisone','DailyMed, prednisone tablets (2026-11-09)',[155],
+    {ar:'5 إلى 60 ملغ يومياً حسب المرض؛ الجرعة الواحدة صباحاً قبل التاسعة مع الطعام أو الحليب',en:'5 to 60 mg a day by disease; a single dose in the morning before 9 am with food or milk'},{ar:'200 ملغ يومياً أسبوعاً، ثم 80 ملغ يوماً بعد يوم لمدة شهر',en:'200 mg a day for a week, then 80 mg every other day for a month'}),
+  dexamethasone: ST('dexamethasone','ديكساميثازون','Dexamethasone','DailyMed, dexamethasone tablets (2026-11-04)',[156],
+    {ar:'0.75 إلى 9 ملغ يومياً حسب المرض',en:'0.75 to 9 mg a day by disease'},{ar:'30 ملغ يومياً أسبوعاً، ثم 4 إلى 12 ملغ يوماً بعد يوم لمدة شهر',en:'30 mg a day for a week, then 4 to 12 mg every other day for a month'}),
+  methylprednisolone: ST('methylprednisolone','ميثيل بريدنيزولون','Methylprednisolone','DailyMed, methylprednisolone tablets (2026-10-13)',[157],
+    {ar:'4 إلى 48 ملغ يومياً حسب المرض',en:'4 to 48 mg a day by disease'},{ar:'ما يعادل 200 ملغ بريدنيزولون (160 ملغ) يومياً أسبوعاً، ثم ما يعادل 80 ملغ (64 ملغ) يوماً بعد يوم لمدة شهر',en:'The equivalent of 200 mg prednisolone (160 mg) a day for a week, then of 80 mg (64 mg) every other day for a month'}),
+  hydrocortisone: ST('hydrocortisone','هيدروكورتيزون','Hydrocortisone','DailyMed, hydrocortisone tablets (2026-10-29)',[158],
+    {ar:'20 إلى 240 ملغ يومياً حسب المرض',en:'20 to 240 mg a day by disease'},null)
+});
