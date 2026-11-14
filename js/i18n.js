@@ -73,6 +73,7 @@ const I18N = {
   pc_every_r:['كل {a} إلى {b} ساعات عند الحاجة','every {a} to {b} hours if needed'], pc_limit:['الحد','Limit'],
   need_age_chart:['هذا الدواء يُحسب بالعمر في نشرته: اختر «سنوات» أو «أشهر» واكتب العمر.','This drug is dosed by age in its label: choose «Years» or «Months» and enter the age.'], mg_day:['ملغ/يوم','mg/day'],
   by_mgkg_day:['{a} إلى {b} ملغ لكل كغ في اليوم','{a} to {b} mg per kg a day'], cap_day_src:['الحد الأعلى المعتاد {m} ملغ في اليوم (WHO).','Usual maximum {m} mg a day (WHO).'], s_eq:['تكافؤ الكورتيزونات','Corticosteroid equivalents'],
+  by_mgkg_dose:['{a} إلى {b} ملغ لكل كغ في الجرعة','{a} to {b} mg per kg per dose'], by_kg_chart:['حسب جدول النشرة للوزن {k} كغ','By the label chart for weight {k} kg'], adult_from:['الجرعة من عمر {y} سنة','Dose from {y} years'],
   s_liver:['الكبد','Liver'], s_preg:['الحمل والرضاعة','Pregnancy and breast-feeding'],
   pcard:['بطاقة المريض','Patient card'], close:['إغلاق','Close'], pc_lang:['لغة البطاقة','Card language'], pc_foot2:['لا تتجاوز الجرعة أو عدد المرات المكتوب. لأي سؤال راجع الصيدلي.','Do not give more, or more often, than written. Ask the pharmacist about anything.'],
   pc_med:['الدواء','Medicine'], pc_susp:['شراب','suspension'], pc_dose:['الجرعة','Dose'], pc_when:['المواعيد','When'],

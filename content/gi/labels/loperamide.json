@@ -1,0 +1,68 @@
+{
+ "id": "loperamide",
+ "query": "openfda.generic_name:\"loperamide hydrochloride\" AND openfda.product_type:\"HUMAN OTC DRUG\"",
+ "set_id": "10edd7bc-fc35-abe3-e063-6394a90aeb3f",
+ "version": "3",
+ "effective_time": "20261104",
+ "brand": [
+  "AMAZON BASIC CARE LOPERAMIDE HYDROCHLORIDE"
+ ],
+ "generic": [
+  "LOPERAMIDE HYDROCHLORIDE"
+ ],
+ "route": [
+  "ORAL"
+ ],
+ "type": "HUMAN OTC DRUG",
+ "manufacturer": [
+  "Amazon.com Services LLC"
+ ],
+ "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=10edd7bc-fc35-abe3-e063-6394a90aeb3f",
+ "sections": {
+  "indications_and_usage": [
+   "Use controls symptoms of diarrhea, including Travelers' Diarrhea"
+  ],
+  "dosage_and_administration": [
+   "Directions drink plenty of clear fluids to help prevent dehydration caused by diarrhea find right dose on chart. If possible, use weight to dose; otherwise, use age. adults and children 12 years and over 2 tablets after the first loose stool; 1 tablet after each subsequent loose stool; but no more than 4 tablets in 24 hours children 9 to 11 years (60 to 95 lbs) 1 tablet after the first loose stool; 1/2 tablet after each subsequent loose stool; but no more than 3 tablets in 24 hours children 6 to 8 years (48 to 59 lbs) 1 tablet after the first loose stool; 1/2 tablet after each subsequent loose stool; but no more than 2 tablets in 24 hours children 2 to 5 years (34 to 47 lbs) ask a doctor children under 2 years (up to 33 lbs) do not use"
+  ],
+  "dosage_and_administration_table": [
+   "<table cellspacing=\"0\" cellpadding=\"0\" border=\"0\" width=\"100%\"> <colgroup> <col width=\"29.46%\"/> <col width=\"70.54%\"/> </colgroup> <tbody> <tr styleCode=\"Botrule\"> <td styleCode=\"Lrule Rrule\" valign=\"middle\">adults and children 12 years and over  </td> <td styleCode=\"Rrule\" valign=\"middle\">2 tablets after the first loose stool; 1 tablet after each subsequent loose stool; but no more than 4 tablets in 24 hours  </td> </tr> <tr styleCode=\"Botrule\"> <td styleCode=\"Lrule Rrule\" valign=\"middle\">children 9 to 11 years (60 to 95 lbs)  </td> <td styleCode=\"Rrule\" valign=\"middle\">1 tablet after the first loose stool; 1/2 tablet after each subsequent loose stool; but no more than 3 tablets in 24 hours  </td> </tr> <tr styleCode=\"Botrule\"> <td styleCode=\"Lrule Rrule\" valign=\"middle\">children 6 to 8 years (48 to 59 lbs)  </td> <td styleCode=\"Rrule\" valign=\"middle\">1 tablet after the first loose stool; 1/2 tablet after each subsequent loose stool; but no more than 2 tablets in 24 hours  </td> </tr> <tr styleCode=\"Botrule\"> <td styleCode=\"Lrule Rrule\" valign=\"middle\">children 2 to 5 years (34 to 47 lbs)  </td> <td styleCode=\"Rrule\" valign=\"middle\">ask a doctor  </td> </tr> <tr> <td styleCode=\"Lrule Rrule\" valign=\"middle\">children under 2 years (up to 33 lbs)  </td> <td styleCode=\"Rrule\" valign=\"middle\">do not use  </td> </tr> </tbody> </table>"
+  ],
+  "warnings": [
+   "Warnings Allergy alert: Do not use if you have ever had a rash or other allergic reaction to loperamide hydrochloride Heart alert: Taking more than directed can cause serious heart problems or death"
+  ],
+  "storage_and_handling": [
+   "Other information store at 20° to 25°C (68° to 77°F). do not use if carton or blister unit is open or torn Meets USP dissolution test 2 see side panel for lot number and expiration date"
+  ],
+  "active_ingredient": [
+   "Drug Facts Active ingredient (in each tablet) Loperamide hydrochloride USP 2 mg"
+  ],
+  "purpose": [
+   "Purpose Anti-diarrheal"
+  ],
+  "do_not_use": [
+   "Do not use if you have bloody or black stool"
+  ],
+  "ask_doctor": [
+   "Ask a doctor before use if you have fever mucus in the stool a history of liver disease a history of abnormal heart rhythm"
+  ],
+  "ask_doctor_or_pharmacist": [
+   "Ask a doctor or pharmacist before use if you are taking a prescription drug. Loperamide may interact with certain prescription drugs."
+  ],
+  "stop_use": [
+   "Stop use and ask a doctor if symptoms get worse diarrhea lasts for more than 2 days you get abdominal swelling or bulging. These may be signs of a serious condition."
+  ],
+  "pregnancy_or_breast_feeding": [
+   "If pregnant or breast-feeding, ask a health professional before use."
+  ],
+  "keep_out_of_reach_of_children": [
+   "Keep out of reach of children. In case of overdose, get medical help or contact a Poison Control Center (1-800-222-1222) right away."
+  ],
+  "when_using": [
+   "When using this product tiredness, drowsiness or dizziness may occur. Be careful when driving or operating machinery."
+  ],
+  "package_label_principal_display_panel": [
+   "PACKAGE LABEL-PRINCIPAL DISPLAY PANEL - 2 mg Blister Carton (4 x 6's Tablets) amazon basics Compare to Imodium® A-D active ingredient* NDC 72288-225-76 Loperamide Hydrochloride Tablets USP 2 mg Anti-Diarrheal Controls the symptoms of diarrhea actual size 24 TABLETS figure"
+  ]
+ }
+}

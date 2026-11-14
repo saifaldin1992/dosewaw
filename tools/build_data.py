@@ -31,7 +31,7 @@ missing = used - ids
 assert not missing, f'source ids used but not defined: {sorted(missing)}'
 for x in sources: x['g'] = 'ab'
 # label-based groups: drugs written from the saved labels (content/<folder>/labels) and WHO; sources built from the label files
-LGROUPS = {'an': 'analgesics', 'ah': 'antihistamines'}
+LGROUPS = {'an': 'analgesics', 'ah': 'antihistamines', 'gi': 'gi'}
 GD = {}
 for g, folder in LGROUPS.items():
   GD[g] = json.load(open(C(folder, 'drugs.json'), encoding='utf-8'))['drugs']

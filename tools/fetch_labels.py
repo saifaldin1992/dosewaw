@@ -44,6 +44,18 @@ GROUPS = {
     'hydrocortisone': ('hydrocortisone', r'^HYDROCORTISONE$', 'ORAL', RX, r'tablet'),
     'hydroxyzine': ('hydroxyzine hydrochloride', r'^HYDROXYZINE( HYDROCHLORIDE| HCL)?$', 'ORAL', RX, None),
   },
+  'gi': {
+    'omeprazole': ('omeprazole', r'^OMEPRAZOLE$', 'ORAL', RX, r'pediatric'),
+    'omeprazole_otc': ('omeprazole', r'^OMEPRAZOLE( MAGNESIUM)?$', 'ORAL', OTC, r'20 mg'),
+    'esomeprazole': ('esomeprazole magnesium', r'^ESOMEPRAZOLE MAGNESIUM$', 'ORAL', RX, r'1 (year|to) (to )?11 years'),
+    'pantoprazole': ('pantoprazole sodium', r'^PANTOPRAZOLE( SODIUM)?$', 'ORAL', RX, None),
+    'lansoprazole': ('lansoprazole', r'^LANSOPRAZOLE$', 'ORAL', RX, r'pediatric'),
+    'famotidine': ('famotidine', r'^FAMOTIDINE$', 'ORAL', RX, r'tablet'),
+    'famotidine_susp': ('famotidine', r'^FAMOTIDINE$', 'ORAL', RX, r'for oral suspension'),
+    'ondansetron': ('ondansetron hydrochloride', r'^ONDANSETRON( HYDROCHLORIDE)?$', 'ORAL', RX, r'oral solution'),
+    'metoclopramide': ('metoclopramide', r'^METOCLOPRAMIDE( HYDROCHLORIDE)?$', 'ORAL', RX, r'poor metabolizers'),
+    'loperamide': ('loperamide hydrochloride', r'^LOPERAMIDE( HYDROCHLORIDE| HCL)?$', 'ORAL', OTC, r'2 mg'),
+  },
   'analgesics': {
     # id: (generic search, exact generic regex, route regex, type, text that must appear in the label or None)
     'paracetamol_child': ('acetaminophen', r'^ACETAMINOPHEN$', 'ORAL', OTC, r'160 mg (in|per|/) ?5 mL'),

@@ -129,4 +129,70 @@ Object.assign(BANDS, {
       {kind:'adult', ageM:[216,1e9], lb:[96,1e9], ref:156, text:{ar:'0.75 إلى 9 ملغ يومياً حسب المرض',en:'0.75 to 9 mg a day by disease'}}],
     duration:{ar:'حسب الطبيب؛ يُخفض تدريجياً',en:'As the doctor directs; taper gradually'}, patient:[]}
 });
+/* GI drugs. kgChart = the label's table by weight in kg (rows kg [from, to), `hiIn` = the upper limit included);
+   mgkgRange with mgkgDose = mg per kg per dose (famotidine suspension). wtFirst: the label says «use weight if possible». */
+const GI_DAY={ar:'مرة يومياً',en:'once a day'};
+Object.assign(BANDS, {
+  omeprazole: { strengths:[],
+    segs:[
+      {kind:'doctor', ageM:[0,1], ref:160, msg:{ar:'أقل من شهر: لا تذكر النشرة جرعة.',en:'Under 1 month: the label gives no dose.'}},
+      {kind:'kgChart', ageM:[1,12], ref:160, freq:{ar:'مرة يومياً حتى 6 أسابيع (التهاب المريء التآكلي)',en:'once a day for up to 6 weeks (erosive esophagitis)'},
+        below:{ar:'أقل من 3 كغ: لا تذكر النشرة جرعة.',en:'Under 3 kg: the label gives no dose.'},
+        rows:[{kg:[3,5],mg:2.5},{kg:[5,10],mg:5},{kg:[10,1e9],mg:10}]},
+      {kind:'kgChart', ageM:[12,204], lb:[0,96], ref:160, freq:{ar:'مرة يومياً: الارتجاع حتى 4 أسابيع، والتهاب المريء التآكلي 4 إلى 8 أسابيع',en:'once a day: GERD up to 4 weeks, erosive esophagitis 4 to 8 weeks'},
+        below:{ar:'أقل من 5 كغ (من سنة): لا تذكر النشرة جرعة. للرضيع أقل من سنة اختر «أشهر» واكتب العمر.',en:'Under 5 kg (from 1 year): the label gives no dose. For an infant under 1 year choose «months» and enter the age.'},
+        hint:{ar:'جدول الأطفال من 1 إلى 16 سنة. للرضيع أقل من سنة اختر «أشهر».',en:'Chart for children 1 to 16 years. For an infant under 1 year choose «months».'},
+        rows:[{kg:[5,10],mg:5},{kg:[10,20],mg:10},{kg:[20,1e9],mg:20}]},
+      {kind:'adult', ageM:[204,1e9], ref:160, text:{ar:'20 ملغ مرة يومياً (الارتجاع حتى 4 أسابيع)',en:'20 mg once a day (GERD up to 4 weeks)'}}],
+    duration:{ar:'الارتجاع حتى 4 أسابيع؛ التهاب المريء 4 إلى 8 أسابيع (الرضع حتى 6 أسابيع)',en:'GERD up to 4 weeks; esophagitis 4 to 8 weeks (infants up to 6 weeks)'},
+    patient:[{ar:'يُعطى قبل الطعام.',en:'Give before a meal.'},{ar:'لا تُسحق الكبسولة ولا تُمضغ.',en:'Do not crush or chew the capsule.'}]},
+  pantoprazole: { strengths:[],
+    segs:[
+      {kind:'doctor', ageM:[0,60], ref:163, msg:{ar:'أقل من 5 سنوات: لا توجد قوة مناسبة للعمر (النشرة).',en:'Under 5 years: no age-appropriate strength (label).'}},
+      {kind:'kgChart', ageM:[60,204], lb:[0,96], ref:163, freq:{ar:'مرة يومياً حتى 8 أسابيع (التهاب المريء التآكلي)',en:'once a day for up to 8 weeks (erosive esophagitis)'},
+        below:{ar:'أقل من 15 كغ: لا تذكر النشرة جرعة.',en:'Under 15 kg: the label gives no dose.'},
+        hint:{ar:'جدول الأطفال من 5 سنوات. أقل من 5 سنوات: لا يُعطى.',en:'Chart for children from 5 years. Under 5 years: not given.'},
+        rows:[{kg:[15,40],mg:20},{kg:[40,1e9],mg:40}]},
+      {kind:'adult', ageM:[204,1e9], ref:163, text:{ar:'40 ملغ مرة يومياً حتى 8 أسابيع',en:'40 mg once a day for up to 8 weeks'}}],
+    duration:{ar:'حتى 8 أسابيع',en:'Up to 8 weeks'},
+    patient:[{ar:'يُبلع القرص كاملاً؛ لا يُقسم ولا يُمضغ.',en:'Swallow the tablet whole; do not split or chew.'}]},
+  lansoprazole: { strengths:[],
+    segs:[
+      {kind:'doctor', ageM:[0,12], ref:164, msg:{ar:'أقل من سنة: لا تذكر النشرة جرعة.',en:'Under 1 year: the label gives no dose.'}},
+      {kind:'kgChart', ageM:[12,144], lb:[0,96], ref:164, freq:{ar:'مرة يومياً حتى 12 أسبوعاً',en:'once a day for up to 12 weeks'},
+        hint:{ar:'جدول الأطفال من 1 إلى 11 سنة.',en:'Chart for children 1 to 11 years.'},
+        rows:[{kg:[0,30],hiIn:true,mg:15},{kg:[30,1e9],mg:30}]},
+      {kind:'adult', ageM:[144,1e9], ref:164, text:{ar:'الارتجاع 15 ملغ، والتهاب المريء التآكلي 30 ملغ، مرة يومياً حتى 8 أسابيع',en:'GERD 15 mg, erosive esophagitis 30 mg, once a day for up to 8 weeks'}}],
+    duration:{ar:'حتى 12 أسبوعاً؛ لا تُتجاوز الجرعة والمدة',en:'Up to 12 weeks; do not exceed the dose or duration'},
+    patient:[{ar:'يُعطى قبل الطعام.',en:'Give before a meal.'},{ar:'لا تُسحق الكبسولة ولا تُمضغ.',en:'Do not crush or chew the capsule.'}]},
+  famotidine: { strengths:[{c:40,ref:166}], defWhy:'gerd',
+    opts:[{id:'why',options:[['gerd',{ar:'ارتجاع',en:'GERD'}],['pud',{ar:'قرحة هضمية (من سنة)',en:'Peptic ulcer (from 1 year)'}]]}],
+    segs:[
+      {kind:'mgkgRange', ageM:[0,3], ref:166, byWhy:{gerd:{mgkgDose:[0.5,1], ref:166, freq:{ar:'مرة يومياً؛ البداية 0.5 ملغ/كغ ويمكن رفعها إلى 1 ملغ/كغ',en:'once a day; start 0.5 mg/kg, may increase to 1 mg/kg'}}}},
+      {kind:'mgkgRange', ageM:[3,12], ref:166, byWhy:{gerd:{mgkgDose:[0.5,1], ref:166, max:{ar:'الحد 40 ملغ في اليوم',en:'maximum 40 mg a day'}, freq:{ar:'مرتين يومياً؛ البداية 0.5 ملغ/كغ ويمكن رفعها إلى 1 ملغ/كغ',en:'twice a day; start 0.5 mg/kg, may increase to 1 mg/kg'}}}},
+      {kind:'mgkgRange', ageM:[12,204], lb:[0,96], ref:166,
+        note:{ar:'هذه جرعة 1 إلى أقل من 17 سنة. للرضيع أقل من سنة اختر «أشهر» واكتب العمر.',en:'This is the dose for 1 to under 17 years. For an infant under 1 year choose «months» and enter the age.'},
+        byWhy:{gerd:{mgkgDose:[0.5,0.5], maxMg:40, ref:166, max:{ar:'الحد 40 ملغ مرتين يومياً',en:'maximum 40 mg twice a day'}, freq:{ar:'مرتين يومياً، 6 إلى 12 أسبوعاً',en:'twice a day, for 6 to 12 weeks'}},
+          pud:{mgkgDose:[0.5,1], maxMg:40, ref:166, max:{ar:'الحد 40 ملغ في اليوم',en:'maximum 40 mg a day'}, freq:{ar:'مرة يومياً قبل النوم؛ البداية 0.5 ملغ/كغ ويمكن رفعها إلى 1 ملغ/كغ، 8 أسابيع',en:'once a day at bedtime; start 0.5 mg/kg, may increase to 1 mg/kg, for 8 weeks'}}}},
+      {kind:'adult', ageM:[204,1e9], ref:165, text:{ar:'الارتجاع 20 ملغ مرتين يومياً حتى 6 أسابيع',en:'GERD 20 mg twice a day for up to 6 weeks'}}],
+    duration:{ar:'حسب الاستعمال؛ يُعاد تقييم الرضيع بعد 4 أسابيع',en:'By use; re-evaluate an infant after 4 weeks'},
+    patient:[{ar:'رجّ العبوة قبل كل جرعة، واستعمل أداة القياس.',en:'Shake the bottle before each dose and use a measuring device.'},{ar:'يُعطى مرة قبل النوم أو مرتين صباحاً وقبل النوم.',en:'Give once at bedtime, or twice: morning and bedtime.'}]},
+  ondansetron: { ageOnly:true, strengths:[],
+    segs:[
+      {kind:'doctor', ageM:[0,48], ref:167, msg:{ar:'أقل من 4 سنوات: لا تذكر النشرة جرعة فموية.',en:'Under 4 years: the label gives no oral dose.'}},
+      {kind:'chart', ageM:[48,144], ref:167, rows:[{age:[4,11],mg:4,freq:{ar:'قبل العلاج الكيميائي بـ30 دقيقة، ثم بعد 4 و8 ساعات من الأولى',en:'30 minutes before chemotherapy, then 4 and 8 hours after the first dose'},max:{ar:'ثم 4 ملغ 3 مرات يومياً 1 إلى 2 يوم بعد العلاج',en:'then 4 mg three times a day for 1 to 2 days after chemotherapy'}}]},
+      {kind:'adult', ageM:[144,1e9], ref:167, text:{ar:'8 ملغ قبل العلاج بـ30 دقيقة، و8 ملغ بعد 8 ساعات، ثم 8 ملغ مرتين يومياً 1 إلى 2 يوم',en:'8 mg 30 minutes before, 8 mg 8 hours later, then 8 mg twice a day for 1 to 2 days'}}],
+    duration:{ar:'1 إلى 2 يوم بعد العلاج الكيميائي',en:'1 to 2 days after chemotherapy'},
+    patient:[{ar:'الجرعة الأولى قبل العلاج الكيميائي بنصف ساعة.',en:'The first dose half an hour before chemotherapy.'}]},
+  loperamide: { wtFirst:true, strengths:[],
+    segs:[
+      {kind:'doctor', ageM:[0,24], lb:[0,34], ref:169, msg:{ar:'أقل من سنتين (حتى 33 رطلاً): لا يُستعمل (النشرة).',en:'Under 2 years (up to 33 lb): do not use (label).'}},
+      {kind:'doctor', ageM:[24,72], lb:[34,48], ref:169, msg:{ar:'من 2 إلى 5 سنوات (34 إلى 47 رطلاً): يُسأل الطبيب (النشرة).',en:'2 to 5 years (34 to 47 lb): ask a doctor (label).'}},
+      {kind:'chart', ageM:[72,144], lb:[48,96], ref:169, rows:[
+        {lb:[48,59],age:[6,8],mg:2,freq:{ar:'بعد أول براز رخو، ثم 1 ملغ (نصف قرص) بعد كل براز رخو',en:'after the first loose stool, then 1 mg (half a tablet) after each loose stool'},max:{ar:'لا يزيد على 4 ملغ (قرصين) في 24 ساعة',en:'no more than 4 mg (2 tablets) in 24 hours'}},
+        {lb:[60,95],age:[9,11],mg:2,freq:{ar:'بعد أول براز رخو، ثم 1 ملغ (نصف قرص) بعد كل براز رخو',en:'after the first loose stool, then 1 mg (half a tablet) after each loose stool'},max:{ar:'لا يزيد على 6 ملغ (3 أقراص) في 24 ساعة',en:'no more than 6 mg (3 tablets) in 24 hours'}}]},
+      {kind:'adult', ageM:[144,1e9], lb:[96,1e9], ref:169, text:{ar:'4 ملغ بعد أول براز رخو، ثم 2 ملغ بعد كل براز رخو، بحد 8 ملغ في 24 ساعة',en:'4 mg after the first loose stool, then 2 mg after each loose stool, up to 8 mg in 24 hours'}}],
+    duration:{ar:'يُراجع الطبيب إذا استمر الإسهال أكثر من يومين',en:'See a doctor if diarrhoea lasts more than 2 days'},
+    patient:[{ar:'اشرب الكثير من السوائل الصافية.',en:'Drink plenty of clear fluids.'},{ar:'لا يُعطى مع براز فيه دم أو أسود.',en:'Do not give with bloody or black stool.'},{ar:'لا تتجاوز الجرعة: الزيادة قد تضر القلب.',en:'Do not give more than directed: too much can harm the heart.'}]}
+});
 if(typeof module!=='undefined')module.exports={BANDS};

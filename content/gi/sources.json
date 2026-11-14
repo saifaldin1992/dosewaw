@@ -1,0 +1,62 @@
+[
+ {
+  "id": 160,
+  "label": "omeprazole",
+  "use_ar": "جرعات الأوميبرازول للكبار والأطفال بالوزن، والكبد، والتداخلات",
+  "use_en": "Omeprazole doses for adults and for children by weight; liver; interactions"
+ },
+ {
+  "id": 161,
+  "label": "omeprazole_otc",
+  "use_ar": "الأوميبرازول دون وصفة: 20 ملغ يومياً 14 يوماً",
+  "use_en": "Omeprazole over the counter: 20 mg a day for 14 days"
+ },
+ {
+  "id": 162,
+  "label": "esomeprazole",
+  "use_ar": "جرعات الإيزوميبرازول للكبار ومن 12 سنة، والكبد، والتداخلات",
+  "use_en": "Esomeprazole doses for adults and from 12 years; liver; interactions"
+ },
+ {
+  "id": 163,
+  "label": "pantoprazole",
+  "use_ar": "جرعات البانتوبرازول للكبار والأطفال من 5 سنوات، والتداخلات",
+  "use_en": "Pantoprazole doses for adults and children from 5 years; interactions"
+ },
+ {
+  "id": 164,
+  "label": "lansoprazole",
+  "use_ar": "جرعات اللانسوبرازول للكبار والأطفال من سنة، والكبد، والتداخلات",
+  "use_en": "Lansoprazole doses for adults and children from 1 year; liver; interactions"
+ },
+ {
+  "id": 165,
+  "label": "famotidine",
+  "use_ar": "جرعات أقراص الفاموتيدين وتعديل الكلى والتداخلات",
+  "use_en": "Famotidine tablet doses, kidney adjustment and interactions"
+ },
+ {
+  "id": 166,
+  "label": "famotidine_susp",
+  "use_ar": "معلق الفاموتيدين 40 ملغ/5 مل: جرعات الأطفال بالوزن",
+  "use_en": "Famotidine suspension 40 mg/5 mL: children doses by weight"
+ },
+ {
+  "id": 167,
+  "label": "ondansetron",
+  "use_ar": "جرعات الأوندانسيترون للكبار والأطفال من 4 سنوات، والكبد، والتداخلات",
+  "use_en": "Ondansetron doses for adults and children from 4 years; liver; interactions"
+ },
+ {
+  "id": 168,
+  "label": "metoclopramide",
+  "use_ar": "جرعات الميتوكلوبراميد وتعديل الكلى والكبد وكبار السن، والتحذير الصندوقي",
+  "use_en": "Metoclopramide doses, kidney, liver and elderly adjustment; boxed warning"
+ },
+ {
+  "id": 169,
+  "label": "loperamide",
+  "use_ar": "جدول جرعات اللوبيراميد حسب الوزن أو العمر",
+  "use_en": "Loperamide dosing chart by weight or age"
+ }
+]

@@ -1,0 +1,1042 @@
+{
+ "group": "gi",
+ "note": "GI drugs. Every text comes from the U.S. label named in src.",
+ "drugs": [
+  {
+   "id": "omeprazole",
+   "n": {
+    "ar": "أوميبرازول",
+    "en": "Omeprazole"
+   },
+   "cls": {
+    "ar": "مثبط مضخة البروتون (PPI)",
+    "en": "Proton pump inhibitor (PPI)"
+   },
+   "uses": {
+    "ar": "قرحة الاثني عشر والمعدة، والقضاء على جرثومة المعدة مع المضادات الحيوية، والارتجاع المريئي والتهاب المريء التآكلي، ومتلازمة زولنجر-إليسون.",
+    "en": "Duodenal and gastric ulcer, H. pylori eradication with antibiotics, GERD and erosive esophagitis, Zollinger-Ellison syndrome."
+   },
+   "dose": {
+    "ar": "الارتجاع: 20 ملغ مرة يومياً حتى 4 أسابيع. التهاب المريء التآكلي: 20 ملغ مرة يومياً 4 إلى 8 أسابيع. قرحة الاثني عشر: 20 ملغ مرة يومياً 4 أسابيع. قرحة المعدة: 40 ملغ مرة يومياً 4 إلى 8 أسابيع. جرثومة المعدة: 20 ملغ مع أموكسيسيلين 1000 ملغ وكلاريثروميسين 500 ملغ، كلها مرتين يومياً 10 أيام. الأطفال من شهر: بالوزن حسب النشرة. دون وصفة (للكبار): 20 ملغ مرة يومياً 14 يوماً.",
+    "en": "GERD: 20 mg once a day up to 4 weeks. Erosive esophagitis: 20 mg once a day for 4 to 8 weeks. Duodenal ulcer: 20 mg once a day for 4 weeks. Gastric ulcer: 40 mg once a day for 4 to 8 weeks. H. pylori: 20 mg with amoxicillin 1000 mg and clarithromycin 500 mg, all twice a day for 10 days. Children from 1 month: by weight per the label. Over the counter (adults): 20 mg once a day for 14 days."
+   },
+   "renal": {
+    "ar": "لا تذكر النشرة تعديلاً كلوياً.",
+    "en": "The label gives no kidney adjustment."
+   },
+   "hepatic": {
+    "ar": "قصور الكبد (أي درجة) وللمرضى الآسيويين: 10 ملغ مرة يومياً لعلاج المداومة لالتهاب المريء.",
+    "en": "Liver impairment (any Child-Pugh class) and Asian patients: 10 mg once a day for maintenance of healed esophagitis."
+   },
+   "timing": {
+    "ar": "يُؤخذ قبل الطعام. لا تُسحق الكبسولة ولا تُمضغ. إذا نُسيت جرعة تُؤخذ عند التذكر إلا إذا حان موعد التالية، ولا تُؤخذ جرعتان معاً.",
+    "en": "Take before meals. Do not crush or chew the capsule. If a dose is missed take it when remembered unless the next one is due; never take two doses together."
+   },
+   "preg": {
+    "ar": "الحمل: لا تُظهر البيانات زيادة في التشوهات مع الاستعمال في الثلث الأول. الرضاعة: قد يمر إلى الحليب بكمية قليلة؛ تُوازن الفائدة مع الخطر.",
+    "en": "Pregnancy: data show no rise in major malformations with first-trimester use. Breast-feeding: may pass into milk in small amounts; weigh benefit and risk."
+   },
+   "inter": [
+    {
+     "with": {
+      "ar": "الريلبيفيرين (علاج HIV)",
+      "en": "Rilpivirine (HIV treatment)"
+     },
+     "desc": {
+      "ar": "ممنوع معاً: ينخفض مستوى الريلبيفيرين فيضعف أثره وقد تظهر مقاومة.",
+      "en": "Contraindicated together: rilpivirine levels fall, it may fail and resistance may develop."
+     },
+     "sev": "major",
+     "r": [
+      160
+     ]
+    },
+    {
+     "with": {
+      "ar": "الكلوبيدوجريل",
+      "en": "Clopidogrel"
+     },
+     "desc": {
+      "ar": "يقلل تفعيل الكلوبيدوجريل وأثره على الصفائح: يُتجنّب معاً.",
+      "en": "Reduces clopidogrel activation and platelet inhibition: avoid together."
+     },
+     "sev": "major",
+     "r": [
+      160
+     ]
+    },
+    {
+     "with": {
+      "ar": "الميثوتريكسات (الجرعات العالية)",
+      "en": "Methotrexate (high doses)"
+     },
+     "desc": {
+      "ar": "قد يرتفع ويطول مستوى الميثوتريكسات فيسبب سمية؛ قد يُوقف الأوميبرازول مؤقتاً.",
+      "en": "Methotrexate levels may rise and stay high, with toxicity; the أوميبرازول may be stopped for a while."
+     },
+     "sev": "major",
+     "r": [
+      160
+     ]
+    },
+    {
+     "with": {
+      "ar": "الوارفارين",
+      "en": "Warfarin"
+     },
+     "desc": {
+      "ar": "ارتفاع INR وزمن البروثرومبين وخطر النزف: يُراقب INR وتُعدّل جرعة الوارفارين.",
+      "en": "Higher INR and prothrombin time with bleeding risk: monitor INR and adjust warfarin."
+     },
+     "sev": "moderate",
+     "r": [
+      160
+     ]
+    },
+    {
+     "with": {
+      "ar": "الأتازانافير والنلفينافير (علاج HIV)",
+      "en": "Atazanavir and nelfinavir (HIV treatment)"
+     },
+     "desc": {
+      "ar": "ينخفض مستواها: النلفينافير يُتجنّب معه، والأتازانافير حسب نشرته.",
+      "en": "Their levels fall: avoid nelfinavir; atazanavir as its own label directs."
+     },
+     "sev": "major",
+     "r": [
+      160
+     ]
+    },
+    {
+     "with": {
+      "ar": "التاكروليمس",
+      "en": "Tacrolimus"
+     },
+     "desc": {
+      "ar": "قد يرتفع مستوى التاكروليمس: يُقاس مستواه في الدم.",
+      "en": "Tacrolimus levels may rise: measure blood levels."
+     },
+     "sev": "moderate",
+     "r": [
+      160
+     ]
+    },
+    {
+     "with": {
+      "ar": "نبتة سانت جون والريفامبين",
+      "en": "St John's wort and rifampin"
+     },
+     "desc": {
+      "ar": "تُضعف مفعول الأوميبرازول: يُتجنّب معاً.",
+      "en": "Weaken omeprazole: avoid together."
+     },
+     "sev": "moderate",
+     "r": [
+      160
+     ]
+    },
+    {
+     "with": {
+      "ar": "السيتالوبرام والسيلوستازول والفينيتوين والديازيبام",
+      "en": "Citalopram, cilostazol, phenytoin, diazepam"
+     },
+     "desc": {
+      "ar": "قد يرتفع مستواها (تتكسر عبر CYP2C19): تُراجع نشراتها.",
+      "en": "Their levels may rise (CYP2C19 substrates): see their labels."
+     },
+     "sev": "moderate",
+     "r": [
+      160
+     ]
+    },
+    {
+     "with": {
+      "ar": "أدوية تحتاج حموضة المعدة لامتصاصها: أملاح الحديد، الكيتوكونازول، الإيتراكونازول، الإرلوتينيب، الميكوفينولات",
+      "en": "Drugs that need stomach acid to be absorbed: iron salts, ketoconazole, itraconazole, erlotinib, mycophenolate"
+     },
+     "desc": {
+      "ar": "يقل امتصاصها فيضعف أثرها.",
+      "en": "Less is absorbed and they may work less well."
+     },
+     "sev": "moderate",
+     "r": [
+      160
+     ]
+    },
+    {
+     "with": {
+      "ar": "فحص الكروموجرانين A (أورام الغدد الصماء العصبية)",
+      "en": "Chromogranin A test (neuroendocrine tumours)"
+     },
+     "desc": {
+      "ar": "يرفع النتيجة كذباً: يُوقف الأوميبرازول 14 يوماً على الأقل قبل الفحص.",
+      "en": "Falsely raises the result: stop the أوميبرازول at least 14 days before the test."
+     },
+     "sev": "minor",
+     "r": [
+      160
+     ]
+    }
+   ],
+   "src": [
+    160,
+    161
+   ]
+  },
+  {
+   "id": "esomeprazole",
+   "n": {
+    "ar": "إيزوميبرازول",
+    "en": "Esomeprazole"
+   },
+   "cls": {
+    "ar": "مثبط مضخة البروتون (PPI)",
+    "en": "Proton pump inhibitor (PPI)"
+   },
+   "uses": {
+    "ar": "التهاب المريء التآكلي والمداومة عليه، والارتجاع، والوقاية من قرحة مضادات الالتهاب، والقضاء على جرثومة المعدة، ومتلازمة زولنجر-إليسون.",
+    "en": "Erosive esophagitis and its maintenance, GERD, risk reduction of NSAID ulcer, H. pylori eradication, Zollinger-Ellison syndrome."
+   },
+   "dose": {
+    "ar": "التهاب المريء التآكلي: 20 أو 40 ملغ مرة يومياً 4 إلى 8 أسابيع. المداومة: 20 ملغ مرة يومياً. الارتجاع: 20 ملغ مرة يومياً 4 أسابيع. الوقاية من قرحة مضادات الالتهاب: 20 أو 40 ملغ مرة يومياً حتى 6 أشهر. جرثومة المعدة: 40 ملغ مرة يومياً مع أموكسيسيلين 1000 ملغ وكلاريثروميسين 500 ملغ مرتين يومياً، 10 أيام. من 12 إلى 17 سنة: 20 أو 40 ملغ (التآكلي) أو 20 ملغ (الارتجاع).",
+    "en": "Erosive esophagitis: 20 or 40 mg once a day for 4 to 8 weeks. Maintenance: 20 mg once a day. GERD: 20 mg once a day for 4 weeks. NSAID ulcer risk reduction: 20 or 40 mg once a day up to 6 months. H. pylori: 40 mg once a day with amoxicillin 1000 mg and clarithromycin 500 mg twice a day, for 10 days. 12 to 17 years: 20 or 40 mg (erosive) or 20 mg (GERD)."
+   },
+   "renal": {
+    "ar": "لا تذكر النشرة تعديلاً كلوياً.",
+    "en": "The label gives no kidney adjustment."
+   },
+   "hepatic": {
+    "ar": "قصور الكبد الشديد (Child-Pugh C): الحد 20 ملغ مرة يومياً، وفي زولنجر-إليسون البداية 20 ملغ مرتين يومياً. الخفيف والمتوسط: لا تعديل.",
+    "en": "Severe liver impairment (Child-Pugh C): up to 20 mg once a day; in Zollinger-Ellison start 20 mg twice a day. Mild or moderate: no change."
+   },
+   "timing": {
+    "ar": "يُؤخذ قبل الطعام بساعة على الأقل. تُبلع الكبسولة كاملة، أو تُفتح وتُخلط محتوياتها بملعقة من صلصة التفاح وتُبلع فوراً.",
+    "en": "Take at least one hour before meals. Swallow the capsule whole, or open it, mix the contents with a spoon of applesauce and swallow at once."
+   },
+   "preg": {
+    "ar": "الحمل: لا دراسات كافية؛ بيانات الأوميبرازول لا تُظهر زيادة في التشوهات.",
+    "en": "Pregnancy: no adequate studies; omeprazole data show no rise in major malformations."
+   },
+   "inter": [
+    {
+     "with": {
+      "ar": "الريلبيفيرين (علاج HIV)",
+      "en": "Rilpivirine (HIV treatment)"
+     },
+     "desc": {
+      "ar": "ممنوع معاً: ينخفض مستوى الريلبيفيرين فيضعف أثره وقد تظهر مقاومة.",
+      "en": "Contraindicated together: rilpivirine levels fall, it may fail and resistance may develop."
+     },
+     "sev": "major",
+     "r": [
+      162
+     ]
+    },
+    {
+     "with": {
+      "ar": "الكلوبيدوجريل",
+      "en": "Clopidogrel"
+     },
+     "desc": {
+      "ar": "يقلل تفعيل الكلوبيدوجريل وأثره على الصفائح: يُتجنّب معاً.",
+      "en": "Reduces clopidogrel activation and platelet inhibition: avoid together."
+     },
+     "sev": "major",
+     "r": [
+      162
+     ]
+    },
+    {
+     "with": {
+      "ar": "الميثوتريكسات (الجرعات العالية)",
+      "en": "Methotrexate (high doses)"
+     },
+     "desc": {
+      "ar": "قد يرتفع ويطول مستوى الميثوتريكسات فيسبب سمية؛ قد يُوقف الإيزوميبرازول مؤقتاً.",
+      "en": "Methotrexate levels may rise and stay high, with toxicity; the إيزوميبرازول may be stopped for a while."
+     },
+     "sev": "major",
+     "r": [
+      162
+     ]
+    },
+    {
+     "with": {
+      "ar": "الوارفارين",
+      "en": "Warfarin"
+     },
+     "desc": {
+      "ar": "ارتفاع INR وزمن البروثرومبين وخطر النزف: يُراقب INR وتُعدّل جرعة الوارفارين.",
+      "en": "Higher INR and prothrombin time with bleeding risk: monitor INR and adjust warfarin."
+     },
+     "sev": "moderate",
+     "r": [
+      162
+     ]
+    },
+    {
+     "with": {
+      "ar": "الأتازانافير والنلفينافير (علاج HIV)",
+      "en": "Atazanavir and nelfinavir (HIV treatment)"
+     },
+     "desc": {
+      "ar": "ينخفض مستواها: النلفينافير يُتجنّب معه، والأتازانافير حسب نشرته.",
+      "en": "Their levels fall: avoid nelfinavir; atazanavir as its own label directs."
+     },
+     "sev": "major",
+     "r": [
+      162
+     ]
+    },
+    {
+     "with": {
+      "ar": "التاكروليمس",
+      "en": "Tacrolimus"
+     },
+     "desc": {
+      "ar": "قد يرتفع مستوى التاكروليمس: يُقاس مستواه في الدم.",
+      "en": "Tacrolimus levels may rise: measure blood levels."
+     },
+     "sev": "moderate",
+     "r": [
+      162
+     ]
+    },
+    {
+     "with": {
+      "ar": "نبتة سانت جون والريفامبين",
+      "en": "St John's wort and rifampin"
+     },
+     "desc": {
+      "ar": "تُضعف مفعول الإيزوميبرازول: يُتجنّب معاً.",
+      "en": "Weaken esomeprazole: avoid together."
+     },
+     "sev": "moderate",
+     "r": [
+      162
+     ]
+    },
+    {
+     "with": {
+      "ar": "السيتالوبرام والسيلوستازول",
+      "en": "Citalopram and cilostazol"
+     },
+     "desc": {
+      "ar": "قد يرتفع مستواهما (CYP2C19): تُراجع نشرتاهما.",
+      "en": "Their levels may rise (CYP2C19): see their labels."
+     },
+     "sev": "moderate",
+     "r": [
+      162
+     ]
+    },
+    {
+     "with": {
+      "ar": "أدوية تحتاج حموضة المعدة لامتصاصها: أملاح الحديد، الكيتوكونازول، الإيتراكونازول، الإرلوتينيب، الميكوفينولات",
+      "en": "Drugs that need stomach acid to be absorbed: iron salts, ketoconazole, itraconazole, erlotinib, mycophenolate"
+     },
+     "desc": {
+      "ar": "يقل امتصاصها فيضعف أثرها.",
+      "en": "Less is absorbed and they may work less well."
+     },
+     "sev": "moderate",
+     "r": [
+      162
+     ]
+    },
+    {
+     "with": {
+      "ar": "فحص الكروموجرانين A (أورام الغدد الصماء العصبية)",
+      "en": "Chromogranin A test (neuroendocrine tumours)"
+     },
+     "desc": {
+      "ar": "يرفع النتيجة كذباً: يُوقف الإيزوميبرازول 14 يوماً على الأقل قبل الفحص.",
+      "en": "Falsely raises the result: stop the إيزوميبرازول at least 14 days before the test."
+     },
+     "sev": "minor",
+     "r": [
+      162
+     ]
+    }
+   ],
+   "src": [
+    162
+   ]
+  },
+  {
+   "id": "pantoprazole",
+   "n": {
+    "ar": "بانتوبرازول",
+    "en": "Pantoprazole"
+   },
+   "cls": {
+    "ar": "مثبط مضخة البروتون (PPI)",
+    "en": "Proton pump inhibitor (PPI)"
+   },
+   "uses": {
+    "ar": "التهاب المريء التآكلي المصاحب للارتجاع والمداومة عليه، ومتلازمة زولنجر-إليسون.",
+    "en": "Erosive esophagitis with GERD and its maintenance, Zollinger-Ellison syndrome."
+   },
+   "dose": {
+    "ar": "التهاب المريء التآكلي: 40 ملغ مرة يومياً حتى 8 أسابيع. المداومة: 40 ملغ مرة يومياً. زولنجر-إليسون: 40 ملغ مرتين يومياً. الأطفال من 5 سنوات: 15 إلى أقل من 40 كغ 20 ملغ، و40 كغ فأكثر 40 ملغ، مرة يومياً حتى 8 أسابيع.",
+    "en": "Erosive esophagitis: 40 mg once a day up to 8 weeks. Maintenance: 40 mg once a day. Zollinger-Ellison: 40 mg twice a day. Children from 5 years: 15 to under 40 kg 20 mg, 40 kg and over 40 mg, once a day up to 8 weeks."
+   },
+   "renal": {
+    "ar": "لا تذكر النشرة تعديلاً كلوياً.",
+    "en": "The label gives no kidney adjustment."
+   },
+   "timing": {
+    "ar": "يُبلع القرص كاملاً مع الطعام أو بدونه؛ لا يُقسم ولا يُمضغ ولا يُسحق. من لا يستطيع بلع قرص 40 ملغ يأخذ قرصين 20 ملغ.",
+    "en": "Swallow the tablet whole, with or without food; do not split, chew or crush. If a 40 mg tablet cannot be swallowed, take two 20 mg tablets."
+   },
+   "preg": {
+    "ar": "الحمل: الدراسات القائمة على الملاحظة لم تُظهر علاقة بالتشوهات.",
+    "en": "Pregnancy: observational studies did not show a link with major malformations."
+   },
+   "inter": [
+    {
+     "with": {
+      "ar": "الريلبيفيرين (علاج HIV)",
+      "en": "Rilpivirine (HIV treatment)"
+     },
+     "desc": {
+      "ar": "ممنوع معاً: ينخفض مستوى الريلبيفيرين فيضعف أثره وقد تظهر مقاومة.",
+      "en": "Contraindicated together: rilpivirine levels fall, it may fail and resistance may develop."
+     },
+     "sev": "major",
+     "r": [
+      163
+     ]
+    },
+    {
+     "with": {
+      "ar": "الكلوبيدوجريل",
+      "en": "Clopidogrel"
+     },
+     "desc": {
+      "ar": "لا أثر مهم: لا يلزم تعديل الكلوبيدوجريل.",
+      "en": "No important effect: no clopidogrel change needed."
+     },
+     "sev": "minor",
+     "r": [
+      163
+     ]
+    },
+    {
+     "with": {
+      "ar": "الميثوتريكسات (الجرعات العالية)",
+      "en": "Methotrexate (high doses)"
+     },
+     "desc": {
+      "ar": "قد يرتفع ويطول مستوى الميثوتريكسات فيسبب سمية؛ قد يُوقف البانتوبرازول مؤقتاً.",
+      "en": "Methotrexate levels may rise and stay high, with toxicity; the بانتوبرازول may be stopped for a while."
+     },
+     "sev": "major",
+     "r": [
+      163
+     ]
+    },
+    {
+     "with": {
+      "ar": "الوارفارين",
+      "en": "Warfarin"
+     },
+     "desc": {
+      "ar": "ارتفاع INR وزمن البروثرومبين وخطر النزف: يُراقب INR وتُعدّل جرعة الوارفارين.",
+      "en": "Higher INR and prothrombin time with bleeding risk: monitor INR and adjust warfarin."
+     },
+     "sev": "moderate",
+     "r": [
+      163
+     ]
+    },
+    {
+     "with": {
+      "ar": "الأتازانافير والنلفينافير (علاج HIV)",
+      "en": "Atazanavir and nelfinavir (HIV treatment)"
+     },
+     "desc": {
+      "ar": "ينخفض مستواها: النلفينافير يُتجنّب معه، والأتازانافير حسب نشرته.",
+      "en": "Their levels fall: avoid nelfinavir; atazanavir as its own label directs."
+     },
+     "sev": "major",
+     "r": [
+      163
+     ]
+    },
+    {
+     "with": {
+      "ar": "أدوية تحتاج حموضة المعدة لامتصاصها: أملاح الحديد، الكيتوكونازول، الإيتراكونازول، الإرلوتينيب، الميكوفينولات",
+      "en": "Drugs that need stomach acid to be absorbed: iron salts, ketoconazole, itraconazole, erlotinib, mycophenolate"
+     },
+     "desc": {
+      "ar": "يقل امتصاصها فيضعف أثرها.",
+      "en": "Less is absorbed and they may work less well."
+     },
+     "sev": "moderate",
+     "r": [
+      163
+     ]
+    },
+    {
+     "with": {
+      "ar": "فحص الكروموجرانين A (أورام الغدد الصماء العصبية)",
+      "en": "Chromogranin A test (neuroendocrine tumours)"
+     },
+     "desc": {
+      "ar": "يرفع النتيجة كذباً: يُوقف البانتوبرازول 14 يوماً على الأقل قبل الفحص.",
+      "en": "Falsely raises the result: stop the بانتوبرازول at least 14 days before the test."
+     },
+     "sev": "minor",
+     "r": [
+      163
+     ]
+    }
+   ],
+   "src": [
+    163
+   ],
+   "hepatic": {
+    "ar": "لا تذكر النشرة تعديلاً للكبد.",
+    "en": "The label gives no liver adjustment."
+   }
+  },
+  {
+   "id": "lansoprazole",
+   "n": {
+    "ar": "لانسوبرازول",
+    "en": "Lansoprazole"
+   },
+   "cls": {
+    "ar": "مثبط مضخة البروتون (PPI)",
+    "en": "Proton pump inhibitor (PPI)"
+   },
+   "uses": {
+    "ar": "قرحة الاثني عشر والمعدة، وقرحة مضادات الالتهاب، والقضاء على جرثومة المعدة، والارتجاع والتهاب المريء التآكلي، ومتلازمة زولنجر-إليسون.",
+    "en": "Duodenal and gastric ulcer, NSAID ulcer, H. pylori eradication, GERD and erosive esophagitis, Zollinger-Ellison syndrome."
+   },
+   "dose": {
+    "ar": "الارتجاع: 15 ملغ مرة يومياً حتى 8 أسابيع. التهاب المريء التآكلي: 30 ملغ مرة يومياً حتى 8 أسابيع. قرحة الاثني عشر: 15 ملغ مرة يومياً 4 أسابيع. قرحة المعدة: 30 ملغ مرة يومياً حتى 8 أسابيع. جرثومة المعدة: 30 ملغ مع أموكسيسيلين 1 غرام وكلاريثروميسين 500 ملغ، كلها مرتين يومياً 10 أو 14 يوماً. الأطفال 1 إلى 11 سنة: 30 كغ أو أقل 15 ملغ، وأكثر من 30 كغ 30 ملغ، مرة يومياً حتى 12 أسبوعاً.",
+    "en": "GERD: 15 mg once a day up to 8 weeks. Erosive esophagitis: 30 mg once a day up to 8 weeks. Duodenal ulcer: 15 mg once a day for 4 weeks. Gastric ulcer: 30 mg once a day up to 8 weeks. H. pylori: 30 mg with amoxicillin 1 g and clarithromycin 500 mg, all twice a day for 10 or 14 days. Children 1 to 11 years: 30 kg or less 15 mg, over 30 kg 30 mg, once a day up to 12 weeks."
+   },
+   "renal": {
+    "ar": "لا تذكر النشرة تعديلاً كلوياً.",
+    "en": "The label gives no kidney adjustment."
+   },
+   "hepatic": {
+    "ar": "قصور الكبد الشديد (Child-Pugh C): 15 ملغ يومياً.",
+    "en": "Severe liver impairment (Child-Pugh C): 15 mg a day."
+   },
+   "timing": {
+    "ar": "يُؤخذ قبل الطعام، وقبل السكرالفات بـ30 دقيقة على الأقل. لا تُسحق الكبسولة ولا تُمضغ.",
+    "en": "Take before meals, and at least 30 minutes before sucralfate. Do not crush or chew the capsule."
+   },
+   "preg": {
+    "ar": "الحمل: الدراسات القائمة على الملاحظة لم تُظهر علاقة بنتائج سيئة للحمل.",
+    "en": "Pregnancy: observational studies did not show a link with adverse pregnancy outcomes."
+   },
+   "inter": [
+    {
+     "with": {
+      "ar": "الريلبيفيرين (علاج HIV)",
+      "en": "Rilpivirine (HIV treatment)"
+     },
+     "desc": {
+      "ar": "ممنوع معاً: ينخفض مستوى الريلبيفيرين فيضعف أثره وقد تظهر مقاومة.",
+      "en": "Contraindicated together: rilpivirine levels fall, it may fail and resistance may develop."
+     },
+     "sev": "major",
+     "r": [
+      164
+     ]
+    },
+    {
+     "with": {
+      "ar": "الميثوتريكسات (الجرعات العالية)",
+      "en": "Methotrexate (high doses)"
+     },
+     "desc": {
+      "ar": "قد يرتفع ويطول مستوى الميثوتريكسات فيسبب سمية؛ قد يُوقف اللانسوبرازول مؤقتاً.",
+      "en": "Methotrexate levels may rise and stay high, with toxicity; the لانسوبرازول may be stopped for a while."
+     },
+     "sev": "major",
+     "r": [
+      164
+     ]
+    },
+    {
+     "with": {
+      "ar": "الوارفارين",
+      "en": "Warfarin"
+     },
+     "desc": {
+      "ar": "ارتفاع INR وزمن البروثرومبين وخطر النزف: يُراقب INR وتُعدّل جرعة الوارفارين.",
+      "en": "Higher INR and prothrombin time with bleeding risk: monitor INR and adjust warfarin."
+     },
+     "sev": "moderate",
+     "r": [
+      164
+     ]
+    },
+    {
+     "with": {
+      "ar": "الأتازانافير والنلفينافير (علاج HIV)",
+      "en": "Atazanavir and nelfinavir (HIV treatment)"
+     },
+     "desc": {
+      "ar": "ينخفض مستواها: النلفينافير يُتجنّب معه، والأتازانافير حسب نشرته.",
+      "en": "Their levels fall: avoid nelfinavir; atazanavir as its own label directs."
+     },
+     "sev": "major",
+     "r": [
+      164
+     ]
+    },
+    {
+     "with": {
+      "ar": "التاكروليمس",
+      "en": "Tacrolimus"
+     },
+     "desc": {
+      "ar": "قد يرتفع مستوى التاكروليمس: يُقاس مستواه في الدم.",
+      "en": "Tacrolimus levels may rise: measure blood levels."
+     },
+     "sev": "moderate",
+     "r": [
+      164
+     ]
+    },
+    {
+     "with": {
+      "ar": "الثيوفيلين",
+      "en": "Theophylline"
+     },
+     "desc": {
+      "ar": "قد ينخفض مستوى الثيوفيلين: قد تلزم معايرة جرعته.",
+      "en": "Theophylline levels may fall: its dose may need adjusting."
+     },
+     "sev": "moderate",
+     "r": [
+      164
+     ]
+    },
+    {
+     "with": {
+      "ar": "السكرالفات",
+      "en": "Sucralfate"
+     },
+     "desc": {
+      "ar": "يقلل امتصاص اللانسوبرازول: يُؤخذ اللانسوبرازول قبله بـ30 دقيقة على الأقل.",
+      "en": "Reduces lansoprazole absorption: take lansoprazole at least 30 minutes before it."
+     },
+     "sev": "minor",
+     "r": [
+      164
+     ]
+    },
+    {
+     "with": {
+      "ar": "أدوية تحتاج حموضة المعدة لامتصاصها: أملاح الحديد، الكيتوكونازول، الإيتراكونازول، الإرلوتينيب، الميكوفينولات",
+      "en": "Drugs that need stomach acid to be absorbed: iron salts, ketoconazole, itraconazole, erlotinib, mycophenolate"
+     },
+     "desc": {
+      "ar": "يقل امتصاصها فيضعف أثرها.",
+      "en": "Less is absorbed and they may work less well."
+     },
+     "sev": "moderate",
+     "r": [
+      164
+     ]
+    },
+    {
+     "with": {
+      "ar": "فحص الكروموجرانين A (أورام الغدد الصماء العصبية)",
+      "en": "Chromogranin A test (neuroendocrine tumours)"
+     },
+     "desc": {
+      "ar": "يرفع النتيجة كذباً: يُوقف اللانسوبرازول 14 يوماً على الأقل قبل الفحص.",
+      "en": "Falsely raises the result: stop the لانسوبرازول at least 14 days before the test."
+     },
+     "sev": "minor",
+     "r": [
+      164
+     ]
+    }
+   ],
+   "src": [
+    164
+   ]
+  },
+  {
+   "id": "famotidine",
+   "n": {
+    "ar": "فاموتيدين",
+    "en": "Famotidine"
+   },
+   "cls": {
+    "ar": "مضاد مستقبلات الهيستامين H2",
+    "en": "H2-receptor antagonist"
+   },
+   "uses": {
+    "ar": "قرحة الاثني عشر والمعدة، والارتجاع والتهاب المريء التآكلي، وحالات فرط الإفراز، والوقاية من عودة قرحة الاثني عشر.",
+    "en": "Duodenal and gastric ulcer, GERD and erosive esophagitis, hypersecretory conditions, prevention of duodenal ulcer recurrence."
+   },
+   "dose": {
+    "ar": "الكبار والأطفال 40 كغ فأكثر: قرحة الاثني عشر 40 ملغ مرة يومياً أو 20 ملغ مرتين يومياً حتى 8 أسابيع. قرحة المعدة 40 ملغ مرة يومياً. الارتجاع 20 ملغ مرتين يومياً حتى 6 أسابيع. التهاب المريء التآكلي 20 أو 40 ملغ مرتين يومياً حتى 12 أسبوعاً. الأطفال (المعلق 40 ملغ/5 مل): بالوزن حسب العمر.",
+    "en": "Adults and children 40 kg and over: duodenal ulcer 40 mg once a day or 20 mg twice a day up to 8 weeks. Gastric ulcer 40 mg once a day. GERD 20 mg twice a day up to 6 weeks. Erosive esophagitis 20 or 40 mg twice a day up to 12 weeks. Children (suspension 40 mg/5 mL): by weight, by age."
+   },
+   "renal": {
+    "ar": "تصفية الكرياتينين أقل من 60 مل/دقيقة: تُخفض الجرعة حسب جدول النشرة (مثلاً الارتجاع: 20 ملغ مرة يومياً عند 30 إلى 60، و20 ملغ يوماً بعد يوم تحت 30).",
+    "en": "Creatinine clearance under 60 mL/min: lower dose per the label table (for example GERD: 20 mg once a day at 30 to 60, 20 mg every other day under 30)."
+   },
+   "timing": {
+    "ar": "مرة يومياً قبل النوم، أو مرتين صباحاً وقبل النوم، مع الطعام أو بدونه. أعراض عصبية (تشوش، هلوسة) أكثر عند كبار السن ومرضى الكلى.",
+    "en": "Once a day at bedtime, or twice a day in the morning and at bedtime, with or without food. CNS effects (confusion, hallucinations) are more likely in the elderly and in kidney disease."
+   },
+   "preg": {
+    "ar": "الحمل: البيانات غير كافية لتحديد خطر.",
+    "en": "Pregnancy: data are insufficient to establish a risk."
+   },
+   "inter": [
+    {
+     "with": {
+      "ar": "التيزانيدين",
+      "en": "Tizanidine"
+     },
+     "desc": {
+      "ar": "قد يرتفع مستواه كثيراً (هبوط ضغط، بطء قلب، نعاس شديد): يُتجنّب معاً.",
+      "en": "Its levels may rise a lot (low blood pressure, slow heart, heavy drowsiness): avoid together."
+     },
+     "sev": "major",
+     "r": [
+      165
+     ]
+    },
+    {
+     "with": {
+      "ar": "الداساتينيب والديلافيردين والسيفديتورين والفوسامبرينافير",
+      "en": "Dasatinib, delavirdine, cefditoren, fosamprenavir"
+     },
+     "desc": {
+      "ar": "يقل امتصاصها فيضعف أثرها: لا يُنصح بها معاً.",
+      "en": "Less is absorbed and they may fail: not recommended together."
+     },
+     "sev": "major",
+     "r": [
+      165
+     ]
+    },
+    {
+     "with": {
+      "ar": "أدوية تحتاج حموضة المعدة: الأتازانافير، الإرلوتينيب، الكيتوكونازول، الإيتراكونازول، النيلوتينيب، الريلبيفيرين",
+      "en": "Acid-dependent drugs: atazanavir, erlotinib, ketoconazole, itraconazole, nilotinib, rilpivirine"
+     },
+     "desc": {
+      "ar": "يقل امتصاصها: تُتبع تعليمات نشراتها في التوقيت.",
+      "en": "Less is absorbed: follow their labels for timing."
+     },
+     "sev": "moderate",
+     "r": [
+      165
+     ]
+    }
+   ],
+   "src": [
+    165,
+    166
+   ],
+   "hepatic": {
+    "ar": "لا تذكر النشرة تعديلاً للكبد.",
+    "en": "The label gives no liver adjustment."
+   }
+  },
+  {
+   "id": "ondansetron",
+   "n": {
+    "ar": "أوندانسيترون",
+    "en": "Ondansetron"
+   },
+   "cls": {
+    "ar": "مضاد للقيء (مضاد مستقبلات 5-HT3)",
+    "en": "Antiemetic (5-HT3 receptor antagonist)"
+   },
+   "uses": {
+    "ar": "الوقاية من الغثيان والقيء مع العلاج الكيميائي والإشعاعي وبعد العمليات.",
+    "en": "Prevention of nausea and vomiting with chemotherapy, radiotherapy and after surgery."
+   },
+   "dose": {
+    "ar": "كيميائي شديد الإقياء: 24 ملغ مرة واحدة قبله بـ30 دقيقة. كيميائي متوسط: 8 ملغ قبله بـ30 دقيقة، و8 ملغ بعد 8 ساعات، ثم 8 ملغ مرتين يومياً 1 إلى 2 يوم بعده. بعد العمليات: 16 ملغ قبل التخدير بساعة. الأطفال 4 إلى 11 سنة (كيميائي متوسط): 4 ملغ قبله بـ30 دقيقة، ثم بعد 4 و8 ساعات، ثم 3 مرات يومياً 1 إلى 2 يوم.",
+    "en": "Highly emetogenic chemotherapy: a single 24 mg dose 30 minutes before. Moderately emetogenic: 8 mg 30 minutes before, 8 mg 8 hours later, then 8 mg twice a day for 1 to 2 days after. After surgery: 16 mg 1 hour before anaesthesia. Children 4 to 11 years (moderately emetogenic): 4 mg 30 minutes before, then at 4 and 8 hours, then three times a day for 1 to 2 days."
+   },
+   "renal": {
+    "ar": "لا تعديل في أي درجة من قصور الكلى (النشرة).",
+    "en": "No change for any degree of kidney impairment (label)."
+   },
+   "hepatic": {
+    "ar": "قصور الكبد الشديد (Child-Pugh 10 فأكثر): لا يتجاوز 8 ملغ في اليوم.",
+    "en": "Severe liver impairment (Child-Pugh 10 or more): no more than 8 mg a day."
+   },
+   "timing": {
+    "ar": "يُتجنّب مع متلازمة إطالة QT الخلقية؛ يُراقب تخطيط القلب مع اضطراب الأملاح أو قصور القلب أو أدوية تطيل QT. قد يخفي انسداد الأمعاء بعد العمليات.",
+    "en": "Avoid in congenital long QT syndrome; ECG monitoring with electrolyte problems, heart failure or other QT-prolonging drugs. May mask ileus after surgery."
+   },
+   "preg": {
+    "ar": "الحمل: الدراسات متضاربة ولا تسمح بحكم على السلامة.",
+    "en": "Pregnancy: studies are inconsistent and do not allow a conclusion on safety."
+   },
+   "inter": [
+    {
+     "with": {
+      "ar": "الأبومورفين",
+      "en": "Apomorphine"
+     },
+     "desc": {
+      "ar": "ممنوع معاً: هبوط شديد في الضغط وفقدان وعي.",
+      "en": "Contraindicated together: profound low blood pressure and loss of consciousness."
+     },
+     "sev": "major",
+     "r": [
+      167
+     ]
+    },
+    {
+     "with": {
+      "ar": "الأدوية السيروتونينية: SSRI وSNRI",
+      "en": "Serotonergic drugs: SSRIs and SNRIs"
+     },
+     "desc": {
+      "ar": "متلازمة السيروتونين: يُراقب المريض ويُوقف الدواء إن ظهرت.",
+      "en": "Serotonin syndrome: monitor and stop if it appears."
+     },
+     "sev": "major",
+     "r": [
+      167
+     ]
+    },
+    {
+     "with": {
+      "ar": "أدوية تطيل QT",
+      "en": "QT-prolonging drugs"
+     },
+     "desc": {
+      "ar": "خطر إطالة QT واضطراب النظم: تخطيط قلب للمراقبة.",
+      "en": "Risk of QT prolongation and arrhythmia: ECG monitoring."
+     },
+     "sev": "major",
+     "r": [
+      167
+     ]
+    },
+    {
+     "with": {
+      "ar": "محفزات CYP3A4: الفينيتوين، الكاربامازيبين، الريفامبين",
+      "en": "CYP3A4 inducers: phenytoin, carbamazepine, rifampin"
+     },
+     "desc": {
+      "ar": "ينخفض مستوى الأوندانسيترون؛ لا يُوصى بتعديل الجرعة.",
+      "en": "Ondansetron levels fall; no dose change is recommended."
+     },
+     "sev": "minor",
+     "r": [
+      167
+     ]
+    },
+    {
+     "with": {
+      "ar": "الترامادول",
+      "en": "Tramadol"
+     },
+     "desc": {
+      "ar": "قد يقل أثر الترامادول المسكن: يُتابع ضبط الألم.",
+      "en": "Tramadol may relieve pain less: check pain control."
+     },
+     "sev": "moderate",
+     "r": [
+      167
+     ]
+    }
+   ],
+   "src": [
+    167
+   ]
+  },
+  {
+   "id": "metoclopramide",
+   "n": {
+    "ar": "ميتوكلوبراميد",
+    "en": "Metoclopramide"
+   },
+   "cls": {
+    "ar": "منشط لحركة المعدة ومضاد للقيء (مضاد الدوبامين)",
+    "en": "Prokinetic and antiemetic (dopamine antagonist)"
+   },
+   "uses": {
+    "ar": "الارتجاع الموثق عند الكبار الذين لم ينفعهم العلاج المعتاد، وخزل المعدة السكري.",
+    "en": "Documented GERD in adults who fail usual therapy, and diabetic gastroparesis."
+   },
+   "dose": {
+    "ar": "الارتجاع: 10 إلى 15 ملغ 4 مرات يومياً قبل الوجبات بـ30 دقيقة وقبل النوم، بحد 60 ملغ يومياً، 4 إلى 12 أسبوعاً. خزل المعدة السكري: 10 ملغ 4 مرات يومياً، بحد 40 ملغ يومياً. كبار السن والقصور الكلوي أو الكبدي: جرعات أقل. لا يزيد العلاج على 12 أسبوعاً. لا يُنصح به للأطفال.",
+    "en": "GERD: 10 to 15 mg four times a day, 30 minutes before meals and at bedtime, up to 60 mg a day, for 4 to 12 weeks. Diabetic gastroparesis: 10 mg four times a day, up to 40 mg a day. Elderly, kidney or liver impairment: lower doses. No more than 12 weeks. Not recommended in children."
+   },
+   "renal": {
+    "ar": "تصفية الكرياتينين 60 مل/دقيقة أو أقل: 5 ملغ 4 مرات يومياً (الحد 30 ملغ للارتجاع). الفشل الكلوي النهائي والغسيل: الحد 20 ملغ يومياً للارتجاع و10 ملغ لخزل المعدة.",
+    "en": "Creatinine clearance 60 mL/min or less: 5 mg four times a day (up to 30 mg for GERD). End-stage kidney disease and dialysis: up to 20 mg a day for GERD and 10 mg for gastroparesis."
+   },
+   "hepatic": {
+    "ar": "قصور الكبد المتوسط أو الشديد (Child-Pugh B أو C): جرعة مخفضة. الخفيف: لا تعديل.",
+    "en": "Moderate or severe liver impairment (Child-Pugh B or C): reduced dose. Mild: no change."
+   },
+   "timing": {
+    "ar": "تحذير صندوقي: خلل الحركة المتأخر، وقد لا يزول؛ يُتجنّب أكثر من 12 أسبوعاً ويُوقف عند ظهور حركات لا إرادية. ممنوع مع الصرع، ونزف أو انسداد أو انثقاب الأمعاء، وورم القواتم.",
+    "en": "Boxed warning: tardive dyskinesia, which may not go away; avoid more than 12 weeks and stop at the first involuntary movements. Contraindicated in epilepsy, GI bleeding, obstruction or perforation, and pheochromocytoma."
+   },
+   "preg": {
+    "ar": "الحمل: الدراسات المنشورة لا تُظهر زيادة في النتائج السيئة للحمل؛ توجد مخاطر محتملة على المولود إذا استُعمل أثناء الولادة.",
+    "en": "Pregnancy: published studies do not report more adverse pregnancy outcomes; there are potential risks to the newborn with use during delivery."
+   },
+   "inter": [
+    {
+     "with": {
+      "ar": "مضادات الذهان",
+      "en": "Antipsychotics"
+     },
+     "desc": {
+      "ar": "تزيد خلل الحركة المتأخر والأعراض خارج الهرمية والمتلازمة الخبيثة: يُتجنّب معاً.",
+      "en": "More tardive dyskinesia, extrapyramidal symptoms and NMS: avoid together."
+     },
+     "sev": "major",
+     "r": [
+      168
+     ]
+    },
+    {
+     "with": {
+      "ar": "مثبطات CYP2D6 القوية: الكينيدين، البوبروبيون، الفلوكستين، الباروكستين",
+      "en": "Strong CYP2D6 inhibitors: quinidine, bupropion, fluoxetine, paroxetine"
+     },
+     "desc": {
+      "ar": "يرتفع مستوى الميتوكلوبراميد: تُخفض الجرعة حسب جدول النشرة.",
+      "en": "Metoclopramide levels rise: lower dose per the label table."
+     },
+     "sev": "major",
+     "r": [
+      168
+     ]
+    },
+    {
+     "with": {
+      "ar": "مثبطات الأكسيداز الأحادي (MAOI)",
+      "en": "MAO inhibitors"
+     },
+     "desc": {
+      "ar": "خطر ارتفاع الضغط: يُتجنّب معاً.",
+      "en": "Risk of high blood pressure: avoid together."
+     },
+     "sev": "major",
+     "r": [
+      168
+     ]
+    },
+    {
+     "with": {
+      "ar": "مثبطات الجهاز العصبي: الكحول، المهدئات، المنومات، الأفيونات",
+      "en": "CNS depressants: alcohol, sedatives, hypnotics, opiates"
+     },
+     "desc": {
+      "ar": "تثبيط عصبي أشد: يُتجنّب أحدهما حسب أهميته.",
+      "en": "More CNS depression: avoid one of them by importance."
+     },
+     "sev": "moderate",
+     "r": [
+      168
+     ]
+    },
+    {
+     "with": {
+      "ar": "مضادات الكولين والأفيونات ومضادات الإسهال",
+      "en": "Anticholinergics, opiates and antidiarrhoeals"
+     },
+     "desc": {
+      "ar": "تضعف أثر الميتوكلوبراميد.",
+      "en": "Weaken metoclopramide."
+     },
+     "sev": "minor",
+     "r": [
+      168
+     ]
+    },
+    {
+     "with": {
+      "ar": "ناهضات الدوبامين: ليفودوبا، بروموكريبتين، كابرجولين، براميبيكسول، روبينيرول",
+      "en": "Dopamine agonists: levodopa, bromocriptine, cabergoline, pramipexole, ropinirole"
+     },
+     "desc": {
+      "ar": "تأثير متعاكس: يضعف أثر كل منهما.",
+      "en": "Opposite effects: each weakens the other."
+     },
+     "sev": "moderate",
+     "r": [
+      168
+     ]
+    }
+   ],
+   "src": [
+    168
+   ]
+  },
+  {
+   "id": "loperamide",
+   "n": {
+    "ar": "لوبيراميد",
+    "en": "Loperamide"
+   },
+   "cls": {
+    "ar": "مضاد للإسهال (أفيوني لا يعبر إلى الدماغ بالجرعات العادية)",
+    "en": "Antidiarrhoeal (opioid acting on the gut)"
+   },
+   "uses": {
+    "ar": "السيطرة على أعراض الإسهال، ومنه إسهال المسافرين.",
+    "en": "Controls symptoms of diarrhoea, including travellers' diarrhoea."
+   },
+   "dose": {
+    "ar": "الكبار و12 سنة فأكثر: 4 ملغ (قرصان) بعد أول براز رخو، ثم 2 ملغ بعد كل براز رخو، بحد 8 ملغ في 24 ساعة. 9 إلى 11 سنة (60 إلى 95 رطلاً): 2 ملغ ثم 1 ملغ، بحد 6 ملغ. 6 إلى 8 سنوات (48 إلى 59 رطلاً): 2 ملغ ثم 1 ملغ، بحد 4 ملغ. 2 إلى 5 سنوات: يُسأل الطبيب. أقل من سنتين: لا يُستعمل.",
+    "en": "Adults and 12 years and over: 4 mg (2 tablets) after the first loose stool, then 2 mg after each loose stool, up to 8 mg in 24 hours. 9 to 11 years (60 to 95 lb): 2 mg then 1 mg, up to 6 mg. 6 to 8 years (48 to 59 lb): 2 mg then 1 mg, up to 4 mg. 2 to 5 years: ask a doctor. Under 2 years: do not use."
+   },
+   "renal": {
+    "ar": "لا تذكر النشرة تعديلاً كلوياً.",
+    "en": "The label gives no kidney adjustment."
+   },
+   "hepatic": {
+    "ar": "تاريخ مرض الكبد: يُسأل الطبيب قبل الاستعمال.",
+    "en": "History of liver disease: ask a doctor before use."
+   },
+   "timing": {
+    "ar": "تحذير القلب: الزيادة على الجرعة قد تسبب مشاكل قلبية خطيرة أو الوفاة. لا يُستعمل مع براز دموي أو أسود. يُسأل الطبيب مع الحرارة أو المخاط في البراز. يُشرب الكثير من السوائل. يُوقف ويُراجع الطبيب إذا استمر الإسهال أكثر من يومين أو انتفخ البطن.",
+    "en": "Heart alert: taking more than directed can cause serious heart problems or death. Do not use with bloody or black stool. Ask a doctor with fever or mucus in the stool. Drink plenty of clear fluids. Stop and see a doctor if diarrhoea lasts more than 2 days or the belly swells."
+   },
+   "preg": {
+    "ar": "الحمل والرضاعة: تستشير مختصاً قبل الاستعمال.",
+    "en": "Pregnancy and breast-feeding: ask a health professional before use."
+   },
+   "inter": [
+    {
+     "with": {
+      "ar": "أدوية بوصفة",
+      "en": "Prescription drugs"
+     },
+     "desc": {
+      "ar": "قد يتداخل مع بعضها: يُسأل الطبيب أو الصيدلي قبل الاستعمال.",
+      "en": "May interact with some: ask a doctor or pharmacist before use."
+     },
+     "sev": "moderate",
+     "r": [
+      169
+     ]
+    }
+   ],
+   "src": [
+    169
+   ]
+  }
+ ]
+}

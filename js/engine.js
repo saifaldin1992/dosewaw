@@ -107,24 +107,34 @@ function bandCalc(spec,P,x,extra){
   const inR=(v,r)=>v!=null&&v>=r[0]&&v<r[1];
   let seg=null;
   if(P.infant)seg=spec.segs.find(s=>s.kind==='doctor');
-  if(!seg&&m!=null)seg=spec.segs.find(s=>inR(m,s.ageM));
-  if(!seg&&lb!=null)seg=spec.segs.find(s=>s.lb&&inR(Math.floor(lb),s.lb));
+  // the label's order: by age first, or by weight first when the label says «use weight if possible» (wtFirst)
+  const byAge=()=>m!=null?spec.segs.find(s=>inR(m,s.ageM)):null,byWt=()=>lb!=null?spec.segs.find(s=>s.lb&&inR(Math.floor(lb),s.lb)):null;
+  if(!seg)seg=spec.wtFirst?(byWt()||byAge()):(byAge()||byWt());
   if(!seg)return spec.ageOnly&&m==null?{kind:'needAge'}:null;
   if(seg.kind==='doctor'||seg.kind==='adult')return {kind:seg.kind,seg};
   const strengths=[...spec.strengths.map(s=>s.c),...(extra||[]).filter(c=>c>0&&!spec.strengths.some(s=>s.c===c))];
   const ml=mg=>strengths.map(c=>({c,ml:mg*5/c}));
   if(seg.kind==='chart'){
-    const row=m!=null?seg.rows.find(r=>Math.floor(m/12)>=r.age[0]&&Math.floor(m/12)<=r.age[1]):seg.rows.find(r=>Math.floor(lb)>=r.lb[0]&&Math.floor(lb)<=r.lb[1]);
+    const useAge=m!=null&&!(spec.wtFirst&&lb!=null&&seg.rows.every(r=>r.lb));
+    const row=useAge?seg.rows.find(r=>Math.floor(m/12)>=r.age[0]&&Math.floor(m/12)<=r.age[1]):seg.rows.find(r=>Math.floor(lb)>=r.lb[0]&&Math.floor(lb)<=r.lb[1]);
     if(!row)return null;
-    return {kind:'chart',seg,row,mg:row.mg,mg2:row.mg2,everyH:seg.everyH,maxDoses:seg.maxDoses,ml:ml(row.mg),ml2:row.mg2?ml(row.mg2):null,by:m!=null?'age':'weight'};
+    return {kind:'chart',seg,row,mg:row.mg,mg2:row.mg2,everyH:seg.everyH,maxDoses:seg.maxDoses,ml:ml(row.mg),ml2:row.mg2?ml(row.mg2):null,by:useAge?'age':'weight'};
   }
-  // a daily range in mg per kg (corticosteroids), the upper end capped where the source gives a maximum
+  // the label's table by weight in kg (proton pump inhibitors): rows [from, to), hiIn = the upper limit included
+  if(seg.kind==='kgChart'){
+    if(!P.W)return {kind:'needW',seg};
+    const row=seg.rows.find(r=>P.W>=r.kg[0]&&(r.hiIn?P.W<=r.kg[1]:P.W<r.kg[1]));
+    if(!row)return {kind:'doctor',seg:{msg:seg.below,ref:seg.ref}};
+    return {kind:'chart',seg,row,mg:row.mg,mg2:row.mg2,ml:ml(row.mg),ml2:row.mg2?ml(row.mg2):null,by:'kg'};
+  }
+  // a range in mg per kg: a day (corticosteroids, mgkgDay) or a dose (mgkgDose); the upper end capped where the source gives a maximum
   if(seg.kind==='mgkgRange'){
     if(!P.W)return {kind:'needW',seg};
-    const w=seg.byWhy[x.why]||Object.values(seg.byWhy)[0];
-    let lo=P.W*w.mgkgDay[0],hi=P.W*w.mgkgDay[1],capped=false;
+    const w=seg.byWhy[x.why]||Object.values(seg.byWhy)[0],k=w.mgkgDay||w.mgkgDose;
+    let lo=P.W*k[0],hi=P.W*k[1],capped=false;
     if(w.maxMg){if(hi>w.maxMg){hi=w.maxMg;capped=true}if(lo>w.maxMg)lo=w.maxMg}
-    return {kind:'mgkgRange',seg,w,mg:lo,mg2:hi,capped,ml:ml(lo),ml2:ml(hi),perDay:true,ref:w.ref};
+    const one=hi===lo;
+    return {kind:'mgkgRange',seg,w,mg:lo,mg2:one?null:hi,capped,ml:ml(lo),ml2:one?null:ml(hi),perDay:!!w.mgkgDay,ref:w.ref};
   }
   // mg per kg (needs a weight: actual, or estimated from age by the page)
   if(!P.W)return {kind:'needW',seg};

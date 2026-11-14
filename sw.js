@@ -1,7 +1,7 @@
 /* DOSEWAW · service worker: the site works offline after the first visit.
    Pages and code: network first (updates show at once), cache when offline. Data files: the same, so a publish shows quickly. */
 const CACHE='dosewaw-v1';
-const CORE=['./','index.html','css/app.css','brand/theme.css','brand/brand.js','brand/logo.svg','js/i18n.js','js/engine.js','js/app.js','js/rules/antibiotics.js','js/rules/peds.js','js/rules/vitamins.js','js/rules/analgesics.js','js/rules/bands.js','js/rules/antihistamines.js','data/antihistamines.json','data/analgesics.json','data/index.json','data/antibiotics.json','data/sources.json','data/who_wfa.json','manifest.webmanifest'];
+const CORE=['./','index.html','css/app.css','brand/theme.css','brand/brand.js','brand/logo.svg','js/i18n.js','js/engine.js','js/app.js','js/rules/antibiotics.js','js/rules/peds.js','js/rules/vitamins.js','js/rules/analgesics.js','js/rules/bands.js','js/rules/antihistamines.js','data/antihistamines.json','js/rules/gi.js','data/gi.json','data/analgesics.json','data/index.json','data/antibiotics.json','data/sources.json','data/who_wfa.json','manifest.webmanifest'];
 self.addEventListener('install',e=>{e.waitUntil(caches.open(CACHE).then(c=>c.addAll(CORE)).then(()=>self.skipWaiting()))});
 self.addEventListener('activate',e=>{e.waitUntil(caches.keys().then(k=>Promise.all(k.filter(x=>x!==CACHE).map(x=>caches.delete(x)))).then(()=>self.clients.claim()))});
 self.addEventListener('fetch',e=>{
