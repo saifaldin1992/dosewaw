@@ -1,0 +1,68 @@
+{
+ "id": "chlorpheniramine",
+ "query": "openfda.generic_name:\"chlorpheniramine maleate\" AND openfda.product_type:\"HUMAN OTC DRUG\"",
+ "set_id": "c948e612-a491-4ad0-adb9-cf31ef76e4d8",
+ "version": "105",
+ "effective_time": "20261102",
+ "brand": [
+  "Allergy"
+ ],
+ "generic": [
+  "CHLORPHENIRAMINE MALEATE"
+ ],
+ "route": [
+  "ORAL"
+ ],
+ "type": "HUMAN OTC DRUG",
+ "manufacturer": [
+  "Bryant Ranch Prepack"
+ ],
+ "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=c948e612-a491-4ad0-adb9-cf31ef76e4d8",
+ "sections": {
+  "indications_and_usage": [
+   "Uses temporarily relieves these symptoms due to hay fever or other upper respiratory allergies: sneezing runny nose itchy, watery eyes itching of the nose or throat"
+  ],
+  "dosage_and_administration": [
+   "Directions take every 4 to 6 hours, or as directed by a doctor adults and children 12 years and over 1 tablet. Do not exceed 6 tablets in 24 hours. children 6 to under 12 years 1/2 tablet (break tablet in half). Do not exceed 3 whole tablets in 24 hours. children under 6 years do not use"
+  ],
+  "dosage_and_administration_table": [
+   "<table width=\"550px\"> <col/> <col/> <tbody> <tr> <td styleCode=\" Botrule Toprule Lrule Rrule\">adults and children 12 years and over</td> <td styleCode=\" Botrule Toprule Lrule Rrule\">1 tablet. Do not exceed 6 tablets in 24 hours.</td> </tr> <tr> <td styleCode=\" Botrule Toprule Lrule Rrule\">children 6 to under 12 years</td> <td styleCode=\" Botrule Toprule Lrule Rrule\">1/2 tablet (break tablet in half). Do not exceed 3 whole tablets in 24 hours.</td> </tr> <tr> <td styleCode=\" Botrule Toprule Lrule Rrule\">children under 6 years</td> <td styleCode=\" Botrule Toprule Lrule Rrule\">do not use</td> </tr> </tbody> </table>"
+  ],
+  "warnings": [
+   "Warnings Do not use to make a child sleepy. Ask a doctor before use if you have a breathing problem such as emphysema or chronic bronchitis glaucoma difficulty in urination due to enlargement of the prostate gland Ask a doctor or pharmacist before use if you are taking sedatives or tranquilizers. When using this product drowsiness may occur avoid alcoholic beverages excitability may occur, especially in children use caution when driving a motor vehicle or operating machinery alcohol, sedatives, and tranquilizers may increase drowsiness If pregnant or breast-feeding, ask a health professional before use. Keep out of reach of children. In case of overdose, get medical help or contact a Poison Control Center right away."
+  ],
+  "how_supplied": [
+   "HOW SUPPLIED Chlorpheniramine Maleate 4 mg NDC 71335-2056-1: 30 Tablets in a BOTTLE NDC 71335-2056-2: 60 Tablets in a BOTTLE NDC 71335-2056-3: 100 Tablets in a BOTTLE NDC 71335-2056-4: 120 Tablets in a BOTTLE NDC 71335-2056-5: 40 Tablets in a BOTTLE NDC 71335-2056-6: 24 Tablets in a BOTTLE Repackaged/Relabeled by: Bryant Ranch Prepack Burbank, CA 91504"
+  ],
+  "storage_and_handling": [
+   "Other information store at 25°C (77°F); excursions permitted between 15°-30°C (59°-86°F) protect from excessive moisture see end flap for expiration date and lot number"
+  ],
+  "active_ingredient": [
+   "Active ingredient (in each tablet) Chlorpheniramine maleate 4 mg"
+  ],
+  "purpose": [
+   "Purpose Antihistamine"
+  ],
+  "do_not_use": [
+   "Do not use to make a child sleepy."
+  ],
+  "ask_doctor": [
+   "Ask a doctor before use if you have a breathing problem such as emphysema or chronic bronchitis glaucoma difficulty in urination due to enlargement of the prostate gland"
+  ],
+  "ask_doctor_or_pharmacist": [
+   "Ask a doctor or pharmacist before use if you are taking sedatives or tranquilizers."
+  ],
+  "pregnancy_or_breast_feeding": [
+   "If pregnant or breast-feeding, ask a health professional before use."
+  ],
+  "keep_out_of_reach_of_children": [
+   "Keep out of reach of children. In case of overdose, get medical help or contact a Poison Control Center right away."
+  ],
+  "when_using": [
+   "When using this product drowsiness may occur avoid alcoholic beverages excitability may occur, especially in children use caution when driving a motor vehicle or operating machinery alcohol, sedatives, and tranquilizers may increase drowsiness"
+  ],
+  "package_label_principal_display_panel": [
+   "Chlorpheniramine Maleate 4 mg Tablet Label"
+  ]
+ }
+}

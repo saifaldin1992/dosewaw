@@ -38,10 +38,10 @@ const ICON={
  src:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19V5a2 2 0 0 1 2-2h13v16H6a2 2 0 0 0-2 2z"/><path d="M8 7h7M8 11h7"/></svg>',
  search:'<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>'
 };
-const GROUPS=[{id:'ab',live:true},{id:'an',live:true},{id:'ah'},{id:'gi'},{id:'vit',live:true}];
-const HREF=d=>(d.g==='vit'?'#/g/vit/v/':'#/g/'+(d.g==='an'?'an':'ab')+'/d/')+encodeURIComponent(d.id);
+const GROUPS=[{id:'ab',live:true},{id:'an',live:true},{id:'ah',live:true},{id:'gi'},{id:'vit',live:true}];
+const HREF=d=>(d.g==='vit'?'#/g/vit/v/':'#/g/'+(['an','ah'].includes(d.g)?d.g:'ab')+'/d/')+encodeURIComponent(d.id);
 /* the screens of each group (its own «app»): antibiotics have a drug list by class; groups not ready show «soon» */
-const GTABS={ab:['calc','inter','drugs','src'],an:['calc','inter','drugs','src'],vit:['calc','inter','src']};
+const GTABS={ab:['calc','inter','drugs','src'],an:['calc','inter','drugs','src'],ah:['calc','inter','drugs','src'],vit:['calc','inter','src']};
 let CURG=null;
 
 /* ---------- data (static files; fetched once, kept in memory; the service worker keeps them offline) ---------- */
@@ -51,11 +51,12 @@ const SCRIPTS={};
 function loadScript(src){return SCRIPTS[src]||(SCRIPTS[src]=new Promise((ok,no)=>{const s=document.createElement('script');s.src=src+'?v='+VERSION;s.onload=ok;s.onerror=()=>{delete SCRIPTS[src];no(new Error(src))};document.head.appendChild(s)}))}
 const loadAB=()=>Promise.all([getJSON('antibiotics.json'),getJSON('sources.json'),getJSON('who_wfa.json'),loadScript('js/rules/antibiotics.js'),loadScript('js/rules/peds.js')]);
 /* the data and rules of a drug group: [drugs, sources, WHO weights] (the analgesic rules extend the antibiotic rule table) */
-const GDATA={ab:'antibiotics.json',an:'analgesics.json'};
+const GDATA={ab:'antibiotics.json',an:'analgesics.json',ah:'antihistamines.json'};
+const GRULES={an:'js/rules/analgesics.js',ah:'js/rules/antihistamines.js'};
 function loadGroup(g){
-  if(g!=='an')return loadAB();
-  return Promise.all([getJSON('analgesics.json'),getJSON('sources.json'),getJSON('who_wfa.json'),
-    loadScript('js/rules/antibiotics.js').then(()=>loadScript('js/rules/analgesics.js')),loadScript('js/rules/bands.js')]);
+  if(!GRULES[g])return loadAB();
+  return Promise.all([getJSON(GDATA[g]),getJSON('sources.json'),getJSON('who_wfa.json'),
+    loadScript('js/rules/antibiotics.js').then(()=>loadScript(GRULES[g])),loadScript('js/rules/bands.js')]);
 }
 
 /* ---------- small helpers ---------- */
@@ -132,11 +133,11 @@ function searchBox(q,group,chips){
   </section>`;
 }
 let SG='';
-function wireSearch(){
+function wireSearch(listAll){
   const q=$('#q'),out=$('#sres');
   const run=()=>{
     const v=normAr(q.value);
-    if(!v&&!SG){out.innerHTML='';return}
+    if(!v&&!(SG&&listAll)){out.innerHTML='';return}
     if(SG&&!GROUPS.find(g=>g.id===SG).live){out.innerHTML=`<p class="none">${esc(T('soon_long'))}</p>`;return}
     const list=(INDEX||[]).filter(d=>!SG||d.g===SG).map(d=>{const n=normAr(d.n.ar+' '+d.n.en),c=normAr(d.c.ar+' '+d.c.en);
       let sc=!v?3:(normAr(d.n.ar).startsWith(v)||normAr(d.n.en).startsWith(v))?0:n.includes(v)?1:c.includes(v)?2:-1;
@@ -163,7 +164,7 @@ async function viewHome(){
   ${recent().length?`<div class="sec-title">🕘 ${esc(T('recent'))}</div><div class="chips">${chipsOf(recent())}</div>`:''}
   <div class="sec-title">${esc(T('search_all'))}</div>
   ${searchBox('','',true)}`;
-  wireSearch();
+  wireSearch(true);
 }
 /* the title bar of a group screen: back to the groups, the group's name and the screen */
 function groupHead(g,tab){
@@ -182,7 +183,7 @@ async function viewGroupCalc(g){
     return;
   }
   app().innerHTML=groupHead(g,'calc')+`<p class="hint lead">${esc(T('calc_pick'))}</p>${searchBox('',g)}`;
-  wireSearch();$('#q').focus({preventScroll:true});
+  wireSearch(true);$('#q').focus({preventScroll:true});
 }
 /* antibiotics by class, with the AWaRe group */
 async function viewDrugList(g){
@@ -211,7 +212,7 @@ async function viewDrug(id,g){
   const d=ab.find(x=>x.id===id);if(!d){location.hash='#/';return}
   pushRecent(id);
   const rule=(typeof ABC_RULES!=='undefined'&&ABC_RULES[id])||null, peds=(g==='ab'&&typeof PEDS!=='undefined'&&PEDS[id])||null;
-  const band=(g==='an'&&typeof BANDS!=='undefined'&&BANDS[id])||null;
+  const band=(GRULES[g]&&typeof BANDS!=='undefined'&&BANDS[id])||null;
   const doc=band&&band.segs.find(x=>x.kind==='doctor');
   D={d,rule,peds,band,src,who,g};
   const fav=favs().includes(id);
@@ -269,11 +270,13 @@ function calc(){
   $('#unit').textContent=T(PT.mode==='w'?'u_kg':PT.mode==='y'?'u_y':'u_m');
   const est=$('#est'),iw=$('#infwrap');if(iw)iw.hidden=PT.mode!=='w'||(peds?P.W>=peds.adultKg:P.W*LB>=24);
   est.hidden=PT.mode==='w'||!(P.v>0);
+  if(D.band&&D.band.ageOnly)est.hidden=true;
   if(!est.hidden)est.textContent=P.W?T('est',{w:num(P.W)}):T('est_out');
   const child=peds&&P.W&&(P.W<peds.adultKg||P.infant);
   if(child)return pedsResult(P);
   // analgesics: a child by age under 12 years, or by weight under 96 lb when no adult age is given
-  if(D.band&&(P.months!=null?P.months<144:(P.W&&P.W*LB<96&&!(P.ageY>=12))||P.infant))return bandResult(P);
+  const adultM=D.band?((D.band.segs.find(x=>x.kind==='adult')||{ageM:[144]}).ageM[0]):144;
+  if(D.band&&(P.months!=null?P.months<adultM:(P.W&&(D.band.ageOnly||P.W*LB<96)&&!(P.ageY>=adultM/12))||P.infant))return bandResult(P);
   if(!rule){R.innerHTML=`<div class="rbody"><p class="hint">${esc(LT(d.dose))}</p></div>`;$('#opts').hidden=true;return}
   adultResult(P);
 }
@@ -345,16 +348,20 @@ function bandResult(P){
   const x=PT.x[d.id+'_kid']||(PT.x[d.id+'_kid']={why:'fever',hot:false});
   const extra=(PT.conc[d.id]||[]);
   const r=bandCalc(band,P,x,extra);
-  const head=(big,sub)=>`<div class="rhead"><div class="k"><span>${esc(T('result'))}</span><span>${P.W?num(P.W)+' '+esc(T('u_kg'))+(P.est?' ≈':''):''}</span></div>${big}${sub?`<div class="sub">${sub}</div>`:''}</div>`;
+  const head=(big,sub)=>`<div class="rhead"><div class="k"><span>${esc(T('result'))}</span><span>${P.W&&!band.ageOnly?num(P.W)+' '+esc(T('u_kg'))+(P.est?' ≈':''):''}</span></div>${big}${sub?`<div class="sub">${sub}</div>`:''}</div>`;
   O.hidden=true;O.innerHTML='';
   if(!r){R.innerHTML=`<div class="empty">${esc(T('enter_w'))}</div>`;return}
   if(r.kind==='doctor'){R.innerHTML=head(`<div class="bigtxt">${esc(T('see_doc'))}</div>`)+`<div class="rbody"><div class="warn red">${esc(LT(r.seg.msg))}</div>${srcLine([r.seg.ref])}</div>`;return}
   if(r.kind==='adult'){R.innerHTML=head(`<div class="bigtxt">${esc(LT(r.seg.text))}</div>`,esc(T('adult12')))+`<div class="rbody">${srcLine([r.seg.ref])}${actions(false)}</div>`;wireActions();return}
   if(r.kind==='needW'){R.innerHTML=`<div class="empty">${esc(T('need_weight'))}</div>`;return}
-  const best=easiest(r.ml),ev=r.everyH[0]===r.everyH[1]?T('every',{h:r.everyH[0]}):T('every_r',{a:r.everyH[0],b:r.everyH[1]});
-  const lim=r.maxDoses?T('max_doses',{n:r.maxDoses}):r.maxDay?T('max_day',{m:num(r.maxDay)}):'';
-  const why=r.kind==='chart'?T(r.by==='age'?'by_age_chart':'by_wt_chart',{a:r.row.age[0]===r.row.age[1]?r.row.age[0]:r.row.age[0]+'–'+r.row.age[1],l:r.row.lb[0]+'–'+r.row.lb[1],k:num(r.row.lb[0]/LB)+'–'+num((r.row.lb[1]+1)/LB)})
+  if(r.kind==='needAge'){R.innerHTML=`<div class="empty">${esc(T('need_age_chart'))}</div>`;return}
+  const best=easiest(r.ml),row=r.row||{};
+  const ev=row.freq?LT(row.freq):r.everyH[0]===r.everyH[1]?T('every',{h:r.everyH[0]}):T('every_r',{a:r.everyH[0],b:r.everyH[1]});
+  const lim=row.max?LT(row.max):r.maxDoses?T('max_doses',{n:r.maxDoses}):r.maxDay?T('max_day',{m:num(r.maxDay)}):'';
+  const mlx=q=>{const two=r.ml2&&r.ml2.find(z=>z.c===q.c);return num(mlRound(q.ml))+(two?'–'+num(mlRound(two.ml)):'')};
+  const why=r.kind==='chart'&&r.row.lb?T(r.by==='age'?'by_age_chart':'by_wt_chart',{a:r.row.age[0]===r.row.age[1]?r.row.age[0]:r.row.age[0]+'–'+r.row.age[1],l:r.row.lb[0]+'–'+r.row.lb[1],k:num(r.row.lb[0]/LB)+'–'+num((r.row.lb[1]+1)/LB)})
     :T('by_mgkg',{m:r.mgkg});
+  const whyTxt=r.kind==='chart'&&!row.lb?T('by_age_chart',{a:row.age[0]===row.age[1]?row.age[0]:row.age[0]+'–'+row.age[1]}):why;
   const warns=[];
   if(r.kind==='mgkg'&&r.seg.note)warns.push(`<div class="warn">${esc(LT(r.seg.note))}</div>`);
   if(r.capped)warns.push(`<div class="warn red">${esc(T('cap_mg',{m:r.seg.maxMg}))}</div>`);
@@ -362,15 +369,17 @@ function bandResult(P){
   const doc=band.segs.find(s2=>s2.kind==='doctor');
   if(PT.mode==='w'&&r.kind==='mgkg'&&doc)warns.push(`<div class="warn">${esc(T('if_younger',{m:doc.ageM[1]}))} ${esc(LT(doc.msg))}</div>`);
   if(r.kind==='chart'&&PT.mode==='w')warns.push(`<p class="hint">${esc(T('adult_use_age'))}</p>`);
-  const table=`<table class="ml"><tr><th>${esc(T('susp'))}</th><th class="ta-e">${esc(T('per_dose'))}</th></tr>${r.ml.map(q=>`<tr class="${q.c===best?'best':''}"><td><span class="num">${q.c} mg / 5 mL</span>${q.c===best?` <small class="easy">· ${esc(T('easiest'))}</small>`:''}${band.strengths.some(s2=>s2.c===q.c)?'':` <small class="hint">· ${esc(T('your_conc'))}</small>`}</td><td class="v">${num(mlRound(q.ml))} <small>${esc(T('ml'))}</small></td></tr>`).join('')}</table>
+  const table=`<table class="ml"><tr><th>${esc(T('susp'))}</th><th class="ta-e">${esc(T('per_dose'))}</th></tr>${r.ml.map(q=>`<tr class="${q.c===best?'best':''}"><td><span class="num">${q.c} mg / 5 mL</span>${q.c===best?` <small class="easy">· ${esc(T('easiest'))}</small>`:''}${band.strengths.some(s2=>s2.c===q.c)?'':` <small class="hint">· ${esc(T('your_conc'))}</small>`}</td><td class="v">${mlx(q)} <small>${esc(T('ml'))}</small></td></tr>`).join('')}</table>
     <div class="conc mt8"><input id="conc" inputmode="decimal" placeholder="${esc(T('conc_ph'))}" aria-label="${esc(T('conc_ph'))}"><span>mg / 5 mL</span><button class="btn" type="button" id="concadd">${esc(T('conc_add'))}</button></div>`;
-  R.innerHTML=head(`<div class="big">${num(r.mg)} <small>${esc(T('mg'))}</small></div>`,`${esc(ev)}${lim?' · '+esc(lim):''}`)+
-    `<div class="rbody">${table}${warns.join('')}<p class="hint">${esc(why)}</p>
+  const noLiquid=!band.strengths.length&&!extra.length;
+  R.innerHTML=head(`<div class="big">${num(r.mg)}${r.mg2?'–'+num(r.mg2):''} <small>${esc(T(r.seg.perDay?'mg_day':'mg'))}</small></div>`,`${esc(ev)}${lim?' · '+esc(lim):''}`)+
+    `<div class="rbody">${noLiquid?'':table}${warns.join('')}<p class="hint">${esc(whyTxt)}</p>
     <div class="facts"><div class="fact"><b>${esc(T('duration'))}</b><span>${esc(LT(band.duration))}</span></div><div class="fact"><b>${esc(T('pc_when'))}</b><span>${esc(ev)}</span></div></div>
     ${srcLine([r.seg.ref])}${actions(true)}</div>`;
   wireActions();
-  $('#bcard').onclick=()=>patientCard({kind:'peds',r:{ml:r.ml,every:r.everyH[0],everyH:r.everyH,maxDoses:r.maxDoses},best});
-  $('#concadd').onclick=()=>{const c=parseFloat(String($('#conc').value).replace(',','.'));if(!(c>0&&c<=1000))return;PT.conc[d.id]=[...new Set([...extra,c])];calc()};
+  $('#bcard').onclick=()=>patientCard({kind:'peds',r:{ml:r.ml,ml2:r.ml2,every:r.everyH&&r.everyH[0],everyH:r.everyH,maxDoses:r.maxDoses,freq:row.freq,max:row.max,mg:r.mg,mg2:r.mg2},best});
+  if(noLiquid)$('#bcard').hidden=true;
+  $('#concadd')&&($('#concadd').onclick=()=>{const c=parseFloat(String($('#conc').value).replace(',','.'));if(!(c>0&&c<=1000))return;PT.conc[d.id]=[...new Set([...extra,c])];calc()});
   // ibuprofen under 2 years: the dose depends on fever or pain, and on the temperature
   if(r.kind==='mgkg'&&band.opts){
     O.hidden=false;
@@ -400,9 +409,9 @@ function patientCard(o){
   let pick=o.best,lines=[],tips=[];
   const draw=()=>{
     if(o.kind==='peds'){const x=o.r.ml.find(m=>m.c===pick)||o.r.ml[0];
-      lines=[[tk('pc_med'),`${CT(d.n)} · ${tk('pc_susp')} ${x.c} mg / 5 mL`],[tk('pc_dose'),`${num(mlRound(x.ml))} ${tk('ml')}`],
-        [tk('pc_when'),o.r.everyH&&o.r.everyH[0]!==o.r.everyH[1]?tk('pc_every_r',{a:o.r.everyH[0],b:o.r.everyH[1]}):tk('pc_every',{h:o.r.every,n:24/o.r.every})],
-        ...(o.r.maxDoses?[[tk('pc_limit'),tk('max_doses',{n:o.r.maxDoses})]]:[]),[tk('duration'),CT(peds.duration)]];
+      lines=[[tk('pc_med'),`${CT(d.n)} · ${tk('pc_susp')} ${x.c} mg / 5 mL`],[tk('pc_dose'),`${num(mlRound(x.ml))}${o.r.ml2?'–'+num(mlRound(o.r.ml2.find(z=>z.c===x.c).ml)):''} ${tk('ml')}`],
+        [tk('pc_when'),o.r.freq?CT(o.r.freq):o.r.everyH&&o.r.everyH[0]!==o.r.everyH[1]?tk('pc_every_r',{a:o.r.everyH[0],b:o.r.everyH[1]}):tk('pc_every',{h:o.r.every,n:24/o.r.every})],
+        ...(o.r.max?[[tk('pc_limit'),CT(o.r.max)]]:o.r.maxDoses?[[tk('pc_limit'),tk('max_doses',{n:o.r.maxDoses})]]:[]),[tk('duration'),CT(peds.duration)]];
       tips=peds.patient?peds.patient.map(CT):[];
     }else{lines=[[tk('pc_med'),CT(d.n)],[tk('pc_dose'),CT(o.text)]];tips=[];
       const t=CT(d.timing).split(/[.؛]/)[0].trim();if(t&&!/label|ملصق|نشرة/i.test(t))lines.push([tk('pc_how'),t]);}

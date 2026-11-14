@@ -30,12 +30,14 @@ used |= {int(i) for m in re.findall(r'srcIds:\[([\d,\s]*)\]', rules) for i in m.
 missing = used - ids
 assert not missing, f'source ids used but not defined: {sorted(missing)}'
 for x in sources: x['g'] = 'ab'
-# analgesics: drugs written from the saved labels (content/analgesics/labels) and WHO; sources built from the label files
-an_doc = json.load(open(C('analgesics', 'drugs.json'), encoding='utf-8'))
-an = an_doc['drugs']
-for x in json.load(open(C('analgesics', 'sources.json'), encoding='utf-8')):
+# label-based groups: drugs written from the saved labels (content/<folder>/labels) and WHO; sources built from the label files
+LGROUPS = {'an': 'analgesics', 'ah': 'antihistamines'}
+GD = {}
+for g, folder in LGROUPS.items():
+  GD[g] = json.load(open(C(folder, 'drugs.json'), encoding='utf-8'))['drugs']
+  for x in json.load(open(C(folder, 'sources.json'), encoding='utf-8')):
     if 'label' in x:
-        L = json.load(open(C('analgesics', 'labels', x['label'] + '.json'), encoding='utf-8'))
+        L = json.load(open(C(folder, 'labels', x['label'] + '.json'), encoding='utf-8'))
         day = L['effective_time']; day = f'{day[:4]}-{day[4:6]}-{day[6:]}'
         kind = 'OTC «Drug Facts»' if L['type'] == 'HUMAN OTC DRUG' else 'prescribing information'
         src = {'id': x['id'], 'org': f"U.S. FDA label on DailyMed ({(L['manufacturer'] or ['?'])[0]}), {day}",
@@ -43,14 +45,16 @@ for x in json.load(open(C('analgesics', 'sources.json'), encoding='utf-8')):
                'use_ar': x['use_ar'], 'use_en': x['use_en'], 'kind': 'd'}
     else:
         src = {k: x[k] for k in ('id', 'org', 'title', 'url', 'use_ar', 'use_en', 'kind')}
-    src['g'] = 'an'
+    src['g'] = g
     assert src['id'] not in ids, f"source id {src['id']} used twice"
     sources.append(src); ids.add(src['id'])
-used_an = {i for d in an for i in d.get('src', [])} | {i for d in an for x in d.get('inter', []) for i in x.get('r', [])}
-assert not (used_an - ids), f'analgesic source ids not defined: {sorted(used_an - ids)}'
-for d in an:
-    assert not __import__('re').search(r'[<>]', json.dumps(d, ensure_ascii=False)), d['id'] + ': < or > in text'
-dump('analgesics.json', an)
+for g, folder in LGROUPS.items():
+  used = {i for d in GD[g] for i in d.get('src', [])} | {i for d in GD[g] for x in d.get('inter', []) for i in x.get('r', [])}
+  assert not (used - ids), f'{folder}: source ids not defined: {sorted(used - ids)}'
+  for d in GD[g]:
+    assert not re.search(r'[<>]', json.dumps(d, ensure_ascii=False)), d['id'] + ': < or > in text'
+  dump(folder + '.json', GD[g])
+an = GD['an']
 dump('sources.json', sources)
 
 # WHO weight-for-age medians (kg) by month 0-120: Child Growth Standards 0-5 y (by day) + 2007 reference 5-10 y (by month)
@@ -74,7 +78,7 @@ for line in open(C('vitamins', 'keys.txt')).read().split('\n'):
     if line.strip():
         k, n, h = line.split()
         idx.append({'id': k, 'g': 'vit', 'n': txt(n), 'c': txt(h)})
-idx += [{'id': d['id'], 'g': 'an', 'n': d['n'], 'c': d['cls']} for d in an]
+idx += [{'id': d['id'], 'g': g, 'n': d['n'], 'c': d['cls']} for g in LGROUPS for d in GD[g]]
 dump('index.json', idx)
 if not os.path.exists(D('brand.json')): dump('brand.json', {})  # the published brand comes from Supabase (worker)
-print('analgesics', len(an), '·', 'antibiotics', len(ab), '· sources', len(sources), '· index', len(idx))
+print(*[f'{LGROUPS[g]} {len(GD[g])} ·' for g in LGROUPS], 'antibiotics', len(ab), '· sources', len(sources), '· index', len(idx))

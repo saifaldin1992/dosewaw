@@ -1,0 +1,530 @@
+{
+ "group": "ah",
+ "note": "Antihistamines first (corticosteroids next). Every text comes from the label or WHO source named in src.",
+ "drugs": [
+  {
+   "id": "cetirizine",
+   "n": {
+    "ar": "سيتريزين",
+    "en": "Cetirizine"
+   },
+   "cls": {
+    "ar": "مضاد هيستامين من الجيل الثاني (قليل النعاس)",
+    "en": "Second-generation antihistamine (less drowsy)"
+   },
+   "uses": {
+    "ar": "أعراض الحساسية الأنفية (رشح، عطاس، حكة الأنف أو الحلق، حكة ودموع العين).",
+    "en": "Hay fever and upper respiratory allergy symptoms (runny nose, sneezing, itchy nose or throat, itchy watery eyes)."
+   },
+   "dose": {
+    "ar": "الكبار ومن 6 سنوات: 5 أو 10 ملغ مرة يومياً حسب شدة الأعراض، بحد 10 ملغ في 24 ساعة. 65 سنة فأكثر: 5 ملغ مرة يومياً بحد 5 ملغ. من 2 إلى أقل من 6 سنوات: 2.5 ملغ مرة يومياً، ويمكن رفعها إلى 5 ملغ مرة يومياً أو 2.5 ملغ كل 12 ساعة، بحد 5 ملغ. أقل من سنتين: يُسأل الطبيب.",
+    "en": "Adults and from 6 years: 5 or 10 mg once a day by severity, up to 10 mg in 24 hours. 65 years and over: 5 mg once a day, up to 5 mg. 2 to under 6 years: 2.5 mg once a day, may increase to 5 mg once a day or 2.5 mg every 12 hours, up to 5 mg. Under 2 years: ask a doctor."
+   },
+   "renal": {
+    "ar": "مرض الكلى: يحدد الطبيب إن كانت الحاجة لجرعة مختلفة (النشرة).",
+    "en": "Kidney disease: the doctor decides whether a different dose is needed (label)."
+   },
+   "hepatic": {
+    "ar": "مرض الكبد: يحدد الطبيب إن كانت الحاجة لجرعة مختلفة (النشرة).",
+    "en": "Liver disease: the doctor decides whether a different dose is needed (label)."
+   },
+   "timing": {
+    "ar": "قد يسبب النعاس: يُتجنّب الكحول والحذر عند القيادة. ممنوع لمن تحسس منه أو من الهيدروكسيزين. يُستعمل كوب القياس المرفق فقط.",
+    "en": "May cause drowsiness: avoid alcohol and take care when driving. Not for people allergic to it or to hydroxyzine. Use only the dosing cup provided."
+   },
+   "preg": {
+    "ar": "الرضاعة: لا يُنصح به. الحمل: تستشير مختصاً قبل الاستعمال.",
+    "en": "Breast-feeding: not recommended. Pregnancy: ask a health professional before use."
+   },
+   "inter": [
+    {
+     "with": {
+      "ar": "الكحول والمهدئات والمنومات",
+      "en": "Alcohol, sedatives and tranquilizers"
+     },
+     "desc": {
+      "ar": "تزيد النعاس؛ يُتجنّب الكحول والحذر عند القيادة.",
+      "en": "Increase drowsiness; avoid alcohol and take care when driving."
+     },
+     "sev": "moderate",
+     "r": [
+      142
+     ]
+    },
+    {
+     "with": {
+      "ar": "الهيدروكسيزين",
+      "en": "Hydroxyzine"
+     },
+     "desc": {
+      "ar": "حساسية متصالبة: ممنوع لمن تحسس من الهيدروكسيزين.",
+      "en": "Cross-allergy: not for people allergic to hydroxyzine."
+     },
+     "sev": "major",
+     "r": [
+      142
+     ]
+    }
+   ],
+   "src": [
+    142,
+    141
+   ]
+  },
+  {
+   "id": "levocetirizine",
+   "n": {
+    "ar": "ليفوسيتريزين",
+    "en": "Levocetirizine"
+   },
+   "cls": {
+    "ar": "مضاد هيستامين من الجيل الثاني (قليل النعاس)",
+    "en": "Second-generation antihistamine (less drowsy)"
+   },
+   "uses": {
+    "ar": "الشرى المزمن مجهول السبب (النشرة).",
+    "en": "Chronic idiopathic urticaria (label)."
+   },
+   "dose": {
+    "ar": "12 سنة فأكثر: 5 ملغ مرة يومياً مساءً (قد تكفي 2.5 ملغ). من 6 إلى 11 سنة: 2.5 ملغ مرة يومياً مساءً ولا تُتجاوز. يُؤخذ مع الطعام أو بدونه.",
+    "en": "12 years and over: 5 mg once a day in the evening (2.5 mg may be enough). 6 to 11 years: 2.5 mg once a day in the evening; do not exceed. With or without food."
+   },
+   "renal": {
+    "ar": "12 سنة فأكثر: تصفية 50 إلى 80: 2.5 ملغ مرة يومياً؛ 30 إلى 50: 2.5 ملغ يوماً بعد يوم؛ 10 إلى 30: 2.5 ملغ مرتين أسبوعياً (كل 3 إلى 4 أيام)؛ أقل من 10 أو غسيل كلوي: ممنوع. الأطفال من 6 أشهر إلى 11 سنة مع قصور كلوي: ممنوع.",
+    "en": "12 years and over: clearance 50 to 80: 2.5 mg once a day; 30 to 50: 2.5 mg every other day; 10 to 30: 2.5 mg twice a week (every 3 to 4 days); under 10 or haemodialysis: contraindicated. Children 6 months to 11 years with kidney impairment: contraindicated."
+   },
+   "hepatic": {
+    "ar": "لا تعديل مع قصور الكبد وحده؛ مع قصور الكبد والكلى معاً يُعدّل حسب الكلى.",
+    "en": "No change with liver impairment alone; with both liver and kidney impairment, adjust for the kidneys."
+   },
+   "timing": {
+    "ar": "قد يسبب النعاس: يُتجنّب الكحول والمهدئات والحذر عند القيادة. ممنوع لمن تحسس منه أو من السيتريزين.",
+    "en": "May cause drowsiness: avoid alcohol and sedatives and take care when driving. Not for people allergic to it or to cetirizine."
+   },
+   "preg": {
+    "ar": "الحمل: البيانات غير كافية لتحديد الخطر. الرضاعة: السيتريزين يظهر في حليب الأم.",
+    "en": "Pregnancy: data are insufficient to identify a risk. Breast-feeding: cetirizine appears in human milk."
+   },
+   "inter": [
+    {
+     "with": {
+      "ar": "الكحول والمهدئات والمنومات",
+      "en": "Alcohol, sedatives and tranquilizers"
+     },
+     "desc": {
+      "ar": "تزيد النعاس؛ يُتجنّب الكحول والحذر عند القيادة.",
+      "en": "Increase drowsiness; avoid alcohol and take care when driving."
+     },
+     "sev": "moderate",
+     "r": [
+      143
+     ]
+    },
+    {
+     "with": {
+      "ar": "السيتريزين",
+      "en": "Cetirizine"
+     },
+     "desc": {
+      "ar": "حساسية متصالبة: ممنوع لمن تحسس من السيتريزين.",
+      "en": "Cross-allergy: contraindicated with cetirizine allergy."
+     },
+     "sev": "major",
+     "r": [
+      143
+     ]
+    }
+   ],
+   "src": [
+    143
+   ]
+  },
+  {
+   "id": "loratadine",
+   "n": {
+    "ar": "لوراتادين",
+    "en": "Loratadine"
+   },
+   "cls": {
+    "ar": "مضاد هيستامين من الجيل الثاني (قليل النعاس)",
+    "en": "Second-generation antihistamine (less drowsy)"
+   },
+   "uses": {
+    "ar": "أعراض الحساسية الأنفية (رشح، عطاس، حكة الأنف أو الحلق، حكة ودموع العين).",
+    "en": "Hay fever and upper respiratory allergy symptoms (runny nose, sneezing, itchy nose or throat, itchy watery eyes)."
+   },
+   "dose": {
+    "ar": "الكبار ومن 6 سنوات: 10 ملغ مرة يومياً، بحد 10 ملغ في 24 ساعة. من 2 إلى أقل من 6 سنوات: 5 ملغ (5 مل من شراب 5 ملغ/5 مل) مرة يومياً، بحد 5 ملغ. أقل من سنتين: يُسأل الطبيب.",
+    "en": "Adults and from 6 years: 10 mg once a day, up to 10 mg in 24 hours. 2 to under 6 years: 5 mg (5 mL of 5 mg/5 mL syrup) once a day, up to 5 mg. Under 2 years: ask a doctor."
+   },
+   "renal": {
+    "ar": "مرض الكلى: يحدد الطبيب إن كانت الحاجة لجرعة مختلفة.",
+    "en": "Kidney disease: the doctor decides whether a different dose is needed."
+   },
+   "hepatic": {
+    "ar": "مرض الكبد: يحدد الطبيب إن كانت الحاجة لجرعة مختلفة.",
+    "en": "Liver disease: the doctor decides whether a different dose is needed."
+   },
+   "timing": {
+    "ar": "لا يُؤخذ أكثر من الجرعة: الزيادة قد تسبب النعاس. يُستعمل كوب القياس المرفق فقط.",
+    "en": "Do not take more than directed: more may cause drowsiness. Use only the dosing cup provided."
+   },
+   "preg": {
+    "ar": "الحامل أو المرضع تستشير مختصاً قبل الاستعمال.",
+    "en": "If pregnant or breast-feeding, ask a health professional before use."
+   },
+   "inter": [
+    {
+     "with": {
+      "ar": "الديسلوراتادين",
+      "en": "Desloratadine"
+     },
+     "desc": {
+      "ar": "حساسية متصالبة: الديسلوراتادين ممنوع لمن تحسس من اللوراتادين.",
+      "en": "Cross-allergy: desloratadine is contraindicated with loratadine allergy."
+     },
+     "sev": "moderate",
+     "r": [
+      146
+     ]
+    }
+   ],
+   "src": [
+    145,
+    144
+   ]
+  },
+  {
+   "id": "desloratadine",
+   "n": {
+    "ar": "ديسلوراتادين",
+    "en": "Desloratadine"
+   },
+   "cls": {
+    "ar": "مضاد هيستامين من الجيل الثاني (قليل النعاس)",
+    "en": "Second-generation antihistamine (less drowsy)"
+   },
+   "uses": {
+    "ar": "التهاب الأنف التحسسي الموسمي والدائم، والشرى المزمن.",
+    "en": "Seasonal and perennial allergic rhinitis, chronic urticaria."
+   },
+   "dose": {
+    "ar": "12 سنة فأكثر: 5 ملغ مرة يومياً، مع الطعام أو بدونه. هذه النشرة (أقراص) لا تذكر جرعة للأطفال.",
+    "en": "12 years and over: 5 mg once a day, with or without food. This (tablet) label gives no dose for children."
+   },
+   "renal": {
+    "ar": "القصور الكلوي عند الكبار: البداية 5 ملغ يوماً بعد يوم.",
+    "en": "Kidney impairment in adults: start with 5 mg every other day."
+   },
+   "hepatic": {
+    "ar": "القصور الكبدي عند الكبار: البداية 5 ملغ يوماً بعد يوم.",
+    "en": "Liver impairment in adults: start with 5 mg every other day."
+   },
+   "timing": {
+    "ar": "ممنوع لمن تحسس منه أو من اللوراتادين.",
+    "en": "Contraindicated with allergy to it or to loratadine."
+   },
+   "preg": {
+    "ar": "الحمل: البيانات المحدودة لا تكفي لتقدير الخطر. الرضاعة: يمر إلى حليب الأم، ويُقرر الاستمرار في الرضاعة أو إيقاف الدواء.",
+    "en": "Pregnancy: limited data are insufficient to inform the risk. Breast-feeding: passes into milk; decide whether to stop nursing or the drug."
+   },
+   "inter": [
+    {
+     "with": {
+      "ar": "الكيتوكونازول والإريثروميسين والأزيثروميسين والفلوكستين",
+      "en": "Ketoconazole, erythromycin, azithromycin, fluoxetine"
+     },
+     "desc": {
+      "ar": "ترفع مستوى الديسلوراتادين بلا تغير مهم سريرياً في الأمان.",
+      "en": "Raise desloratadine levels without clinically relevant safety changes."
+     },
+     "sev": "minor",
+     "r": [
+      146
+     ]
+    },
+    {
+     "with": {
+      "ar": "اللوراتادين",
+      "en": "Loratadine"
+     },
+     "desc": {
+      "ar": "حساسية متصالبة: ممنوع لمن تحسس من اللوراتادين.",
+      "en": "Cross-allergy: contraindicated with loratadine allergy."
+     },
+     "sev": "major",
+     "r": [
+      146
+     ]
+    }
+   ],
+   "src": [
+    146
+   ]
+  },
+  {
+   "id": "fexofenadine",
+   "n": {
+    "ar": "فيكسوفينادين",
+    "en": "Fexofenadine"
+   },
+   "cls": {
+    "ar": "مضاد هيستامين من الجيل الثاني (قليل النعاس)",
+    "en": "Second-generation antihistamine (less drowsy)"
+   },
+   "uses": {
+    "ar": "أعراض الحساسية الأنفية (رشح، عطاس، حكة الأنف أو الحلق، حكة ودموع العين).",
+    "en": "Hay fever and upper respiratory allergy symptoms (runny nose, sneezing, itchy nose or throat, itchy watery eyes)."
+   },
+   "dose": {
+    "ar": "12 سنة فأكثر: 180 ملغ مرة يومياً مع الماء (قرص)، أو 60 ملغ (10 مل من شراب 30 ملغ/5 مل) كل 12 ساعة، بحد 120 ملغ من الشراب في 24 ساعة. من 2 إلى أقل من 12 سنة: 30 ملغ (5 مل) كل 12 ساعة، بحد 60 ملغ. أقل من سنتين: يُسأل الطبيب.",
+    "en": "12 years and over: 180 mg once a day with water (tablet), or 60 mg (10 mL of 30 mg/5 mL) every 12 hours, up to 120 mg of suspension in 24 hours. 2 to under 12 years: 30 mg (5 mL) every 12 hours, up to 60 mg. Under 2 years: ask a doctor."
+   },
+   "renal": {
+    "ar": "مرض الكلى: يحدد الطبيب إن كانت الحاجة لجرعة مختلفة.",
+    "en": "Kidney disease: the doctor decides whether a different dose is needed."
+   },
+   "timing": {
+    "ar": "يُؤخذ مع الماء، ولا يُؤخذ مع عصائر الفاكهة، ولا في وقت مضادات الحموضة التي فيها ألمنيوم أو مغنيسيوم. رجّ الشراب جيداً.",
+    "en": "Take with water, not with fruit juices, and not at the same time as aluminium or magnesium antacids. Shake the suspension well."
+   },
+   "preg": {
+    "ar": "الحامل أو المرضع تستشير مختصاً قبل الاستعمال.",
+    "en": "If pregnant or breast-feeding, ask a health professional before use."
+   },
+   "inter": [
+    {
+     "with": {
+      "ar": "عصائر الفاكهة",
+      "en": "Fruit juices"
+     },
+     "desc": {
+      "ar": "لا يُؤخذ معها (النشرة).",
+      "en": "Do not take with them (label)."
+     },
+     "sev": "moderate",
+     "r": [
+      148
+     ]
+    },
+    {
+     "with": {
+      "ar": "مضادات الحموضة (ألمنيوم أو مغنيسيوم)",
+      "en": "Antacids (aluminium or magnesium)"
+     },
+     "desc": {
+      "ar": "لا تُؤخذ في الوقت نفسه.",
+      "en": "Do not take at the same time."
+     },
+     "sev": "moderate",
+     "r": [
+      148
+     ]
+    }
+   ],
+   "src": [
+    148,
+    147
+   ]
+  },
+  {
+   "id": "chlorpheniramine",
+   "n": {
+    "ar": "كلورفينيرامين",
+    "en": "Chlorpheniramine"
+   },
+   "cls": {
+    "ar": "مضاد هيستامين من الجيل الأول (منوّم)",
+    "en": "First-generation antihistamine (sedating)"
+   },
+   "uses": {
+    "ar": "أعراض الحساسية الأنفية، والشرى والحكة والحساسية (WHO).",
+    "en": "Hay fever symptoms; urticaria, itching and allergic conditions (WHO)."
+   },
+   "dose": {
+    "ar": "12 سنة فأكثر: 4 ملغ كل 4 إلى 6 ساعات، بحد 24 ملغ (6 أقراص) في 24 ساعة. من 6 إلى أقل من 12 سنة: 2 ملغ (نصف قرص) كل 4 إلى 6 ساعات، بحد 12 ملغ. أقل من 6 سنوات: لا يُستعمل (النشرة)؛ وWHO تذكر من سنة إلى سنتين 1 ملغ مرتين يومياً، ومن 2 إلى 6 سنوات 1 ملغ كل 4 إلى 6 ساعات (حد 6 ملغ)، بقرار الطبيب.",
+    "en": "12 years and over: 4 mg every 4 to 6 hours, up to 24 mg (6 tablets) in 24 hours. 6 to under 12 years: 2 mg (half a tablet) every 4 to 6 hours, up to 12 mg. Under 6 years: do not use (label); WHO lists 1 mg twice a day from 1 to 2 years and 1 mg every 4 to 6 hours (max 6 mg) from 2 to 6 years, as the doctor decides."
+   },
+   "renal": {
+    "ar": "القصور الكلوي الشديد: قد يلزم تخفيض الجرعة (WHO).",
+    "en": "Severe kidney impairment: dose reduction may be required (WHO)."
+   },
+   "hepatic": {
+    "ar": "يُتجنّب في مرض الكبد الشديد لأن النعاس غير مناسب (WHO).",
+    "en": "Avoid in severe liver disease, where sedation is inappropriate (WHO)."
+   },
+   "timing": {
+    "ar": "لا يُستعمل لتنويم الطفل. يسبب النعاس، وقد يسبب تهيجاً خاصة عند الأطفال. يُسأل الطبيب مع ضيق التنفس المزمن أو الزرق أو تضخم البروستات.",
+    "en": "Do not use to make a child sleepy. Causes drowsiness, and may cause excitability especially in children. Ask a doctor with chronic breathing problems, glaucoma or an enlarged prostate."
+   },
+   "preg": {
+    "ar": "الحامل أو المرضع تستشير مختصاً قبل الاستعمال.",
+    "en": "If pregnant or breast-feeding, ask a health professional before use."
+   },
+   "inter": [
+    {
+     "with": {
+      "ar": "الكحول والمهدئات والمنومات",
+      "en": "Alcohol, sedatives and tranquilizers"
+     },
+     "desc": {
+      "ar": "تزيد النعاس؛ يُتجنّب الكحول والحذر عند القيادة.",
+      "en": "Increase drowsiness; avoid alcohol and take care when driving."
+     },
+     "sev": "moderate",
+     "r": [
+      149
+     ]
+    },
+    {
+     "with": {
+      "ar": "الأميتريبتيلين",
+      "en": "Amitriptyline"
+     },
+     "desc": {
+      "ar": "يزيد الأثر المضاد للكولين والنعاس.",
+      "en": "More antimuscarinic and sedative effects."
+     },
+     "sev": "moderate",
+     "r": [
+      152
+     ]
+    }
+   ],
+   "src": [
+    149,
+    152
+   ]
+  },
+  {
+   "id": "diphenhydramine",
+   "n": {
+    "ar": "ديفينهيدرامين",
+    "en": "Diphenhydramine"
+   },
+   "cls": {
+    "ar": "مضاد هيستامين من الجيل الأول (منوّم)",
+    "en": "First-generation antihistamine (sedating)"
+   },
+   "uses": {
+    "ar": "أعراض الحساسية الأنفية والزكام (رشح، عطاس، حكة العين والأنف).",
+    "en": "Hay fever and common cold symptoms (runny nose, sneezing, itchy eyes and nose)."
+   },
+   "dose": {
+    "ar": "12 سنة فأكثر: 25 إلى 50 ملغ (قرص أو قرصان) كل 4 إلى 6 ساعات، بحد 6 جرعات في 24 ساعة. من 6 إلى 11 سنة: 12.5 إلى 25 ملغ (5 إلى 10 مل من شراب 12.5 ملغ/5 مل) كل 4 إلى 6 ساعات، بحد 6 جرعات. من 2 إلى 5 سنوات: لا يُستعمل إلا بتوجيه الطبيب. أقل من سنتين: لا يُستعمل.",
+    "en": "12 years and over: 25 to 50 mg (1 to 2 tablets) every 4 to 6 hours, up to 6 doses in 24 hours. 6 to 11 years: 12.5 to 25 mg (5 to 10 mL of 12.5 mg/5 mL) every 4 to 6 hours, up to 6 doses. 2 to 5 years: only if directed by a doctor. Under 2 years: do not use."
+   },
+   "renal": {
+    "ar": "لا تذكر النشرة تعديلاً كلوياً.",
+    "en": "The label gives no kidney adjustment."
+   },
+   "timing": {
+    "ar": "لا يُستعمل مع أي منتج آخر فيه ديفينهيدرامين حتى الكريمات، ولا لتنويم الطفل. نعاس واضح، وقد يسبب تهيجاً عند الأطفال. يُسأل الطبيب مع ضيق التنفس المزمن أو الزرق.",
+    "en": "Do not use with any other product containing diphenhydramine, even one used on skin, or to make a child sleepy. Marked drowsiness; may cause excitability in children. Ask a doctor with chronic breathing problems or glaucoma."
+   },
+   "preg": {
+    "ar": "الحامل أو المرضع تستشير مختصاً قبل الاستعمال.",
+    "en": "If pregnant or breast-feeding, ask a health professional before use."
+   },
+   "inter": [
+    {
+     "with": {
+      "ar": "منتجات أخرى فيها ديفينهيدرامين (حتى الكريمات)",
+      "en": "Other products containing diphenhydramine (even on skin)"
+     },
+     "desc": {
+      "ar": "لا تُجمع: جرعة زائدة.",
+      "en": "Do not combine: overdose."
+     },
+     "sev": "major",
+     "r": [
+      150
+     ]
+    },
+    {
+     "with": {
+      "ar": "الكحول والمهدئات والمنومات",
+      "en": "Alcohol, sedatives and tranquilizers"
+     },
+     "desc": {
+      "ar": "تزيد النعاس؛ يُتجنّب الكحول والحذر عند القيادة.",
+      "en": "Increase drowsiness; avoid alcohol and take care when driving."
+     },
+     "sev": "moderate",
+     "r": [
+      150,
+      153
+     ]
+    }
+   ],
+   "src": [
+    153,
+    150
+   ]
+  },
+  {
+   "id": "hydroxyzine",
+   "n": {
+    "ar": "هيدروكسيزين",
+    "en": "Hydroxyzine"
+   },
+   "cls": {
+    "ar": "مضاد هيستامين من الجيل الأول (منوّم)",
+    "en": "First-generation antihistamine (sedating)"
+   },
+   "uses": {
+    "ar": "الحكة التحسسية (الشرى المزمن والتهاب الجلد التأتبي والتماسي)، والقلق والتوتر، ومهدئ قبل التخدير وبعده.",
+    "en": "Allergic itching (chronic urticaria, atopic and contact dermatitis), anxiety and tension, and sedation before and after anaesthesia."
+   },
+   "dose": {
+    "ar": "الحكة: الكبار 25 ملغ 3 أو 4 مرات يومياً؛ الأطفال أقل من 6 سنوات 50 ملغ يومياً مقسمة؛ أكثر من 6 سنوات 50 إلى 100 ملغ يومياً مقسمة. القلق: الكبار 50 إلى 100 ملغ 4 مرات يومياً.",
+    "en": "Itching: adults 25 mg three or four times a day; children under 6 years 50 mg a day in divided doses; over 6 years 50 to 100 mg a day divided. Anxiety: adults 50 to 100 mg four times a day."
+   },
+   "renal": {
+    "ar": "لا تذكر النشرة تعديلاً كلوياً.",
+    "en": "The label gives no kidney adjustment."
+   },
+   "timing": {
+    "ar": "ممنوع مع إطالة QT، ومع حساسية السيتريزين أو الليفوسيتريزين. يزيد أثر مثبطات الجهاز العصبي فتُخفض جرعاتها.",
+    "en": "Contraindicated with a prolonged QT interval and with cetirizine or levocetirizine allergy. Potentiates CNS depressants, whose doses should be reduced."
+   },
+   "preg": {
+    "ar": "ممنوع في بداية الحمل، ولا يُعطى للمرضع.",
+    "en": "Contraindicated in early pregnancy; not to be given to nursing mothers."
+   },
+   "inter": [
+    {
+     "with": {
+      "ar": "مثبطات الجهاز العصبي (المسكنات الأفيونية وغير الأفيونية والباربيتورات)",
+      "en": "CNS depressants (narcotics, non-narcotic analgesics, barbiturates)"
+     },
+     "desc": {
+      "ar": "يزيد أثرها؛ تُخفض جرعاتها.",
+      "en": "Potentiates them; reduce their doses."
+     },
+     "sev": "major",
+     "r": [
+      151
+     ]
+    },
+    {
+     "with": {
+      "ar": "أدوية تطيل QT",
+      "en": "Drugs that prolong QT"
+     },
+     "desc": {
+      "ar": "يُستعمل بحذر: خطر إطالة QT واضطراب النظم (Torsade de pointes).",
+      "en": "Use with caution: risk of QT prolongation and torsade de pointes."
+     },
+     "sev": "moderate",
+     "r": [
+      151
+     ]
+    }
+   ],
+   "src": [
+    151
+   ]
+  }
+ ]
+}

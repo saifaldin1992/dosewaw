@@ -71,6 +71,7 @@ const I18N = {
   if_younger:['إذا كان عمر الطفل أقل من {m} أشهر:','If the child is under {m} months:'], adult_use_age:['هذا جدول الأطفال من سنتين إلى 11 سنة. للكبار اختر «سنوات» واكتب العمر.','This is the chart for children 2 to 11 years. For adults choose «Years» and enter the age.'],
   your_conc:['تركيز أضفته','strength you added'], conc_ph:['تركيز آخر على العبوة','Another strength on the bottle'], conc_add:['إضافة','Add'], why:['السبب','Reason'],
   pc_every_r:['كل {a} إلى {b} ساعات عند الحاجة','every {a} to {b} hours if needed'], pc_limit:['الحد','Limit'],
+  need_age_chart:['هذا الدواء يُحسب بالعمر في نشرته: اختر «سنوات» أو «أشهر» واكتب العمر.','This drug is dosed by age in its label: choose «Years» or «Months» and enter the age.'], mg_day:['ملغ/يوم','mg/day'],
   s_liver:['الكبد','Liver'], s_preg:['الحمل والرضاعة','Pregnancy and breast-feeding'],
   pcard:['بطاقة المريض','Patient card'], close:['إغلاق','Close'], pc_lang:['لغة البطاقة','Card language'], pc_foot2:['لا تتجاوز الجرعة أو عدد المرات المكتوب. لأي سؤال راجع الصيدلي.','Do not give more, or more often, than written. Ask the pharmacist about anything.'],
   pc_med:['الدواء','Medicine'], pc_susp:['شراب','suspension'], pc_dose:['الجرعة','Dose'], pc_when:['المواعيد','When'],

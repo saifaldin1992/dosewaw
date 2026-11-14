@@ -1,0 +1,68 @@
+{
+ "id": "cetirizine_adult",
+ "query": "openfda.generic_name:\"cetirizine hydrochloride\" AND openfda.product_type:\"HUMAN OTC DRUG\"",
+ "set_id": "59cef432-41ac-768c-e063-6294a90a38fa",
+ "version": "2",
+ "effective_time": "20261109",
+ "brand": [
+  "Zyrtec Allergy Cetirizine HCl"
+ ],
+ "generic": [
+  "CETIRIZINE HYDROCHLORIDE"
+ ],
+ "route": [
+  "ORAL"
+ ],
+ "type": "HUMAN OTC DRUG",
+ "manufacturer": [
+  "Jones Healthcare Group - Packaging Services, Inc"
+ ],
+ "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=59cef432-41ac-768c-e063-6294a90a38fa",
+ "sections": {
+  "indications_and_usage": [
+   "Uses temporarily relieves these symptoms due to hay fever or other upper respiratory allergies: • runny nose • sneezing • itchy, watery eyes • itching of the nose or throat"
+  ],
+  "dosage_and_administration": [
+   "Directions adults and children 6 years and over one 10 mg capsule once daily; do not take more than one 10 mg capsule in 24 hours. A 5 mg product may be appropriate for less severe symptoms adults 65 years and over ask a doctor children under 6 years of age ask a doctor consumers with liver or kidney disease ask a doctor"
+  ],
+  "dosage_and_administration_table": [
+   "<table width=\"100%\"> <caption/> <tbody> <tr> <td>   adults and children 6 years and over </td> <td> one 10 mg capsule once daily; do not take more than one 10 mg capsule in 24 hours. A 5 mg product may be appropriate for less severe symptoms</td> </tr> <tr> <td> adults 65 years and over</td> <td> ask a doctor</td> </tr> <tr> <td> children under 6 years of age</td> <td> ask a doctor</td> </tr> <tr> <td> consumers with liver or kidney disease</td> <td> ask a doctor</td> </tr> </tbody> </table>"
+  ],
+  "warnings": [
+   "Warnings Do not use if you have ever had an allergic reaction to this product or any of its ingredients or to an antihistamine containing hydroxyzine. Ask a doctor before use if you have liver or kidney disease. Your doctor should determine if you need a different dose. Ask a doctor or pharmacist before use if you are taking tranquilizers or sedatives. When using this product • drowsiness may occur • avoid alcoholic drinks • alcohol, sedatives, and tranquilizers may increase drowsiness • be careful when driving a motor vehicle or operating machinery Stop use and ask a doctor if an allergic reaction to this product occurs. Seek medical help right away. If pregnant or breast-feeding: • if breast-feeding: not recommended. • if pregnant: ask a health professional before use. Keep out of reach of children. In case of overdose, get medical help or contact a Poison Control Center right away. (1-800-222-1222)"
+  ],
+  "active_ingredient": [
+   "Active ingredient (in each capsule) Cetirizine HCl 10 mg Purpose Antihistamine"
+  ],
+  "purpose": [
+   "Purpose Antihistamine"
+  ],
+  "do_not_use": [
+   "Do not use if you have ever had an allergic reaction to this product or any of its ingredients or to an antihistamine containing hydroxyzine."
+  ],
+  "ask_doctor": [
+   "Ask a doctor before use if you have liver or kidney disease. Your doctor should determine if you need a different dose."
+  ],
+  "ask_doctor_or_pharmacist": [
+   "Ask a doctor or pharmacist before use if you are taking tranquilizers or sedatives."
+  ],
+  "stop_use": [
+   "Stop use and ask a doctor if an allergic reaction to this product occurs. Seek medical help right away."
+  ],
+  "pregnancy_or_breast_feeding": [
+   "If pregnant or breast-feeding: • if breast-feeding: not recommended. • if pregnant: ask a health professional before use."
+  ],
+  "keep_out_of_reach_of_children": [
+   "Keep out of reach of children. In case of overdose, get medical help or contact a Poison Control Center right away. (1-800-222-1222)"
+  ],
+  "when_using": [
+   "When using this product • drowsiness may occur • avoid alcoholic drinks • alcohol, sedatives, and tranquilizers may increase drowsiness • be careful when driving a motor vehicle or operating machinery"
+  ],
+  "package_label_principal_display_panel": [
+   "Package Labeling: 67414-013-01 Package Labeling: 67414-013-01 Outer Package Inner Package",
+   "Package Labeling: 67414-013-02 Package Labeling: 67414-013-02 Outer Package2 Inner Package2",
+   "Package Labeling: 67414-013-03 Package Labeling: 67414-013-03 Outer Package3 Inner Package3",
+   "Package Labeling: 67414-013-04 Package Labeling: 67414-013-04 Outer Package4 Inner Package4"
+  ]
+ }
+}

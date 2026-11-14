@@ -1,0 +1,84 @@
+[
+ {
+  "id": 141,
+  "label": "cetirizine_child",
+  "use_ar": "جدول جرعات شراب السيتريزين للأطفال من سنتين",
+  "use_en": "Children’s cetirizine syrup chart from 2 years"
+ },
+ {
+  "id": 142,
+  "label": "cetirizine_adult",
+  "use_ar": "جرعة السيتريزين للكبار ومن 6 سنوات، والتحذيرات",
+  "use_en": "Cetirizine dose for adults and from 6 years; warnings"
+ },
+ {
+  "id": 143,
+  "label": "levocetirizine",
+  "use_ar": "جرعات الليفوسيتريزين وجدول الكلى",
+  "use_en": "Levocetirizine doses and kidney table"
+ },
+ {
+  "id": 144,
+  "label": "loratadine_child",
+  "use_ar": "جدول جرعات شراب اللوراتادين للأطفال من سنتين",
+  "use_en": "Children’s loratadine syrup chart from 2 years"
+ },
+ {
+  "id": 145,
+  "label": "loratadine_adult",
+  "use_ar": "جرعة اللوراتادين للكبار ومن 6 سنوات",
+  "use_en": "Loratadine dose for adults and from 6 years"
+ },
+ {
+  "id": 146,
+  "label": "desloratadine",
+  "use_ar": "جرعة الديسلوراتادين، والكبد والكلى",
+  "use_en": "Desloratadine dose; liver and kidney"
+ },
+ {
+  "id": 147,
+  "label": "fexofenadine_child",
+  "use_ar": "جدول جرعات شراب الفيكسوفينادين للأطفال من سنتين",
+  "use_en": "Children’s fexofenadine suspension chart from 2 years"
+ },
+ {
+  "id": 148,
+  "label": "fexofenadine_adult",
+  "use_ar": "جرعة الفيكسوفينادين للكبار، والعصائر ومضادات الحموضة",
+  "use_en": "Fexofenadine adult dose; fruit juice and antacids"
+ },
+ {
+  "id": 149,
+  "label": "chlorpheniramine",
+  "use_ar": "جرعة الكلورفينيرامين من 6 سنوات والتحذيرات",
+  "use_en": "Chlorpheniramine dose from 6 years; warnings"
+ },
+ {
+  "id": 150,
+  "label": "diphenhydramine",
+  "use_ar": "جدول جرعات شراب الديفينهيدرامين للأطفال",
+  "use_en": "Children’s diphenhydramine liquid chart"
+ },
+ {
+  "id": 151,
+  "label": "hydroxyzine",
+  "use_ar": "جرعات الهيدروكسيزين للحكة والقلق، والموانع",
+  "use_en": "Hydroxyzine doses for itch and anxiety; contraindications"
+ },
+ {
+  "id": 153,
+  "label": "diphenhydramine_adult",
+  "use_ar": "جرعة الديفينهيدرامين للكبار ومن 6 سنوات",
+  "use_en": "Diphenhydramine dose for adults and from 6 years"
+ },
+ {
+  "id": 152,
+  "org": "World Health Organization, 2010",
+  "title": "WHO Model Formulary for Children 2010 (section 3: chlorphenamine)",
+  "url": "https://iris.who.int/handle/10665/44309",
+  "kind": "g",
+  "use_ar": "جرعات الكلورفينيرامين للأطفال من سنة، والكلى والكبد",
+  "use_en": "Chlorphenamine doses for children from 1 year; kidney and liver",
+  "evidence": "content/antihistamines/who_mfc_2010_3.txt"
+ }
+]

@@ -1,0 +1,65 @@
+{
+ "id": "loratadine_adult",
+ "query": "openfda.generic_name:\"loratadine\" AND openfda.product_type:\"HUMAN OTC DRUG\"",
+ "set_id": "fdacfd88-eb85-4a33-9863-c6ff484fea4e",
+ "version": "3",
+ "effective_time": "20261106",
+ "brand": [
+  "careone allergy relief"
+ ],
+ "generic": [
+  "LORATADINE"
+ ],
+ "route": [
+  "ORAL"
+ ],
+ "type": "HUMAN OTC DRUG",
+ "manufacturer": [
+  "American Sales Company"
+ ],
+ "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=fdacfd88-eb85-4a33-9863-c6ff484fea4e",
+ "sections": {
+  "indications_and_usage": [
+   "Uses temporarily relieves these symptoms due to hay fever or other upper respiratory allergies: • runny nose • itchy, watery eyes • sneezing • itching of the nose or throat"
+  ],
+  "dosage_and_administration": [
+   "Directions • place 1 tablet on tongue; tablet disintegrates, with or without water adults and children 6 years and over 1 tablet daily; not more than 1 tablet in 24 hours children under 6 years of age ask a doctor consumers with liver or kidney disease ask a doctor"
+  ],
+  "dosage_and_administration_table": [
+   "<table styleCode=\"Noautorules\" width=\"100%\"> <col width=\"49%\"/> <col width=\"49%\"/> <tbody> <tr> <td styleCode=\"Rrule Botrule Lrule Toprule \" valign=\"top\"> <paragraph>adults and children 6 years and over</paragraph> </td> <td styleCode=\"Rrule Botrule Lrule Toprule \" valign=\"top\"> <paragraph>1 tablet daily; not more than 1 tablet in 24 hours</paragraph> </td> </tr> <tr> <td styleCode=\"Rrule Lrule Botrule \" valign=\"top\"> <paragraph>children under 6 years of age</paragraph> </td> <td styleCode=\"Rrule Lrule Toprule Botrule \" valign=\"top\"> <paragraph>ask a doctor</paragraph> </td> </tr> <tr> <td styleCode=\"Rrule Botrule Lrule Toprule \" valign=\"top\"> <paragraph>consumers with liver or kidney disease</paragraph> </td> <td styleCode=\"Rrule Botrule Lrule Toprule \" valign=\"top\"> <paragraph>ask a doctor</paragraph> </td> </tr> </tbody> </table>"
+  ],
+  "warnings": [
+   "Warnings Do not use if you have ever had an allergic reaction to this product or any of its ingredients. Ask a doctor before use if you have liver or kidney disease. Your doctor should determine if you need a different dose. When using this product do not take more than directed. Taking more than directed may cause drowsiness. Stop use and ask a doctor if an allergic reaction to this product occurs. Seek medical help right away. If pregnant or breast-feeding, ask a health professional before use. Keep out of reach of children. In case of overdose, get medical help or contact a Poison Control Center right away (1-800-222-1222)."
+  ],
+  "active_ingredient": [
+   "Active ingredient (in each tablet) Loratadine 10 mg"
+  ],
+  "purpose": [
+   "Purpose Antihistamine"
+  ],
+  "do_not_use": [
+   "Do not use if you have ever had an allergic reaction to this product or any of its ingredients."
+  ],
+  "ask_doctor": [
+   "Ask a doctor before use if you have liver or kidney disease. Your doctor should determine if you need a different dose."
+  ],
+  "stop_use": [
+   "Stop use and ask a doctor if an allergic reaction to this product occurs. Seek medical help right away."
+  ],
+  "pregnancy_or_breast_feeding": [
+   "If pregnant or breast-feeding, ask a health professional before use."
+  ],
+  "keep_out_of_reach_of_children": [
+   "Keep out of reach of children. In case of overdose, get medical help or contact a Poison Control Center right away (1-800-222-1222)."
+  ],
+  "when_using": [
+   "When using this product do not take more than directed. Taking more than directed may cause drowsiness."
+  ],
+  "other_safety_information": [
+   "Other information • do not use if printed blister unit is broken or torn • store between 20° to 25°C (68° to 77°F) • use tablet immediately after opening individual blister"
+  ],
+  "package_label_principal_display_panel": [
+   "Package/Label Principal Display Panel CAREONE® Compare to the active ingredient in Claritin® RediTabs® 24 hr ORIGINAL PRESCRIPTION STRENGTH Non-Drowsy* Allergy Relief NO WATER NEEDED MELTS IN YOUR MOUTH Loratadine Orally Disintegrating Tablets, 10 mg Antihistamine Actual Size 30 ORALLY DISINTEGRATING TABLETS INDOOR & OUTDOOR ALLERGIES 24 HOUR RELIEF OF: -Sneezing -Runny Nose -Itchy, Watery Eyes -Itchy Throat Or Nose OUR PHARMACISTS RECOMMEND *When taken as directed. See Drug Facts Panel. 5v9-of-allergy-relief"
+  ]
+ }
+}

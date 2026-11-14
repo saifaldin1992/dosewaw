@@ -1,0 +1,65 @@
+{
+ "id": "fexofenadine_child",
+ "query": "openfda.generic_name:\"fexofenadine hydrochloride\" AND openfda.product_type:\"HUMAN OTC DRUG\" AND active_ingredient:\"30 mg\"",
+ "set_id": "b21bb11d-bf74-4ee7-9cfe-5b599a3c4775",
+ "version": "6",
+ "effective_time": "20260811",
+ "brand": [
+  "Childrens Fexofenadine Hydrochloride Allergy"
+ ],
+ "generic": [
+  "FEXOFENADINE HYDROCHLORIDE"
+ ],
+ "route": [
+  "ORAL"
+ ],
+ "type": "HUMAN OTC DRUG",
+ "manufacturer": [
+  "Sun Pharmaceutical Industries, Inc."
+ ],
+ "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=b21bb11d-bf74-4ee7-9cfe-5b599a3c4775",
+ "sections": {
+  "indications_and_usage": [
+   "Uses temporarily relieves these symptoms due to hay fever or other upper respiratory allergies: runny nose itchy, watery eyes sneezing itching of the nose or throat"
+  ],
+  "dosage_and_administration": [
+   "Directions shake well before using use only with enclosed dosing cup Note: mL = milliliters adults and children 12 years of age and over take 10 mL every 12 hours; do not take more than 20 mL in 24 hours children 2 to under 12 years of age take 5 mL every 12 hours; do not take more than 10 mL in 24 hours children under 2 years of age ask a doctor adults 65 years of age and older ask a doctor consumers with kidney disease ask a doctor"
+  ],
+  "dosage_and_administration_table": [
+   "<table width=\"60%\"><col width=\"40%\" align=\"left\" valign=\"top\"/><col width=\"60%\" align=\"left\" valign=\"top\"/><tfoot><tr><td align=\"left\" colspan=\"2\">Note: mL = milliliters</td></tr></tfoot><tbody><tr styleCode=\"Botrule\"><td styleCode=\"Rrule\">adults and children 12 years of age and over</td><td>take 10 mL every 12 hours; do not take more than 20 mL in 24 hours</td></tr><tr styleCode=\"Botrule\"><td styleCode=\"Rrule\">children 2 to under 12 years of age</td><td>take 5 mL every 12 hours; do not take more than 10 mL in 24 hours</td></tr><tr styleCode=\"Botrule\"><td styleCode=\"Rrule\">children under 2 years of age</td><td>ask a doctor</td></tr><tr styleCode=\"Botrule\"><td styleCode=\"Rrule\">adults 65 years of age and older</td><td>ask a doctor</td></tr><tr><td styleCode=\"Rrule\">consumers with kidney disease</td><td>ask a doctor</td></tr></tbody></table>"
+  ],
+  "warnings": [
+   "Warnings Do not use if you have ever had an allergic reaction to this product or any of its ingredients. Ask a doctor before use if you have kidney disease. Your doctor should determine if you need a different dose. When using this product do not take more than directed do not take at the same time as aluminum or magnesium antacids do not take with fruit juices (see Directions ) Stop use and ask a doctor if an allergic reaction to this product occurs. Seek medical help right away. If pregnant or breast-feeding, ask a health professional before use. Keep out of reach of children. In case of overdose, get medical help or contact a Poison Control Center right away."
+  ],
+  "storage_and_handling": [
+   "Other information each 5 mL contains: sodium 14 mg safety sealed: do not use if carton is opened, or if imprinted safety seal is broken or missing. store between 20º and 25ºC (68º and 77ºF)"
+  ],
+  "active_ingredient": [
+   "Active ingredient (in each 5 mL) Fexofenadine HCl 30 mg"
+  ],
+  "purpose": [
+   "Purpose Antihistamine"
+  ],
+  "do_not_use": [
+   "Do not use if you have ever had an allergic reaction to this product or any of its ingredients."
+  ],
+  "ask_doctor": [
+   "Ask a doctor before use if you have kidney disease. Your doctor should determine if you need a different dose."
+  ],
+  "stop_use": [
+   "Stop use and ask a doctor if an allergic reaction to this product occurs. Seek medical help right away."
+  ],
+  "pregnancy_or_breast_feeding": [
+   "If pregnant or breast-feeding, ask a health professional before use."
+  ],
+  "keep_out_of_reach_of_children": [
+   "Keep out of reach of children. In case of overdose, get medical help or contact a Poison Control Center right away."
+  ],
+  "when_using": [
+   "When using this product do not take more than directed do not take at the same time as aluminum or magnesium antacids do not take with fruit juices (see Directions )"
+  ],
+  "package_label_principal_display_panel": [
+   "PRINCIPAL DISPLAY PANEL - 120 mL Bottle Carton NDC 51672-2141-8 Compare to the active ingredient in Children's Allegra ® Allergy* Children's Allergy Fexofenadine HCl Oral Suspension, 30 mg/ 5 mL Antihistamine NON-DROWSY 12 Hour Berry Flavor 2 Years & Older INDOOR/OUTDOOR ALLERGY RELIEF Sneezing Runny Nose Itchy, Watery Eyes Itchy Nose or Throat Dye free / Alcohol free / Sugar free LIQUID Oral Suspension 4 fl. oz. (120 mL) PRINCIPAL DISPLAY PANEL - 120 mL Bottle Carton"
+  ]
+ }
+}

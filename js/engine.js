@@ -109,14 +109,14 @@ function bandCalc(spec,P,x,extra){
   if(P.infant)seg=spec.segs.find(s=>s.kind==='doctor');
   if(!seg&&m!=null)seg=spec.segs.find(s=>inR(m,s.ageM));
   if(!seg&&lb!=null)seg=spec.segs.find(s=>s.lb&&inR(Math.floor(lb),s.lb));
-  if(!seg)return null;
+  if(!seg)return spec.ageOnly&&m==null?{kind:'needAge'}:null;
   if(seg.kind==='doctor'||seg.kind==='adult')return {kind:seg.kind,seg};
   const strengths=[...spec.strengths.map(s=>s.c),...(extra||[]).filter(c=>c>0&&!spec.strengths.some(s=>s.c===c))];
   const ml=mg=>strengths.map(c=>({c,ml:mg*5/c}));
   if(seg.kind==='chart'){
     const row=m!=null?seg.rows.find(r=>Math.floor(m/12)>=r.age[0]&&Math.floor(m/12)<=r.age[1]):seg.rows.find(r=>Math.floor(lb)>=r.lb[0]&&Math.floor(lb)<=r.lb[1]);
     if(!row)return null;
-    return {kind:'chart',seg,row,mg:row.mg,everyH:seg.everyH,maxDoses:seg.maxDoses,ml:ml(row.mg),by:m!=null?'age':'weight'};
+    return {kind:'chart',seg,row,mg:row.mg,mg2:row.mg2,everyH:seg.everyH,maxDoses:seg.maxDoses,ml:ml(row.mg),ml2:row.mg2?ml(row.mg2):null,by:m!=null?'age':'weight'};
   }
   // mg per kg (needs a weight: actual, or estimated from age by the page)
   if(!P.W)return {kind:'needW',seg};

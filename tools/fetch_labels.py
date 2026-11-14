@@ -24,6 +24,20 @@ KEEP = ['boxed_warning', 'indications_and_usage', 'dosage_and_administration', '
         'package_label_principal_display_panel']
 RX, OTC = 'HUMAN PRESCRIPTION DRUG', 'HUMAN OTC DRUG'
 GROUPS = {
+  'antihistamines': {
+    'cetirizine_child': ('cetirizine hydrochloride', r'^CETIRIZINE( HYDROCHLORIDE| HCL)?$', 'ORAL', OTC, r'5 mg (in|per|/) ?5 mL|1 mg/mL'),
+    'cetirizine_adult': ('cetirizine hydrochloride', r'^CETIRIZINE( HYDROCHLORIDE| HCL)?$', 'ORAL', OTC, r'10 mg'),
+    'levocetirizine': ('levocetirizine dihydrochloride', r'^LEVOCETIRIZINE( DIHYDROCHLORIDE)?$', 'ORAL', RX, None),
+    'loratadine_child': ('loratadine', r'^LORATADINE$', 'ORAL', OTC, r'5 mg (in|per|/) ?5 mL|1 mg/mL'),
+    'loratadine_adult': ('loratadine', r'^LORATADINE$', 'ORAL', OTC, r'10 mg'),
+    'desloratadine': ('desloratadine', r'^DESLORATADINE$', 'ORAL', RX, None),
+    'fexofenadine_child': ('fexofenadine hydrochloride', r'^FEXOFENADINE( HYDROCHLORIDE| HCL)?$', 'ORAL', OTC, r'each 5 mL'),
+    'fexofenadine_adult': ('fexofenadine hydrochloride', r'^FEXOFENADINE( HYDROCHLORIDE| HCL)?$', 'ORAL', OTC, r'180 mg'),
+    'chlorpheniramine': ('chlorpheniramine maleate', r'^CHLORPHENIRAMINE MALEATE$', 'ORAL', OTC, r'4 mg'),
+    'diphenhydramine': ('diphenhydramine hydrochloride', r'^DIPHENHYDRAMINE( HYDROCHLORIDE| HCL)?$', 'ORAL', OTC, r'12.5 mg (in|per|/) ?5 mL'),
+    'diphenhydramine_adult': ('diphenhydramine hydrochloride', r'^DIPHENHYDRAMINE( HYDROCHLORIDE| HCL)?$', 'ORAL', OTC, r'25 mg'),
+    'hydroxyzine': ('hydroxyzine hydrochloride', r'^HYDROXYZINE( HYDROCHLORIDE| HCL)?$', 'ORAL', RX, None),
+  },
   'analgesics': {
     # id: (generic search, exact generic regex, route regex, type, text that must appear in the label or None)
     'paracetamol_child': ('acetaminophen', r'^ACETAMINOPHEN$', 'ORAL', OTC, r'160 mg (in|per|/) ?5 mL'),
@@ -55,6 +69,8 @@ def fetch(group, lid, spec):
     words, gen_re, route_re, typ, must = spec
     q = f'openfda.generic_name:"{words}" AND openfda.product_type:"{typ}"'
     if words == 'acetaminophen' and must and '160' in must: q += ' AND active_ingredient:"160 mg"'
+    extra = {'cetirizine_child': '"5 mg"', 'loratadine_child': '"5 mg"', 'fexofenadine_child': '"30 mg"', 'diphenhydramine': '"12.5 mg"', 'diphenhydramine_adult': '"25 mg"'}.get(lid)
+    if extra: q += ' AND active_ingredient:' + extra
     res = get(API + '?' + urllib.parse.urlencode({'search': q, 'limit': 100, 'sort': 'effective_time:desc'})).get('results', [])
     ok = []
     for r in res:

@@ -5,7 +5,7 @@ import fs from 'fs';
 import vm from 'vm';
 const dir = new URL('../js/', import.meta.url).pathname;
 const ctx = vm.createContext({ document: { getElementById: () => null, addEventListener() {}, readyState: 'complete' }, esc: s => s, L: (a) => a, CFG: {}, console });
-vm.runInContext(fs.readFileSync(dir + 'rules/antibiotics.js', 'utf8') + '\n' + fs.readFileSync(dir + 'rules/analgesics.js', 'utf8') + '\n' + fs.readFileSync(dir + 'rules/peds.js', 'utf8') + '\n' + fs.readFileSync(dir + 'rules/bands.js', 'utf8') + '\n' + fs.readFileSync(dir + 'engine.js', 'utf8'), ctx);
+vm.runInContext(fs.readFileSync(dir + 'rules/antibiotics.js', 'utf8') + '\n' + fs.readFileSync(dir + 'rules/analgesics.js', 'utf8') + '\n' + fs.readFileSync(dir + 'rules/antihistamines.js', 'utf8') + '\n' + fs.readFileSync(dir + 'rules/peds.js', 'utf8') + '\n' + fs.readFileSync(dir + 'rules/bands.js', 'utf8') + '\n' + fs.readFileSync(dir + 'engine.js', 'utf8'), ctx);
 const RULES = vm.runInContext('ABC_RULES', ctx), abEval = vm.runInContext('abEval', ctx), evalRule = (rule, x, cr, c = {}) => abEval(rule, x, { ...c, cr }, { kidney: true, age: true, weight: true }), crcl = vm.runInContext('abCrCl', ctx);
 let fail = 0, ok = 0;
 const check = (cond, msg) => { if (cond) ok++; else { fail++; console.log('FAIL', msg); } };
@@ -150,7 +150,7 @@ const BANDS = vm.runInContext('BANDS', ctx), band = vm.runInContext('bandCalc', 
 const lab = id => JSON.stringify(JSON.parse(fs.readFileSync(new URL('../content/analgesics/labels/' + id + '.json', import.meta.url), 'utf8')).sections).replace(/\\s+|\s+/g, ' ');
 const whoMf = fs.readFileSync(new URL('../content/analgesics/who_mfc_2010_2.1.txt', import.meta.url), 'utf8').replace(/\s+/g, ' ');
 const SRC = {127: lab('paracetamol_child'), 128: lab('paracetamol_adult'), 130: lab('ibuprofen_susp'), 132: lab('ibuprofen_child_otc'), 133: lab('ibuprofen_adult_otc'), 134: whoMf};
-for (const [id, b] of Object.entries(BANDS)) {
+for (const [id, b] of Object.entries(BANDS).filter(([k]) => ['paracetamol', 'ibuprofen'].includes(k))) {
   for (const seg of b.segs) {
     check(SRC[seg.ref] || seg.ref === 128 || seg.ref === 133, id + ': segment source saved');
     if (seg.kind === 'chart') for (const r of seg.rows) {
@@ -199,5 +199,37 @@ for (const id of ['naproxen', 'diclofenac_k', 'mefenamic', 'aspirin', 'celecoxib
 const kt = (x, c) => abEval(RULES.ketorolac, { renal: 'ok', after: true, ...x }, c, { kidney: false, age: true, weight: true }).rows.find(r => r.strong).v.en;
 check(/^20 mg once/.test(kt({}, { cr: null, age: 40, wt: 70 })) && /^10 mg once/.test(kt({}, { cr: null, age: 70, wt: 70 })) && /^10 mg once/.test(kt({}, { cr: null, age: 40, wt: 45 })) && /^10 mg once/.test(kt({ renal: 'imp' }, { cr: null, age: 40, wt: 70 })), 'ketorolac 20 mg first dose only for 17-64 years, 50 kg or more, normal kidneys');
 check(/Contraindicated/.test(kt({ renal: 'adv' }, { cr: null, age: 40, wt: 70 })) && /not an initial dose/.test(kt({ after: false }, { cr: null, age: 40, wt: 70 })), 'ketorolac contraindications and continuation only');
+
+// ---------- antihistamines: age charts and adult rules against the saved label text ----------
+const labH = id => JSON.stringify(JSON.parse(fs.readFileSync(new URL('../content/antihistamines/labels/' + id + '.json', import.meta.url), 'utf8')).sections).replace(/\\s+|\s+/g, ' ').toLowerCase();
+const whoH = fs.readFileSync(new URL('../content/antihistamines/who_mfc_2010_3.txt', import.meta.url), 'utf8').replace(/\s+/g, ' ').toLowerCase();
+const EVH = {cetirizine_child: ['children 2 to under 6 years of age 2.5 ml once daily', 'maximum of 5 ml once daily or 2.5 ml every 12 hours', 'adults and children 6 years and over 5 ml or 10 ml once daily', 'do not take more than 10 ml in 24 hours', 'adults 65 years and over 5 ml once daily', 'children under 2 years of age ask a doctor'],
+  cetirizine_adult: ['one 10 mg capsule once daily', 'if breast-feeding: not recommended', 'hydroxyzine'],
+  loratadine_child: ['children 2 to under 6 years of age 1 teaspoonful (tsp) daily', 'adults and children 6 years and over 2 teaspoonfuls (tsp) daily', 'children under 2 years of age ask a doctor'],
+  loratadine_adult: ['adults and children 6 years and over 1 tablet daily; not more than 1 tablet in 24 hours'],
+  fexofenadine_child: ['children 2 to under 12 years of age take 5 ml every 12 hours; do not take more than 10 ml in 24 hours', 'adults and children 12 years of age and over take 10 ml every 12 hours; do not take more than 20 ml in 24 hours', 'children under 2 years of age ask a doctor'],
+  fexofenadine_adult: ['take one 180 mg tablet with water once a day', 'do not take with fruit juices', 'aluminum or magnesium antacids'],
+  chlorpheniramine: ['adults and children 12 years and over 1 tablet. do not exceed 6 tablets in 24 hours', 'children 6 to under 12 years 1/2 tablet', 'do not exceed 3 whole tablets in 24 hours', 'children under 6 years do not use', 'do not use to make a child sleepy'],
+  diphenhydramine: ['children 6 to 11 years 5 ml to 10 ml', 'children 2 to 5 years do not use unless directed by a doctor', 'children under 2 years do not use', 'do not take more than 6 doses in 24 hours', 'even one used on skin'],
+  diphenhydramine_adult: ['adults and children 12 years and over 1 to 2 tablets', 'do not take more than 6 doses in 24 hours'],
+  levocetirizine: ['5 mg (1 tablet) once daily in the evening', 'children 6 to 11 years of age: 2.5 mg once daily in the evening', 'a dose of 2.5 mg once daily is recommended', 'a dose of 2.5 mg once every other day is recommended', 'a dose of 2.5 mg twice weekly', 'should not receive levocetirizine', '50 to 80 ml/min', '30 to 50 ml/min', '10 to 30 ml/min'],
+  desloratadine: ['one 5 mg tablet once daily', 'a starting dose of one 5 mg tablet every other day', 'loratadine'],
+  hydroxyzine: ['adults, 25 mg t.i.d. or q.i.d.', 'children under 6 years, 50 mg daily in divided doses', 'children over 6 years, 50 to 100 mg daily in divided doses', 'adults, 50 to 100 mg q.i.d.', 'prolonged qt interval', 'should not be given to nursing mothers']};
+for (const [id, list] of Object.entries(EVH)) { const t = labH(id); for (const q of list) check(t.includes(q), id + ': «' + q + '» in the label'); }
+check(whoH.includes('1–2 years 1 mg twice daily') && whoH.includes('2–6 years 1 mg every 4–6 hours (maximum 6 mg daily)') && whoH.includes('oral liquid: 2 mg/5 ml'), 'WHO chlorphenamine text');
+const ah = JSON.parse(fs.readFileSync(new URL('../data/antihistamines.json', import.meta.url), 'utf8'));
+check(ah.length === 8 && ah.every(d => RULES[d.id] && BANDS[d.id] && txt(d.n) && txt(d.dose) && txt(d.preg) && d.inter.length && d.src.length), 'antihistamines: 8 drugs, each with adult rules, children chart, dose, pregnancy, interactions, sources');
+const hb = (id, m) => band(BANDS[id], { months: m }, {}, []);
+let h = hb('cetirizine', 36); check(h.mg === 2.5 && h.ml[0].ml === 2.5, 'cetirizine 3 years: 2.5 mg = 2.5 mL');
+h = hb('cetirizine', 96); check(h.mg === 5 && h.mg2 === 10 && h.ml2[0].ml === 10, 'cetirizine 8 years: 5-10 mg = 5-10 mL');
+check(hb('cetirizine', 18).kind === 'doctor' && band(BANDS.cetirizine, { W: 20 }, {}, []).kind === 'needAge', 'cetirizine under 2: doctor; weight only: needs the age');
+h = hb('loratadine', 48); check(h.mg === 5 && h.ml[0].ml === 5, 'loratadine 4 years: 5 mg = 5 mL');
+h = hb('fexofenadine', 60); check(h.mg === 30 && h.ml[0].ml === 5, 'fexofenadine 5 years: 30 mg = 5 mL every 12 h');
+check(hb('chlorpheniramine', 48).kind === 'doctor' && hb('chlorpheniramine', 96).mg === 2, 'chlorpheniramine: under 6 per label no; 8 years 2 mg');
+h = hb('diphenhydramine', 96); check(h.mg === 12.5 && h.mg2 === 25 && h.ml[0].ml === 5 && h.ml2[0].ml === 10, 'diphenhydramine 8 years: 12.5-25 mg = 5-10 mL');
+check(hb('diphenhydramine', 48).kind === 'doctor', 'diphenhydramine 4 years: only if a doctor directs');
+check(hb('hydroxyzine', 48).mg === 50 && hb('hydroxyzine', 120).mg2 === 100 && hb('hydroxyzine', 216).kind === 'adult', 'hydroxyzine: under 6 50 mg/day; over 6 50-100 mg/day; adults from 18');
+const lv = cr => abEval(RULES.levocetirizine, { hd: false }, { cr }, { kidney: true, age: true, weight: true }).rows.find(r => r.strong).v.en;
+check(/^5 mg/.test(lv(90)) && lv(80) === '2.5 mg once a day' && lv(50) === '2.5 mg once a day' && lv(49) === '2.5 mg every other day' && lv(30) === '2.5 mg every other day' && /twice a week/.test(lv(29)) && /Contraindicated/.test(lv(9)), 'levocetirizine kidney table (80/50/30/10 mL/min)');
 console.log(`engine: ${ok} ok, ${fail} failed`);
 process.exit(fail ? 1 : 0);
