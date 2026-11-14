@@ -1,0 +1,49 @@
+{
+ "group": "an",
+ "note": "Every text comes from the label or WHO source named in src (numbers in brackets in inter.r). Adult doses: U.S. OTC labels first, then Rx labels; children: see js/rules/bands.js.",
+ "drugs": [
+  {
+   "id": "paracetamol",
+   "n": {"ar": "باراسيتامول (أسيتامينوفين)", "en": "Paracetamol (acetaminophen)"},
+   "cls": {"ar": "مسكن وخافض حرارة غير أفيوني", "en": "Non-opioid analgesic and antipyretic"},
+   "uses": {"ar": "الألم الخفيف إلى المتوسط، وخفض الحرارة. لا يُستعمل كمضاد للالتهاب.", "en": "Mild to moderate pain and fever. Not used as an anti-inflammatory."},
+   "dose": {"ar": "الكبار و12 سنة فأكثر: 1000 ملغ (قرصان 500 ملغ) كل 6 ساعات عند الحاجة، بحد 3000 ملغ (6 أقراص) في 24 ساعة إلا بتوجيه الطبيب، ولا يزيد على 10 أيام إلا بتوجيه الطبيب. الحد اليومي من كل المصادر ومن كل الأدوية التي تحتوي باراسيتامول: 4000 ملغ.", "en": "Adults and 12 years and over: 1,000 mg (two 500 mg tablets) every 6 hours as needed, up to 3,000 mg (6 tablets) in 24 hours unless directed by a doctor, for no more than 10 days unless directed by a doctor. Daily maximum from all routes and all products containing paracetamol: 4,000 mg."},
+   "renal": {"ar": "نشرة الأقراص لا تذكر تعديلاً كلوياً. عند تصفية الكرياتينين 30 مل/دقيقة أو أقل قد يلزم إطالة الفاصل بين الجرعات وتقليل الجرعة اليومية (نشرة الحقن 8.7).", "en": "The tablet label gives no kidney adjustment. With creatinine clearance 30 mL/min or less, longer dosing intervals and a lower daily dose may be needed (injection label 8.7)."},
+   "hepatic": {"ar": "ممنوع في القصور الكبدي الشديد أو مرض الكبد النشط الشديد، ويُستعمل بحذر مع أمراض الكبد. ضرر كبدي شديد ممكن مع أكثر من 4000 ملغ يومياً، أو مع أدوية أخرى فيها باراسيتامول، أو مع 3 مشروبات كحولية أو أكثر يومياً.", "en": "Contraindicated in severe hepatic impairment or severe active liver disease; use with caution in liver disease. Severe liver damage may occur with more than 4,000 mg a day, with other drugs containing paracetamol, or with 3 or more alcoholic drinks a day."},
+   "timing": {"ar": "لا يُجمع مع أي دواء آخر يحتوي باراسيتامول. رجّ الشراب جيداً واستعمل كوب القياس المرفق. أوقفه وراجع الطبيب إذا استمرت الحرارة أكثر من 3 أيام أو الألم أكثر من 5 أيام عند الأطفال (10 أيام للكبار).", "en": "Do not use with any other drug containing paracetamol. Shake the suspension well and use the dosing cup provided. Stop and see a doctor if fever lasts more than 3 days, or pain more than 5 days in children (10 days in adults)."},
+   "preg": {"ar": "الحامل أو المرضع: تستشير مختصاً قبل الاستعمال (النشرة).", "en": "If pregnant or breast-feeding, ask a health professional before use (label)."},
+   "inter": [
+    {"with": {"ar": "أدوية أخرى تحتوي باراسيتامول", "en": "Other medicines containing paracetamol"}, "desc": {"ar": "خطر جرعة زائدة وضرر شديد للكبد؛ لا تُجمع.", "en": "Risk of overdose and severe liver damage; do not combine."}, "sev": "major", "r": [127, 128]},
+    {"with": {"ar": "الكحول (3 مشروبات أو أكثر يومياً)", "en": "Alcohol (3 or more drinks a day)"}, "desc": {"ar": "يزيد خطر الضرر الكبدي الشديد.", "en": "Raises the risk of severe liver damage."}, "sev": "major", "r": [128]},
+    {"with": {"ar": "الوارفارين", "en": "Warfarin"}, "desc": {"ar": "الاستعمال المنتظم الطويل قد يزيد أثر الوارفارين المميّع؛ يُسأل الطبيب أو الصيدلي قبل الاستعمال.", "en": "Prolonged regular use may enhance the effect of warfarin; ask a doctor or pharmacist before use."}, "sev": "moderate", "r": [127, 134]},
+    {"with": {"ar": "الميتوكلوبراميد", "en": "Metoclopramide"}, "desc": {"ar": "يزيد امتصاص الباراسيتامول.", "en": "Increases paracetamol absorption."}, "sev": "minor", "r": [134]}
+   ],
+   "src": [128, 127, 129, 134]
+  },
+  {
+   "id": "ibuprofen",
+   "n": {"ar": "إيبوبروفين", "en": "Ibuprofen"},
+   "cls": {"ar": "مضاد التهاب غير ستيرويدي (NSAID)", "en": "Non-steroidal anti-inflammatory drug (NSAID)"},
+   "uses": {"ar": "الألم الخفيف إلى المتوسط، وخفض الحرارة، وآلام الدورة الشهرية، وأعراض التهاب المفاصل.", "en": "Mild to moderate pain, fever, period pain, and the signs and symptoms of arthritis."},
+   "dose": {"ar": "بدون وصفة (الكبار و12 سنة فأكثر): 200 ملغ كل 4 إلى 6 ساعات، و400 ملغ إذا لم تكفِ 200 ملغ، بحد 1200 ملغ (6 أقراص) في 24 ساعة إلا بتوجيه الطبيب. بوصفة للألم الخفيف إلى المتوسط: 400 ملغ كل 4 إلى 6 ساعات عند الحاجة، ولا تتجاوز الجرعة اليومية الكلية 3200 ملغ. أقل جرعة فعالة لأقصر مدة.", "en": "Over the counter (adults and 12 years and over): 200 mg every 4 to 6 hours, 400 mg if 200 mg does not help, up to 1,200 mg (6 tablets) in 24 hours unless directed by a doctor. On prescription for mild to moderate pain: 400 mg every 4 to 6 hours as needed; never more than 3,200 mg a day in total. Lowest effective dose for the shortest time."},
+   "renal": {"ar": "لا يُنصح به في المرض الكلوي المتقدم، وإن لزم فمع مراقبة دقيقة لوظائف الكلى (نشرة الأقراص). القصور الخفيف: أقل جرعة فعالة مع مراقبة الكلى؛ المتوسط إلى الشديد: يُتجنّب (WHO). خطر أكبر مع الجفاف أو الإسهال أو القيء.", "en": "Not recommended in advanced renal disease; if needed, monitor kidney function closely (tablet label). Mild impairment: lowest effective dose and monitor; moderate to severe: avoid (WHO). Higher risk with dehydration, diarrhoea or vomiting."},
+   "hepatic": {"ar": "يُستعمل بحذر في القصور الكبدي (خطر نزف هضمي واحتباس سوائل)، ويُتجنّب في مرض الكبد الشديد (WHO).", "en": "Use with caution in hepatic impairment (risk of GI bleeding and fluid retention); avoid in severe liver disease (WHO)."},
+   "timing": {"ar": "مع الطعام أو الحليب إذا سبّب اضطراب المعدة. رجّ الشراب جيداً. للأطفال: لا يزيد على 4 مرات يومياً، ويُراجع الطبيب إذا لم يتحسن في 24 ساعة أو استمرت الحرارة أو الألم أكثر من 3 أيام.", "en": "With food or milk if it upsets the stomach. Shake the suspension well. Children: no more than 4 times a day; see a doctor if no relief within 24 hours or if fever or pain lasts more than 3 days."},
+   "preg": {"ar": "الحامل أو المرضع تستشير مختصاً قبل الاستعمال، ولا يُستعمل من الأسبوع 20 من الحمل إلا بتوجيه صريح من الطبيب لأنه قد يسبب مشكلات للجنين أو مضاعفات أثناء الولادة.", "en": "If pregnant or breast-feeding, ask a health professional; do not use from 20 weeks of pregnancy unless definitely directed by a doctor, as it may harm the unborn child or cause complications during delivery."},
+   "inter": [
+    {"with": {"ar": "الأسبرين", "en": "Aspirin"}, "desc": {"ar": "تجنّب الجمع: يزيد الآثار الجانبية وخطر النزف الهضمي، وقد يقلل فائدة الأسبرين للقلب عند من يأخذه للوقاية من الجلطة.", "en": "Avoid together: more adverse effects and GI bleeding risk; may reduce the heart benefit of aspirin taken to prevent heart attack or stroke."}, "sev": "major", "r": [134, 131, 133]},
+    {"with": {"ar": "الوارفارين ومميعات الدم", "en": "Warfarin and other anticoagulants"}, "desc": {"ar": "يزيد خطر النزف.", "en": "Increases the risk of bleeding."}, "sev": "major", "r": [134, 131]},
+    {"with": {"ar": "الفلوكستين", "en": "Fluoxetine"}, "desc": {"ar": "يزيد خطر النزف.", "en": "Increases the risk of bleeding."}, "sev": "major", "r": [134]},
+    {"with": {"ar": "الليثيوم", "en": "Lithium"}, "desc": {"ar": "يقل إخراج الليثيوم فيرتفع خطر التسمم.", "en": "Lithium excretion falls: risk of toxicity."}, "sev": "major", "r": [134, 131]},
+    {"with": {"ar": "الميثوتريكسات", "en": "Methotrexate"}, "desc": {"ar": "يقل إخراج الميثوتريكسات فيرتفع خطر السمية.", "en": "Methotrexate excretion falls: risk of toxicity."}, "sev": "major", "r": [134, 131]},
+    {"with": {"ar": "السيكلوسبورين", "en": "Ciclosporin"}, "desc": {"ar": "يزيد خطر السمية الكلوية.", "en": "Increases the risk of kidney toxicity."}, "sev": "major", "r": [134]},
+    {"with": {"ar": "الليفوفلوكساسين والأوفلوكساسين", "en": "Levofloxacin and ofloxacin"}, "desc": {"ar": "قد يزيد خطر التشنجات.", "en": "Possibly increased risk of convulsions."}, "sev": "major", "r": [134]},
+    {"with": {"ar": "مثبطات ACE وحاصرات مستقبلات الأنجيوتنسين وحاصرات بيتا", "en": "ACE inhibitors, ARBs and beta-blockers"}, "desc": {"ar": "يضعف أثرها الخافض للضغط، ومع الجفاف أو كبر السن أو القصور الكلوي قد تتدهور وظائف الكلى.", "en": "Weaker blood pressure effect; with dehydration, old age or kidney impairment, kidney function may worsen."}, "sev": "moderate", "r": [134, 131]},
+    {"with": {"ar": "مدرات البول (فوروسيمايد، سبيرونولاكتون)", "en": "Diuretics (furosemide, spironolactone)"}, "desc": {"ar": "يضعف أثر المدر ويزيد خطر السمية الكلوية، ومع السبيرونولاكتون قد يرتفع البوتاسيوم.", "en": "Weaker diuretic effect and more kidney toxicity; with spironolactone, possibly high potassium."}, "sev": "moderate", "r": [134, 131]},
+    {"with": {"ar": "الكورتيزونات (بريدنيزولون، ديكساميثازون، هيدروكورتيزون)", "en": "Corticosteroids (prednisolone, dexamethasone, hydrocortisone)"}, "desc": {"ar": "يزيد خطر النزف والقرحة في الجهاز الهضمي.", "en": "Increases the risk of GI bleeding and ulceration."}, "sev": "moderate", "r": [134, 131]},
+    {"with": {"ar": "الديجوكسين", "en": "Digoxin"}, "desc": {"ar": "قد يرفع مستوى الديجوكسين ويضعف وظائف الكلى.", "en": "May raise digoxin levels and reduce kidney function."}, "sev": "moderate", "r": [134]}
+   ],
+   "src": [133, 131, 132, 130, 134]
+  }
+ ]
+}

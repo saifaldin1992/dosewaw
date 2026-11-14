@@ -31,11 +31,14 @@ async function build(row, request, env) {
   const d = row.data || {};
   const ab = (d.antibiotics || []).filter(x => x && !x.hidden);
   const src = (d.sources || []).filter(x => x && !x.hidden);
-  // the vitamin calculators are code (js/rules/vitamins.js): their search entries come from the static index
-  let vit = [];
-  try { const r = await env.ASSETS.fetch(new URL('/data/index.json', request.url)); vit = (await r.json()).filter(x => x.g === 'vit'); } catch (e) {}
-  const index = [...ab.map(x => ({ id: x.id, g: 'ab', n: x.n, c: x.cls || { ar: '', en: '' } })), ...vit];
-  const out = { 'antibiotics.json': ab, 'sources.json': src, 'brand.json': Object.assign({ version: row.version }, d.brand || {}), 'index.json': index };
+  // the other groups (analgesics, vitamins…) are not in the database yet: their search entries and sources come from the static files
+  let other = [], otherSrc = [];
+  try { const r = await env.ASSETS.fetch(new URL('/data/index.json', request.url)); other = (await r.json()).filter(x => x.g !== 'ab'); } catch (e) {}
+  try { const r = await env.ASSETS.fetch(new URL('/data/sources.json', request.url)); otherSrc = (await r.json()).filter(x => x.g && x.g !== 'ab'); } catch (e) {}
+  const ids = new Set(src.map(x => x.id));
+  const sources = [...src.map(x => Object.assign({ g: 'ab' }, x)), ...otherSrc.filter(x => !ids.has(x.id))];
+  const index = [...ab.map(x => ({ id: x.id, g: 'ab', n: x.n, c: x.cls || { ar: '', en: '' } })), ...other];
+  const out = { 'antibiotics.json': ab, 'sources.json': sources, 'brand.json': Object.assign({ version: row.version }, d.brand || {}), 'index.json': index };
   const files = {};
   for (const name of FILES) { const body = JSON.stringify(out[name]); files[name] = { body, etag: await etagOf(body) }; }
   return { version: row.version, files, at: Date.now() };

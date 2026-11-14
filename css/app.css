@@ -300,3 +300,7 @@ details.recon summary{cursor:pointer;padding:10px 0;font-weight:600;font-size:14
 .ghead .gsub{font-size:13px;color:var(--mute);font-weight:600}
 .gback{flex:none;width:44px;height:44px;border-radius:12px;border:1px solid var(--line);background:var(--card);color:var(--primary-text);display:grid;place-items:center;font-size:26px;text-decoration:none;line-height:1}
 html[dir="rtl"] .gback{transform:scaleX(-1)}
+
+.conc{display:flex;gap:8px;align-items:center}
+.conc input{flex:1;min-width:0;height:44px;border:1px solid var(--line);border-radius:12px;padding:0 12px;font-family:var(--font-num);background:var(--card);color:var(--ink)}
+.conc span{font-family:var(--font-num);font-size:13px;color:var(--mute);white-space:nowrap}

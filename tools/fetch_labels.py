@@ -32,6 +32,7 @@ GROUPS = {
     'ibuprofen_susp': ('ibuprofen', r'^IBUPROFEN$', 'ORAL', RX, r'100 mg ?(per|/|in) ?5 mL'),
     'ibuprofen_tab': ('ibuprofen', r'^IBUPROFEN$', 'ORAL', RX, r'(400|600|800) mg'),
     'ibuprofen_child_otc': ('ibuprofen', r'^IBUPROFEN$', 'ORAL', OTC, r'100 mg (in|per|/) ?5 mL'),
+    'ibuprofen_adult_otc': ('ibuprofen', r'^IBUPROFEN$', 'ORAL', OTC, r'Ibuprofen,? USP,? 200 mg|Ibuprofen 200 mg'),
     'naproxen': ('naproxen', r'^NAPROXEN$', 'ORAL', RX, None),
     'diclofenac_k': ('diclofenac potassium', r'^DICLOFENAC POTASSIUM$', 'ORAL', RX, r'50 mg'),
     'mefenamic': ('mefenamic acid', r'^MEFENAMIC ACID$', 'ORAL', RX, None),

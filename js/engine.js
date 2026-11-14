@@ -97,3 +97,34 @@ function easiest(ml){if(!ml.length)return null;const ok=ml.filter(x=>x.ml>=1);co
 const mlRound=v=>v<10?Math.round(v*10)/10:Math.round(v*2)/2;
 
 if(typeof module!=='undefined')module.exports={abWeights,abEgfr,abCrCl,abMatch,abEval,abFill,abRound,wfaWeight,pedsCalc,easiest,mlRound};
+
+/* children's doses of the analgesics group (js/rules/bands.js). P = {W (kg), months|null, infant(bool)}; x = answers (why, hot).
+   With an age, the chart row is chosen by age; with a weight only, by weight in pounds (the U.S. charts are in lb).
+   Returns {kind, seg, mg, mgkg, everyH, maxDoses|maxDay, ml:[{c,ml}], row} — or {kind:'doctor'|'adult', seg}. */
+const LB=2.20462;
+function bandCalc(spec,P,x,extra){
+  x=x||{};const lb=P.W?P.W*LB:null,m=P.months;
+  const inR=(v,r)=>v!=null&&v>=r[0]&&v<r[1];
+  let seg=null;
+  if(P.infant)seg=spec.segs.find(s=>s.kind==='doctor');
+  if(!seg&&m!=null)seg=spec.segs.find(s=>inR(m,s.ageM));
+  if(!seg&&lb!=null)seg=spec.segs.find(s=>s.lb&&inR(Math.floor(lb),s.lb));
+  if(!seg)return null;
+  if(seg.kind==='doctor'||seg.kind==='adult')return {kind:seg.kind,seg};
+  const strengths=[...spec.strengths.map(s=>s.c),...(extra||[]).filter(c=>c>0&&!spec.strengths.some(s=>s.c===c))];
+  const ml=mg=>strengths.map(c=>({c,ml:mg*5/c}));
+  if(seg.kind==='chart'){
+    const row=m!=null?seg.rows.find(r=>Math.floor(m/12)>=r.age[0]&&Math.floor(m/12)<=r.age[1]):seg.rows.find(r=>Math.floor(lb)>=r.lb[0]&&Math.floor(lb)<=r.lb[1]);
+    if(!row)return null;
+    return {kind:'chart',seg,row,mg:row.mg,everyH:seg.everyH,maxDoses:seg.maxDoses,ml:ml(row.mg),by:m!=null?'age':'weight'};
+  }
+  // mg per kg (needs a weight: actual, or estimated from age by the page)
+  if(!P.W)return {kind:'needW',seg};
+  let mgkg=seg.mgkg;
+  if(seg.mgkgBy){const hit=seg.mgkgBy.find(r=>Object.keys(r.when).every(k=>x[k]===r.when[k]));mgkg=hit.mgkg}
+  let mg=P.W*mgkg,capped=false;
+  if(seg.maxMg&&mg>seg.maxMg){mg=seg.maxMg;capped=true}
+  const maxDay=seg.maxMgkgDay?P.W*seg.maxMgkgDay:null;
+  return {kind:'mgkg',seg,mgkg,mg,capped,everyH:seg.everyH,maxDoses:seg.maxDoses,maxDay,ml:ml(mg)};
+}
+if(typeof module!=='undefined')Object.assign(module.exports,{bandCalc,LB});

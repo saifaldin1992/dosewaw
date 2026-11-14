@@ -1,8 +1,9 @@
 // Edge worker: published bundle → data files, fallbacks, config. Run: node tests/worker_test.mjs
 import worker from '../src/worker.js';
 let fail = 0, ok = 0; const check = (c, m) => { if (c) ok++; else { fail++; console.log('FAIL', m); } };
-const staticIndex = [{ id: 'amox', g: 'ab', n: { ar: 'أ', en: 'A' }, c: {} }, { id: 'd', g: 'vit', n: { ar: 'د', en: 'D' }, c: {} }];
-const ASSETS = { fetch: async (r) => { const u = new URL(r.url || r); return new Response(u.pathname === '/data/index.json' ? JSON.stringify(staticIndex) : 'STATIC ' + u.pathname, { status: 200 }); } };
+const staticIndex = [{ id: 'amox', g: 'ab', n: { ar: 'أ', en: 'A' }, c: {} }, { id: 'd', g: 'vit', n: { ar: 'د', en: 'D' }, c: {} }, { id: 'paracetamol', g: 'an', n: { ar: 'ب', en: 'P' }, c: {} }];
+const staticSources = [{ id: 1, g: 'ab' }, { id: 127, g: 'an' }];
+const ASSETS = { fetch: async (r) => { const u = new URL(r.url || r); return new Response(u.pathname === '/data/index.json' ? JSON.stringify(staticIndex) : u.pathname === '/data/sources.json' ? JSON.stringify(staticSources) : 'STATIC ' + u.pathname, { status: 200 }); } };
 const ctx = { waitUntil() {} };
 let calls = 0, mode = 'ok';
 globalThis.fetch = async (url) => {
@@ -25,7 +26,8 @@ check(r.headers.get('Cache-Control') === 'public, no-cache' && r.headers.get('ET
 const etag = r.headers.get('ETag');
 r = await get('/data/antibiotics.json', env, { 'If-None-Match': etag }); check(r.status === 304, '304 when unchanged');
 r = await get('/data/index.json'); const idx = await r.json();
-check(idx.length === 2 && idx.some(x => x.g === 'vit') && idx[0].c.en === 'P', 'index = published antibiotics + vitamins');
+check(idx.length === 3 && idx.some(x => x.g === 'vit') && idx.some(x => x.g === 'an') && idx[0].c.en === 'P', 'index = published antibiotics + vitamins + analgesics');
+r = await get('/data/sources.json'); const so = await r.json(); check(so.length === 2 && so.find(x => x.id === 127).g === 'an' && so.find(x => x.id === 1).g === 'ab', 'sources = published + other groups, each with its group');
 r = await get('/data/brand.json'); const br = await r.json(); check(br.version === 7 && br.name[1] === 'WAW', 'brand with version');
 const before = calls; for (let i = 0; i < 50; i++) await get('/data/sources.json'); check(calls === before, '50 visitors, 0 extra Supabase requests');
 r = await get('/data/other.json'); check((await r.text()) === 'STATIC /data/other.json', 'unknown data file: static');

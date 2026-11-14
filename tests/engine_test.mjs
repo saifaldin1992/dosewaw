@@ -5,7 +5,7 @@ import fs from 'fs';
 import vm from 'vm';
 const dir = new URL('../js/', import.meta.url).pathname;
 const ctx = vm.createContext({ document: { getElementById: () => null, addEventListener() {}, readyState: 'complete' }, esc: s => s, L: (a) => a, CFG: {}, console });
-vm.runInContext(fs.readFileSync(dir + 'rules/antibiotics.js', 'utf8') + '\n' + fs.readFileSync(dir + 'rules/peds.js', 'utf8') + '\n' + fs.readFileSync(dir + 'engine.js', 'utf8'), ctx);
+vm.runInContext(fs.readFileSync(dir + 'rules/antibiotics.js', 'utf8') + '\n' + fs.readFileSync(dir + 'rules/analgesics.js', 'utf8') + '\n' + fs.readFileSync(dir + 'rules/peds.js', 'utf8') + '\n' + fs.readFileSync(dir + 'rules/bands.js', 'utf8') + '\n' + fs.readFileSync(dir + 'engine.js', 'utf8'), ctx);
 const RULES = vm.runInContext('ABC_RULES', ctx), abEval = vm.runInContext('abEval', ctx), evalRule = (rule, x, cr, c = {}) => abEval(rule, x, { ...c, cr }, { kidney: true, age: true, weight: true }), crcl = vm.runInContext('abCrCl', ctx);
 let fail = 0, ok = 0;
 const check = (cond, msg) => { if (cond) ok++; else { fail++; console.log('FAIL', msg); } };
@@ -144,5 +144,45 @@ check(who.boys.length === 121 && who.girls.length === 121, 'WHO table 0-120 mont
 check(Math.abs(wfa(who, 0, 'm') - 3.35) < 0.01 && Math.abs(wfa(who, 0, 'f') - 3.23) < 0.01, 'birth medians 3.35 / 3.23 kg');
 check(Math.abs(wfa(who, 120, 'm') - 31.16) < 0.01, '10 y boys median 31.16 kg');
 check(wfa(who, 121, '') === null, 'no estimate after 10 years');
+
+// ---------- analgesics: children's charts and mg/kg, each number checked against the saved source text ----------
+const BANDS = vm.runInContext('BANDS', ctx), band = vm.runInContext('bandCalc', ctx);
+const lab = id => JSON.stringify(JSON.parse(fs.readFileSync(new URL('../content/analgesics/labels/' + id + '.json', import.meta.url), 'utf8')).sections).replace(/\\s+|\s+/g, ' ');
+const whoMf = fs.readFileSync(new URL('../content/analgesics/who_mfc_2010_2.1.txt', import.meta.url), 'utf8').replace(/\s+/g, ' ');
+const SRC = {127: lab('paracetamol_child'), 128: lab('paracetamol_adult'), 130: lab('ibuprofen_susp'), 132: lab('ibuprofen_child_otc'), 133: lab('ibuprofen_adult_otc'), 134: whoMf};
+for (const [id, b] of Object.entries(BANDS)) {
+  for (const seg of b.segs) {
+    check(SRC[seg.ref] || seg.ref === 128 || seg.ref === 133, id + ': segment source saved');
+    if (seg.kind === 'chart') for (const r of seg.rows) {
+      const per5 = b.strengths.find(x => x.ref === seg.ref).c, ml = r.mg * 5 / per5, t = SRC[seg.ref];
+      check(new RegExp(r.lb[0] + ' ?- ?' + r.lb[1] + '( lbs)? ' + r.age[0] + (r.age[0] !== r.age[1] ? '-' + r.age[1] : '') + '( years)? ' + ml + ' mL').test(t), id + ' chart ' + r.lb.join('-') + ' lb = ' + ml + ' mL in the label');
+    }
+    if (seg.mgkg) check(SRC[seg.ref].includes(seg.mgkg + ' mg/kg'), id + ': ' + seg.mgkg + ' mg/kg in the source');
+    if (seg.mgkgBy) for (const m of seg.mgkgBy) check(SRC[seg.ref].includes(m.mgkg + ' mg/kg'), id + ': ' + m.mgkg + ' mg/kg in the source');
+    if (seg.maxMgkgDay) check(SRC[seg.ref].includes('maximum daily dose is ' + seg.maxMgkgDay + ' mg/kg'), id + ': max ' + seg.maxMgkgDay + ' mg/kg/day in the source');
+  }
+}
+check(SRC[127].includes('do not give more than 5 times in 24 hours') && SRC[132].includes('do not use more than 4 times a day'), 'chart limits in the labels');
+check(whoMf.includes('15 mg/kg, up to 1 g, every 4–6 hours') && whoMf.includes('Maximum 4 doses') && whoMf.includes('Infants under 3 months should not be given paracetamol unless advised by a doctor'), 'WHO paracetamol text');
+check(SRC[128].includes('do not take more than 6 gelcaps in 24 hours') && SRC[133].includes('do not exceed 6 tablets in 24 hours'), 'adult limits in the labels');
+const bc = (id, P, x) => band(BANDS[id], P, x || {}, []);
+let b = bc('paracetamol', { W: 14 }); check(b.kind === 'chart' && b.mg === 160 && Math.abs(b.ml[0].ml - 5) < 1e-9, 'paracetamol 14 kg (30.9 lb) = 160 mg = 5 mL of 160 mg/5 mL');
+b = bc('paracetamol', { W: 8, months: 9 }); check(b.kind === 'mgkg' && b.mg === 120 && b.maxDoses === 4, 'paracetamol 9 months 8 kg = 15 mg/kg = 120 mg, max 4 doses (WHO)');
+b = bc('paracetamol', { W: 80, months: 20 }); check(b.mg === 1000 && b.capped, 'paracetamol single dose capped at 1 g (WHO)');
+check(bc('paracetamol', { months: 2 }).kind === 'doctor', 'paracetamol under 3 months: doctor');
+check(bc('paracetamol', { W: 5, infant: true }).kind === 'doctor', 'paracetamol infant box: doctor');
+b = bc('paracetamol', { months: 60 }); check(b.kind === 'chart' && b.mg === 240 && b.by === 'age', 'paracetamol 5 years by age = 240 mg');
+check(bc('paracetamol', { months: 150 }).kind === 'adult' && bc('paracetamol', { W: 50 }).kind === 'adult', 'paracetamol 12 years or over 95 lb: adult dose');
+b = bc('ibuprofen', { W: 9, months: 12 }, { why: 'fever', hot: false }); check(b.mg === 45 && b.maxDay === 360, 'ibuprofen 9 kg fever under 39.2 = 5 mg/kg = 45 mg, max 360 mg/day');
+b = bc('ibuprofen', { W: 9, months: 12 }, { why: 'fever', hot: true }); check(b.mg === 90, 'ibuprofen fever 39.2 or more = 10 mg/kg');
+b = bc('ibuprofen', { W: 9, months: 12 }, { why: 'pain' }); check(b.mg === 90, 'ibuprofen pain = 10 mg/kg');
+check(bc('ibuprofen', { months: 4 }).kind === 'doctor', 'ibuprofen under 6 months: doctor (FDA)');
+b = bc('ibuprofen', { W: 20 }); check(b.kind === 'chart' && b.mg === 150 && Math.abs(b.ml[0].ml - 7.5) < 1e-9, 'ibuprofen 20 kg (44 lb) = 150 mg = 7.5 mL');
+b = band(BANDS.paracetamol, { W: 14 }, {}, [120, 250]); check(b.ml.map(q => Math.round(q.ml * 10) / 10).join() === '5,6.4,6.7,3.2', 'extra strengths 120 and 250 mg/5 mL from the same mg dose');
+// adult rules of the group
+const pa = abEval(RULES.paracetamol, { liver: 'sev', alc: false }, { cr: null }, { kidney: false, age: false, weight: false });
+check(/Contraindicated/.test(pa.rows.find(r => r.strong).v.en), 'paracetamol severe liver: contraindicated');
+const ib = abEval(RULES.ibuprofen, { use: 'otc', renal: 'ok', preg20: true }, { cr: null }, { kidney: false, age: false, weight: false });
+check(/1,200 mg/.test(ib.rows.find(r => r.strong).v.en) && ib.rows.some(r => /20 weeks/.test((r.v || {}).en || '')), 'ibuprofen OTC 1,200 mg/day; 20 weeks warning');
 console.log(`engine: ${ok} ok, ${fail} failed`);
 process.exit(fail ? 1 : 0);
