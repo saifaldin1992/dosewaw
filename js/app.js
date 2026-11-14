@@ -327,7 +327,7 @@ function adultResult(P){
   const egH=egfr?`<p class="hint">${esc(T('egfr',{v:egfr.toFixed(0)}))}</p>`:'';
   R.innerHTML=`<div class="rhead"><div class="k"><span>${esc(T('result'))}${main?' · '+esc(LT(main.k)):''}</span><span>${P.W?num(P.W)+' '+esc(T('u_kg'))+(P.est?' ≈':''):''}</span></div>
     <div class="bigtxt">${main?esc(LT(main.v)):'—'}</div></div>
-    <div class="rbody">${kidsWarn?`<div class="warn">${esc(T('kids_adult_calc',{r:rule.pedsRef?' ('+rule.pedsRef+')':''}))}</div>`:''}
+    <div class="rbody">${kidsWarn?`<div class="warn">${esc(rule.kids?LT(rule.kids):T('kids_adult_calc',{r:rule.pedsRef?' ('+rule.pedsRef+')':''}))}</div>`:''}
     <div class="rrows">${rowsH}</div>${crH}${egH}<p class="hint">${esc(LT(r.notes))}</p>${srcLine(rule.srcIds,rule.label)}${actions(!!main)}</div>`;
   wireActions();
   if(main)$('#bcard').onclick=()=>patientCard({kind:'adult',text:main.v});

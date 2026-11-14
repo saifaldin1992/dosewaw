@@ -184,5 +184,20 @@ const pa = abEval(RULES.paracetamol, { liver: 'sev', alc: false }, { cr: null },
 check(/Contraindicated/.test(pa.rows.find(r => r.strong).v.en), 'paracetamol severe liver: contraindicated');
 const ib = abEval(RULES.ibuprofen, { use: 'otc', renal: 'ok', preg20: true }, { cr: null }, { kidney: false, age: false, weight: false });
 check(/1,200 mg/.test(ib.rows.find(r => r.strong).v.en) && ib.rows.some(r => /20 weeks/.test((r.v || {}).en || '')), 'ibuprofen OTC 1,200 mg/day; 20 weeks warning');
+
+// the other analgesics: each dose sentence of the rules is in its label
+const EV = {naproxen: ['500 mg followed by 250 mg every 6 to 8 hours', 'should not exceed 1,250 mg', '750 mg of naproxen tablets followed by 250 mg every 8 hours', 'creatinine clearance < 30 mL/min', '1,500 mg/day for up to 6 months', 'approximately 10 mg/kg given in 2 divided doses', 'less than 50 kilograms'],
+  diclofenac_k: ['50 mg three times a day', 'initial dose of 100 mg', '100-150 mg/day in divided doses, 50 mg twice a day or three times a day', '150-200 mg/day in divided doses, 50 mg three times a day or four times a day', 'within 4 to 8 weeks', 'advanced renal disease unless'],
+  mefenamic: ['500 mg given orally as an initial dose followed by 250 mg every 6 hours', 'one week (7 days)', '14 years of age and older', 'may require reduced doses', 'magnesium hydroxide'],
+  aspirin: ['take 1 or 2 tablets every 4 hours or 3 tablets every 6 hours, not to exceed 12 tablets in 24 hours', 'children under 12 years: do not use', 'drink a full glass of water with each dose', 'age 60 or older', '20 weeks or later'],
+  celecoxib: ['400 mg initially, followed by 200 mg dose if needed on first day', '200 mg twice daily as needed', '200 mg once daily or 100 mg twice daily', '100 mg to 200 mg twice daily', 'reduce the dose by 50%', 'severe hepatic impairment is not recommended', '50 mg twice daily in patients 10 kg to 25 kg', 'sulfonamides', 'fluconazole'],
+  ketorolac: ['20 mg PO once followed by 10 mg q4-6 hours prn not >40 mg/day', '10 mg PO once followed by 10 mg q4-6 hours prn not >40 mg/day', 'Oral not approved', 'not to exceed 5 days', 'probenecid is contraindicated', 'pentoxifylline is contraindicated', 'advanced renal impairment']};
+for (const [id, list] of Object.entries(EV)) { const t = lab(id).replace(/&gt;/g, '>'); for (const q of list) check(t.toLowerCase().includes(q.toLowerCase()), id + ': «' + q + '» in the label'); }
+const an = JSON.parse(fs.readFileSync(new URL('../data/analgesics.json', import.meta.url), 'utf8'));
+check(an.length === 8 && an.every(d => RULES[d.id] && txt(d.n) && txt(d.dose) && txt(d.renal) && txt(d.preg) && d.inter.length && d.src.length), 'analgesics: 8 drugs, each with rules, dose, kidney, pregnancy, interactions, sources');
+for (const id of ['naproxen', 'diclofenac_k', 'mefenamic', 'aspirin', 'celecoxib', 'ketorolac']) check(txt(RULES[id].kids), id + ': says what the label allows for children');
+const kt = (x, c) => abEval(RULES.ketorolac, { renal: 'ok', after: true, ...x }, c, { kidney: false, age: true, weight: true }).rows.find(r => r.strong).v.en;
+check(/^20 mg once/.test(kt({}, { cr: null, age: 40, wt: 70 })) && /^10 mg once/.test(kt({}, { cr: null, age: 70, wt: 70 })) && /^10 mg once/.test(kt({}, { cr: null, age: 40, wt: 45 })) && /^10 mg once/.test(kt({ renal: 'imp' }, { cr: null, age: 40, wt: 70 })), 'ketorolac 20 mg first dose only for 17-64 years, 50 kg or more, normal kidneys');
+check(/Contraindicated/.test(kt({ renal: 'adv' }, { cr: null, age: 40, wt: 70 })) && /not an initial dose/.test(kt({ after: false }, { cr: null, age: 40, wt: 70 })), 'ketorolac contraindications and continuation only');
 console.log(`engine: ${ok} ok, ${fail} failed`);
 process.exit(fail ? 1 : 0);

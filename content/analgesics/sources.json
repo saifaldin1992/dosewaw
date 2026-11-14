@@ -1,10 +1,90 @@
 [
- {"id": 127, "label": "paracetamol_child", "use_ar": "جدول جرعات شراب الباراسيتامول للأطفال من سنتين إلى 11 سنة، والتحذيرات", "use_en": "Children's paracetamol suspension dosing chart (2 to 11 years) and warnings"},
- {"id": 128, "label": "paracetamol_adult", "use_ar": "جرعة الباراسيتامول للكبار و12 سنة فأكثر، وتحذير الكبد", "use_en": "Paracetamol dose for adults and 12 years and over; liver warning"},
- {"id": 129, "label": "paracetamol_iv", "use_ar": "الباراسيتامول في القصور الكلوي والكبدي، والحد اليومي من كل المصادر", "use_en": "Paracetamol in kidney and liver impairment; daily maximum from all sources"},
- {"id": 130, "label": "ibuprofen_susp", "use_ar": "جرعة شراب الإيبوبروفين بالملغ لكل كغ من 6 أشهر إلى سنتين", "use_en": "Ibuprofen suspension mg/kg dose from 6 months to 2 years"},
- {"id": 131, "label": "ibuprofen_tab", "use_ar": "جرعة الإيبوبروفين بوصفة للكبار، والكلى، والتداخلات", "use_en": "Prescription ibuprofen dose for adults, kidney, interactions"},
- {"id": 132, "label": "ibuprofen_child_otc", "use_ar": "جدول جرعات شراب الإيبوبروفين للأطفال من سنتين إلى 11 سنة", "use_en": "Children's ibuprofen suspension dosing chart (2 to 11 years)"},
- {"id": 133, "label": "ibuprofen_adult_otc", "use_ar": "جرعة الإيبوبروفين بدون وصفة للكبار، والحمل", "use_en": "Over-the-counter ibuprofen dose for adults; pregnancy"},
- {"id": 134, "org": "World Health Organization, 2010", "title": "WHO Model Formulary for Children 2010 (section 2.1: paracetamol, ibuprofen, acetylsalicylic acid)", "url": "https://iris.who.int/handle/10665/44309", "kind": "g", "use_ar": "جرعات الباراسيتامول والإيبوبروفين بالملغ لكل كغ للرضع والأطفال، والكلى والكبد، والتداخلات", "use_en": "Paracetamol and ibuprofen mg/kg doses for infants and children; kidney, liver, interactions", "evidence": "content/analgesics/who_mfc_2010_2.1.txt"}
+ {
+  "id": 127,
+  "label": "paracetamol_child",
+  "use_ar": "جدول جرعات شراب الباراسيتامول للأطفال من سنتين إلى 11 سنة، والتحذيرات",
+  "use_en": "Children's paracetamol suspension dosing chart (2 to 11 years) and warnings"
+ },
+ {
+  "id": 128,
+  "label": "paracetamol_adult",
+  "use_ar": "جرعة الباراسيتامول للكبار و12 سنة فأكثر، وتحذير الكبد",
+  "use_en": "Paracetamol dose for adults and 12 years and over; liver warning"
+ },
+ {
+  "id": 129,
+  "label": "paracetamol_iv",
+  "use_ar": "الباراسيتامول في القصور الكلوي والكبدي، والحد اليومي من كل المصادر",
+  "use_en": "Paracetamol in kidney and liver impairment; daily maximum from all sources"
+ },
+ {
+  "id": 130,
+  "label": "ibuprofen_susp",
+  "use_ar": "جرعة شراب الإيبوبروفين بالملغ لكل كغ من 6 أشهر إلى سنتين",
+  "use_en": "Ibuprofen suspension mg/kg dose from 6 months to 2 years"
+ },
+ {
+  "id": 131,
+  "label": "ibuprofen_tab",
+  "use_ar": "جرعة الإيبوبروفين بوصفة للكبار، والكلى، والتداخلات",
+  "use_en": "Prescription ibuprofen dose for adults, kidney, interactions"
+ },
+ {
+  "id": 132,
+  "label": "ibuprofen_child_otc",
+  "use_ar": "جدول جرعات شراب الإيبوبروفين للأطفال من سنتين إلى 11 سنة",
+  "use_en": "Children's ibuprofen suspension dosing chart (2 to 11 years)"
+ },
+ {
+  "id": 133,
+  "label": "ibuprofen_adult_otc",
+  "use_ar": "جرعة الإيبوبروفين بدون وصفة للكبار، والحمل",
+  "use_en": "Over-the-counter ibuprofen dose for adults; pregnancy"
+ },
+ {
+  "id": 134,
+  "org": "World Health Organization, 2010",
+  "title": "WHO Model Formulary for Children 2010 (section 2.1: paracetamol, ibuprofen, acetylsalicylic acid)",
+  "url": "https://iris.who.int/handle/10665/44309",
+  "kind": "g",
+  "use_ar": "جرعات الباراسيتامول والإيبوبروفين بالملغ لكل كغ للرضع والأطفال، والكلى والكبد، والتداخلات",
+  "use_en": "Paracetamol and ibuprofen mg/kg doses for infants and children; kidney, liver, interactions",
+  "evidence": "content/analgesics/who_mfc_2010_2.1.txt"
+ },
+ {
+  "id": 135,
+  "label": "naproxen",
+  "use_ar": "جرعات النابروكسين، والكلى (تصفية أقل من 30)، والتداخلات",
+  "use_en": "Naproxen doses, kidney (clearance under 30), interactions"
+ },
+ {
+  "id": 136,
+  "label": "diclofenac_k",
+  "use_ar": "جرعات الديكلوفيناك البوتاسيوم، والكبد والكلى، والتداخلات",
+  "use_en": "Diclofenac potassium doses, liver and kidney, interactions"
+ },
+ {
+  "id": 137,
+  "label": "mefenamic",
+  "use_ar": "جرعة حمض الميفيناميك من 14 سنة ولمدة لا تتجاوز أسبوعاً",
+  "use_en": "Mefenamic acid dose from 14 years, for no more than one week"
+ },
+ {
+  "id": 138,
+  "label": "aspirin",
+  "use_ar": "جرعة الأسبرين بدون وصفة، ومتلازمة راي، والتحذيرات",
+  "use_en": "Over-the-counter aspirin dose, Reye's syndrome, warnings"
+ },
+ {
+  "id": 139,
+  "label": "celecoxib",
+  "use_ar": "جرعات السيليكوكسيب، والكبد، وحساسية السلفوناميد، والتداخلات",
+  "use_en": "Celecoxib doses, liver, sulfonamide allergy, interactions"
+ },
+ {
+  "id": 140,
+  "label": "ketorolac",
+  "use_ar": "جرعات أقراص الكيتورولاك وحدود المدة، وموانع الاستعمال",
+  "use_en": "Ketorolac tablet doses, duration limits, contraindications"
+ }
 ]
