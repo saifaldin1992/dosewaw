@@ -124,7 +124,7 @@ async function reportsPane(){
   if(error)return pane().innerHTML=errBox(error);
   const name=pg=>{const [g,id]=pg.split('/');const d=(INDEX||[]).find(x=>x.id===id&&(g==='v'?x.g==='vit':x.g!=='vit'));return d?LT(d.n):pg};
   pane().innerHTML=`<section class="card"><h2><span class="ic">⚑</span>${esc(A('t_reports'))}<span class="cnt">${data.length}</span></h2><div class="ilist">${data.length?data.map(r=>`<div class="inter moderate"><div class="grow"><b>${esc(name(r.page))}</b><p>${esc(r.msg)}</p><p class="hint m0">${esc(String(r.created_at).slice(0,16).replace('T',' '))}</p></div>
-    <div class="fields"><a class="btn" href="#/${esc(r.page)}">${esc(A('open_page'))}</a><button class="btn" type="button" data-done="${r.id}">${esc(A('done'))}</button></div></div>`).join(''):`<p class="hint">${esc(A('no_reports'))}</p>`}</div></section>`;
+    <div class="fields"><a class="btn" href="#/g/${r.page.startsWith('v/')?'vit':'ab'}/${esc(r.page)}">${esc(A('open_page'))}</a><button class="btn" type="button" data-done="${r.id}">${esc(A('done'))}</button></div></div>`).join(''):`<p class="hint">${esc(A('no_reports'))}</p>`}</div></section>`;
   $$('[data-done]').forEach(b=>b.onclick=async()=>{const {error}=await SB.rpc('report_done',{p_id:+b.dataset.done});if(error)return alert(error.message);reportsPane()});
 }
 

@@ -44,7 +44,17 @@ require('fs').mkdirSync(out,{recursive:true});
    await p.goto(B+'#/d/cipro');await p.waitForSelector('#result .rbody');await p.screenshot({path:out+'phone-cipro.png',fullPage:true});
    await p.goto(B+'#/inter');await p.fill('#iq','سيبرو');await p.locator('[data-add]').first().click();await p.fill('#iq','دوكسي');await p.locator('[data-add]').first().click();
    chk(await p.locator('#ires .inter').count()>0,'interaction checker lists interactions');await p.screenshot({path:out+'phone-inter.png',fullPage:true});
-   await p.goto(B+'#/calc');await p.waitForSelector('.sres a');chk(await p.locator('.sres a').count()===114,'calculators: 1 child + 13 vitamins + 100 adult');
+   // group screens: each group has its own tabs
+   await p.goto(B+'#/g/ab');await p.waitForSelector('#q');chk(await p.locator('#tabs a').count()===5,'antibiotics: 4 tabs + groups');chk(await p.locator('#sres a').count()===100,'antibiotics calculator lists 100 drugs');
+   await p.screenshot({path:out+'phone-group-ab.png'});
+   await p.goto(B+'#/g/ab/drugs');await p.waitForSelector('[data-cls]');chk(await p.locator('#dlist a').count()===100,'drugs by class: 100');
+   await p.fill('#dlq','سيبرو');chk(await p.locator('#dlist a:not([hidden])').count()===1,'drug list filter');
+   await p.goto(B+'#/g/ab/src');await p.waitForSelector('.ref-item');chk(await p.locator('.ref-item').count()===126,'antibiotic sources only');
+   await p.goto(B+'#/g/vit');await p.waitForSelector('.gcard');chk(await p.locator('.gcard').count()===13&&await p.locator('#tabs a').count()===4,'vitamins: 13 calculators, 3 tabs + groups');
+   await p.goto(B+'#/g/vit/inter');await p.waitForSelector('.inter');chk(await p.locator('.inter').count()===13,'vitamin interactions: 13');
+   await p.goto(B+'#/g/vit/src');await p.waitForSelector('.ref-item');chk(await p.locator('.ref-item').count()===52,'vitamin sources only');
+   await p.goto(B+'#/g/an');await p.waitForSelector('.ghead');chk((await p.innerText('#app')).includes('قيد الإعداد'),'a group not ready says soon');
+   await p.goto(B+'#/d/amox');await p.waitForSelector('.ghead');chk(p.url().includes('#/g/ab/d/amox'),'old drug links still work');
    await p.goto(B+'#/src');await p.waitForSelector('.ref-item');chk(await p.locator('.ref-item').count()===126+52,'126 antibiotic + 52 vitamin sources');
    await p.goto(B+'#/v/d');await p.waitForSelector('#vform');await p.fill('#age','40');await p.fill('#dlab','12');await p.waitForTimeout(50);
    chk((await p.locator('#result').innerText()).includes('50,000'),'vitamin D 40 y, 12 ng/mL -> 50,000 IU weekly');await p.screenshot({path:out+'phone-vitd.png',fullPage:true});

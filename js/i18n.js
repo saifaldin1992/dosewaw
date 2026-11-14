@@ -3,6 +3,9 @@
 const I18N = {
   nav_drugs:['الأدوية','Drugs'], nav_inter:['التداخلات','Interactions'], nav_calc:['الحاسبات','Calculators'], nav_menu:['القائمة','Menu'],
   nav_inter_long:['فاحص التداخلات','Interaction checker'], nav_src:['المصادر والمنهجية','Sources and method'],
+  nav_groups:['المجموعات','Groups'], tab_calc:['الحاسبة','Calculator'], tab_inter:['التداخلات','Interactions'], tab_drugs:['الأدوية','Drugs'], tab_src:['المصادر','Sources'],
+  pick_group:['اختر المجموعة الدوائية','Choose a drug group'], search_all:['أو ابحث في كل المجموعات','Or search all groups'],
+  calc_pick:['اختر الدواء لحساب جرعته.','Choose a drug to calculate its dose.'], vit_pick:['اختر الحاسبة.','Choose a calculator.'], n_calcs:['{n} حاسبة','{n} calculators'],
   search_ph:['اكتب الاسم العلمي للدواء…','Type the generic name…'], search_lbl:['ابحث عن دواء','Search for a drug'],
   clear:['مسح','Clear'], none_found:['لا يوجد دواء بهذا الاسم.','No drug with this name.'],
   hero_t:['الجرعة الصحيحة في ثوانٍ','The right dose in seconds'],

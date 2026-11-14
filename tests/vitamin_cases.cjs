@@ -8,7 +8,7 @@ const SEL=['feg','folg','czg','tri','feed','vag','fetri','bsp','thg'],CHK=['infl
  const errs=[];p.on('pageerror',e=>errs.push(String(e)));
  let fails=0;
  for(const c of CASES){
-  await p.goto(B+'?lang=ar#/v/'+c.k);await p.waitForSelector('#vform');
+  await p.goto(B+'?lang=ar#/g/vit/v/'+c.k);await p.waitForSelector('#vform');
   // a fresh patient for every case
   await p.evaluate(()=>{for(const k in VPT)delete VPT[k];document.querySelectorAll('#vform input').forEach(i=>{if(i.type==='checkbox')i.checked=false;else i.value=''})});
   for(const [f,v] of Object.entries(c.f)){
@@ -17,7 +17,7 @@ const SEL=['feg','folg','czg','tri','feed','vag','fetri','bsp','thg'],CHK=['infl
     else await p.fill('#'+f,String(v));
   }
   if(await p.isVisible('#sex'))await p.selectOption('#sex',c.sex);
-  await p.evaluate(()=>vitCalc(location.hash.split('/')[2]));
+  await p.evaluate(()=>vitCalc(location.hash.split('/').pop()));
   const txt=await p.innerText('#result');const ok=txt.includes(c.want);fails+=!ok;
   console.log((ok?'ok   ':'FAIL ')+c.k+' '+JSON.stringify(c.f)+' '+c.sex+' -> «'+c.want+'»');
   if(!ok)console.log('     got:',txt.slice(0,240).replace(/\n/g,' | '));

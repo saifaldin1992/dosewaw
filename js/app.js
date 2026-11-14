@@ -34,10 +34,15 @@ const ICON={
  calc:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="5" y="2" width="14" height="20" rx="3"/><path d="M8 6h8M8 11h2M14 11h2M8 15h2M14 15h2M8 19h2M14 19h2"/></svg>',
  menu:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 6h16M4 12h16M4 18h16"/></svg>',
  drug:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="3" y="8" width="18" height="8" rx="4" transform="rotate(-35 12 12)"/></svg>',
+ grid:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="3" y="3" width="7" height="7" rx="2"/><rect x="14" y="3" width="7" height="7" rx="2"/><rect x="3" y="14" width="7" height="7" rx="2"/><rect x="14" y="14" width="7" height="7" rx="2"/></svg>',
+ src:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19V5a2 2 0 0 1 2-2h13v16H6a2 2 0 0 0-2 2z"/><path d="M8 7h7M8 11h7"/></svg>',
  search:'<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>'
 };
 const GROUPS=[{id:'ab',live:true},{id:'an'},{id:'ah'},{id:'gi'},{id:'vit',live:true}];
-const HREF=d=>(d.g==='vit'?'#/v/':'#/d/')+encodeURIComponent(d.id);
+const HREF=d=>(d.g==='vit'?'#/g/vit/v/':'#/g/ab/d/')+encodeURIComponent(d.id);
+/* the screens of each group (its own «app»): antibiotics have a drug list by class; groups not ready show «soon» */
+const GTABS={ab:['calc','inter','drugs','src'],vit:['calc','inter','src']};
+let CURG=null;
 
 /* ---------- data (static files; fetched once, kept in memory; the service worker keeps them offline) ---------- */
 const CACHE={};
@@ -59,26 +64,45 @@ function applyLang(){
   document.documentElement.lang=LANG;document.documentElement.dir=LANG==='ar'?'rtl':'ltr';
   const B=window.BRAND||{};drawBrand();document.title=(B.name||['DOSE','WAW']).join('')+' — '+LT(B.tagline);
   $('#hlang').textContent=LANG==='ar'?'EN':'ع';$('#hlang').setAttribute('aria-label',LANG==='ar'?'English':'العربية');
-  $('#topnav').innerHTML=[['#/','nav_drugs'],['#/inter','nav_inter_long'],['#/calc','nav_calc'],['#/src','nav_src']].map(([h,k])=>`<a href="${h}" data-nav="${h}">${esc(T(k))}</a>`).join('');
-  $('#tabs').innerHTML=[['#/','nav_drugs','drug'],['#/inter','nav_inter','inter'],['#/calc','nav_calc','calc'],['#/menu','nav_menu','menu']].map(([h,k,i])=>`<a href="${h}" data-nav="${h}"><span class="pill">${ICON[i]}</span>${esc(T(k))}</a>`).join('');
+  setNav(CURG);
   $('#disc').textContent=T('disc');
 }
 function setLang(l){LANG=l;store.set('dw-lang',l);applyLang();route()}
 function themeNow(){const t=document.documentElement.dataset.theme;return t||(matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light')}
 function setTheme(t){if(t==='auto')delete document.documentElement.dataset.theme;else document.documentElement.dataset.theme=t;store.set('dw-theme',t);$('#htheme').textContent=themeNow()==='dark'?'☀':'☾'}
+const TABICON={calc:'calc',inter:'inter',drugs:'drug',src:'src'};
+function setNav(g){
+  CURG=g;
+  const items=g&&GTABS[g]?[...GTABS[g].map(t=>['#/g/'+g+(t==='calc'?'':'/'+t),'tab_'+t,TABICON[t]]),['#/','nav_groups','grid']]
+    :[['#/','nav_groups','grid'],['#/src','tab_src','src'],['#/menu','nav_menu','menu']];
+  $('#topnav').innerHTML=items.map(([h,k])=>`<a href="${h}" data-nav="${h}">${esc(T(k))}</a>`).join('');
+  $('#tabs').innerHTML=items.map(([h,k,i])=>`<a href="${h}" data-nav="${h}"><span class="pill">${ICON[i]}</span>${esc(T(k))}</a>`).join('');
+  $('#tabs').style.gridTemplateColumns='repeat('+items.length+',1fr)';
+}
 function markNav(base){$$('[data-nav]').forEach(a=>{const on=a.dataset.nav===base;a.classList.toggle('on',on);if(on)a.setAttribute('aria-current','page');else a.removeAttribute('aria-current')})}
 
 /* ---------- router ---------- */
 function route(){
-  const h=location.hash.replace(/^#/,'')||'/';const p=h.split('/').filter(Boolean);
+  const h=location.hash.replace(/^#/,'')||'/';const p=h.split('/').filter(Boolean).map(decodeURIComponent);
   const view=p[0]||'';window.scrollTo(0,0);
-  const base={'':'#/',d:'#/',v:'#/',g:'#/',inter:'#/inter',calc:'#/calc',src:'#/src',menu:'#/menu',admin:'#/menu'}[view]||'#/';markNav(base);
+  // older links (before the group screens) still work
+  const old={d:'#/g/ab/d/',v:'#/g/vit/v/'};
+  if(old[view]&&p[1]){location.replace(old[view]+encodeURIComponent(p[1]));return}
+  if(view==='inter'){location.replace('#/g/ab/inter');return}
+  if(view==='calc'){location.replace('#/');return}
+  if(view==='g'&&p[1]){
+    const g=GROUPS.find(x=>x.id===p[1])?p[1]:'ab';setNav(GTABS[g]?g:null);
+    const tab=p[2]||'calc';markNav('#/g/'+g+(['inter','drugs','src'].includes(tab)?'/'+tab:''));
+    if(!GTABS[g])return viewSoon(g);
+    if(g==='ab'&&tab==='d'&&p[3])return viewDrug(p[3]);
+    if(g==='vit'&&tab==='v'&&p[3])return viewVit(p[3]);
+    if(tab==='inter')return g==='ab'?viewInter():viewVitInter();
+    if(tab==='src')return viewSources(p[3],g);
+    if(tab==='drugs'&&g==='ab')return viewDrugList();
+    return viewGroupCalc(g);
+  }
+  setNav(null);markNav({src:'#/src',menu:'#/menu',admin:'#/menu'}[view]||'#/');
   if(view==='admin'){loading();return loadScript('js/admin.js').then(()=>adminBoot()).catch(failed)}
-  if(view==='d'&&p[1])return viewDrug(decodeURIComponent(p[1]));
-  if(view==='v'&&p[1])return viewVit(decodeURIComponent(p[1]));
-  if(view==='g'&&p[1])return viewGroup(p[1]);
-  if(view==='inter')return viewInter();
-  if(view==='calc')return viewCalc();
   if(view==='src')return viewSources(p[1]);
   if(view==='menu')return viewMenu();
   viewHome();
@@ -89,14 +113,14 @@ function failed(){app().innerHTML=`<p class="empty">${esc(T('load_err'))}</p>`}
 
 /* ---------- search box (home and drug page) ---------- */
 let INDEX=null;
-function searchBox(q,group){
+function searchBox(q,group,chips){
   return `<section class="search" aria-label="${esc(T('search_lbl'))}">
     <label class="sbox">${ICON.search}<input id="q" type="search" value="${esc(q||'')}" placeholder="${esc(T('search_ph'))}" autocomplete="off" aria-label="${esc(T('search_lbl'))}" dir="auto">
     <button class="clr" type="button" id="qclr" aria-label="${esc(T('clear'))}">×</button></label>
-    <div class="chips" role="group" aria-label="${esc(T('groups'))}">
+    ${chips?`<div class="chips" role="group" aria-label="${esc(T('groups'))}">
       <button class="chip" data-g="" aria-pressed="${!group}">${esc(T('g_all'))}</button>
       ${GROUPS.map(g=>`<button class="chip${g.live?'':' soon'}" data-g="${g.id}" aria-pressed="${group===g.id}">${g.live?'<span class="dot"></span>':''}${esc(T('g_'+g.id))}${g.live?'':` <em>${esc(T('soon'))}</em>`}</button>`).join('')}
-    </div>
+    </div>`:''}
     <div class="sres" id="sres" aria-live="polite"></div>
   </section>`;
 }
@@ -112,7 +136,7 @@ function wireSearch(){
       if(sc<0&&v.length>=4){const e=Math.min(editIn(v,normAr(d.n.ar)),editIn(v,normAr(d.n.en)));if(e<=allowedEdits(v.length))sc=2.5+e/10}
       return [sc,d]}).filter(x=>x[0]>=0)
       .sort((a,b)=>a[0]-b[0]||LT(a[1].n).localeCompare(LT(b[1].n),LANG)).slice(0,v?12:200).map(x=>x[1]);
-    out.innerHTML=list.length?list.map(d=>`<a href="${HREF(d)}"><b>${esc(LT(d.n))}</b>${LANG==='ar'?`<span class="en">${esc(d.n.en)}</span>`:''}<span class="c">${esc(LT(d.c))}</span></a>`).join(''):`<p class="none">${esc(T('none_found'))}</p>`;
+    out.innerHTML=list.length?list.map(d=>`<a href="${HREF(d)}"><b>${esc(LT(d.n))}</b>${LANG==='ar'?`<span class="en">${esc(d.n.en)}</span>`:''}<span class="c">${esc(SG?LT(d.c):T('g_'+d.g))}</span></a>`).join(''):`<p class="none">${esc(T('none_found'))}</p>`;
   };
   q.oninput=run;$('#qclr').onclick=()=>{q.value='';SG='';$$('[data-g]').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.g==='')));run();q.focus()};
   $$('[data-g]').forEach(b=>b.onclick=()=>{SG=b.dataset.g;$$('[data-g]').forEach(x=>x.setAttribute('aria-pressed',String(x===b)));run()});
@@ -120,25 +144,53 @@ function wireSearch(){
   run();
 }
 
-/* ---------- home ---------- */
+/* ---------- home: the groups first; each group opens its own screens ---------- */
 async function viewHome(){
   SG='';
   try{INDEX=INDEX||await getJSON('index.json')}catch(e){return failed()}
   const chipsOf=ids=>ids.map(id=>{const d=INDEX.find(x=>x.id===id);return d?`<a class="chip" href="${HREF(d)}">${esc(LT(d.n))}</a>`:''}).join('');
   const count=g=>INDEX.filter(d=>d.g===g).length;
-  app().innerHTML=`<div class="hero"><h1>${esc(T('hero_t'))}</h1><p>${esc(T('hero_s'))}</p></div>
-  ${searchBox('', '')}
+  app().innerHTML=`<div class="hero"><h1>${esc(T('pick_group'))}</h1><p>${esc(T('hero_s'))}</p></div>
+  <div class="groups">${GROUPS.map(g=>`<a class="gcard${g.live?'':' soon'}" href="#/g/${g.id}"><span class="gi">${ICON[g.id]}</span><b>${esc(T('g_'+g.id))}</b><small>${g.live?esc(T(g.id==='vit'?'n_calcs':'n_drugs',{n:count(g.id)})):esc(T('soon'))}</small>${g.live?'':`<span class="soonb">${esc(T('soon'))}</span>`}</a>`).join('')}</div>
   ${favs().length?`<div class="sec-title">⭐ ${esc(T('favs'))}</div><div class="chips">${chipsOf(favs())}</div>`:''}
   ${recent().length?`<div class="sec-title">🕘 ${esc(T('recent'))}</div><div class="chips">${chipsOf(recent())}</div>`:''}
-  <div class="sec-title">${esc(T('groups'))}</div>
-  <div class="groups">${GROUPS.map(g=>`<a class="gcard${g.live?'':' soon'}" href="#/g/${g.id}"><span class="gi">${ICON[g.id]}</span><b>${esc(T('g_'+g.id))}</b><small>${g.live?esc(T('n_drugs',{n:count(g.id)})):esc(T('soon'))}</small>${g.live?'':`<span class="soonb">${esc(T('soon'))}</span>`}</a>`).join('')}</div>`;
+  <div class="sec-title">${esc(T('search_all'))}</div>
+  ${searchBox('','',true)}`;
   wireSearch();
 }
-async function viewGroup(g){
+/* the title bar of a group screen: back to the groups, the group's name and the screen */
+function groupHead(g,tab){
+  return `<div class="ghead"><a class="gback" href="#/" aria-label="${esc(T('nav_groups'))}">‹</a><span class="dicon">${ICON[g]}</span><div><h1>${esc(T('g_'+g))}</h1>${tab?`<span class="gsub">${esc(T('tab_'+tab))}</span>`:''}</div></div>`;
+}
+async function viewSoon(g){
+  app().innerHTML=groupHead(g)+`<section class="card"><p class="prose">${esc(T('soon_long'))}</p><a class="btn w100 mt12" href="#/">‹ ${esc(T('nav_groups'))}</a></section>`;
+}
+/* the calculator screen of a group: pick a drug (antibiotics) or a calculator (vitamins) */
+async function viewGroupCalc(g){
   try{INDEX=INDEX||await getJSON('index.json')}catch(e){return failed()}
-  const G=GROUPS.find(x=>x.id===g)||GROUPS[0];SG=G.id;
-  app().innerHTML=`<div class="page-h"><span class="dicon">${ICON[G.id]}</span><h1>${esc(T('g_'+G.id))}</h1></div>${searchBox('',G.id)}`;
-  wireSearch();
+  SG=g;
+  if(g==='vit'){
+    const list=INDEX.filter(d=>d.g==='vit');
+    app().innerHTML=groupHead(g,'calc')+`<p class="hint lead">${esc(T('vit_pick'))}</p><div class="groups">${list.map(d=>`<a class="gcard" href="${HREF(d)}"><span class="gi">${ICON.vit}</span><b>${esc(LT(d.n))}</b><small>${esc(LT(d.c))}</small></a>`).join('')}</div>`;
+    return;
+  }
+  app().innerHTML=groupHead(g,'calc')+`<p class="hint lead">${esc(T('calc_pick'))}</p>${searchBox('',g)}`;
+  wireSearch();$('#q').focus({preventScroll:true});
+}
+/* antibiotics by class, with the AWaRe group */
+async function viewDrugList(){
+  loading();let ab;try{[ab]=await loadAB()}catch(e){return failed()}
+  const by={};for(const d of ab){const k=LT(d.cls);(by[k]=by[k]||[]).push(d)}
+  const classes=Object.keys(by).sort((a,b)=>a.localeCompare(b,LANG));
+  app().innerHTML=groupHead('ab','drugs')+`<section class="search"><label class="sbox">${ICON.search}<input id="dlq" type="search" placeholder="${esc(T('search_ph'))}" autocomplete="off" dir="auto" aria-label="${esc(T('search_lbl'))}"></label></section>
+  <div id="dlist">${classes.map(k=>`<section class="card mt12" data-cls><h2><span class="ic">💊</span>${esc(k)}<span class="cnt">${by[k].length}</span></h2><div class="sres">${by[k].sort((a,b)=>LT(a.n).localeCompare(LT(b.n),LANG)).map(d=>`<a href="${HREF({g:'ab',id:d.id})}" data-n="${esc(normAr(d.n.ar+' '+d.n.en))}"><b>${esc(LT(d.n))}</b>${LANG==='ar'?`<span class="en">${esc(d.n.en)}</span>`:''}${d.aware?`<span class="c">AWaRe · ${esc(d.aware[0].toUpperCase()+d.aware.slice(1))}</span>`:''}</a>`).join('')}</div></section>`).join('')}</div>`;
+  $('#dlq').oninput=()=>{const v=normAr($('#dlq').value);$$('#dlist [data-cls]').forEach(sec=>{let any=false;sec.querySelectorAll('a').forEach(a=>{const ok=!v||a.dataset.n.includes(v);a.hidden=!ok;any=any||ok});sec.hidden=!any})};
+}
+/* vitamin interactions, by nutrient */
+async function viewVitInter(){
+  loading();try{await loadScript('js/rules/vitamins.js');INDEX=INDEX||await getJSON('index.json')}catch(e){return failed()}
+  const by={};for(const x of VIT.INTER)(by[x[0]]=by[x[0]]||[]).push(x);
+  app().innerHTML=groupHead('vit','inter')+Object.entries(by).map(([k,list])=>`<section class="card mt12"><h2><span class="ic">⚠️</span>${esc(L(list[0][1][0],list[0][1][1]))}<span class="cnt">${list.length}</span></h2><div class="ilist">${list.map(x=>`<div class="inter"><div class="grow"><b>${esc(L(x[2][0],x[2][1]))}</b><p>${esc(L(x[3][0],x[3][1]))}${(x[4]||[]).map(n=>`<a class="ref" href="#/g/vit/src/v${n}">${n}</a>`).join('')}</p></div></div>`).join('')}</div></section>`).join('');
 }
 
 /* ---------- drug page ---------- */
@@ -156,7 +208,8 @@ async function viewDrug(id){
   const fav=favs().includes(id);
   const renal=rule&&!rule.noRenal;
   const kidOpen=!!(PT.scr||PT.ht);
-  app().innerHTML=`${searchBox('', '')}
+  SG='ab';
+  app().innerHTML=`${groupHead('ab')}${searchBox('','ab')}
   <div class="dhead">
     <div class="dicon" aria-hidden="true">${ICON.ab}</div>
     <div><h1>${esc(LT(d.n))}${LANG==='ar'?` <span class="en">${esc(d.n.en)}</span>`:''}</h1>
@@ -387,7 +440,8 @@ async function viewVit(k){
   const meta=INDEX.find(d=>d.g==='vit'&&d.id===k);if(!meta){location.hash='#/';return}
   pushRecent(k);VIT.setLang(LANG);
   const fav=favs().includes(k);
-  app().innerHTML=`${searchBox('', '')}
+  SG='vit';
+  app().innerHTML=`${groupHead('vit')}${searchBox('','vit')}
   <div class="dhead"><div class="dicon" aria-hidden="true">${ICON.vit}</div>
     <div><h1>${esc(LT(meta.n))}</h1><div class="tags"><span class="tag">${esc(T('g_vit'))}</span><span class="tag gold">${esc(LT(meta.c))}</span></div></div>
     <button class="star" type="button" id="fav" aria-pressed="${fav}" aria-label="${esc(T(fav?'fav_rm':'fav_add'))}">${fav?'★':'☆'}</button></div>
@@ -452,7 +506,7 @@ async function viewInter(){
       chosen.map(d=>`<div class="sec-title">${esc(T('inter_with',{d:LT(d.n)}))}</div><div class="ilist">${[...(d.inter||[])].sort((a,b)=>(sevRank[a.sev]??3)-(sevRank[b.sev]??3)).map(i=>`<div class="inter ${esc(i.sev)}"><div class="grow"><b>${esc(LT(i.with))}</b><p>${esc(LT(i.desc))}</p></div><span class="sev">${esc(T('sev_'+i.sev))}</span></div>`).join('')}</div>`).join('');
     $$('[data-rm]').forEach(b=>b.onclick=()=>{PICK.splice(PICK.indexOf(b.dataset.rm),1);draw()});
   };
-  app().innerHTML=`<div class="page-h"><span class="dicon">${ICON.inter}</span><h1>${esc(T('inter_t'))}</h1></div><p class="hint lead">${esc(T('inter_s'))}</p>
+  app().innerHTML=`${groupHead('ab','inter')}<p class="hint lead">${esc(T('inter_s'))}</p>
   <section class="search"><label class="sbox">${ICON.search}<input id="iq" type="search" placeholder="${esc(T('inter_add'))}" autocomplete="off" dir="auto" aria-label="${esc(T('inter_add'))}"></label><div class="sres" id="ilist"></div><div class="picked" id="ichosen"></div></section>
   <section class="card mt16"><div class="ilist" id="ires"></div></section>`;
   const q=$('#iq');q.oninput=()=>{const v=normAr(q.value);$('#ilist').innerHTML=v?ab.filter(d=>normAr(d.n.ar+' '+d.n.en).includes(v)&&!PICK.includes(d.id)).slice(0,8).map(d=>`<a href="#" data-add="${d.id}"><b>${esc(LT(d.n))}</b><span class="c">${esc(LT(d.cls))}</span></a>`).join(''):'';
@@ -460,35 +514,24 @@ async function viewInter(){
   draw();
 }
 
-/* ---------- calculators ---------- */
-async function viewCalc(){
-  loading();let ab;try{[ab]=await loadAB()}catch(e){return failed()}
-  INDEX=INDEX||await getJSON('index.json');
-  const kids=ab.filter(d=>PEDS[d.id]),adults=ab.filter(d=>ABC_RULES[d.id]),vits=INDEX.filter(d=>d.g==='vit');
-  const li=list=>list.map(d=>`<a href="#/d/${encodeURIComponent(d.id)}"><b>${esc(LT(d.n))}</b><span class="c">${esc(LT(d.cls))}</span></a>`).join('');
-  app().innerHTML=`<div class="page-h"><span class="dicon">${ICON.calc}</span><h1>${esc(T('calc_t'))}</h1></div><p class="hint lead">${esc(T('calc_s'))}</p>
-  <section class="card"><h2><span class="ic">👶</span>${esc(T('calc_peds'))}<span class="cnt">${kids.length}</span></h2><div class="sres">${li(kids)}</div></section>
-  <section class="card mt16"><h2><span class="ic">💧</span>${esc(T('g_vit'))}<span class="cnt">${vits.length}</span></h2><div class="sres">${vits.map(d=>`<a href="${HREF(d)}"><b>${esc(LT(d.n))}</b><span class="c">${esc(LT(d.c))}</span></a>`).join('')}</div></section>
-  <section class="card mt16"><h2><span class="ic">🫘</span>${esc(T('calc_adult'))}<span class="cnt">${adults.length}</span></h2><div class="sres">${li(adults)}</div></section>`;
-}
-
 /* ---------- sources and method ---------- */
-async function viewSources(hl){
+async function viewSources(hl,g){
   loading();let src;try{src=await getJSON('sources.json');await loadScript('js/rules/vitamins.js')}catch(e){return failed()}
-  const vr=Object.entries(VIT.REFS).sort((a,b)=>a[0]-b[0]);
-  app().innerHTML=`<div class="page-h"><span class="dicon">📚</span><h1>${esc(T('src_t'))}</h1></div>
+  let vr=Object.entries(VIT.REFS).sort((a,b)=>a[0]-b[0]);
+  if(g==='ab')vr=[];if(g==='vit')src=[];
+  app().innerHTML=`${g?groupHead(g,'src'):`<div class="page-h"><span class="dicon">📚</span><h1>${esc(T('src_t'))}</h1></div>`}
   <section class="card"><h2><span class="ic">🧭</span>${esc(T('method'))}</h2><div class="prose"><p>${esc(T('method_p'))}</p></div></section>
   <section class="card mt16"><h2><span class="ic">📚</span>${esc(T('s_src'))}<span class="cnt">${esc(T('src_n',{n:src.length+vr.length}))}</span></h2>
-  <div class="sec-title">${esc(T('g_ab'))}</div><ol class="refs">${src.map(s=>`<li class="ref-item${String(s.id)===hl?' hl':''}" id="r${s.id}" value="${s.id}"><a href="${esc(s.url)}" target="_blank" rel="noopener">${esc(s.title)}</a><span class="k">${esc(T('k_'+s.kind))}</span><br><span class="d">${esc(s.org)} · ${esc(L(s.use_ar,s.use_en))}</span></li>`).join('')}</ol>
-  <div class="sec-title">${esc(T('g_vit'))}</div><ol class="refs">${vr.map(([n,x])=>`<li class="ref-item${'v'+n===hl?' hl':''}" id="rv${n}" value="${n}"><a href="${esc(x[2])}" target="_blank" rel="noopener">${esc(x[1])}</a><span class="k">${esc(T('k_'+vKind(x[0])))}</span><br><span class="d">${esc(x[0])} · ${esc(L(x[3],x[4]))}</span></li>`).join('')}</ol></section>`;
-  if(hl){const t=document.getElementById('r'+hl);if(t)t.scrollIntoView({block:'center'})}
+  ${src.length?`<div class="sec-title">${esc(T('g_ab'))}</div>`:''}<ol class="refs">${src.map(s=>`<li class="ref-item${String(s.id)===hl?' hl':''}" id="r${s.id}" value="${s.id}"><a href="${esc(s.url)}" target="_blank" rel="noopener">${esc(s.title)}</a><span class="k">${esc(T('k_'+s.kind))}</span><br><span class="d">${esc(s.org)} · ${esc(L(s.use_ar,s.use_en))}</span></li>`).join('')}</ol>
+  ${vr.length?`<div class="sec-title">${esc(T('g_vit'))}</div>`:''}<ol class="refs">${vr.map(([n,x])=>`<li class="ref-item${'v'+n===hl?' hl':''}" id="rv${n}" value="${n}"><a href="${esc(x[2])}" target="_blank" rel="noopener">${esc(x[1])}</a><span class="k">${esc(T('k_'+vKind(x[0])))}</span><br><span class="d">${esc(x[0])} · ${esc(L(x[3],x[4]))}</span></li>`).join('')}</ol></section>`;
+  if(hl){const t=document.getElementById('r'+hl);if(t){t.classList.add('hl');t.scrollIntoView({block:'center'})}}
 }
 
 /* ---------- menu ---------- */
 function viewMenu(){
   const th=store.get('dw-theme','auto');
   app().innerHTML=`<div class="page-h"><span class="dicon">${ICON.menu}</span><h1>${esc(T('nav_menu'))}</h1></div>
-  <nav class="menu"><a href="#/src">📚 ${esc(T('nav_src'))}</a><a href="#/admin">🔐 ${esc(T('a_title'))}</a><a href="#/inter">⚠️ ${esc(T('nav_inter_long'))}</a><a href="#/calc">🧮 ${esc(T('nav_calc'))}</a></nav>
+  <nav class="menu"><a href="#/src">📚 ${esc(T('nav_src'))}</a><a href="#/admin">🔐 ${esc(T('a_title'))}</a></nav>
   <section class="card"><h2><span class="ic">⚙️</span>${esc(T('settings'))}</h2>
     <div class="lbl first">${esc(T('lang'))}</div><div class="seg two"><button type="button" data-lang="ar" aria-pressed="${LANG==='ar'}">العربية</button><button type="button" data-lang="en" aria-pressed="${LANG==='en'}">English</button></div>
     <div class="lbl">${esc(T('theme'))}</div><div class="seg">${['auto','light','dark'].map(t=>`<button type="button" data-th="${t}" aria-pressed="${th===t}">${esc(T('th_'+t))}</button>`).join('')}</div></section>

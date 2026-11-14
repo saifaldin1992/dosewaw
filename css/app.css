@@ -293,3 +293,10 @@ details.recon summary{cursor:pointer;padding:10px 0;font-weight:600;font-size:14
   body.printcard .sheet-in{max-width:none;padding:0;box-shadow:none}
   body.printcard .sheet-h,body.printcard .sheet-in>div>:not(.pcard){display:none!important}
 }
+
+/* group screens */
+.ghead{display:flex;align-items:center;gap:12px;margin:14px 2px 12px}
+.ghead h1{margin:0;font-size:21px;line-height:1.3}
+.ghead .gsub{font-size:13px;color:var(--mute);font-weight:600}
+.gback{flex:none;width:44px;height:44px;border-radius:12px;border:1px solid var(--line);background:var(--card);color:var(--primary-text);display:grid;place-items:center;font-size:26px;text-decoration:none;line-height:1}
+html[dir="rtl"] .gback{transform:scaleX(-1)}
